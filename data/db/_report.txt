@@ -1,4 +1,4 @@
-2026-10-21T18:54:47+00:00
+2026-10-21T19:15:36+00:00
 Brasileirão Série A: FALHOU (https://www.sofascore.com/api/v1/unique-tournament/325/seasons: HTTP 403; FBref: fbref /en/comps/24/Serie-A-Stats: HTTP 403)
 Brasileirão Série B: FALHOU (https://www.sofascore.com/api/v1/unique-tournament/390/seasons: HTTP 403; FBref: fbref /en/comps/38/Serie-B-Stats: HTTP 403)
 Premier League: FALHOU (https://www.sofascore.com/api/v1/unique-tournament/17/seasons: HTTP 403; FBref: fbref /en/comps/9/Premier-League-Stats: HTTP 403)
