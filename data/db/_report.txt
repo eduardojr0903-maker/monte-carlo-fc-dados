@@ -1,8 +1,8 @@
-2026-10-21T19:15:36+00:00
-Brasileirão Série A: FALHOU (https://www.sofascore.com/api/v1/unique-tournament/325/seasons: HTTP 403; FBref: fbref /en/comps/24/Serie-A-Stats: HTTP 403)
-Brasileirão Série B: FALHOU (https://www.sofascore.com/api/v1/unique-tournament/390/seasons: HTTP 403; FBref: fbref /en/comps/38/Serie-B-Stats: HTTP 403)
-Premier League: FALHOU (https://www.sofascore.com/api/v1/unique-tournament/17/seasons: HTTP 403; FBref: fbref /en/comps/9/Premier-League-Stats: HTTP 403)
-La Liga: FALHOU (https://www.sofascore.com/api/v1/unique-tournament/8/seasons: HTTP 403; FBref: fbref /en/comps/12/La-Liga-Stats: HTTP 403)
-Serie A (Itália): FALHOU (https://www.sofascore.com/api/v1/unique-tournament/23/seasons: HTTP 403; FBref: fbref /en/comps/11/Serie-A-Stats: HTTP 403)
-Bundesliga: FALHOU (https://www.sofascore.com/api/v1/unique-tournament/35/seasons: HTTP 403; FBref: fbref /en/comps/20/Bundesliga-Stats: HTTP 403)
-Ligue 1: FALHOU (https://www.sofascore.com/api/v1/unique-tournament/34/seasons: HTTP 403; FBref: fbref /en/comps/13/Ligue-1-Stats: HTTP 403)
+2026-10-21T19:45:03+00:00
+Brasileirão Série A: 309 jogos (309 novos, 309 com chutes), 745 jogadores, xG não, 66 KB
+Brasileirão Série B: 340 jogos (340 novos, 340 com chutes), 768 jogadores, xG não, 70 KB
+Premier League: 70 jogos (70 novos, 70 com chutes), 454 jogadores, xG sim, 37 KB
+La Liga: 88 jogos (88 novos, 88 com chutes), 477 jogadores, xG sim, 40 KB
+Serie A (Itália): 70 jogos (70 novos, 70 com chutes), 480 jogadores, xG sim, 40 KB
+Bundesliga: 54 jogos (54 novos, 54 com chutes), 395 jogadores, xG sim, 32 KB
+Ligue 1: 63 jogos (63 novos, 63 com chutes), 418 jogadores, xG sim, 35 KB
