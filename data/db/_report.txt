@@ -1,0 +1,8 @@
+2026-10-21T18:54:47+00:00
+Brasileirão Série A: FALHOU (https://www.sofascore.com/api/v1/unique-tournament/325/seasons: HTTP 403; FBref: fbref /en/comps/24/Serie-A-Stats: HTTP 403)
+Brasileirão Série B: FALHOU (https://www.sofascore.com/api/v1/unique-tournament/390/seasons: HTTP 403; FBref: fbref /en/comps/38/Serie-B-Stats: HTTP 403)
+Premier League: FALHOU (https://www.sofascore.com/api/v1/unique-tournament/17/seasons: HTTP 403; FBref: fbref /en/comps/9/Premier-League-Stats: HTTP 403)
+La Liga: FALHOU (https://www.sofascore.com/api/v1/unique-tournament/8/seasons: HTTP 403; FBref: fbref /en/comps/12/La-Liga-Stats: HTTP 403)
+Serie A (Itália): FALHOU (https://www.sofascore.com/api/v1/unique-tournament/23/seasons: HTTP 403; FBref: fbref /en/comps/11/Serie-A-Stats: HTTP 403)
+Bundesliga: FALHOU (https://www.sofascore.com/api/v1/unique-tournament/35/seasons: HTTP 403; FBref: fbref /en/comps/20/Bundesliga-Stats: HTTP 403)
+Ligue 1: FALHOU (https://www.sofascore.com/api/v1/unique-tournament/34/seasons: HTTP 403; FBref: fbref /en/comps/13/Ligue-1-Stats: HTTP 403)
