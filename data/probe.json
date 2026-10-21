@@ -1,0 +1,47 @@
+{
+ "sofascore_www": [
+  403,
+  48,
+  "{\"error\": {\"code\": 403, \"reason\": \"Forbidden\" }}"
+ ],
+ "sofascore_api": [
+  403,
+  48,
+  "{\"error\": {\"code\": 403, \"reason\": \"Forbidden\" }}"
+ ],
+ "sofascore_app": [
+  200,
+  0,
+  ""
+ ],
+ "espn_scoreboard": [
+  400,
+  55,
+  "{\"code\":400,\"message\":\"Failed to get events endpoint.\"}"
+ ],
+ "espn_core": [
+  200,
+  2269,
+  "{\"count\":21,\"pageIndex\":1,\"pageSize\":25,\"pageCount\":1,\"items\":[{\"$ref\":\"http://sports.core.api.espn.com/v2/sports/soccer/leagues/bra.1/seasons/2026?lang=en&regi"
+ ],
+ "understat": [
+  200,
+  18698,
+  "<!DOCTYPE html> <html lang=\"en\">     <head> \t\t<base href=\"https://understat.com/\"> \t\t<title>EPL xG Table and Scorers for the 2026/2027 season | Understat.com</t"
+ ],
+ "fotmob": [
+  404,
+  211680,
+  "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\"><head><meta charSet=\"utf-8\" data-next-head=\"\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, ma"
+ ],
+ "fbref": [
+  403,
+  6023,
+  "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA"
+ ],
+ "flashscore": [
+  200,
+  731650,
+  "<!DOCTYPE html> <html lang=\"en\">     <head>         <meta charset=\"utf-8\">         <title>Football Live Scores, Latest Football Results | Flashscore.com</title>"
+ ]
+}
