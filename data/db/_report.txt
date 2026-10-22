@@ -1,8 +1,8 @@
-2026-10-21T19:45:03+00:00
-Brasileirão Série A: 309 jogos (309 novos, 309 com chutes), 745 jogadores, xG não, 66 KB
-Brasileirão Série B: 340 jogos (340 novos, 340 com chutes), 768 jogadores, xG não, 70 KB
-Premier League: 70 jogos (70 novos, 70 com chutes), 454 jogadores, xG sim, 37 KB
-La Liga: 88 jogos (88 novos, 88 com chutes), 477 jogadores, xG sim, 40 KB
-Serie A (Itália): 70 jogos (70 novos, 70 com chutes), 480 jogadores, xG sim, 40 KB
-Bundesliga: 54 jogos (54 novos, 54 com chutes), 395 jogadores, xG sim, 32 KB
-Ligue 1: 63 jogos (63 novos, 63 com chutes), 418 jogadores, xG sim, 35 KB
+2026-10-22T00:59:25+00:00
+Brasileirão Série A: 309 jogos (0 novos, 309 com chutes), 745 jogadores, xG não, 66 KB
+Brasileirão Série B: 340 jogos (0 novos, 340 com chutes), 768 jogadores, xG não, 70 KB
+Premier League: 70 jogos (0 novos, 70 com chutes), 454 jogadores, xG sim, 37 KB
+La Liga: 89 jogos (1 novos, 89 com chutes), 477 jogadores, xG sim, 40 KB
+Serie A (Itália): 70 jogos (0 novos, 70 com chutes), 480 jogadores, xG sim, 40 KB
+Bundesliga: 54 jogos (0 novos, 54 com chutes), 395 jogadores, xG sim, 32 KB
+Ligue 1: 63 jogos (0 novos, 63 com chutes), 418 jogadores, xG sim, 35 KB
