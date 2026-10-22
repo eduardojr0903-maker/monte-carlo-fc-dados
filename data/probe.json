@@ -1,77 +1,24 @@
 {
- "8814": {
-  "name": "Série B",
-  "season": "2026",
-  "n": 384,
-  "fin": 340,
-  "has_xg": true,
-  "n_playerStats": 42,
-  "up_lineupType": [
-   "lastStarting11",
-   "lastStartingLineups"
-  ]
- },
- "47": {
-  "name": "Premier League",
-  "season": "2026/2027",
-  "n": 380,
-  "fin": 70,
-  "has_xg": true,
-  "n_playerStats": 40,
-  "up_lineupType": [
-   "predicted",
-   "enetpulse"
-  ]
- },
- "87": {
-  "name": "LaLiga",
-  "season": "2026/2027",
-  "n": 380,
-  "fin": 90,
-  "has_xg": true,
-  "n_playerStats": 46,
-  "up_lineupType": [
-   "predicted",
-   "enetpulse"
-  ]
- },
- "55": {
-  "name": "Serie A",
-  "season": "2026/2027",
-  "n": 380,
-  "fin": 70,
-  "has_xg": true,
-  "n_playerStats": 50,
-  "up_lineupType": [
-   "predicted",
-   "enetpulse"
-  ]
- },
- "54": {
-  "name": "Bundesliga",
-  "season": "2026/2027",
-  "n": 306,
-  "fin": 54,
-  "has_xg": true,
-  "n_playerStats": 40,
-  "up_lineupType": [
-   "predicted",
-   "enetpulse"
-  ]
- },
- "53": {
-  "name": "Ligue 1",
-  "season": "2026/2027",
-  "n": 306,
-  "fin": 63,
-  "has_xg": true,
-  "n_playerStats": 40,
-  "up_lineupType": [
-   "predicted",
-   "enetpulse"
-  ]
- },
- "sg_links_santos": [],
- "sg_any_links": [],
- "sg_raw_santos": "0</span>\n\t\t\t\t\t\t                        <span class=\"fxs-league h-sm\">Brazil Série A</span>\n\t\t\t\t\t\t                    </div>\n\t\t\t\t\t\t                    <div class=\"fxs-game\">\n\t\t\t\t\t\t                        <span class=\"fxs-team home\">Chapecoense</span>\n\t\t\t\t\t\t                        <span class=\"vs-teams\"> vs </span>\n\t\t\t\t\t\t                        <span class=\"fxs-team\">Fluminense</span>\n\t\t\t\t\t\t                    </div>\n\t\t\t\t\t\t                    <div class=\"fxs-btn\">\n\t\t\t\t\t\t                        <a href=\"#\" class=\"view-lineups lineups-toggle-button confirmed yellow-button\" rel=\"#lineup5103683\" id=\"5103683\" onClick=\"reply_click(5103683)\">\n\t\t\t\t\t\t                           <span class=\"h-sm\">Predicted Lineups</span> <i class=\"icon icon-down-open\"></i>\n\t\t\t\t\t\t                        </a>\n\t\t\t\t\t\t                    </div>\n\t\t\t\t\t\t                \n\t\t\t\t\t\t                </div><!--table row-->\n\t\t\t\t\t\t\t\t       <div id=\"lineup5103683\" class=\"toggle-content\" style=\"display:none;\">\n\t\t\t\t\t\t\t\t\t   <div id=\"modify5103683\"></div> \n\t\t\t\t\t\t\t\t\t  \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t        <div class=\"table-row-loneups\">\n\t\t\t\t\t\t\t\t        <div class=\"lineup-row\">\n\t\t\t\t\t\t                    <div class=\"fxs-info\">\n\t\t\t\t\t\t                        <span class=\"fxs-time\">18:00</span>\n\t\t\t\t\t\t                        <span class=\"fxs-league h-sm\">Brazil Série A</span>\n\t\t\t\t\t\t                    </div>\n\t\t\t\t\t\t                    <div class=\"fxs-game\">\n\t\t\t\t\t\t                        <span class=\"fxs-team home\">Santos</span>\n\t\t\t\t\t\t                        <span class=\"vs-teams\"> vs </span>\n\t\t\t\t\t\t                        <span class=\"fxs-team\">Bahia</span>\n\t\t\t\t\t\t                    </div>\n\t\t\t\t\t\t                    <div class=\"fxs-btn\">\n\t\t\t\t\t\t                        <a href=\"#\" class=\"view-lineups lineups-toggle-button confirmed yellow-button\" rel=\"#lineup5103676\" id=\"5103676\" onClick=\"reply_click(5103676)\">\n\t\t\t\t\t\t                           <span class=\"h-sm\">Predicted Lineups</span> <i class=\"icon icon-down-open\"></i>\n\t\t\t\t\t\t                        </a>\n\t\t\t\t\t\t                    </div>\n\t\t\t\t\t\t                \n\t\t\t\t\t\t                </div><!--table row-->\n\t\t\t\t\t\t\t\t       <div id=\"lineup5103676\" class=\"toggle-content\" style=\"display:none;\">\n\t\t\t\t\t\t\t\t\t   <div id=\"modify5103676\"></div> \n\t\t\t\t\t\t\t\t\t  \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>           \t\n\t\t\t\t\t\t\t<h3 class=\"date-headline\">Monday 26 October</h3>\n\t\t\t\t\t\t\t<div class=\"fxs-table table-for-lineups\">\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t        <div class=\"table-row-loneups\">\n\t\t\t\t\t\t\t\t        <div class=\"lineup-row\">\n\t\t\t\t\t\t                    <div class=\"fxs-info\">\n\t\t\t\t\t\t                        <span class=\"fxs-time\">14:30</span>\n\t\t\t\t\t\t                        <span class=\"fxs-league h-sm\">Brazil Série A</span>\n\t\t\t\t\t\t                    </div>\n\t\t\t\t\t\t                    <div class=\"fxs-game\">\n\t\t\t\t\t\t                        <span class=\"fxs-team home\">Coritiba</span>\n\t\t\t\t\t\t                        <span class=\"vs-teams\"> vs </span>\n\t\t\t\t\t\t                        <span class=\"fxs-team\">Grêmio</span>\n\t\t\t\t\t\t                    </div>\n\t\t\t\t\t\t                    <div class=\"fxs-btn\">\n\t\t\t\t\t\t                        <a href=\"#\" class=\"view-lineups lineups-toggle-button confirmed yellow-button\" rel=\"#lineup5103681\" id=\"5103681\" onClick=\"reply_click(5103681)\">\n\t\t\t\t\t\t                           <span class=\"h-sm\">Predicted Lineups</span> <i class=\"icon icon-down-open\"></i>\n\t\t\t\t\t\t                        </a>\n\t\t\t\t\t\t                    </div>\n\t\t\t\t\t\t                \n\t\t\t\t\t\t                </div><!--table row-->\n\t\t\t\t\t\t\t\t       <div id=\"lineup5103681\" class=\"toggle-content\" style=\"display:none;\">\n\t\t\t\t\t\t\t\t\t   <div id=\"modify5103681\"></div> \n\t\t\t\t\t\t\t\t\t  \n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t        <div class=\"table-row-loneups\">\n\t\t\t\t\t\t\t\t        <div class=\"lineup-row\">\n\t\t\t\t\t\t                    <div class=\"fxs-info\">\n\t\t\t\t\t\t                        <span class=\"fxs-time\">15:00</span>\n\t\t\t\t\t\t                        <span class=\"fxs-league h-sm\">Brazil Série A</span>\n\t\t\t\t\t\t                    </div>\n\t\t\t\t\t\t                    <div class=\"fxs-game\">\n\t\t\t\t\t\t                        <span class=\"fxs-team home\">Flamengo</span>\n\t\t\t\t\t\t                        <span class=\"vs-teams\"> vs </span>\n\t\t\t\t\t\t                        <span class=\"fxs-team\">Atlético MG</span>\n\t\t\t\t\t\t                    </div>\n\t\t\t\t\t\t                    <div class=\"fxs-btn\">\n\t\t\t\t\t\t                        <a href=\"#\" class=\"view-lineups lineups-toggle-button confirmed yellow-button"
+ "fn": [
+  "owText: '+',// the button text to show when a div is closed\n            hideText: '-' // the button text to show when a div is open\n        });\n    });\n</script>\n\n<script type=\"text/javascript\">\n\n    function reply_click(clicked_id)\n    {\n        var id = clicked_id;\n        var tmpstr = \"#modify\" + id;\n        event.preventDefault();\n        $.ajax({\n            url: '/lineups/lineups-load2.php',\n            type: 'get',\n            data: {'id' : id},\n            success: function(response) {\n                $(tmpstr).html(response);\n            }\n        });\n    }\n\n\n    ;\n\n</script>\n\n<script>\n\n    window.onload = function() {\n\n        \n            var iframe = document.getElementById(\"righttopmonth\");\n\n        iframe.src = \"/betting-sites/internal/provider-of-the-month/\";\n            \n\n\n        var iframe2 = document.getElementById(\"righttop3\");\n\n        iframe2.src = \"/betting-sites/internal/top-5-sidebar-bonus/\";\n\n        var iframe3 = document.getElementById(\"righttop5\");\n\n        iframe3.src = \"/betting-sites/internal/offers/5/\";\n\n        var iframe4 = document.getElementById(\"midtop3\");\n\n        iframe4.src = \"/betting-sites/internal/top-3/\";\n\n\n        date_time();\n\n    }\n\n</script>\n</body>\n\n</html>"
+ ],
+ "scripts": [
+  "https://www.sportsgambler.com/scripts/respond.min.js",
+  "https://www.googletagmanager.com/gtag/js?id=G-G62W6SH7RD",
+  "https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js",
+  "https://sportsgambler.sirv.com/final/js/mmenu-light.js",
+  "https://sportsgambler.sirv.com/final/js/showhide.js",
+  "https://sportsgambler.sirv.com/final/js/misc_new_2.js",
+  "https://sportsgambler.sirv.com/final/js/carousel.js",
+  "https://sportsgambler.sirv.com/release/js/search_2.js",
+  "https://scripts.sirv.com/sirvjs/v3/sirv.js"
+ ],
+ "https://www.sportsgambler.com/lineups/ajax/5103676": [
+  200,
+  "<!DOCTYPE HTML>\n\n<html lang=\"en\">\n\n<head>\n    <!-- Google Tag Manager -->\n    <script>\n        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n        })(window,document,'script','dataLayer','GTM-M6QV8QH');\n    </script>\n "
+ ],
+ "https://www.sportsgambler.com/wp-admin/admin-ajax.php?action=lineups&id=5103676": [
+  404,
+  "No input file specified.\n"
+ ]
 }
