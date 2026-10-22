@@ -36,6 +36,53 @@ DELAY = float(os.environ.get("DELAY", "0.7"))
 MAX_NEW = int(os.environ.get("MAX_NEW_EVENTS", "2500"))
 HIST_BUDGET = int(os.environ.get("HIST_BUDGET", "2500"))  # past-season matches downloaded per run
 HIST_CACHE = os.path.join(ROOT, "data", "cache", "history")
+POS_CACHE = os.path.join(ROOT, "data", "cache", "positions")
+POS_BUDGET = int(os.environ.get("POS_BUDGET", "1200"))  # player position lookups per run
+POS_MAX_AGE = 30 * 86400
+LEFT = {"LB", "LWB", "LCB", "LM", "LW", "LCM", "LDM", "LAM", "LF", "LS"}
+RIGHT = {"RB", "RWB", "RCB", "RM", "RW", "RCM", "RDM", "RAM", "RF", "RS"}
+pos_budget = [POS_BUDGET]
+
+
+def player_position(pid):
+    """Where the player actually plays (FotMob/Opta): main position label, lateral x (0 = left, 1 = right)
+    and depth y (0 = own goal, 1 = attack), weighted by how often he played each position."""
+    if not pid or str(pid).startswith("n:"):
+        return None
+    path = os.path.join(POS_CACHE, f"{pid}.json")
+    if os.path.exists(path) and time.time() - os.path.getmtime(path) < POS_MAX_AGE:
+        return json.load(open(path)) or None
+    if pos_budget[0] <= 0:
+        return (json.load(open(path)) or None) if os.path.exists(path) else None
+    pos_budget[0] -= 1
+    out = None
+    try:
+        d = fm("playerData", id=pid)
+        time.sleep(DELAY * 0.6)
+        pd = (d or {}).get("positionDescription") or {}
+        items = pd.get("positions") or []
+        wx = wy = w = 0.0
+        main = None
+        for it in items:
+            lab = ((it.get("strPosShort") or {}).get("label") or "").upper()
+            occ = float(it.get("occurences") or 0) or (5.0 if it.get("isMainPosition") else 1.0)
+            if it.get("isMainPosition"):
+                main = lab
+            pp = it.get("pitchPositionData") or {}
+            if "right" in pp and "top" in pp:
+                x, y = float(pp["right"]), 1 - float(pp["top"])
+            else:
+                x = 0.17 if lab in LEFT else 0.83 if lab in RIGHT else 0.5
+                y = 0.0 if lab == "GK" else 0.3 if lab.endswith("B") or lab.endswith("CB") else 0.55 if "M" in lab else 0.8
+            wx += occ * x; wy += occ * y; w += occ
+        if w > 0:
+            out = {"p": main or "", "x": round(wx / w, 3), "y": round(wy / w, 3)}
+    except Exception as e:  # noqa: BLE001
+        print("  posição", pid, e, flush=True)
+    os.makedirs(POS_CACHE, exist_ok=True)
+    with open(path, "w") as fh:
+        json.dump(out or {}, fh)
+    return out
 
 # FotMob league id -> (app doc id, app name, Sportsgambler has predicted lineups)
 LEAGUES = {
@@ -413,7 +460,27 @@ def build(lid, season, cache, upcoming, hist=None):
                       sides[0]["out"], sides[1]["out"], sides[0]["xi"], sides[1]["xi"],
                       [sides[0]["form"], sides[1]["form"]], [sides[0]["coords"], sides[1]["coords"]]])
 
+    wanted = []
+    for n in nexts:
+        for ids in (n[5], n[6], n[9], n[10]):
+            wanted += [str(x) for x in ids or []]
+    seen = set()
+    for pid in wanted + [row[0] for row in sorted(players.values(), key=lambda r: -r[6])]:
+        if pid in seen:
+            continue
+        seen.add(pid)
+        player_position(pid)
     for key, row in players.items():
+        while len(row) < 21:
+            row.append(0)
+        pp = None
+        pth = os.path.join(POS_CACHE, f"{row[0]}.json")
+        if os.path.exists(pth):
+            try:
+                pp = json.load(open(pth)) or None
+            except ValueError:
+                pp = None
+        row[21:24] = [pp["p"], pp["x"], pp["y"]] if pp else ["", -1, -1]
         if key in posc:
             row[3] = max(posc[key].items(), key=lambda kv: kv[1])[0]
         row[9] = round(row[9], 2)

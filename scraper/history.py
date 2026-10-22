@@ -100,7 +100,7 @@ def _season_table(recs):
         s = r.get("s")
         for side, tid, name, gf, ga in ((0, r["h"], r["hn"], r["hg"], r["ag"]), (1, r["a"], r["an"], r["ag"], r["hg"])):
             t = T.setdefault(tid, {"name": name, "n": 0, "pts": 0, "gf": 0, "ga": 0, "ns": 0, "shf": 0, "sha": 0, "sotf": 0, "sota": 0,
-                                   "xgf": 0, "xga": 0, "nx": 0, "h": [0, 0, 0], "a": [0, 0, 0]})
+                                   "xgf": 0, "xga": 0, "nx": 0, "h": [0, 0, 0, 0, 0], "a": [0, 0, 0, 0, 0]})
             t["n"] += 1
             t["gf"] += gf
             t["ga"] += ga
@@ -117,7 +117,7 @@ def _season_table(recs):
                     hx = (s[2][side], s[2][o])
             q = hx or (gf, ga)
             bucket = t["h"] if side == 0 else t["a"]
-            bucket[0] += 1; bucket[1] += q[0]; bucket[2] += q[1]
+            bucket[0] += 1; bucket[1] += q[0]; bucket[2] += q[1]; bucket[3] += gf; bucket[4] += ga
     return T
 
 
@@ -271,7 +271,21 @@ def summarize(seasons, current_recs, current_teams):
             past.setdefault(tid, []).append([s, pos, t["pts"], t["n"],
                                              round(t["xgf"] / t["nx"], 2) if t["nx"] else None,
                                              round(t["xga"] / t["nx"], 2) if t["nx"] else None, t["gf"], t["ga"]])
+    # strength by venue over all seasons since 2022 in this league (xG, or goals when xG is missing)
+    venue = {}
+    for tid in current_teams:
+        v = [0] * 10
+        for s in all_s:
+            t = (tables.get(s) or {}).get(tid)
+            if not t:
+                continue
+            for k in range(5):
+                v[k] += t["h"][k]
+                v[5 + k] += t["a"][k]
+        if v[0] or v[5]:
+            venue[tid] = [round(x, 2) if isinstance(x, float) else x for x in v]
     return {
+        "venue": venue,
         "seasons": season_rows, "hfa": league_hfa, "hfaRel": round(rel, 3), "b": b,
         "metrics": list(METRICS), "prior": priors, "teamHfa": team_hfa,
         "past": {tid: past[tid] for tid in current_teams if tid in past},
