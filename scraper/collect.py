@@ -22,6 +22,9 @@ import re
 import sys
 import time
 import unicodedata
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import history  # noqa: E402
 from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -31,6 +34,8 @@ RECENT_N = 8
 UPCOMING_DAYS = 8
 DELAY = float(os.environ.get("DELAY", "0.7"))
 MAX_NEW = int(os.environ.get("MAX_NEW_EVENTS", "2500"))
+HIST_BUDGET = int(os.environ.get("HIST_BUDGET", "2500"))  # past-season matches downloaded per run
+HIST_CACHE = os.path.join(ROOT, "data", "cache", "history")
 
 # FotMob league id -> (app doc id, app name, Sportsgambler has predicted lineups)
 LEAGUES = {
@@ -316,7 +321,7 @@ def _save(path, cache):
 
 
 # ------------------------------------------------------------------ build
-def build(lid, season, cache, upcoming):
+def build(lid, season, cache, upcoming, hist=None):
     doc_id, name, _ = LEAGUES[lid]
     recs = sorted(cache.values(), key=lambda r: r["ts"])
     teams, tidx = [], {}
@@ -428,14 +433,14 @@ def build(lid, season, cache, upcoming):
         "source": "fotmob.com" + (" + sportsgambler.com" if any(f.get("sg") for f in upcoming) else ""),
         "hasXg": has_xg, "recentN": RECENT_N,
         "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "teams": teams, "matches": matches, "players": rows, "next": nexts, "logos": logos,
+        "teams": teams, "matches": matches, "players": rows, "next": nexts, "logos": logos, "hist": hist,
     }
 
 
 def write_doc(doc_id, doc):
     """Rows are packed into one JSON string field ("pack"): the app's database caps a document at 256 KiB."""
     os.makedirs(OUT, exist_ok=True)
-    keys = ("teams", "matches", "players", "next", "logos")
+    keys = ("teams", "matches", "players", "next", "logos", "hist")
     out = {k: v for k, v in doc.items() if k not in keys}
     out["pack"] = json.dumps({k: doc[k] for k in keys}, ensure_ascii=False, separators=(",", ":"))
     path = os.path.join(OUT, f"{doc_id}.json")
@@ -447,6 +452,7 @@ def write_doc(doc_id, doc):
 def main(argv):
     wanted = [int(a) for a in argv] or list(LEAGUES)
     budget = MAX_NEW
+    hist_budget = [HIST_BUDGET]
     report = []
     for lid in wanted:
         doc_id, name, _ = LEAGUES[lid]
@@ -454,18 +460,34 @@ def main(argv):
         try:
             lg, season, cache, upcoming, new = collect_league(lid, budget)
             budget -= new
-            doc_id, doc = build(lid, season, cache, upcoming)
+            hist, hnew = None, 0
+            try:
+                past, hnew = history.collect(lid, lg, fm, team_stats, HIST_CACHE, hist_budget[0], DELAY)
+                hist_budget[0] -= hnew
+                cur = []
+                for r in cache.values():
+                    t = r.get("t")
+                    cur.append({"h": r["h"], "hn": r["hn"], "a": r["a"], "an": r["an"], "hg": r["hg"], "ag": r["ag"],
+                                "s": [[t[0][0], t[1][0]], [t[0][1], t[1][1]], [t[0][2], t[1][2]]] if t else None})
+                tids = sorted({r["h"] for r in cache.values()} | {r["a"] for r in cache.values()} | {f["h"] for f in upcoming} | {f["a"] for f in upcoming})
+                hist = history.summarize(past, cur, tids) if past else None
+            except Exception as e:  # noqa: BLE001
+                report.append(f"{name}: histórico falhou ({e})")
+            doc_id, doc = build(lid, season, cache, upcoming, hist)
             size = write_doc(doc_id, doc)
             srcs = {}
             for n in doc["next"]:
                 srcs[n[4]] = srcs.get(n[4], 0) + 1
-            report.append(f"{name}: {len(doc['matches'])} jogos ({new} novos), {len(doc['players'])} jogadores, xG {'sim' if doc['hasXg'] else 'não'}, "
+            hinfo = f"histórico {hist['nMatches']} jogos (+{hnew}), mando {hist['hfa']}, " if hist else ""
+            report.append(f"{name}: {hinfo}{len(doc['matches'])} jogos ({new} novos), {len(doc['players'])} jogadores, xG {'sim' if doc['hasXg'] else 'não'}, "
                           f"{len(doc['next'])} próximos jogos {srcs}, {size // 1024} KB")
         except Exception as e:  # noqa: BLE001
             report.append(f"{name}: FALHOU ({e})")
         if budget <= 0:
             report.append("Limite de jogos novos por execução atingido; o restante entra na próxima execução.")
             break
+    if hist_budget[0] <= 0:
+        report.append("Histórico: limite por execução atingido; a carga continua na próxima execução.")
     os.makedirs(OUT, exist_ok=True)
     with open(os.path.join(OUT, "_report.txt"), "w", encoding="utf-8") as fh:
         fh.write(datetime.now(timezone.utc).isoformat(timespec="seconds") + "\n" + "\n".join(report) + "\n")
