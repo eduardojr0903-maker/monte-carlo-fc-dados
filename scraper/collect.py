@@ -363,11 +363,11 @@ def build(code, season, events, us):
 
 
 def write_doc(doc_id, doc):
-    """The app's database does not store arrays of arrays, so each row is wrapped as {"r": [...]}."""
+    """Rows are packed into one JSON string field ("pack"): the app's database counts
+    nested arrays at a high per-value cost and caps a document at 256 KiB."""
     os.makedirs(OUT, exist_ok=True)
-    out = dict(doc)
-    for k in ("teams", "matches", "players"):
-        out[k] = [{"r": r} for r in out[k]]
+    out = {k: v for k, v in doc.items() if k not in ("teams", "matches", "players")}
+    out["pack"] = json.dumps({k: doc[k] for k in ("teams", "matches", "players")}, ensure_ascii=False, separators=(",", ":"))
     path = os.path.join(OUT, f"{doc_id}.json")
     with open(path, "w", encoding="utf-8") as fh:
         json.dump(out, fh, ensure_ascii=False, separators=(",", ":"))
