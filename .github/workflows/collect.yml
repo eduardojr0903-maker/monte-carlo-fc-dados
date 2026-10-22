@@ -2,7 +2,7 @@ name: Coletar dados
 
 on:
   schedule:
-    - cron: "17 */6 * * *"   # a cada 6 horas
+    - cron: "17 */3 * * *"   # a cada 3 horas
   workflow_dispatch:
   push:
     paths:
