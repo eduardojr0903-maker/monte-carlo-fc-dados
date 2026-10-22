@@ -1,9 +1,9 @@
-2026-10-22T18:57:10+00:00
-Brasileirão Série A: 309 jogos (0 novos), 757 jogadores, xG sim, 18 próximos jogos {'sg_predicted': 10, None: 8}, 89 KB
-Brasileirão Série B: 340 jogos (0 novos), 779 jogadores, xG sim, 10 próximos jogos {'last_xi': 9, None: 1}, 81 KB
-Premier League: 70 jogos (0 novos), 456 jogadores, xG sim, 10 próximos jogos {'sg_predicted': 10}, 52 KB
-La Liga: 89 jogos (0 novos), 488 jogadores, xG sim, 10 próximos jogos {'sg_predicted': 10}, 54 KB
-Serie A (Itália): 70 jogos (0 novos), 488 jogadores, xG sim, 20 próximos jogos {'sg_predicted': 10, None: 10}, 60 KB
-Bundesliga: 54 jogos (0 novos), 397 jogadores, xG sim, 9 próximos jogos {'sg_predicted': 9}, 45 KB
-Ligue 1: 63 jogos (0 novos), 421 jogadores, xG sim, 10 próximos jogos {'fotmob_predicted': 7, 'sg_predicted': 1, 'last_xi': 1, None: 1}, 47 KB
-Championship: 132 jogos (0 novos), 619 jogadores, xG sim, 12 próximos jogos {'last_xi': 4, 'sg_predicted': 8}, 69 KB
+2026-10-22T19:24:02+00:00
+Brasileirão Série A: 309 jogos (0 novos), 757 jogadores, xG sim, 18 próximos jogos {'sg_predicted': 10, None: 8}, 163 KB
+Brasileirão Série B: 340 jogos (0 novos), 779 jogadores, xG sim, 10 próximos jogos {'last_xi': 9, None: 1}, 153 KB
+Premier League: 70 jogos (0 novos), 456 jogadores, xG sim, 10 próximos jogos {'sg_predicted': 10}, 129 KB
+La Liga: 89 jogos (0 novos), 483 jogadores, xG sim, 10 próximos jogos {'sg_predicted': 10}, 127 KB
+Serie A (Itália): 70 jogos (0 novos), 480 jogadores, xG sim, 20 próximos jogos {'sg_predicted': 10, None: 10}, 125 KB
+Bundesliga: 54 jogos (0 novos), 397 jogadores, xG sim, 9 próximos jogos {'sg_predicted': 9}, 108 KB
+Ligue 1: 63 jogos (0 novos), 418 jogadores, xG sim, 10 próximos jogos {'fotmob_predicted': 8, 'sg_predicted': 1, None: 1}, 112 KB
+Championship: 132 jogos (0 novos), 619 jogadores, xG sim, 12 próximos jogos {'last_xi': 4, 'sg_predicted': 8}, 161 KB
