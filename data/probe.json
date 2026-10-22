@@ -1,88 +1,799 @@
 {
- "espn_upcoming": [
-  [
-   "401841282",
-   "Bahia at Santos",
-   "2026-10-25T00:00Z",
-   "pre"
-  ]
+ "lg_keys": [
+  "tabs",
+  "allAvailableSeasons",
+  "details",
+  "seostr",
+  "QAData",
+  "table",
+  "transfers",
+  "overview",
+  "stats",
+  "fixtures",
+  "playoff",
+  "seasons"
  ],
- "espn_up_rosters": [
-  [
-   "home",
-   0
+ "fx_keys": [
+  "firstUnplayedMatch",
+  "allMatches",
+  "hasOngoingMatch",
+  "fixtureInfo"
+ ],
+ "n_matches": 380,
+ "m0": {
+  "round": "1",
+  "roundName": 1,
+  "pageUrl": "/matches/atletico-mg-vs-palmeiras/3hsci5#5103369",
+  "id": "5103369",
+  "home": {
+   "name": "Atlético-MG",
+   "shortName": "Atlético-MG",
+   "id": "10272"
+  },
+  "away": {
+   "name": "Palmeiras",
+   "shortName": "Palmeiras",
+   "id": "10283"
+  },
+  "status": {
+   "utcTime": "2026-01-28T22:00:00Z",
+   "timezone": "",
+   "finished": true,
+   "started": true,
+   "cancelled": false,
+   "awarded": false,
+   "scoreStr": "2 - 2",
+   "reason": {
+    "short": "FT",
+    "shortKey": "fulltime_short",
+    "long": "Full-Time",
+    "longKey": "finished"
+   }
+  }
+ },
+ "up": [
+  {
+   "round": "32",
+   "roundName": 32,
+   "pageUrl": "/matches/bahia-vs-santos/27zkgu#5103676",
+   "id": "5103676",
+   "home": {
+    "name": "Santos",
+    "shortName": "Santos",
+    "id": "8514"
+   },
+   "away": {
+    "name": "Bahia",
+    "shortName": "Bahia",
+    "id": "7877"
+   },
+   "status": {
+    "utcTime": "2026-10-25T01:00:00Z",
+    "timezone": "",
+    "started": false,
+    "cancelled": false,
+    "finished": false
+   }
+  }
+ ],
+ "stats_keys": [
+  "players",
+  "teams",
+  "seasonStatLinks",
+  "seasonsWithLinks"
+ ],
+ "up_data/matchDetails?ma": [
+  200,
+  46082,
+  "{\"general\":{\"matchId\":\"5103676\",\"matchName\":\"Santos-vs-Bahia_Sun, Oct 25, 2026, 01:00 UTC\",\"matchRound\":\"32\",\"teamColors\":{\"darkMode\":{\"home\":\"#ffffff\",\"away\":\"#1D669E\"},\"lightMode\":{\"home\":\"#1b1b1b\","
+ ],
+ "up_content_keys": [
+  "matchFacts",
+  "liveticker",
+  "superlive",
+  "buzz",
+  "stats",
+  "playerStats",
+  "shotmap",
+  "weather",
+  "lineup",
+  "hasPlayoff",
+  "table",
+  "h2h",
+  "momentum"
+ ],
+ "up_lineup": {
+  "matchId": 5103676,
+  "lineupType": "lastStarting11",
+  "source": "lastStartingLineups",
+  "availableFilters": [
+   "marketValue",
+   "age",
+   "...3"
   ],
-  [
-   "away",
-   0
-  ]
- ],
- "espn_up_keys": [
-  "boxscore",
-  "format",
-  "gameInfo",
-  "lastFiveGames",
-  "leaders",
-  "broadcasts",
-  "pickcenter",
-  "odds",
-  "hasOdds",
-  "rosters",
-  "news",
-  "header",
-  "wallclockAvailable",
-  "meta",
-  "seasonseries",
-  "standings"
- ],
- "rotowire_epl": [
+  "homeTeam": {
+   "id": 8514,
+   "name": "Santos",
+   "formation": "4-2-3-1",
+   "starters": [
+    {
+     "id": 1272356,
+     "age": 25,
+     "optaId": "543890",
+     "name": "Diógenes",
+     "positionId": 11,
+     "usualPlayingPositionId": 0,
+     "shirtNumber": "1",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "horizontalLayout": {
+      "x": 0.1,
+      "y": 0.5,
+      "height": 0.25,
+      "width": 0.192
+     },
+     "verticalLayout": {
+      "x": 0.5,
+      "y": 0.1,
+      "height": 0.192,
+      "width": 1
+     },
+     "marketValue": 643222,
+     "firstName": "",
+     "lastName": "Diógenes",
+     "nationalTeamId": 8256,
+     "rankings": null
+    },
+    {
+     "id": 400256,
+     "age": 34,
+     "optaId": "117347",
+     "name": "Rodinei",
+     "positionId": 32,
+     "usualPlayingPositionId": 1,
+     "shirtNumber": "23",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "horizontalLayout": {
+      "x": 0.292,
+      "y": 0.875,
+      "height": 0.25,
+      "width": 0.385
+     },
+     "verticalLayout": {
+      "x": 0.125,
+      "y": 0.292,
+      "height": 0.192,
+      "width": 0.25
+     },
+     "marketValue": 351286,
+     "firstName": "",
+     "lastName": "Rodinei",
+     "nationalTeamId": 8256,
+     "rankings": null
+    },
+    "...11"
+   ],
+   "coach": {
+    "id": 319981,
+    "age": 63,
+    "optaId": "24",
+    "name": "Cuca",
+    "countryName": "Brazil",
+    "countryCode": "BRA",
+    "firstName": "",
+    "lastName": "Cuca",
+    "nationalTeamId": 8256,
+    "primaryTeamId": 8514,
+    "primaryTeamName": "Santos",
+    "usualPlayingPositionId": null,
+    "isCoach": true
+   },
+   "subs": [
+    {
+     "id": 535896,
+     "age": 31,
+     "optaId": "172883",
+     "name": "João Paulo",
+     "usualPlayingPositionId": 0,
+     "shirtNumber": "34",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "marketValue": 1402837,
+     "shortName": "João Paulo",
+     "firstName": "João",
+     "lastName": "Paulo",
+     "nationalTeamId": 8256,
+     "rankings": null
+    },
+    {
+     "id": 916348,
+     "age": 29,
+     "optaId": "226120",
+     "name": "Igor Vinícius",
+     "usualPlayingPositionId": 1,
+     "shirtNumber": "18",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "marketValue": 1605849,
+     "shortName": "I. Vinícius",
+     "firstName": "Igor",
+     "lastName": "Vinícius",
+     "nationalTeamId": 8256,
+     "rankings": null
+    },
+    "...12"
+   ],
+   "unavailable": [
+    {
+     "id": 305713,
+     "age": 34,
+     "name": "Willian Arão",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "marketValue": 559445,
+     "unavailability": {
+      "injuryId": 69,
+      "type": "injury",
+      "expectedReturn": "About 1-2 weeks"
+     },
+     "shortName": "W. Arão",
+     "firstName": "Willian",
+     "lastName": "Arão",
+     "nationalTeamId": 8256
+    },
+    {
+     "id": 699694,
+     "age": 31,
+     "name": "Lucas Veríssimo",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "marketValue": 2344525,
+     "unavailability": {
+      "injuryId": 42,
+      "type": "injury",
+      "expectedReturn": "Late November 2026"
+     },
+     "shortName": "L. Veríssimo",
+     "firstName": "Lucas",
+     "lastName": "Veríssimo",
+     "nationalTeamId": 8256
+    },
+    "...6"
+   ],
+   "averageStarterAge": 29.4,
+   "totalStarterMarketValue": 35708873,
+   "lastMatch": {
+    "matchId": 5103664,
+    "homeTeamId": 9863,
+    "awayTeamId": 8514,
+    "homeTeamName": "Fluminense",
+    "awayTeamName": "Santos",
+    "homeScore": 1,
+    "awayScore": 2,
+    "matchDate": "2026-10-18T21:00:00"
+   }
+  },
+  "awayTeam": {
+   "id": 7877,
+   "name": "Bahia",
+   "formation": "5-3-2",
+   "starters": [
+    {
+     "id": 812077,
+     "age": 30,
+     "optaId": "215246",
+     "name": "Ronaldo",
+     "positionId": 11,
+     "usualPlayingPositionId": 0,
+     "shirtNumber": "1",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "horizontalLayout": {
+      "x": 0.1,
+      "y": 0.5,
+      "height": 0.195,
+      "width": 0.2
+     },
+     "verticalLayout": {
+      "x": 0.5,
+      "y": 0.1,
+      "height": 0.2,
+      "width": 1
+     },
+     "marketValue": 1625693,
+     "firstName": "",
+     "lastName": "Ronaldo",
+     "nationalTeamId": 8256,
+     "rankings": null
+    },
+    {
+     "id": 1355337,
+     "age": 24,
+     "optaId": "566262",
+     "name": "Marcos Victor",
+     "positionId": 33,
+     "usualPlayingPositionId": 1,
+     "shirtNumber": "44",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "horizontalLayout": {
+      "x": 0.357,
+      "y": 0.695,
+      "height": 0.195,
+      "width": 0.257
+     },
+     "verticalLayout": {
+      "x": 0.305,
+      "y": 0.357,
+      "height": 0.2,
+      "width": 0.195
+     },
+     "marketValue": 800817,
+     "shortName": "M. Victor",
+     "firstName": "Marcos",
+     "lastName": "Victor",
+     "nationalTeamId": 8256,
+     "rankings": null
+    },
+    "...11"
+   ],
+   "coach": {
+    "id": 30755,
+    "age": 53,
+    "optaId": "39",
+    "name": "Rogério Ceni",
+    "countryName": "Brazil",
+    "countryCode": "BRA",
+    "shortName": "R. Ceni",
+    "firstName": "Rogério",
+    "lastName": "Ceni",
+    "nationalTeamId": 8256,
+    "primaryTeamId": 7877,
+    "primaryTeamName": "Bahia",
+    "usualPlayingPositionId": null,
+    "isCoach": true
+   },
+   "subs": [
+    {
+     "id": 322966,
+     "age": 34,
+     "optaId": "117879",
+     "name": "Guido Herrera",
+     "usualPlayingPositionId": 0,
+     "shirtNumber": "17",
+     "countryName": "Argentina",
+     "countryCode": "ARG",
+     "marketValue": 1365541,
+     "shortName": "G. Herrera",
+     "firstName": "Guido",
+     "lastName": "Herrera",
+     "nationalTeamId": 6706,
+     "rankings": null
+    },
+    {
+     "id": 844161,
+     "age": 29,
+     "optaId": "228503",
+     "name": "Kanu",
+     "usualPlayingPositionId": 1,
+     "shirtNumber": "4",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "marketValue": 1959309,
+     "firstName": "",
+     "lastName": "Kanu",
+     "nationalTeamId": 8256,
+     "rankings": null
+    },
+    "...12"
+   ],
+   "unavailable": [
+    {
+     "id": 934675,
+     "age": 28,
+     "name": "Jean Lucas",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "marketValue": 14927687,
+     "unavailability": {
+      "type": "suspension",
+      "expectedReturn": "Late October 2026",
+      "expectedReturnDate": "2026-10-25T02:00:00Z"
+     },
+     "shortName": "Jean Lucas",
+     "firstName": "Jean",
+     "lastName": "Lucas",
+     "nationalTeamId": 8256
+    },
+    {
+     "id": 1617809,
+     "age": 22,
+     "name": "Román Gómez",
+     "countryName": "Argentina",
+     "countryCode": "ARG",
+     "marketValue": 1770352,
+     "unavailability": {
+      "type": "suspension",
+      "expectedReturn": "Late October 2026",
+      "expectedReturnDate": "2026-10-25T02:00:00Z"
+     },
+     "shortName": "R. Gómez",
+     "firstName": "Román",
+     "lastName": "Gómez",
+     "nationalTeamId": 6706
+    },
+    "...3"
+   ],
+   "averageStarterAge": 26.9,
+   "totalStarterMarketValue": 71405893,
+   "lastMatch": {
+    "matchId": 5103672,
+    "homeTeamId": 7877,
+    "awayTeamId": 9770,
+    "homeTeamName": "Bahia",
+    "awayTeamName": "Flamengo",
+    "homeScore": 0,
+    "awayScore": 3,
+    "matchDate": "2026-10-18T23:30:00"
+   }
+  }
+ },
+ "up_stats": "{}",
+ "fin_data/matchDetails?ma": [
   200,
-  481854,
-  " Premier League Lineups: Confirmed & Predicted Starting XIs | RotoWire Featured Betting Prediction Markets DFS Picks &amp; Props NFL Fantasy Top Fantasy Football News Weekly Rankings Who Should I Start? My Leagues NFL Fantasy Football Draft Kit MLB Fantasy My Leagues MLB MLB Starting Lineups MLB Closers Probable Pitchers Top 400 MLB Prospects NBA Fantasy NBA Starting Lineups My Leagues NBA NBA Draft Kit Latest NBA News NBA Injury Report NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports NFL Betting Latest NFL Odds ProBets Anytime Touchdown Prop Tool NFL Picks NFL Super Bowl Odds MLB Betting MLB Futures MLB Picks MLB Player Props MLB Historical Odds NBA"
+  261550,
+  "{\"general\":{\"matchId\":\"5103667\",\"matchName\":\"Corinthians-vs-Vitória_Mon, Oct 19, 2026, 23:00 UTC\",\"matchRound\":\"31\",\"teamColors\":{\"darkMode\":{\"home\":\"#ffffff\",\"away\":\"#FF1000\"},\"lightMode\":{\"home\":\"#2"
  ],
- "rotowire_liga": [
-  200,
-  472378,
-  " La Liga Lineups | RotoWire Soccer Featured Betting Prediction Markets DFS Picks &amp; Props NFL Fantasy Top Fantasy Football News Weekly Rankings Who Should I Start? My Leagues NFL Fantasy Football Draft Kit MLB Fantasy My Leagues MLB MLB Starting Lineups MLB Closers Probable Pitchers Top 400 MLB Prospects NBA Fantasy NBA Starting Lineups My Leagues NBA NBA Draft Kit Latest NBA News NBA Injury Report NHL Soccer Golf College FB College BB WNBA EuroLeague MMA NASCAR F1 Tennis CFL UFL eSports NFL Betting Latest NFL Odds ProBets Anytime Touchdown Prop Tool NFL Picks NFL Super Bowl Odds MLB Betting MLB Futures MLB Picks MLB Player Props MLB Historical Odds NBA Betting NBA Picks Latest NBA Odds N"
+ "fin_content_keys": [
+  "matchFacts",
+  "liveticker",
+  "superlive",
+  "buzz",
+  "stats",
+  "playerStats",
+  "shotmap",
+  "weather",
+  "lineup",
+  "hasPlayoff",
+  "table",
+  "h2h",
+  "momentum",
+  "attackingZones",
+  "heatmapUrl"
  ],
- "sportsgambler": [
-  200,
-  286767,
-  " Football Lineups --> Predictions Football Predictions Premier League Predictions Championship Predictions La Liga Predictions Serie A Predictions Bundesliga Predictions Ligue 1 Predictions MLS Predictions Champions League Predictions Europa League Predictions FIFA World Cup Predictions Basketball Predictions NBA Predictions College Basketball Predictions WNBA Predictions EuroLeague Predictions American Football Predictions NFL Predictions College Football Predictions Baseball Predictions MLB Predictions NPB Predictions KBO League Predictions Ice Hockey Predictions NHL Predictions More Sports Boxing Predictions Cricket Predictions Darts Predictions Esports Predictions Formula 1 Predictions G"
- ],
- "sportsgambler_bra": [
-  200,
-  224607,
-  " Brazil Série A Lineups --> Predictions Football Predictions Premier League Predictions Championship Predictions La Liga Predictions Serie A Predictions Bundesliga Predictions Ligue 1 Predictions MLS Predictions Champions League Predictions Europa League Predictions FIFA World Cup Predictions Basketball Predictions NBA Predictions College Basketball Predictions WNBA Predictions EuroLeague Predictions American Football Predictions NFL Predictions College Football Predictions Baseball Predictions MLB Predictions NPB Predictions KBO League Predictions Ice Hockey Predictions NHL Predictions More Sports Boxing Predictions Cricket Predictions Darts Predictions Esports Predictions Formula 1 Predict"
- ],
- "ge_globo": [
-  200,
-  969866,
-  " Tabela e Jogos do Brasileirão Série A 2026 | ge | brasileirão série a | ge Pular para o conteúdo Brasileirão Série A TIMES Série A Série B Europa classificação simulador S.A.B - BRAHMA vídeos acesse o globopop assine premiere VAR cartola do brasileirão Artilharia Ranking Gols 1 Viveros Atacante 21 2 Pedro Atacante 16 3 Gabriel Atacante 15 4 Carlos Vinícius Atacante 11 Kaio Jorge Atacante 11 5 Danilo Volante 10 Calleri Atacante 10 Luciano Juba Lateral-esquerdo 10 Renê Atacante 10 6 Flaco López Atacante 9 Luciano Atacante 9 John Kennedy Atacante 9 Matheus Pereira Meio-campo 9 Samuel Lino Atacante 9 7 Maurício Meio-campo 8 Breno Lopes Atacante 8 Pedro Rocha Atacante 8 Neymar Meio-campo 8 Jajá "
- ],
- "fotmob_page": [
-  200,
-  1246414,
-  " Série A matches, tables and news 2026 Skip to main content News About TV schedules Série A Série A Brazil Sync to calendar TV schedules Select season 2026 2025 2024 2023 2022 2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 2010 Follow Overview Table Fixtures Player stats Team stats Transfers Seasons ‌ FotMob is the essential football app. Matches News Transfer Center Rumors TV schedules About Careers Advertise with us Lineup Builder FAQ FIFA Rankings Men FIFA Rankings Women Predictor Newsletter Get the app © Copyright 2026 FotMob Terms of use • Cookie policy • Privacy policy • Transparency act statement The use of automatic services (robots, crawler, indexing etc.) as well as other m"
- ],
- "fotmob_api": [
-  200,
-  898487,
-  "{\"tabs\":[\"overview\",\"table\",\"fixtures\",\"stats\",\"transfers\",\"seasons\"],\"allAvailableSeasons\":[\"2026\",\"2025\",\"2024\",\"2023\",\"2022\",\"2021\",\"2020\",\"2019\",\"2018\",\"2017\",\"2016\",\"2015\",\"2014\",\"2013\",\"2012\",\"2011\",\"2010\"],\"details\":{\"id\":268,\"type\":\"league\",\"name\":\"Série A\",\"selectedSeason\":\"2026\",\"latestSeason\":\"2026\",\"shortName\":\"Série A\",\"country\":\"BRA\",\"gender\":\"male\",\"nationalTeamId\":8256,\"faqJSONLD\":null,\"breadcrumbJSONLD\":{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://www.fotmob.com\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Série A\",\"item\":\"https://www.fotmob.com/leagues/268/overview/serie\"}]},\"canSyn"
- ],
- "sofa_app": [
-  200,
-  0,
-  ""
- ],
- "football_lineups": [
-  "ERR",
-  198,
-  "Failed to perform, curl: (35) TLS connect error: error:10000458:SSL routines:OPENSSL_internal:TLSV1_ALERT_UNRECOGNIZED_NAME. See https://curl.se/libcurl/c/libcurl-errors.html first for more details."
- ],
- "sportsmole": [
-  200,
-  439096,
-  " Football - Previews, news, transfer gossip, fixtures, results, stats and live commentaries of games - Sports Mole Live scores Previews Search the website Menu Loading... Sports Mole Latest Football News Preview:&nbsp; West Ham vs Southampton - prediction, team news, lineups Football | NEW Preview:&nbsp; Blackburn vs Wrexham - prediction, team news, lineups Football | NEW Preview:&nbsp; Dundee Utd vs Aberdeen - prediction, team news, lineups Football | NEW Preview:&nbsp; Stoke vs Bristol City - prediction, team news, lineups Football | NEW Today's games Europa League - League Stage ← Dinamo Zagreb Nijmegen 5.45pm Union SG H. Be&#039;er Sheva 5.45pm Lech Poznan Sunderland 5.45pm Sturm Graz Ma"
+ "fin_lineup": {
+  "matchId": 5103667,
+  "lineupType": "standard",
+  "source": "optaSdapi",
+  "availableFilters": [
+   "marketValue",
+   "match",
+   "...4"
+  ],
+  "homeTeam": {
+   "id": 9808,
+   "name": "Corinthians",
+   "rating": 7.2,
+   "formation": "4-2-3-1",
+   "starters": [
+    {
+     "id": 960887,
+     "age": 27,
+     "optaId": "423977",
+     "name": "Hugo Souza",
+     "positionId": 11,
+     "usualPlayingPositionId": 0,
+     "shirtNumber": "1",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "horizontalLayout": {
+      "x": 0.1,
+      "y": 0.5,
+      "height": 0.25,
+      "width": 0.192
+     },
+     "verticalLayout": {
+      "x": 0.5,
+      "y": 0.1,
+      "height": 0.192,
+      "width": 1
+     },
+     "marketValue": 13059775,
+     "performance": {
+      "rating": 7.1
+     },
+     "shortName": "Hugo Souza",
+     "firstName": "Hugo",
+     "lastName": "Souza",
+     "nationalTeamId": 8256,
+     "rankings": null
+    },
+    {
+     "id": 1174660,
+     "age": 26,
+     "optaId": "448423",
+     "name": "Matheuzinho",
+     "positionId": 32,
+     "usualPlayingPositionId": 1,
+     "shirtNumber": "2",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "horizontalLayout": {
+      "x": 0.292,
+      "y": 0.875,
+      "height": 0.25,
+      "width": 0.385
+     },
+     "verticalLayout": {
+      "x": 0.125,
+      "y": 0.292,
+      "height": 0.192,
+      "width": 0.25
+     },
+     "marketValue": 11036188,
+     "performance": {
+      "rating": 7.4
+     },
+     "firstName": "",
+     "lastName": "Matheuzinho",
+     "nationalTeamId": 8256,
+     "rankings": null
+    },
+    "...11"
+   ],
+   "coach": {
+    "id": 0,
+    "age": 40,
+    "optaId": "2",
+    "name": "Leonardo Porto",
+    "countryName": "Brazil",
+    "countryCode": "BRA",
+    "firstName": "Leonardo",
+    "lastName": "Porto",
+    "nationalTeamId": 8256,
+    "primaryTeamId": 9808,
+    "primaryTeamName": "Corinthians",
+    "usualPlayingPositionId": null,
+    "isCoach": true
+   },
+   "subs": [
+    {
+     "id": 1395944,
+     "age": 22,
+     "optaId": "590161",
+     "name": "Kaio",
+     "usualPlayingPositionId": 3,
+     "shirtNumber": "37",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "marketValue": 4351413,
+     "performance": {
+      "rating": 6.1,
+      "substitutionEvents": [
+       "…"
+      ]
+     },
+     "shortName": "K. César",
+     "firstName": "",
+     "lastName": "Kaio",
+     "nationalTeamId": 8256,
+     "rankings": null
+    },
+    {
+     "id": 1130833,
+     "age": 27,
+     "optaId": "483145",
+     "name": "Bidu",
+     "usualPlayingPositionId": 1,
+     "shirtNumber": "21",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "marketValue": 6741866,
+     "performance": {
+      "rating": 6.3,
+      "events": [
+       "…"
+      ],
+      "substitutionEvents": [
+       "…"
+      ]
+     },
+     "shortName": "M. Bidu",
+     "firstName": "",
+     "lastName": "Bidu",
+     "nationalTeamId": 8256,
+     "rankings": null
+    },
+    "...12"
+   ],
+   "averageStarterAge": 29,
+   "totalStarterMarketValue": 87889641
+  },
+  "awayTeam": {
+   "id": 7733,
+   "name": "Vitória",
+   "rating": 6.8,
+   "formation": "4-2-3-1",
+   "starters": [
+    {
+     "id": 1281584,
+     "age": 28,
+     "optaId": "483908",
+     "name": "Lucas Arcanjo",
+     "positionId": 11,
+     "usualPlayingPositionId": 0,
+     "shirtNumber": "1",
+     "isCaptain": true,
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "horizontalLayout": {
+      "x": 0.1,
+      "y": 0.5,
+      "height": 0.25,
+      "width": 0.192
+     },
+     "verticalLayout": {
+      "x": 0.5,
+      "y": 0.1,
+      "height": 0.192,
+      "width": 1
+     },
+     "marketValue": 2044465,
+     "performance": {
+      "rating": 7.8
+     },
+     "shortName": "L. Arcanjo",
+     "firstName": "Lucas",
+     "lastName": "Arcanjo",
+     "nationalTeamId": 8256,
+     "rankings": null
+    },
+    {
+     "id": 1357732,
+     "age": 28,
+     "optaId": "533846",
+     "name": "Mateusinho",
+     "positionId": 32,
+     "usualPlayingPositionId": 1,
+     "shirtNumber": "98",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "horizontalLayout": {
+      "x": 0.292,
+      "y": 0.875,
+      "height": 0.25,
+      "width": 0.192
+     },
+     "verticalLayout": {
+      "x": 0.125,
+      "y": 0.292,
+      "height": 0.192,
+      "width": 0.25
+     },
+     "performance": {
+      "rating": 6.8
+     },
+     "shortName": "M. Silva",
+     "firstName": "",
+     "lastName": "Mateusinho",
+     "nationalTeamId": 8256,
+     "rankings": null
+    },
+    "...11"
+   ],
+   "coach": {
+    "id": 1180949,
+    "age": 47,
+    "optaId": "17",
+    "name": "Jair Ventura",
+    "countryName": "Brazil",
+    "countryCode": "BRA",
+    "shortName": "Jair Ventura",
+    "firstName": "Jair",
+    "lastName": "Ventura",
+    "nationalTeamId": 8256,
+    "primaryTeamId": 7733,
+    "primaryTeamName": "Vitória",
+    "usualPlayingPositionId": null,
+    "isCoach": true
+   },
+   "subs": [
+    {
+     "id": 1637669,
+     "age": 26,
+     "optaId": "654937",
+     "name": "Zé Vitor",
+     "usualPlayingPositionId": 2,
+     "shirtNumber": "88",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "performance": {
+      "rating": 6.3,
+      "substitutionEvents": [
+       "…"
+      ]
+     },
+     "shortName": "Zé Vitor",
+     "firstName": "Zé",
+     "lastName": "Vitor",
+     "nationalTeamId": 8256,
+     "rankings": null
+    },
+    {
+     "id": 1031130,
+     "age": 27,
+     "optaId": "247000",
+     "name": "Lucas Silva",
+     "usualPlayingPositionId": 3,
+     "shirtNumber": "20",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "marketValue": 343468,
+     "performance": {
+      "rating": 6.3,
+      "substitutionEvents": [
+       "…"
+      ]
+     },
+     "shortName": "L. Silva",
+     "firstName": "Lucas",
+     "lastName": "Silva",
+     "nationalTeamId": 8256,
+     "rankings": null
+    },
+    "...12"
+   ],
+   "unavailable": [
+    {
+     "id": 1165259,
+     "age": 26,
+     "name": "Fabiano Souza",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "marketValue": 1144530,
+     "unavailability": {
+      "injuryId": 76,
+      "type": "injury",
+      "expectedReturn": "Out for season"
+     },
+     "shortName": "F. Souza",
+     "firstName": "Fabiano",
+     "lastName": "Souza",
+     "nationalTeamId": 8256
+    },
+    {
+     "id": 1174633,
+     "age": 25,
+     "name": "Ramon",
+     "countryName": "Brazil",
+     "countryCode": "BRA",
+     "marketValue": 2080817,
+     "unavailability": {
+      "injuryId": 74,
+      "type": "injury",
+      "expectedReturn": "Out for season"
+     },
+     "firstName": "",
+     "lastName": "Ramon",
+     "nationalTeamId": 8256
+    },
+    "...4"
+   ],
+   "averageStarterAge": 28.4,
+   "totalStarterMarketValue": 12458629
+  }
+ },
+ "fin_stats": "{\"Periods\": {\"All\": {\"stats\": [{\"title\": \"Top stats\", \"key\": \"top_stats\", \"stats\": [{\"title\": \"Ball possession\", \"key\": \"BallPossesion\", \"stats\": [68, 32], \"rawStats\": [{\"value\": 68}, {\"value\": 32}], \"format\": \"integer\", \"type\": \"graph\", \"highlighted\": \"home\"}, {\"title\": \"Expected goals (xG)\", \"key\": \"expected_goals\", \"stats\": [\"1.56\", \"0.92\"], \"rawStats\": [{\"value\": 1.56}, {\"value\": 0.92}], \"format\": \"double\", \"type\": \"text\", \"highlighted\": \"home\"}, {\"title\": \"Total shots\", \"key\": \"total_shots\", \"stats\": [21, 5], \"rawStats\": [{\"value\": 21}, {\"value\": 5}], \"format\": \"integer\", \"type\": \"text\", \"highlighted\": \"home\"}, {\"title\": \"Shots on target\", \"key\": \"ShotsOnTarget\", \"stats\": [6, 5], \"rawStats\": [{\"value\": 6}, {\"value\": 5}], \"format\": \"integer\", \"type\": \"text\", \"highlighted\": \"home\"}, {\"title\": \"Touches in opposition box\", \"key\": \"touches_opp_box\", \"stats\": [33, 6], \"rawStats\": [{\"value\": 33}, {\"value\": 6}], \"type\": \"text\", \"highlighted\": \"home\"}, {\"title\": \"Big chances\", \"key\": \"big_chance\", \"stats\": [2, 2], \"rawStats\": [{\"value\": 2}, {\"value\": 2}], \"format\": \"integer\", \"type\": \"text\", \"highlighted\": \"equal\"}, {\"title\": \"Big chances missed\", \"key\": \"big_chance_missed_title\", \"stats\": [1, 1], \"rawStats\": [{\"value\": 1}, {\"value\": 1}], \"type\": \"text\", \"highlighted\": \"equal\"}, {\"title\": \"Accurate passes\", \"key\": \"accurate_passes\", \"stats\": [\"555 (89%)\", \"232 (76%)\"], \"rawStats\": [{\"value\": 555, \"total\": 625}, {\"value\": 232, \"total\": 304}], \"format\": \"integerWithPercentage\", \"ty",
+ "fin_playerStats0": "{\"name\": \"Gabriel Paulista\", \"id\": 177503, \"optaId\": \"158074\", \"teamId\": 9808, \"teamName\": \"Corinthians\", \"isGoalkeeper\": false, \"stats\": [{\"title\": \"Top stats\", \"key\": \"top_stats\", \"stats\": {\"FotMob rating\": {\"key\": \"rating_title\", \"stat\": {\"value\": 7.53, \"type\": \"double\"}}, \"Minutes played\": {\"key\": \"minutes_played\", \"stat\": {\"value\": 90, \"type\": \"integer\"}}, \"Goals\": {\"key\": \"goals\", \"stat\": {\"value\": 0, \"type\": \"integer\"}}, \"Assists\": {\"key\": \"assists\", \"stat\": {\"value\": 0, \"type\": \"integer\"}}, \"Expected goals (xG)\": {\"key\": \"expected_goals\", \"stat\": {\"value\": 0.02, \"type\": \"double\"}}, \"Expected goals on target (xGOT)\": {\"key\": \"expected_goals_on_target_variant\", \"stat\": {\"type\": \"double\"}}, \"Expected assists (xA)\": {\"key\": \"expected_assists\", \"stat\": {\"value\": 0.02, \"type\": \"double\"}}, \"xG + xA\": {\"key\": \"xg_and_xa\", \"stat\": {\"value\": 0.04, \"type\": \"double\"}}, \"Total shots\": {\"key\": \"total_shots\", \"stat\": {\"value\": 1, \"type\": \"integer\"}, \"hideInPopupCard\": true}, \"Accurate passes\": {\"key\": \"accurate_passes\", \"stat\": {\"value\": 80, \"total\": 83, \"type\": \"fractionWithPercentage\"}}, \"Chances created\": {\"key\": \"chances_created\", \"stat\": {\"value\": 0, \"type\": \"integer\"}}, \"Shots on target\": {\"key\": \"ShotsOnTarget\", \"stat\": {\"value\": 0, \"type\": \"integer\"}}, \"Shots off target\": {\"key\": \"ShotsOffTarget\", \"stat\": {\"value\": 1, \"type\": \"integer\"}}, \"Shot accuracy\": {\"key\": \"shot_accuracy\", \"stat\": {\"value\": 0, \"total\": 1, \"type\": \"fractionWithPercentage\"}}, \"Shotmap\": {\"key\": null, \"stat\": {\"value\": 1, \"type\": \"boolean\"}}, \"Defensive actions\": {\"key\": \"defensive_actions\", \"stat\": {\"value\": 8, \"type\": \"integer\"}}}}, {\"title\": \"Attack\", \"key\": \"attack\", \"stats\": {\"Touches\": {\"key\": \"touches\", \"stat\": {\"value\": 95, \"type\": \"integer\"}}, \"Touches in opposition box\": {\"key\": \"touches_opp_box\", \"stat\": {\"value\": 2, \"type\": \"integer\"}}, \"Passes into final third\": {\"key\": \"passes_into_final_third\", \"stat\": {\"value\": 9, \"type\": \"integer\"}}, \"Accurate long balls\": {\"key\": \"long_balls_accurate\", \"stat\": {\"value\": 1, \"total\": 1, \"type\": \"fractionWithPercentage\"}}, \"Dispossessed\": {\"key\": \"dispossessed\", \"stat\": {\"value\": 0, \"type\": \"integer\"}}, \"xG Non-penalty\": {\"key\": \"expected_goals_non_penalty\", \"stat\": {\"value\": 0.02, \"type\": \"double\"}}}}, {\"title\": \"Defense\", \"key\": \"defense\", \"stats\": {\"Defensive actions\": {\"key\": \"defensive_actions\", \"stat\": {\"value\": 8, \"type\": \"integer\"}}, \"Tackles\": {\"key\": \"matchstats.headers.tackles\", \"stat\": {\"value\": 1, \"type\": \"integer\"}}, \"Bloc",
+ "sg_santos": "o|Predicted Lineups|15:30|Brazil Série A|Vitória|vs|Athletico PR|Predicted Lineups|17:30|Brazil Série A|Vasco da Gama|vs|Corinthians|Predicted Lineups|17:30|Brazil Série A|Palmeiras|vs|Bragantino|Predicted Lineups|18:30|Brazil Série A|Chapecoense|vs|Fluminense|Predicted Lineups|21:00|Brazil Série A|Santos|vs|Bahia|Predicted Lineups|Monday 26 October|17:30|Brazil Série A|Coritiba|vs|Grêmio|Predicted Lineups|18:00|Brazil Série A|Flamengo|vs|Atlético MG|Predicted Lineups|Wednesday 28 October|17:30|Brazil Série A|Fluminense|vs|Internacional|17:30|Brazil Série A|Santos|vs|Palmeiras|17:30|Brazil Série A|Bragantino|vs|Chapecoense|19:30|Brazil Série A|Bahia|vs|São Paulo|19:30|Brazil Série A|Remo|vs|Botafogo|Thursday 29 October|17:30|Brazil Série A|Atlético MG|vs|Cruzeiro|17:30|Brazil Série A|Coritiba|vs|Vitória|18:00|Brazil Série A|Vasco da Gama|vs|Flamengo|19:30|Brazil Série A|Grêmio|vs|Athletico PR|Friday 30 October|18:00|Brazil Série A|Corinthians|vs|Mirassol|Série A|Predictions|Série A|Injuries|Série A|Fixtures|Série A|Standings|Série A|Transfer News|Série A|Live Streaming|Best Betting Offers|Betting|Sites|Betting|Offers|Betting|School|Prediction|Markets|Online|Casinos|Sweepstakes|Casinos|Previous Brazil Série A Lineups|Monday 19 October|19:00|Brazil Série A|Corinthians|1-1|Vitória|Confirmed Lineups|Sunday 18 October|18:30|Brazil Série A|Remo|1-1|Bragantino|Confirmed Lineups|17:30|Brazil Série A|Bahia|0-3|Flamengo|Confirmed Lineups|15:00|Brazil Série A|Fluminense|1-2|Santos|Confirmed Lineups|15:00|Brazil Série A|Grêmio|2-4|Cruzeiro|Confirmed Lineups|Saturday 17 October|20:00|Brazil Série A|São Paulo|1-0|Vasco da Gama|Confirmed Lineups|18:30|Brazil Série A|Athletico PR|0-2|Palmeiras|Confirmed Lineups|17:30|Brazil Série A|Atlético MG|1-0|Coritiba|Confirmed Lineups|17:00|Brazi",
+ "sg_links": [
+  "/lineups/football/brazil-serie-a/",
+  "/lineups/football/england-premier-league/",
+  "/lineups/football/fifa-world-cup/",
+  "/lineups/football/germany-bundesliga/",
+  "/lineups/football/italy-serie-a/",
+  "/lineups/football/spain-la-liga/",
+  "/lineups/football/uefa-champions-league/"
  ]
 }
