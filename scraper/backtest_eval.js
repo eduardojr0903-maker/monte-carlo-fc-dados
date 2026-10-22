@@ -6,6 +6,7 @@ const MC = new Function(fs.readFileSync(process.argv[2], 'utf8') + ';return MC')
 if (process.argv[4]) Object.assign(MC.PARAMS, JSON.parse(process.argv[4]));
 const HL = process.argv[5] ? Number(process.argv[5]) : 6;
 const N = Number(process.env.SIMS || 3000);
+const dump = process.env.DUMP ? fs.createWriteStream(process.env.DUMP) : null;
 const LN = { 268: 'Série A', 8814: 'Série B', 47: 'Premier League', 48: 'Championship', 87: 'La Liga', 55: 'Serie A IT', 54: 'Bundesliga', 53: 'Ligue 1' };
 const L2 = (p) => Math.log(Math.max(p, 1e-4));
 const devig = (o) => { const inv = o.map((x) => 1 / x), s = inv.reduce((a, b) => a + b, 0); return inv.map((x) => x / s); };
@@ -33,6 +34,7 @@ function cal(acc, k, p, y) { const c = acc.cal[k] || (acc.cal[k] = Array.from({ 
     const pO = s.groups.find((g) => g.id === 'gols').rows.find((r) => r.key === 'G>2.5').p;
     const pB = s.groups.find((g) => g.id === 'btts').rows[0].p;
     const yO = c.m.hg + c.m.ag > 2.5 ? 1 : 0, yB = c.m.hg > 0 && c.m.ag > 0 ? 1 : 0;
+    if (dump) dump.write(JSON.stringify([c.lid, c.season, P, pO, pB, res, yO, yB, c.odds ? c.odds.pin : null, c.odds ? c.odds.ou_pin : null]) + '\n');
     for (const key of ['TODAS', LN[c.lid] || c.lid]) {
       const a = S(key);
       a.nbt++; a.bt -= yB ? L2(pB) : L2(1 - pB);
