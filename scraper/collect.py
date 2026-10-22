@@ -346,6 +346,7 @@ def build(lid, season, cache, upcoming):
     cutoff = {t: sorted(v)[-RECENT_N] if len(v) >= RECENT_N else 0 for t, v in team_ts.items()}
 
     players, posc, shirt, last_ts = {}, {}, {}, {}
+    mins_split = {}  # key -> [start minutes, starts, sub minutes, sub apps]
     for r in recs:
         hi, ai = tidx[r["h"]], tidx[r["a"]]
         for p in r["p"]:
@@ -357,6 +358,11 @@ def build(lid, season, cache, upcoming):
             if len(p) > 10 and p[10]:
                 row[18] = p[10]
             last_ts[key] = r["ts"]
+            ms = mins_split.setdefault(key, [0, 0, 0, 0])
+            if p[4]:
+                ms[0] += p[5]; ms[1] += 1
+            else:
+                ms[2] += p[5]; ms[3] += 1
             for k, v in enumerate([1, p[4], p[5], p[6], p[7], p[8], p[9]]):
                 row[4 + k] += v
                 if r["ts"] >= cutoff.get(ti, 0):
@@ -407,6 +413,9 @@ def build(lid, season, cache, upcoming):
             row[3] = max(posc[key].items(), key=lambda kv: kv[1])[0]
         row[9] = round(row[9], 2)
         row[16] = round(row[16], 2)
+        ms = mins_split.get(key, [0, 0, 0, 0])
+        # average minutes in this competition: as a starter, and when coming off the bench
+        row[19:21] = [round(ms[0] / ms[1]) if ms[1] else 0, round(ms[2] / ms[3]) if ms[3] else 0]
     rows = sorted(players.values(), key=lambda x: (x[2], -x[6]))
     has_xg = any(m[7] >= 0 for m in matches)
     logos = {}
