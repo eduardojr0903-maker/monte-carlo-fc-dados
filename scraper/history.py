@@ -50,7 +50,8 @@ def collect(lid, lg, fm, team_stats, cache_dir, budget, delay):
     data = {}
     for season in past_seasons(lg):
         path = os.path.join(cache_dir, f"{lid}_{season.replace('/', '-')}.json")
-        c = _load(path) or {"fixtures": None, "m": {}}
+        full = os.path.join(cache_dir + "_full", f"{lid}_{season.replace('/', '-')}.json")
+        c = _load(full) or _load(path) or {"fixtures": None, "m": {}}
         if c["fixtures"] is None:
             s_lg = fm("leagues", id=lid, season=season.replace("/", "%2F"))
             fx = []
