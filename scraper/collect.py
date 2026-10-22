@@ -172,10 +172,12 @@ def sportsgambler(mid):
     txt = re.sub(r"<script.*?</script>|<style.*?</style>", " ", t, flags=re.S)
     txt = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "|", txt))
     kind = "confirmed" if re.search(r"Confirmed Lineup", txt) else "predicted"
+    forms = re.findall(r"(?:Predicted|Confirmed) Lineup\|[ |]*(\d(?:-\d){2,4})", txt)
     pairs = re.findall(r"\|(\d{1,3})\| \|([^|]{2,40}?)\|", txt)
     if len(pairs) < 22:
         return None
-    return kind, [[n, nm.strip()] for n, nm in pairs[:11]], [[n, nm.strip()] for n, nm in pairs[11:22]]
+    forms = (forms + [None, None])[:2]
+    return kind, [[n, nm.strip()] for n, nm in pairs[:11]], [[n, nm.strip()] for n, nm in pairs[11:22]], forms
 
 
 def resolve(entries, squad):
@@ -255,13 +257,16 @@ def collect_league(lid, budget):
         lu = ((d or {}).get("content") or {}).get("lineup") or {}
         fx = {"id": str(m["id"]), "ts": ts_of(stt["utcTime"]), "h": str(m["home"]["id"]), "a": str(m["away"]["id"]),
               "hn": m["home"].get("shortName") or m["home"]["name"], "an": m["away"].get("shortName") or m["away"]["name"],
-              "src": None, "xi": [[], []], "out": [[], []], "squad": [{}, {}]}
+              "src": None, "xi": [[], []], "out": [[], []], "squad": [{}, {}], "form": [None, None], "coords": [None, None]}
         lt = lu.get("lineupType")
         has_xi = bool((lu.get("homeTeam") or {}).get("starters"))
         fx["src"] = {"standard": "confirmed", "predicted": "fotmob_predicted", "lastStarting11": "last_xi"}.get(lt) if has_xi else None
         for i, k in enumerate(("homeTeam", "awayTeam")):
             side = lu.get(k) or {}
             fx["xi"][i] = [str(p["id"]) for p in side.get("starters") or []]
+            fx["form"][i] = side.get("formation")
+            co = [[round((p.get("verticalLayout") or {}).get("x", -1), 3), round((p.get("verticalLayout") or {}).get("y", -1), 3)] for p in side.get("starters") or []]
+            fx["coords"][i] = co if co and all(c[0] >= 0 and c[1] >= 0 for c in co) else None
             fx["squad"][i] = lineup_people(side)
             for p in side.get("unavailable") or []:
                 u = p.get("unavailability") or {}
@@ -273,6 +278,35 @@ def collect_league(lid, budget):
                 fx["sg"] = sg
         upcoming.append(fx)
     return lg, season, cache, upcoming, new
+
+
+LOGO_DIR = os.path.join(ROOT, "data", "cache", "logos")
+
+
+def logo(team_id):
+    """Club crest as a small data URI (the app cannot load images from other sites)."""
+    path = os.path.join(LOGO_DIR, f"{team_id}.txt")
+    if os.path.exists(path):
+        return open(path).read().strip() or None
+    uri = ""
+    try:
+        import base64
+        import io
+        from PIL import Image
+        r = SESSION.get(f"https://images.fotmob.com/image_resources/logo/teamlogo/{team_id}.png", timeout=30)
+        if r.status_code == 200:
+            im = Image.open(io.BytesIO(r.content)).convert("RGBA")
+            im.thumbnail((64, 64), Image.LANCZOS)
+            buf = io.BytesIO()
+            im.save(buf, "WEBP", quality=82, method=6)
+            uri = "data:image/webp;base64," + base64.b64encode(buf.getvalue()).decode()
+        time.sleep(0.3)
+    except Exception as e:  # noqa: BLE001
+        print("  logo", team_id, e, flush=True)
+    os.makedirs(LOGO_DIR, exist_ok=True)
+    with open(path, "w") as fh:
+        fh.write(uri)
+    return uri or None
 
 
 def _save(path, cache):
@@ -346,21 +380,27 @@ def build(lid, season, cache, upcoming):
             for (pid, t2), row in players.items():
                 if t2 == ti and pid not in squad:
                     squad[pid] = {"name": row[1], "shirt": row[18]}
-            pred = None
+            pred, form, coords = None, fx["form"][i], fx["coords"][i]
             if fx.get("sg"):
-                kind, h_xi, a_xi = fx["sg"]
+                kind, h_xi, a_xi, forms = fx["sg"]
                 ids = resolve(h_xi if i == 0 else a_xi, squad)
-                for x in ids:
+                sg_form = forms[i] or form
+                lines = [1] + [int(x) for x in (sg_form or "4-3-3").split("-")]
+                slot_pos = []
+                for li, cnt in enumerate(lines):
+                    slot_pos += [("G" if li == 0 else "D" if li == 1 else "F" if li == len(lines) - 1 else "M")] * cnt
+                for k, x in enumerate(ids):
                     if x.startswith("n:") and (x, ti) not in players:
-                        players[(x, ti)] = [x, x[2:], ti, "M"] + [0] * 14 + [""]
-                pred = ids
-            sides.append({"xi": fx["xi"][i], "pred": pred, "out": fx["out"][i]})
+                        players[(x, ti)] = [x, x[2:], ti, slot_pos[k] if k < len(slot_pos) else "M"] + [0] * 14 + [""]
+                pred, form, coords = ids, sg_form, None
+            sides.append({"xi": fx["xi"][i], "pred": pred, "out": fx["out"][i], "form": form, "coords": coords})
         src = fx["src"]
         if src != "confirmed" and fx.get("sg"):
             src = "sg_" + fx["sg"][0]
         nexts.append([fx["id"], fx["ts"], tidx[fx["h"]], tidx[fx["a"]], src,
                       sides[0]["pred"] or sides[0]["xi"], sides[1]["pred"] or sides[1]["xi"],
-                      sides[0]["out"], sides[1]["out"], sides[0]["xi"], sides[1]["xi"]])
+                      sides[0]["out"], sides[1]["out"], sides[0]["xi"], sides[1]["xi"],
+                      [sides[0]["form"], sides[1]["form"]], [sides[0]["coords"], sides[1]["coords"]]])
 
     for key, row in players.items():
         if key in posc:
@@ -369,19 +409,24 @@ def build(lid, season, cache, upcoming):
         row[16] = round(row[16], 2)
     rows = sorted(players.values(), key=lambda x: (x[2], -x[6]))
     has_xg = any(m[7] >= 0 for m in matches)
+    logos = {}
+    for tid, _n in teams:
+        u = logo(tid)
+        if u:
+            logos[tid] = u
     return doc_id, {
         "v": 3, "comp": int(doc_id[1:]), "name": name, "season": season,
         "source": "fotmob.com" + (" + sportsgambler.com" if any(f.get("sg") for f in upcoming) else ""),
         "hasXg": has_xg, "recentN": RECENT_N,
         "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "teams": teams, "matches": matches, "players": rows, "next": nexts,
+        "teams": teams, "matches": matches, "players": rows, "next": nexts, "logos": logos,
     }
 
 
 def write_doc(doc_id, doc):
     """Rows are packed into one JSON string field ("pack"): the app's database caps a document at 256 KiB."""
     os.makedirs(OUT, exist_ok=True)
-    keys = ("teams", "matches", "players", "next")
+    keys = ("teams", "matches", "players", "next", "logos")
     out = {k: v for k, v in doc.items() if k not in keys}
     out["pack"] = json.dumps({k: doc[k] for k in keys}, ensure_ascii=False, separators=(",", ":"))
     path = os.path.join(OUT, f"{doc_id}.json")
