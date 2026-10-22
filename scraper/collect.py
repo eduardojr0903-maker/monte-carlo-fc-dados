@@ -41,6 +41,7 @@ LEAGUES = {
     55: ("s23", "Serie A (Itália)", True),
     54: ("s35", "Bundesliga", True),
     53: ("s34", "Ligue 1", True),
+    48: ("s18", "Championship", True),
 }
 POS = {0: "G", 1: "D", 2: "M", 3: "F"}
 
