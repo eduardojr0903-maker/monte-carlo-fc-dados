@@ -1,0 +1,290 @@
+{
+ "400256": [
+  200,
+  [
+   "id",
+   "name",
+   "birthDate",
+   "isCoach",
+   "isCaptain",
+   "gender",
+   "primaryTeam",
+   "positionDescription",
+   "injuryInformation",
+   "internationalDuty",
+   "playerInformation",
+   "mainLeague",
+   "trophies",
+   "recentMatches",
+   "matchesUrl",
+   "matchFilters",
+   "careerHistory",
+   "traits",
+   "meta",
+   "coachStats",
+   "statSeasons",
+   "firstSeasonStats",
+   "status",
+   "marketValues",
+   "relatedLinksData",
+   "nextMatch",
+   "dataProvider",
+   "initialMatchesPage"
+  ],
+  {
+   "positions": [
+    {
+     "strPos": {
+      "label": "Right Back",
+      "key": "rightback"
+     },
+     "strPosShort": {
+      "label": "RB",
+      "key": "rightback_short"
+     },
+     "occurences": 25,
+     "position": "32",
+     "isMainPosition": true,
+     "pitchPositionData": {
+      "right": 0.83,
+      "top": 0.74
+     }
+    },
+    {
+     "strPos": {
+      "label": "Right Wing-Back",
+      "key": "right_wing_back"
+     },
+     "strPosShort": {
+      "label": "RWB",
+      "key": "right_wing_back_short"
+     },
+     "occurences": 1,
+     "position": "62",
+     "isMainPosition": false,
+     "pitchPositionData": null
+    },
+    {
+     "strPos": {
+      "label": "Right Winger",
+      "key": "rightwinger"
+     },
+     "strPosShort": {
+      "label": "RW",
+      "key": "rightwinger_short"
+     },
+     "occurences": 9,
+     "position": "83",
+     "isMainPosition": false,
+     "pitchPositionData": {
+      "right": 0.83,
+      "top": 0.26,
+      "ratio": 0.45714285714285713
+     }
+    }
+   ],
+   "primaryPosition": {
+    "label": "Right Back",
+    "key": "rightback"
+   },
+   "nonPrimaryPositions": [
+    {
+     "label": "Right Winger",
+     "key": "rightwinger"
+    }
+   ]
+  }
+ ],
+ "528348": [
+  200,
+  [
+   "id",
+   "name",
+   "birthDate",
+   "isCoach",
+   "isCaptain",
+   "gender",
+   "primaryTeam",
+   "positionDescription",
+   "injuryInformation",
+   "internationalDuty",
+   "playerInformation",
+   "mainLeague",
+   "trophies",
+   "recentMatches",
+   "matchesUrl",
+   "matchFilters",
+   "careerHistory",
+   "traits",
+   "meta",
+   "coachStats",
+   "statSeasons",
+   "firstSeasonStats",
+   "status",
+   "marketValues",
+   "relatedLinksData",
+   "nextMatch",
+   "dataProvider",
+   "initialMatchesPage"
+  ],
+  {
+   "positions": [
+    {
+     "strPos": {
+      "label": "Left Wing-Back",
+      "key": "left_wing_back"
+     },
+     "strPosShort": {
+      "label": "LWB",
+      "key": "left_wing_back_short"
+     },
+     "occurences": 1,
+     "position": "68",
+     "isMainPosition": false,
+     "pitchPositionData": null
+    },
+    {
+     "strPos": {
+      "label": "Left Midfielder",
+      "key": "leftmidfielder"
+     },
+     "strPosShort": {
+      "label": "LM",
+      "key": "leftmidfielder_short"
+     },
+     "occurences": 1,
+     "position": "78",
+     "isMainPosition": false,
+     "pitchPositionData": null
+    },
+    {
+     "strPos": {
+      "label": "Left Winger",
+      "key": "leftwinger"
+     },
+     "strPosShort": {
+      "label": "LW",
+      "key": "leftwinger_short"
+     },
+     "occurences": 13,
+     "position": "87",
+     "isMainPosition": true,
+     "pitchPositionData": {
+      "right": 0.17,
+      "top": 0.26
+     }
+    }
+   ],
+   "primaryPosition": {
+    "label": "Left Winger",
+    "key": "leftwinger"
+   },
+   "nonPrimaryPositions": []
+  }
+ ],
+ "19533": [
+  200,
+  [
+   "id",
+   "name",
+   "birthDate",
+   "contractEnd",
+   "isCoach",
+   "isCaptain",
+   "gender",
+   "primaryTeam",
+   "positionDescription",
+   "injuryInformation",
+   "internationalDuty",
+   "playerInformation",
+   "mainLeague",
+   "trophies",
+   "recentMatches",
+   "matchesUrl",
+   "matchFilters",
+   "careerHistory",
+   "traits",
+   "meta",
+   "coachStats",
+   "statSeasons",
+   "firstSeasonStats",
+   "status",
+   "marketValues",
+   "relatedLinksData",
+   "nextMatch",
+   "dataProvider",
+   "initialMatchesPage"
+  ],
+  {
+   "positions": [
+    {
+     "strPos": {
+      "label": "Attacking Midfielder",
+      "key": "centerattackingmidfielder"
+     },
+     "strPosShort": {
+      "label": "AM",
+      "key": "centerattackingmidfielder_short"
+     },
+     "occurences": 18,
+     "position": "85",
+     "isMainPosition": true,
+     "pitchPositionData": {
+      "right": 0.5,
+      "top": 0.26
+     }
+    },
+    {
+     "strPos": {
+      "label": "Left Winger",
+      "key": "leftwinger"
+     },
+     "strPosShort": {
+      "label": "LW",
+      "key": "leftwinger_short"
+     },
+     "occurences": 2,
+     "position": "87",
+     "isMainPosition": false,
+     "pitchPositionData": {
+      "right": 0.17,
+      "top": 0.26,
+      "ratio": 0.27142857142857146
+     }
+    },
+    {
+     "strPos": {
+      "label": "Striker",
+      "key": "striker"
+     },
+     "strPosShort": {
+      "label": "ST",
+      "key": "striker_short"
+     },
+     "occurences": 8,
+     "position": "104",
+     "isMainPosition": false,
+     "pitchPositionData": {
+      "right": 0.5,
+      "top": 0.1,
+      "ratio": 0.4857142857142857
+     }
+    }
+   ],
+   "primaryPosition": {
+    "label": "Attacking Midfielder",
+    "key": "centerattackingmidfielder"
+   },
+   "nonPrimaryPositions": [
+    {
+     "label": "Left Winger",
+     "key": "leftwinger"
+    },
+    {
+     "label": "Striker",
+     "key": "striker"
+    }
+   ]
+  }
+ ]
+}
