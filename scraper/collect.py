@@ -256,7 +256,8 @@ def collect_league(lid, budget):
               "hn": m["home"].get("shortName") or m["home"]["name"], "an": m["away"].get("shortName") or m["away"]["name"],
               "src": None, "xi": [[], []], "out": [[], []], "squad": [{}, {}]}
         lt = lu.get("lineupType")
-        fx["src"] = {"standard": "confirmed", "predicted": "fotmob_predicted", "lastStarting11": "last_xi"}.get(lt, lt)
+        has_xi = bool((lu.get("homeTeam") or {}).get("starters"))
+        fx["src"] = {"standard": "confirmed", "predicted": "fotmob_predicted", "lastStarting11": "last_xi"}.get(lt) if has_xi else None
         for i, k in enumerate(("homeTeam", "awayTeam")):
             side = lu.get(k) or {}
             fx["xi"][i] = [str(p["id"]) for p in side.get("starters") or []]
