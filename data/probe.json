@@ -1,290 +1,285 @@
 {
- "400256": [
-  200,
-  [
-   "id",
-   "name",
-   "birthDate",
-   "isCoach",
-   "isCaptain",
-   "gender",
-   "primaryTeam",
-   "positionDescription",
-   "injuryInformation",
-   "internationalDuty",
-   "playerInformation",
-   "mainLeague",
-   "trophies",
-   "recentMatches",
-   "matchesUrl",
-   "matchFilters",
-   "careerHistory",
-   "traits",
-   "meta",
-   "coachStats",
-   "statSeasons",
-   "firstSeasonStats",
-   "status",
-   "marketValues",
-   "relatedLinksData",
-   "nextMatch",
-   "dataProvider",
-   "initialMatchesPage"
-  ],
+ "shotmap_keys": [
+  "shots",
+  "Periods"
+ ],
+ "n_shots": 26,
+ "shot0": {
+  "id": 2984802017,
+  "eventType": "AttemptSaved",
+  "teamId": 7733,
+  "playerId": 1607054,
+  "playerName": "Diego Tarzia",
+  "x": 74.714077672,
+  "y": 42.813125,
+  "min": 1,
+  "minAdded": null,
+  "isBlocked": false,
+  "isOnTarget": true,
+  "blockedX": 103.6724137932,
+  "blockedY": 34.533750000000005,
+  "goalCrossedY": 31.48375,
+  "goalCrossedZ": 0.8154736802,
+  "expectedGoals": 0.014068144373595715,
+  "expectedGoalsOnTarget": 0.05532329902052879,
+  "shotType": "LeftFoot",
+  "situation": "RegularPlay",
+  "period": "FirstHalf",
+  "isOwnGoal": false,
+  "onGoalShot": {
+   "x": 1.665674603174603,
+   "y": 0.2157337778306878,
+   "zoomRatio": 1
+  },
+  "isSavedOffLine": false,
+  "isFromInsideBox": false,
+  "keeperId": 960887,
+  "firstName": "Diego",
+  "lastName": "Tarzia",
+  "fullName": "Diego Tarzia",
+  "teamColor": "#B81808"
+ },
+ "situations": [
+  "FastBreak",
+  "FreeKick",
+  "FromCorner",
+  "Penalty",
+  "RegularPlay"
+ ],
+ "eventTypes": [
+  "AttemptSaved",
+  "Goal",
+  "Miss"
+ ],
+ "mf_keys": [
+  "matchId",
+  "highlights",
+  "playerOfTheMatch",
+  "events",
+  "infoBox",
+  "teamForm",
+  "poll",
+  "topPlayers",
+  "momentum",
+  "countryCode",
+  "QAData"
+ ],
+ "ev_types": [
+  "AddedTime",
+  "Card",
+  "Comment",
+  "Goal",
+  "Half",
+  "Substitution"
+ ],
+ "ev_card": [
   {
-   "positions": [
-    {
-     "strPos": {
-      "label": "Right Back",
-      "key": "rightback"
-     },
-     "strPosShort": {
-      "label": "RB",
-      "key": "rightback_short"
-     },
-     "occurences": 25,
-     "position": "32",
-     "isMainPosition": true,
-     "pitchPositionData": {
-      "right": 0.83,
-      "top": 0.74
-     }
-    },
-    {
-     "strPos": {
-      "label": "Right Wing-Back",
-      "key": "right_wing_back"
-     },
-     "strPosShort": {
-      "label": "RWB",
-      "key": "right_wing_back_short"
-     },
-     "occurences": 1,
-     "position": "62",
-     "isMainPosition": false,
-     "pitchPositionData": null
-    },
-    {
-     "strPos": {
-      "label": "Right Winger",
-      "key": "rightwinger"
-     },
-     "strPosShort": {
-      "label": "RW",
-      "key": "rightwinger_short"
-     },
-     "occurences": 9,
-     "position": "83",
-     "isMainPosition": false,
-     "pitchPositionData": {
-      "right": 0.83,
-      "top": 0.26,
-      "ratio": 0.45714285714285713
-     }
-    }
-   ],
-   "primaryPosition": {
-    "label": "Right Back",
-    "key": "rightback"
+   "reactKey": "053Card1605930undefinedfalse",
+   "timeStr": 53,
+   "type": "Card",
+   "time": 53,
+   "overloadTime": null,
+   "eventId": 0,
+   "highlight": {
+    "id": 2214312,
+    "eventId": 0,
+    "elapsed": "",
+    "title": "YURI CRAVA EM 1º PÊNALTI DO TIMÃO NO BR26, MAS CONTINUA NA BEIRA DA ZONA | CORINTHIANS 1X1 VITÓRIA",
+    "image": "https://i.ytimg.com/vi/N_2iSdJceHM/maxresdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=N_2iSdJceHM",
+    "source": "www.youtube.com",
+    "eventType": "1"
    },
-   "nonPrimaryPositions": [
-    {
-     "label": "Right Winger",
-     "key": "rightwinger"
-    }
-   ]
+   "player": {
+    "id": 1605930,
+    "name": "Renê",
+    "profileUrl": "/players/1605930/rene"
+   },
+   "homeScore": 0,
+   "awayScore": 1,
+   "profileUrl": "/players/1605930/rene",
+   "overloadTimeStr": false,
+   "isHome": false,
+   "nameStr": "Renê",
+   "firstName": "",
+   "lastName": "Renê",
+   "fullName": "Renê",
+   "playerId": 1605930,
+   "card": "Yellow",
+   "cardDescription": null,
+   "cardReason": {
+    "localizedKey": "card_desc_foul",
+    "defaultText": "Foul"
+   }
+  },
+  {
+   "reactKey": "090Card1093746undefinedtrue",
+   "timeStr": "90 + 13",
+   "type": "Card",
+   "time": 90,
+   "overloadTime": 13,
+   "eventId": 0,
+   "highlight": {
+    "id": 2214312,
+    "eventId": 0,
+    "elapsed": "",
+    "title": "YURI CRAVA EM 1º PÊNALTI DO TIMÃO NO BR26, MAS CONTINUA NA BEIRA DA ZONA | CORINTHIANS 1X1 VITÓRIA",
+    "image": "https://i.ytimg.com/vi/N_2iSdJceHM/maxresdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=N_2iSdJceHM",
+    "source": "www.youtube.com",
+    "eventType": "1"
+   },
+   "player": {
+    "id": 1093746,
+    "name": "Rodrigo Garro",
+    "profileUrl": "/players/1093746/rodrigo-garro"
+   },
+   "homeScore": 1,
+   "awayScore": 1,
+   "profileUrl": "/players/1093746/rodrigo-garro",
+   "overloadTimeStr": "+13",
+   "isHome": true,
+   "nameStr": "Rodrigo Garro",
+   "firstName": "Rodrigo",
+   "lastName": "Garro",
+   "fullName": "Rodrigo Garro",
+   "shortName": "R. Garro",
+   "playerId": 1093746,
+   "card": "Yellow",
+   "cardDescription": null,
+   "cardReason": {
+    "localizedKey": "card_desc_dissent",
+    "defaultText": "Dissent"
+   }
   }
  ],
- "528348": [
-  200,
-  [
-   "id",
-   "name",
-   "birthDate",
-   "isCoach",
-   "isCaptain",
-   "gender",
-   "primaryTeam",
-   "positionDescription",
-   "injuryInformation",
-   "internationalDuty",
-   "playerInformation",
-   "mainLeague",
-   "trophies",
-   "recentMatches",
-   "matchesUrl",
-   "matchFilters",
-   "careerHistory",
-   "traits",
-   "meta",
-   "coachStats",
-   "statSeasons",
-   "firstSeasonStats",
-   "status",
-   "marketValues",
-   "relatedLinksData",
-   "nextMatch",
-   "dataProvider",
-   "initialMatchesPage"
-  ],
+ "ev_goal": [
   {
-   "positions": [
-    {
-     "strPos": {
-      "label": "Left Wing-Back",
-      "key": "left_wing_back"
-     },
-     "strPosShort": {
-      "label": "LWB",
-      "key": "left_wing_back_short"
-     },
-     "occurences": 1,
-     "position": "68",
-     "isMainPosition": false,
-     "pitchPositionData": null
-    },
-    {
-     "strPos": {
-      "label": "Left Midfielder",
-      "key": "leftmidfielder"
-     },
-     "strPosShort": {
-      "label": "LM",
-      "key": "leftmidfielder_short"
-     },
-     "occurences": 1,
-     "position": "78",
-     "isMainPosition": false,
-     "pitchPositionData": null
-    },
-    {
-     "strPos": {
-      "label": "Left Winger",
-      "key": "leftwinger"
-     },
-     "strPosShort": {
-      "label": "LW",
-      "key": "leftwinger_short"
-     },
-     "occurences": 13,
-     "position": "87",
-     "isMainPosition": true,
-     "pitchPositionData": {
-      "right": 0.17,
-      "top": 0.26
-     }
-    }
-   ],
-   "primaryPosition": {
-    "label": "Left Winger",
-    "key": "leftwinger"
+   "reactKey": "045Goal1605930undefinedfalse",
+   "timeStr": "45 + 1",
+   "type": "Goal",
+   "time": 45,
+   "overloadTime": 1,
+   "eventId": 0,
+   "highlight": {
+    "id": 2214312,
+    "eventId": 0,
+    "elapsed": "",
+    "title": "YURI CRAVA EM 1º PÊNALTI DO TIMÃO NO BR26, MAS CONTINUA NA BEIRA DA ZONA | CORINTHIANS 1X1 VITÓRIA",
+    "image": "https://i.ytimg.com/vi/N_2iSdJceHM/maxresdefault.jpg",
+    "url": "https://www.youtube.com/watch?v=N_2iSdJceHM",
+    "source": "www.youtube.com",
+    "eventType": "1"
    },
-   "nonPrimaryPositions": []
+   "player": {
+    "id": 1605930,
+    "name": "Renê",
+    "profileUrl": "/players/1605930/rene"
+   },
+   "homeScore": 0,
+   "awayScore": 0,
+   "profileUrl": "/players/1605930/rene",
+   "overloadTimeStr": "+1",
+   "isHome": false,
+   "ownGoal": null,
+   "goalDescription": null,
+   "goalDescriptionKey": null,
+   "suffix": null,
+   "suffixKey": null,
+   "isPenaltyShootoutEvent": false,
+   "nameStr": "Renê",
+   "firstName": "",
+   "lastName": "Renê",
+   "fullName": "Renê",
+   "playerId": 1605930,
+   "newScore": [
+    0,
+    1
+   ],
+   "penShootoutScore": null,
+   "shotmapEvent": {
+    "id": 2984818291,
+    "eventType": "Goal",
+    "teamId": 7733,
+    "playerId": 1605930,
+    "playerName": "Renê",
+    "x": 102.4396551726,
+    "y": 34.68625,
+    "min": 45,
+    "minAdded": 1,
+    "isBlocked": false,
+    "isOnTarget": true,
+    "blockedX": null,
+    "blockedY": null,
+    "goalCrossedY": 34.838750000000005,
+    "goalCrossedZ": 0.2439999988,
+    "expectedGoals": 0.8259783387184143,
+    "expectedGoalsOnTarget": 0.9396880269050598,
+    "shotType": "LeftFoot",
+    "situation": "FromCorner",
+    "period": "FirstHalf",
+    "isOwnGoal": false,
+    "onGoalShot": {
+     "x": 0.7781084656084645,
+     "y": 0.06455026423280423,
+     "zoomRatio": 1
+    },
+    "isSavedOffLine": false,
+    "isFromInsideBox": true,
+    "keeperId": 960887,
+    "firstName": "",
+    "lastName": "Renê",
+    "fullName": "Renê",
+    "teamColor": "#B81808"
+   },
+   "assistStr": null,
+   "assistProfileUrl": null
   }
  ],
- "19533": [
-  200,
-  [
-   "id",
-   "name",
-   "birthDate",
-   "contractEnd",
-   "isCoach",
-   "isCaptain",
-   "gender",
-   "primaryTeam",
-   "positionDescription",
-   "injuryInformation",
-   "internationalDuty",
-   "playerInformation",
-   "mainLeague",
-   "trophies",
-   "recentMatches",
-   "matchesUrl",
-   "matchFilters",
-   "careerHistory",
-   "traits",
-   "meta",
-   "coachStats",
-   "statSeasons",
-   "firstSeasonStats",
-   "status",
-   "marketValues",
-   "relatedLinksData",
-   "nextMatch",
-   "dataProvider",
-   "initialMatchesPage"
-  ],
-  {
-   "positions": [
-    {
-     "strPos": {
-      "label": "Attacking Midfielder",
-      "key": "centerattackingmidfielder"
-     },
-     "strPosShort": {
-      "label": "AM",
-      "key": "centerattackingmidfielder_short"
-     },
-     "occurences": 18,
-     "position": "85",
-     "isMainPosition": true,
-     "pitchPositionData": {
-      "right": 0.5,
-      "top": 0.26
-     }
-    },
-    {
-     "strPos": {
-      "label": "Left Winger",
-      "key": "leftwinger"
-     },
-     "strPosShort": {
-      "label": "LW",
-      "key": "leftwinger_short"
-     },
-     "occurences": 2,
-     "position": "87",
-     "isMainPosition": false,
-     "pitchPositionData": {
-      "right": 0.17,
-      "top": 0.26,
-      "ratio": 0.27142857142857146
-     }
-    },
-    {
-     "strPos": {
-      "label": "Striker",
-      "key": "striker"
-     },
-     "strPosShort": {
-      "label": "ST",
-      "key": "striker_short"
-     },
-     "occurences": 8,
-     "position": "104",
-     "isMainPosition": false,
-     "pitchPositionData": {
-      "right": 0.5,
-      "top": 0.1,
-      "ratio": 0.4857142857142857
-     }
-    }
-   ],
-   "primaryPosition": {
-    "label": "Attacking Midfielder",
-    "key": "centerattackingmidfielder"
-   },
-   "nonPrimaryPositions": [
-    {
-     "label": "Left Winger",
-     "key": "leftwinger"
-    },
-    {
-     "label": "Striker",
-     "key": "striker"
-    }
-   ]
-  }
- ]
+ "general_keys": [
+  "matchId",
+  "matchName",
+  "matchRound",
+  "teamColors",
+  "leagueId",
+  "leagueName",
+  "leagueRoundName",
+  "parentLeagueId",
+  "countryCode",
+  "homeTeam",
+  "awayTeam",
+  "coverageLevel",
+  "matchTimeUTC",
+  "matchTimeUTCDate",
+  "started",
+  "finished",
+  "gender"
+ ],
+ "header_status": {
+  "utcTime": "2026-10-19T23:00:00.000Z",
+  "numberOfHomeRedCards": 0,
+  "numberOfAwayRedCards": 0,
+  "halfs": {
+   "firstHalfStarted": "20.10.2026 01:03:34",
+   "firstHalfEnded": "20.10.2026 01:51:33",
+   "secondHalfStarted": "20.10.2026 02:08:05",
+   "secondHalfEnded": "20.10.2026 03:05:10",
+   "firstExtraHalfStarted": "",
+   "secondExtraHalfStarted": "",
+   "gameEnded": "20.10.2026 03:05:10"
+  },
+  "finished": true,
+  "started": true,
+  "cancelled": false,
+  "awarded": false,
+  "scoreStr": "1 - 1",
+  "reason": {
+   "short": "FT",
+   "shortKey": "fulltime_short",
+   "long": "Full-Time",
+   "longKey": "finished"
+  },
+  "whoLostOnPenalties": null,
+  "whoLostOnAggregated": ""
+ }
 }
