@@ -1,0 +1,51 @@
+name: Histórico de escanteios
+on:
+  workflow_dispatch:
+  push:
+    paths: [".github/workflows/corners.yml", "scraper/corners.py"]
+permissions:
+  contents: write
+jobs:
+  league:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        lid: [268, 8814, 47, 48, 87, 55, 54, 53]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r scraper/requirements.txt
+      - run: python scraper/corners.py ${{ matrix.lid }}
+        env: { DELAY: "0.4" }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: corners-${{ matrix.lid }}
+          path: data/cache/corners/${{ matrix.lid }}_*.json
+  save:
+    needs: league
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - name: Salvar
+        run: |
+          git config user.name "monte-carlo-fc-bot"
+          git config user.email "monte-carlo-fc-bot@users.noreply.github.com"
+          mkdir -p data/cache/corners
+          for i in 1 2 3 4 5; do
+            git pull --rebase -X ours origin main || git rebase --abort
+            find artifacts -name '*.json' -exec cp {} data/cache/corners/ \;
+            git add data/cache/corners
+            git diff --cached --quiet && exit 0
+            git commit -m "Histórico de escanteios (jogo e 1º tempo)"
+            git push && exit 0
+            sleep 10
+          done
+          exit 1
