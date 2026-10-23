@@ -26,6 +26,8 @@ import unicodedata
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import history  # noqa: E402
 import rich  # noqa: E402
+import ratings  # noqa: E402
+import lineup_strength  # noqa: E402
 from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -379,7 +381,55 @@ def _save(path, cache):
 
 
 # ------------------------------------------------------------------ build
-def build(lid, season, cache, upcoming, hist=None):
+RICH_DIR = os.path.join(ROOT, "data", "cache", "rich")
+FULL_DIR = HIST_CACHE + "_full"
+RAT_HALF_LIFE, RAT_K = 240.0, 6.0  # chosen by backtest
+
+
+def model_v2(lid, hist, tids):
+    """Opponent-adjusted ratings (as of now) and per-player lineup strength from the detailed history."""
+    import glob as _g
+    recs = []
+    for f in _g.glob(os.path.join(RICH_DIR, f"{lid}_*.json")):
+        full = {}
+        fp = os.path.join(FULL_DIR, os.path.basename(f))
+        if os.path.exists(fp):
+            full = {k: v for k, v in json.load(open(fp))["m"].items() if v}
+        for mid, r in json.load(open(f)).items():
+            if not r.get("sh") and mid in full and full[mid].get("s"):
+                s_ = full[mid]["s"]
+                r = dict(r, t_tot=[[s_[0][0], s_[1][0], s_[2][0]], [s_[0][1], s_[1][1], s_[2][1]]])
+            try:
+                ts = int(datetime.fromisoformat(r["t"].replace("Z", "+00:00")).timestamp())
+            except Exception:  # noqa: BLE001
+                continue
+            recs.append((ts, r))
+    if not recs:
+        return None
+    recs.sort(key=lambda x: x[0])
+    allm = []
+    trk = lineup_strength.Tracker()
+    for ts, r in recs:
+        v = ratings.match_values(r)
+        if v:
+            allm.append({"ts": ts, "h": r["h"], "a": r["a"], "vh": v[0], "va": v[1], "w": v[2]})
+        trk.add(r, ts)
+    pri6 = None
+    if hist and hist.get("prior"):
+        pri6 = {t: [p[0], p[2] * p[0], p[4] * p[0], p[1], p[3] * p[1], p[5] * p[1]] for t, p in hist["prior"].items()}
+    fitted, home = ratings.fit(allm, int(time.time()), RAT_HALF_LIFE, RAT_K, prior=pri6)
+    pos_avg = trk.pos_averages()
+    lu_team = {}
+    for t in tids:
+        xis = (trk.team_xi.get(t) or [])[-8:]
+        if len(xis) >= 3:
+            st = [[sum(trk.rates(pid, pos_avg)[i] for pid in xi) for i in (0, 1)] for _, xi in xis]
+            lu_team[t] = [round(sum(x[0] for x in st) / len(st), 4), round(sum(x[1] for x in st) / len(st), 4)]
+    return {"rat": {t: ratings.engine_rating(v) for t, v in fitted.items() if t in set(tids)},
+            "ratHome": [round(x, 4) for x in home], "luTeam": lu_team, "trk": trk, "posAvg": pos_avg}
+
+
+def build(lid, season, cache, upcoming, hist=None, v2=None):
     doc_id, name, _ = LEAGUES[lid]
     recs = sorted(cache.values(), key=lambda r: r["ts"])
     teams, tidx = [], {}
@@ -492,6 +542,9 @@ def build(lid, season, cache, upcoming, hist=None):
             except ValueError:
                 pp = None
         row[21:24] = [pp["p"], pp["x"], pp["y"]] if pp else ["", -1, -1]
+        if v2:
+            o, dfn = v2["trk"].rates(row[0], v2["posAvg"])
+            row[24:26] = [round(o, 4), round(dfn, 4)]
         if key in posc:
             row[3] = max(posc[key].items(), key=lambda kv: kv[1])[0]
         row[9] = round(row[9], 2)
@@ -512,13 +565,14 @@ def build(lid, season, cache, upcoming, hist=None):
         "hasXg": has_xg, "recentN": RECENT_N,
         "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "teams": teams, "matches": matches, "players": rows, "next": nexts, "logos": logos, "hist": hist,
+        "rat": v2["rat"] if v2 else None, "ratHome": v2["ratHome"] if v2 else None, "luTeam": v2["luTeam"] if v2 else None,
     }
 
 
 def write_doc(doc_id, doc):
     """Rows are packed into one JSON string field ("pack"): the app's database caps a document at 256 KiB."""
     os.makedirs(OUT, exist_ok=True)
-    keys = ("teams", "matches", "players", "next", "logos", "hist")
+    keys = ("teams", "matches", "players", "next", "logos", "hist", "rat", "ratHome", "luTeam")
     out = {k: v for k, v in doc.items() if k not in keys}
     out["pack"] = json.dumps({k: doc[k] for k in keys}, ensure_ascii=False, separators=(",", ":"))
     path = os.path.join(OUT, f"{doc_id}.json")
@@ -551,7 +605,12 @@ def main(argv):
                 hist = history.summarize(past, cur, tids) if past else None
             except Exception as e:  # noqa: BLE001
                 report.append(f"{name}: histórico falhou ({e})")
-            doc_id, doc = build(lid, season, cache, upcoming, hist)
+            v2 = None
+            try:
+                v2 = model_v2(lid, hist, sorted({r["h"] for r in cache.values()} | {r["a"] for r in cache.values()} | {f["h"] for f in upcoming} | {f["a"] for f in upcoming}))
+            except Exception as e:  # noqa: BLE001
+                report.append(f"{name}: modelo v2 falhou ({e})")
+            doc_id, doc = build(lid, season, cache, upcoming, hist, v2)
             size = write_doc(doc_id, doc)
             srcs = {}
             for n in doc["next"]:

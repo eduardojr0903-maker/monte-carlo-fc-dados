@@ -39,7 +39,7 @@ def match_values(r):
         mins = (first_red if first_red is not None else end)
         scale = end / max(mins, 30.0)
         return [x * scale for x in v[0]], [x * scale for x in v[1]], min(1.0, mins / 60.0)
-    t = r.get("t")
+    t = r.get("t_tot") or (r.get("t") if isinstance(r.get("t"), list) else None)
     if not t:
         return None
     # totals only: [[sh, sot, xg] home, [..] away]; penalties unknown, xG used as is
@@ -65,7 +65,11 @@ def fit(matches, asof, half_life_days=120.0, k_prior=6.0, prior=None, iters=25):
     home = [1.0] * 3
     if not rows:
         return out, home
+    all_rows = rows
     for k in range(3):
+        rows = [x for x in all_rows if x[2][k] is not None and x[3][k] is not None and x[2][k] >= 0 and x[3][k] >= 0]
+        if not rows:
+            continue
         tot = sum(w * (vh[k] + va[k]) for _, _, vh, va, w in rows)
         wsum = sum(2 * w for *_, w in rows)
         base = tot / wsum if wsum else 1.0
@@ -94,7 +98,7 @@ def fit(matches, asof, half_life_days=120.0, k_prior=6.0, prior=None, iters=25):
             hd = sum(w * att[h] * dfn[a] for h, a, vh, va, w in rows)
             an = sum(w * va[k] for h, a, vh, va, w in rows) / base
             ad = sum(w * att[a] * dfn[h] for h, a, vh, va, w in rows)
-            hf = math.sqrt((hn / hd) / (an / ad)) if hd and ad and an else 1.0
+            hf = math.sqrt((hn / hd) / (an / ad)) if hd > 0 and ad > 0 and an > 0 and hn > 0 else 1.0
             # keep the average team at 1
             ga = math.exp(sum(math.log(x) for x in att.values()) / len(att))
             gd = math.exp(sum(math.log(x) for x in dfn.values()) / len(dfn))

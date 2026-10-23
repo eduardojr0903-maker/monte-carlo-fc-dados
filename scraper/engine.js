@@ -4,7 +4,7 @@ const MC = (() => {
   // simulation settings (tuned by backtest)
   // Tuned on 9.372 matches (2023–2026, 8 leagues) against results and closing odds.
   const PARAMS = { disp: 50, pdisp: 4, shared: 0, conv: 0, kvol: 7, kvol0: 5, ks: 70, kq: 90, stretch: 1.25, xgw: 0.9, totShrink: 0.6,
-    bttsA: 0.144, bttsB: 0.757 };
+    bttsA: 0.144, bttsB: 0.757, useRat: 1, luA: 1, luD: 0.3 };
 
   function mulberry32(a) {
     return function () {
@@ -61,7 +61,8 @@ const MC = (() => {
         mp: r[4], st: r[5], min: r[6], sh: r[7], sot: r[8], xg: r[9] >= 0 ? r[9] : null, g: r[10],
         r: { mp: r[11], st: r[12], min: r[13], sh: r[14], sot: r[15], xg: r[16] >= 0 ? r[16] : null, g: r[17] }, shirt: r[18] || '',
         startMin: r[19] || 0, subMin: r[20] || 0,
-        posLabel: r[21] || '', px: r[22] != null && r[22] >= 0 ? r[22] : null, py: r[23] != null && r[23] >= 0 ? r[23] : null };
+        posLabel: r[21] || '', px: r[22] != null && r[22] >= 0 ? r[22] : null, py: r[23] != null && r[23] >= 0 ? r[23] : null,
+        luOff: r[24] != null ? r[24] : null, luDef: r[25] != null ? r[25] : null };
     }
     const pos = String(r[3] || 'MF').split(',')[0] || 'MF';
     return { pid: r[0], name: r[1], team: r[2], pos, mp: r[4], st: r[5], min: r[6], g: r[7], sh: r[8], sot: r[9], xg: null, r: null };
@@ -321,7 +322,7 @@ const MC = (() => {
   // Projected xG for/against per game against an average opponent on neutral ground
   function teamStrength(L, teamId, halfLife) {
     const S = leagueStats(L);
-    const R = teamRating(teamAgg(L, teamId, halfLife), S, teamPrior(L, teamId));
+    const R = applyRat(L, teamId, teamRating(teamAgg(L, teamId, halfLife), S, teamPrior(L, teamId)));
     return {
       xgFor: S.shPer * R.attSh * R.qL * R.attQ,
       xgAg: S.shPer * R.defSh * R.qL * R.defQ,
@@ -329,9 +330,15 @@ const MC = (() => {
       homeEffect: (L.hist && L.hist.teamHfa && L.hist.teamHfa[String(teamId)]) || 0
     };
   }
+  // Opponent-adjusted ratings fitted by the collector (model v2), when present
+  function applyRat(L, teamId, R) {
+    const r = PARAMS.useRat && L.rat && L.rat[String(teamId)];
+    if (!r) return R;
+    return Object.assign(R, { attSh: r[0], defSh: r[1], attAcc: r[2], defAcc: r[3], attQ: r[4], defQ: r[5], fromRat: true });
+  }
   function buildSide(L, S, teamId, lineup, halfLife) {
     const T = teamAgg(L, teamId, halfLife);
-    const R = teamRating(T, S, teamPrior(L, teamId));
+    const R = applyRat(L, teamId, teamRating(T, S, teamPrior(L, teamId)));
     const players = playersOf(L, teamId);
     const sel = [];
     let sumMin = 0;
@@ -359,7 +366,22 @@ const MC = (() => {
     return { T, R, sel, w, wOther, lineupFactor, sumMin };
   }
 
+  // Lineup strength vs the team's usual lineup, from players' attack (npxG+xA/90) and on-pitch xG conceded
+  function lineupStrength(L, teamId, lineup) {
+    const u = L.luTeam && L.luTeam[String(teamId)];
+    if (!u) return null;
+    const ps = playersOf(L, teamId).filter((p) => lineup[p.pid] && lineup[p.pid].role === 'T');
+    if (ps.length < 9) return null;
+    let o = 0, d = 0;
+    for (const p of ps) { o += p.luOff != null ? p.luOff : 0.12; d += p.luDef != null ? p.luDef : 0; }
+    o *= 11 / ps.length;
+    return [clamp(u[0] > 0 ? o / u[0] : 1, 0.7, 1.4), clamp(Math.exp((d - u[1]) / 1.3), 0.85, 1.2)];
+  }
   function prepareMatch(L, homeId, awayId, lineupH, lineupA, opts = {}) {
+    if (!opts.lu && L.luTeam) {
+      const fh = lineupStrength(L, homeId, lineupH), fa = lineupStrength(L, awayId, lineupA);
+      if (fh && fa) opts = Object.assign({}, opts, { lu: [fh[0], fh[1], fa[0], fa[1]] });
+    }
     const halfLife = opts.halfLife == null ? Infinity : opts.halfLife;
     const S = leagueStats(L);
     const hfa = opts.neutral ? 1 : S.hfa;
@@ -368,9 +390,14 @@ const MC = (() => {
     // each team's own home effect (from 2022+ history, already shrunk by how consistent it is)
     const th = L.hist && L.hist.teamHfa && !opts.neutral ? (L.hist.teamHfa[String(homeId)] || 0) + (L.hist.teamHfa[String(awayId)] || 0) : 0;
     const teamHa = Math.exp(th / 4);
-    const sides = [[H, A, Math.sqrt(hfa) * teamHa], [A, H, 1 / (Math.sqrt(hfa) * teamHa)]].map(([X, Y, ha]) => {
+    const baseHa = PARAMS.useRat && L.ratHome && H.R.fromRat && A.R.fromRat && !opts.neutral ? L.ratHome[2] : Math.sqrt(hfa);
+    const sides = [[H, A, baseHa * teamHa], [A, H, 1 / (baseHa * teamHa)]].map(([X, Y, ha]) => {
       const k = PARAMS.stretch;
-      const mu = S.shPer * Math.pow(X.R.attSh * Y.R.defSh, k) * ha * X.lineupFactor;
+      // lineup factors from the players on the pitch (attack of this side, defence of the other)
+      const lu = opts.lu || L.lu;
+      const luMul = lu ? Math.pow(X === H ? lu[0] : lu[2], PARAMS.luA) * Math.pow(X === H ? lu[3] : lu[1], PARAMS.luD) : 1;
+      // with lineup strength available it replaces the simpler shot-volume lineup factor
+      const mu = S.shPer * Math.pow(X.R.attSh * Y.R.defSh, k) * ha * (lu ? 1 : X.lineupFactor) * luMul;
       const pSot = clamp(S.sotRate * Math.pow(X.R.attAcc * Y.R.defAcc, k), 0.12, 0.7);
       const pGshot = clamp(X.R.qL * Math.pow(X.R.attQ * Y.R.defQ, k), 0.03, 0.3);
       const weights = X.w.concat([X.wOther]);
@@ -398,7 +425,24 @@ const MC = (() => {
         for (const sd of sides) { sd.fin = sd.fin.map((x) => clamp(x * f, 0.02, 0.95)); sd.xg *= f; sd.pG *= f; }
       }
     }
-    return { S, hfa, halfLife, H, A, sides };
+    return { S, hfa, halfLife, H, A, sides, lu: opts.lu || L.lu || null, rated: !!(H.R.fromRat && A.R.fromRat) };
+  }
+
+  // Two model variants, chosen by backtest, simulated and combined (60% / 40%):
+  // v1 = season data + historical prior; v2 = opponent-adjusted ratings since 2022 (when available).
+  const ENSEMBLE = [{ w: 0.6, set: { useRat: 0, stretch: 1.25 } }, { w: 0.4, set: { useRat: 1, stretch: 1.45 } }];
+  function prepareEnsemble(L, homeId, awayId, lineupH, lineupA, opts = {}) {
+    const keep = Object.assign({}, PARAMS);
+    const out = [];
+    for (const e of ENSEMBLE) {
+      if (e.set.useRat && !L.rat) continue;
+      Object.assign(PARAMS, e.set);
+      out.push({ w: e.w, M: prepareMatch(L, homeId, awayId, lineupH, lineupA, opts) });
+      Object.assign(PARAMS, keep);
+    }
+    const tw = out.reduce((a, b) => a + b.w, 0);
+    out.forEach((o) => { o.w /= tw; });
+    return out;
   }
 
   // Run N simulations. Returns raw arrays + per-player threshold counts.
@@ -564,5 +608,5 @@ const MC = (() => {
 
   function fmtLine(l) { return String(l).replace('.', ','); }
 
-  return { PARAMS, leagueStats, lineupFrom, subMinutes, teamStrength, teamAgg, teamList, playersOf, playerObj, suggestLineup, defaultMinutes, prepareMatch, simulate, summarize };
+  return { PARAMS, prepareEnsemble, lineupStrength, leagueStats, lineupFrom, subMinutes, teamStrength, teamAgg, teamList, playersOf, playerObj, suggestLineup, defaultMinutes, prepareMatch, simulate, summarize };
 })();

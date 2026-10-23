@@ -13,24 +13,35 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import backtest_build as bb  # noqa: E402
 import history  # noqa: E402
 import ratings  # noqa: E402
+import lineup_strength  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RICH = os.path.join(ROOT, "data", "cache", "rich")
+
+
+FULL = os.path.join(ROOT, "data", "cache", "history_full")
 
 
 def load_league(lid):
     seasons = {}
     for f in glob.glob(os.path.join(RICH, f"{lid}_*.json")):
         season = os.path.basename(f)[len(str(lid)) + 1:-5].replace("-", "/")
+        full = {}
+        fp = os.path.join(FULL, os.path.basename(f))
+        if os.path.exists(fp):
+            full = {k: v for k, v in json.load(open(fp))["m"].items() if v}
         recs = []
-        for r in json.load(open(f)).values():
+        for mid, r in json.load(open(f)).items():
+            if not r.get("sh") and mid in full and full[mid].get("s"):
+                s_ = full[mid]["s"]
+                r = dict(r, t_tot=[[s_[0][0], s_[1][0], s_[2][0]], [s_[0][1], s_[1][1], s_[2][1]]])
             ts = int(datetime.fromisoformat(r["t"].replace("Z", "+00:00")).timestamp())
             # team totals for the engine's current-season aggregates
             sh = [[0, 0, 0.0], [0, 0, 0.0]]
             for s in r.get("sh") or []:
                 sh[s[1]][0] += 1; sh[s[1]][1] += s[3]; sh[s[1]][2] += s[2]
             rec = {"ts": ts, "h": r["h"], "hn": r["hn"], "a": r["a"], "an": r["an"], "hg": r["hg"], "ag": r["ag"],
-                   "t": sh if r.get("sh") else None, "rich": r}
+                   "t": sh if r.get("sh") else r.get("t_tot"), "rich": r}
             recs.append(rec)
         seasons[season] = sorted(recs, key=lambda x: x["ts"])
     return seasons
@@ -52,6 +63,9 @@ def main(out_path, half_life=120.0, k_prior=6.0):
         odds = bb.load_odds(lid)
         cache_week = {}
         n = 0
+        trk = lineup_strength.Tracker()
+        for r in seasons[order[0]]:
+            trk.add(r["rich"], r["ts"])
         for si, season in enumerate(order[1:], 1):
             past = {s: {str(i): bb.hist_rec(r) for i, r in enumerate(seasons[s])} for s in order[:si]}
             recs = seasons[season]
@@ -78,8 +92,16 @@ def main(out_path, half_life=120.0, k_prior=6.0):
                     t = r["t"]
                     matches.append([r["ts"], tidx[r["h"]], tidx[r["a"]], r["hg"], r["ag"]] +
                                    ([int(t[0][0]), int(t[0][1]), round(t[0][2], 2), int(t[1][0]), int(t[1][1]), round(t[1][2], 2)] if t else [-1] * 6))
+                pos_avg = trk.pos_averages()
+                pl = m["rich"].get("pl") or []
+                xh = [p_[0] for p_ in pl if p_[1] == 0 and p_[2]]
+                xa = [p_[0] for p_ in pl if p_[1] == 1 and p_[2]]
+                fh = trk.factors(m["h"], xh, pos_avg)
+                fa = trk.factors(m["a"], xa, pos_avg)
+                trk.add(m["rich"], m["ts"])
                 L = {"v": 3, "teams": [[t, names[t]] for t in team_ids], "matches": matches, "players": [], "next": [],
-                     "hist": hist, "hasXg": True, "rat": {t: rat[t] for t in team_ids if t in rat}, "ratHome": home}
+                     "hist": hist, "hasXg": True, "rat": {t: rat[t] for t in team_ids if t in rat}, "ratHome": home,
+                     "lu": [round(fh[0], 3), round(fh[1], 3), round(fa[0], 3), round(fa[1], 3)]}
                 day = datetime.fromtimestamp(m["ts"], timezone.utc).date()
                 o = bb.find_odds(odds, day, m["hn"], m["an"], m["hg"], m["ag"]) if odds else None
                 if o:
