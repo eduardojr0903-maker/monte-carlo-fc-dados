@@ -25,6 +25,7 @@ import unicodedata
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import history  # noqa: E402
+import rich  # noqa: E402
 from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -276,6 +277,8 @@ def collect_league(lid, budget):
     all_m = (lg.get("fixtures") or {}).get("allMatches") or []
     path = os.path.join(CACHE, f"{lid}_{season.replace('/', '-')}.json")
     cache = json.load(open(path, encoding="utf-8")) if os.path.exists(path) else {}
+    rich_path = rich.path(os.path.join(ROOT, "data", "cache", "rich"), lid, season)
+    rich_data = rich.load(rich_path)
     new = 0
     now = datetime.now(timezone.utc)
     for m in all_m:
@@ -289,11 +292,19 @@ def collect_league(lid, budget):
         if not d:
             continue
         cache[str(m["id"])] = match_record(m, d)
+        try:
+            hs, as_ = [int(x.strip()) for x in (stt.get("scoreStr") or "0-0").split("-")]
+            rich_data[str(m["id"])] = rich.record({"t": stt.get("utcTime"), "h": str(m["home"]["id"]), "hn": m["home"].get("shortName") or m["home"]["name"],
+                                                    "a": str(m["away"]["id"]), "an": m["away"].get("shortName") or m["away"]["name"], "hg": hs, "ag": as_}, d)
+        except Exception:  # noqa: BLE001
+            pass
         new += 1
         if new % 40 == 0:
             _save(path, cache)
             print(f"  {name}: {new} jogos novos", flush=True)
     _save(path, cache)
+    if new:
+        rich.save(rich_path, rich_data)
 
     # upcoming fixtures: lineups and absences
     upcoming = []
