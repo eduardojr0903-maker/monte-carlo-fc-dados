@@ -4,7 +4,9 @@ const MC = (() => {
   // simulation settings (tuned by backtest)
   // Tuned on 9.372 matches (2023–2026, 8 leagues) against results and closing odds.
   const PARAMS = { disp: 50, pdisp: 4, shared: 0, conv: 0, kvol: 7, kvol0: 5, ks: 70, kq: 90, stretch: 1.25, xgw: 0.9, totShrink: 0.6,
-    bttsA: 0.144, bttsB: 0.757, useRat: 1, luA: 1, luD: 0.3, restB: 0.06, contB: 0.06 };
+    bttsA: 0.144, bttsB: 0.757, useRat: 1, luA: 1, luD: 0.3, restB: 0.06, contB: 0.06,
+    // corners (backtest on 7,340 European matches; see the notes in the page)
+    cBlend: 0.4, cT: 0.6, cD: 1.0, cR: 64, cPhi: 12.9, cKappa: 0, cBlow: 0.975, cClose: 1.008, c1: 0.46 };
 
   function mulberry32(a) {
     return function () {
@@ -433,7 +435,20 @@ const MC = (() => {
         for (const sd of sides) { sd.fin = sd.fin.map((x) => clamp(x * f, 0.02, 0.95)); sd.xg *= f; sd.pG *= f; }
       }
     }
-    return { S, hfa, halfLife, H, A, sides, lu: opts.lu || L.lu || null, rated: !!(H.R.fromRat && A.R.fromRat), ctx: ctx && ctx.h && ctx.a ? ctx : null, ctxMul: Math.exp(2 * cd) };
+    // corners: team ratings for corners won / conceded (blended with shot ratings in the collector), shrunk toward
+    // the league's home/away averages separately for the match total (cT) and the split between the teams (cD)
+    let corners = null;
+    if (L.cor && L.corBase) {
+      const ch = L.cor[String(homeId)], ca = L.cor[String(awayId)];
+      if (ch && ca) {
+        const bh = opts.neutral ? (L.corBase[0] + L.corBase[1]) / 2 : L.corBase[0], ba = opts.neutral ? (L.corBase[0] + L.corBase[1]) / 2 : L.corBase[1];
+        const mH = Math.log(ch[0] * ca[1]), mA = Math.log(ca[0] * ch[1]);
+        const lh = bh * Math.exp(PARAMS.cT * (mH + mA) / 2 + PARAMS.cD * (mH - mA) / 2);
+        const la = ba * Math.exp(PARAMS.cT * (mH + mA) / 2 - PARAMS.cD * (mH - mA) / 2);
+        corners = { lh, la, c1: L.corBase[2] || PARAMS.c1 };
+      }
+    }
+    return { S, hfa, halfLife, H, A, sides, corners, lu: opts.lu || L.lu || null, rated: !!(H.R.fromRat && A.R.fromRat), ctx: ctx && ctx.h && ctx.a ? ctx : null, ctxMul: Math.exp(2 * cd) };
   }
 
   // Two model variants, chosen by backtest, simulated and combined (60% / 40%):
@@ -469,6 +484,9 @@ const MC = (() => {
     const pSum = nP.map((n) => new Float64Array(n * 3));
     const tmpC = nP.map((n) => new Float64Array(n));
     const tmpS = nP.map((n) => new Uint8Array(n)), tmpT = nP.map((n) => new Uint8Array(n)), tmpG = nP.map((n) => new Uint8Array(n));
+    const C = M.corners;
+    const cH = C ? new Uint8Array(N) : null, cA = C ? new Uint8Array(N) : null, cH1 = C ? new Uint8Array(N) : null, cA1 = C ? new Uint8Array(N) : null;
+    const cLogit = C ? Math.log(C.lh / C.la) : 0;
     for (let s = 0; s < N; s++) {
       const tempo = SHARED > 0 ? gamma(R, SHARED, 1 / SHARED) : 1;
       for (let side = 0; side < 2; side++) {
@@ -502,6 +520,19 @@ const MC = (() => {
           PG[i * (MAXK + 1) + Math.min(tg[i], MAXK)]++;
         }
       }
+      if (C) {
+        // match total (negative binomial, a bit shorter when the game is decided by 2+), then the split between the
+        // teams (beta-binomial: one team dominating takes corners from the other); the team that is behind gets more
+        const gd = gH[s] - gA[s];
+        const lamT = (C.lh + C.la) * (Math.abs(gd) >= 2 ? PARAMS.cBlow : PARAMS.cClose);
+        const T = poisson(R, gamma(R, PARAMS.cR, lamT / PARAMS.cR));
+        const p = 1 / (1 + Math.exp(-(cLogit - PARAMS.cKappa * Math.sign(gd))));
+        const g1 = gamma(R, PARAMS.cPhi * p, 1), g2 = gamma(R, PARAMS.cPhi * (1 - p), 1);
+        const pb = g1 / (g1 + g2 || 1);
+        let h = 0, h1 = 0, a1 = 0;
+        for (let j = 0; j < T; j++) { if (R() < pb) { h++; if (R() < C.c1) h1++; } else if (R() < C.c1) a1++; }
+        cH[s] = Math.min(h, 255); cA[s] = Math.min(T - h, 255); cH1[s] = h1; cA1[s] = a1;
+      }
       if (onProgress && (s & 4095) === 0) onProgress(s / N);
     }
     const geq = (H, i, k) => { let c = 0; for (let x = k; x <= MAXK; x++) c += H[i * (MAXK + 1) + x]; return c / N; };
@@ -515,7 +546,7 @@ const MC = (() => {
         goal: [1, 2].map((k) => geq(pGoal[side], i, k))
       }));
     });
-    return { N, gH, gA, sH, sA, tH, tA, players };
+    return { N, gH, gA, sH, sA, tH, tA, players, cH, cA, cH1, cA1 };
   }
 
   // ---- markets -------------------------------------------------------------
@@ -600,6 +631,44 @@ const MC = (() => {
       { id: 'th', title: 'No alvo · ' + hn, rows: sotH.rows },
       { id: 'ta', title: 'No alvo · ' + an, rows: sotA.rows }
     ];
+    // corners
+    let cornerGroups = null, cornerMeans = null;
+    if (sim.cH) {
+      const { cH, cA, cH1, cA1 } = sim;
+      const ct = new Uint16Array(N), ct1 = new Uint16Array(N);
+      for (let i = 0; i < N; i++) { ct[i] = cH[i] + cA[i]; ct1[i] = cH1[i] + cA1[i]; }
+      const fixed = (arr, lines, label, keyp, unit) => {
+        const rows = [];
+        for (const l of lines) {
+          const o = frac((i) => arr[i] > l);
+          rows.push({ key: keyp + '>' + l, label: label + ' mais de ' + fmtLine(l) + unit, p: o });
+          rows.push({ key: keyp + '<' + l, label: label + ' menos de ' + fmtLine(l) + unit, p: 1 - o });
+        }
+        return rows;
+      };
+      const mT = mean(ct), c0 = Math.floor(mT) + 0.5;
+      const totLines = [c0 - 2, c0 - 1, c0, c0 + 1, c0 + 2].filter((l) => l > 0);
+      const m1 = mean(ct1), c1 = Math.floor(m1) + 0.5;
+      const pcH = frac((i) => cH[i] > cA[i]), pcD = frac((i) => cH[i] === cA[i]);
+      const hcpRows = [];
+      for (const l of [-2.5, -1.5, 1.5, 2.5]) {
+        const ph = frac((i) => cH[i] - cA[i] + l > 0);
+        hcpRows.push({ key: 'CH' + l, label: hn + ' ' + (l > 0 ? '+' : '−') + fmtLine(Math.abs(l)), p: ph });
+        hcpRows.push({ key: 'CA' + (-l), label: an + ' ' + (l > 0 ? '−' : '+') + fmtLine(Math.abs(l)), p: 1 - ph });
+      }
+      cornerGroups = [
+        { id: 'ct', title: 'Total de escanteios', rows: fixed(ct, totLines, 'Total', 'C', ' escanteios') },
+        { id: 'cx', title: 'Mais escanteios (1X2)', rows: [
+          { key: 'CX1', label: hn + ' com mais escanteios', p: pcH },
+          { key: 'CXX', label: 'Mesmo número de escanteios', p: pcD },
+          { key: 'CX2', label: an + ' com mais escanteios', p: 1 - pcH - pcD }] },
+        { id: 'chc', title: 'Handicap de escanteios', rows: hcpRows },
+        { id: 'ch', title: 'Escanteios · ' + hn, rows: lineRows(cH, hn, 1, 'CHt', ' escanteios').rows },
+        { id: 'ca', title: 'Escanteios · ' + an, rows: lineRows(cA, an, 1, 'CAt', ' escanteios').rows },
+        { id: 'c1', title: 'Escanteios no 1º tempo', rows: fixed(ct1, [c1 - 1, c1, c1 + 1].filter((l) => l > 0), '1º tempo', 'C1', ' escanteios') }
+      ];
+      cornerMeans = { cH: mean(cH), cA: mean(cA), c1: m1 };
+    }
     // correct scores
     const sc = new Map();
     for (let i = 0; i < N; i++) { const k = Math.min(gH[i], 9) + '-' + Math.min(gA[i], 9); sc.set(k, (sc.get(k) || 0) + 1); }
@@ -609,7 +678,7 @@ const MC = (() => {
     return {
       pH, pD, pA,
       means: { gH: mean(gH), gA: mean(gA), sH: mean(sH), sA: mean(sA), tH: mean(tH), tA: mean(tA) },
-      groups, shotGroups, scores,
+      groups, shotGroups, scores, cornerGroups, cornerMeans,
       distH: dist(gH), distA: dist(gA)
     };
   }

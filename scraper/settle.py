@@ -27,6 +27,11 @@ def load_matches():
         for mid, r in json.load(open(f)).items():
             by_id[mid] = r
             by_teams.setdefault((r["h"], r["a"]), []).append(r)
+    # corners (whole match and first half) from the corners cache, same match ids
+    for f in glob.glob(os.path.join(ROOT, "data", "cache", "corners", "*.json")):
+        for mid, c in json.load(open(f)).items():
+            if mid in by_id and c.get("c") and c["c"][0] >= 0:
+                by_id[mid]["corners"] = c["c"]
     return by_id, by_teams
 
 
@@ -51,6 +56,28 @@ def outcome(key, r):
         return simple[key]
     if key in ("DNB1", "DNB2"):
         return None if hg == ag else (hg > ag) == (key == "DNB1")
+    if key.startswith("C") and not key.startswith("CS"):
+        c = r.get("corners")
+        if not c:
+            return "?"
+        ch, ca = c[0], c[1]
+        if key in ("CX1", "CXX", "CX2"):
+            return {"CX1": ch > ca, "CXX": ch == ca, "CX2": ca > ch}[key]
+        m = re.match(r"^C([HA])(-?[\d.]+)$", key)
+        if m:
+            d = (ch - ca) if m.group(1) == "H" else (ca - ch)
+            return d + float(m.group(2)) > 0
+        m = re.match(r"^(C|CHt|CAt|C1)([<>])([\d.]+)$", key)
+        if m:
+            if m.group(1) == "C1":
+                if c[2] < 0:
+                    return "?"
+                v = c[2] + c[3]
+            else:
+                v = {"C": ch + ca, "CHt": ch, "CAt": ca}[m.group(1)]
+            line = float(m.group(3))
+            return v > line if m.group(2) == ">" else v < line
+        return "?"
     m = re.match(r"^CS(\d)-(\d)$", key)
     if m:
         return hg == int(m.group(1)) and ag == int(m.group(2))

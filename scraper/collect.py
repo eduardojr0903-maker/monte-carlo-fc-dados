@@ -29,6 +29,7 @@ import rich  # noqa: E402
 import ratings  # noqa: E402
 import lineup_strength  # noqa: E402
 import schedule_ctx  # noqa: E402
+import corners  # noqa: E402
 from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -579,13 +580,14 @@ def build(lid, season, cache, upcoming, hist=None, v2=None):
         "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "teams": teams, "matches": matches, "players": rows, "next": nexts, "logos": logos, "hist": hist,
         "rat": v2["rat"] if v2 else None, "ratHome": v2["ratHome"] if v2 else None, "luTeam": v2["luTeam"] if v2 else None,
+        "cor": (v2 or {}).get("cor"), "corBase": (v2 or {}).get("corBase"),
     }
 
 
 def write_doc(doc_id, doc):
     """Rows are packed into one JSON string field ("pack"): the app's database caps a document at 256 KiB."""
     os.makedirs(OUT, exist_ok=True)
-    keys = ("teams", "matches", "players", "next", "logos", "hist", "rat", "ratHome", "luTeam")
+    keys = ("teams", "matches", "players", "next", "logos", "hist", "rat", "ratHome", "luTeam", "cor", "corBase")
     out = {k: v for k, v in doc.items() if k not in keys}
     out["pack"] = json.dumps({k: doc[k] for k in keys}, ensure_ascii=False, separators=(",", ":"))
     path = os.path.join(OUT, f"{doc_id}.json")
@@ -623,6 +625,14 @@ def main(argv):
                 v2 = model_v2(lid, hist, sorted({r["h"] for r in cache.values()} | {r["a"] for r in cache.values()} | {f["h"] for f in upcoming} | {f["a"] for f in upcoming}))
             except Exception as e:  # noqa: BLE001
                 report.append(f"{name}: modelo v2 falhou ({e})")
+            # corners: new finished matches of the current season, then team corner ratings
+            try:
+                corners.process_season(lid, season, lg, budget=150, verbose=False)
+                cor, cor_base = corners.model(lid, v2["rat"] if v2 else None)
+                if v2 is not None and cor:
+                    v2["cor"], v2["corBase"] = cor, cor_base
+            except Exception as e:  # noqa: BLE001
+                report.append(f"{name}: escanteios falharam ({e})")
             doc_id, doc = build(lid, season, cache, upcoming, hist, v2)
             size = write_doc(doc_id, doc)
             srcs = {}
