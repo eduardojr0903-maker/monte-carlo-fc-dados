@@ -34,7 +34,7 @@ function cal(acc, k, p, y) { const c = acc.cal[k] || (acc.cal[k] = Array.from({ 
     const pO = s.groups.find((g) => g.id === 'gols').rows.find((r) => r.key === 'G>2.5').p;
     const pB = s.groups.find((g) => g.id === 'btts').rows[0].p;
     const yO = c.m.hg + c.m.ag > 2.5 ? 1 : 0, yB = c.m.hg > 0 && c.m.ag > 0 ? 1 : 0;
-    if (dump) dump.write(JSON.stringify([c.lid, c.season, P, pO, pB, res, yO, yB, c.odds ? c.odds.pin : null, c.odds ? c.odds.ou_pin : null]) + '\n');
+    if (dump) dump.write(JSON.stringify([c.lid, c.season, P, pO, pB, res, yO, yB, c.odds || null]) + '\n');
     for (const key of ['TODAS', LN[c.lid] || c.lid]) {
       const a = S(key);
       a.nbt++; a.bt -= yB ? L2(pB) : L2(1 - pB);

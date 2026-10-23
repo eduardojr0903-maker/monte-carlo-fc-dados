@@ -73,6 +73,14 @@ def load_odds(lid):
                     "ou_pin": [num("PC>2.5"), num("PC<2.5")],
                     "ou_avg": [num("AvgC>2.5"), num("AvgC<2.5")],
                     "ou_max": [num("MaxC>2.5"), num("MaxC<2.5")],
+                    # earlier prices (collected days before kickoff)
+                    "pin_e": [num("PSH"), num("PSD"), num("PSA")],
+                    "avg_e": [num("AvgH"), num("AvgD"), num("AvgA")],
+                    "max_e": [num("MaxH"), num("MaxD"), num("MaxA")],
+                    "b365_e": [num("B365H"), num("B365D"), num("B365A")],
+                    "ou_pin_e": [num("P>2.5"), num("P<2.5")],
+                    "ou_avg_e": [num("Avg>2.5"), num("Avg<2.5")],
+                    "ou_max_e": [num("Max>2.5"), num("Max<2.5")],
                 })
     by_day = {}
     for r in rows:
