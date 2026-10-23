@@ -1,0 +1,34 @@
+name: Calendário completo
+on:
+  workflow_dispatch:
+  push:
+    paths: [".github/workflows/calendar.yml", "scraper/calendar_collect.py"]
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r scraper/requirements.txt
+      - run: python scraper/calendar_collect.py
+      - name: Salvar
+        if: always()
+        run: |
+          git config user.name "monte-carlo-fc-bot"
+          git config user.email "monte-carlo-fc-bot@users.noreply.github.com"
+          for i in 1 2 3 4 5; do
+            git add data/calendar
+            git diff --cached --quiet && exit 0
+            git stash
+            git pull --rebase -X ours origin main || git rebase --abort
+            git stash pop
+            git add data/calendar
+            git commit -m "Calendário completo (copas, continentais, estaduais)"
+            git push && exit 0
+            sleep 10
+          done
+          exit 1
