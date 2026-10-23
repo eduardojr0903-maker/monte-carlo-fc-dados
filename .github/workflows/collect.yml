@@ -30,6 +30,9 @@ jobs:
       - run: pip install -r scraper/requirements.txt
       - name: Coletar
         run: python scraper/collect.py
+      - name: Odds de fechamento da temporada atual
+        continue-on-error: true
+        run: python scraper/odds.py --current
       - name: Salvar dados no repositório
         if: always()
         run: |
