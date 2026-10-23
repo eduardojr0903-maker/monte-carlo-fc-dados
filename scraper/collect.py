@@ -28,6 +28,7 @@ import history  # noqa: E402
 import rich  # noqa: E402
 import ratings  # noqa: E402
 import lineup_strength  # noqa: E402
+import schedule_ctx  # noqa: E402
 from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -45,6 +46,7 @@ POS_MAX_AGE = 30 * 86400
 LEFT = {"LB", "LWB", "LCB", "LM", "LW", "LCM", "LDM", "LAM", "LF", "LS"}
 RIGHT = {"RB", "RWB", "RCB", "RM", "RW", "RCM", "RDM", "RAM", "RF", "RS"}
 pos_budget = [POS_BUDGET]
+SCHED = None
 
 
 def player_position(pid):
@@ -520,6 +522,17 @@ def build(lid, season, cache, upcoming, hist=None, v2=None):
                       sides[0]["pred"] or sides[0]["xi"], sides[1]["pred"] or sides[1]["xi"],
                       sides[0]["out"], sides[1]["out"], sides[0]["xi"], sides[1]["xi"],
                       [sides[0]["form"], sides[1]["form"]], [sides[0]["coords"], sides[1]["coords"]]])
+
+    # rest and congestion from the full calendar (cups, continental, state leagues) plus this league
+    global SCHED
+    if SCHED is None:
+        SCHED = schedule_ctx.Schedule()
+    for r in recs:
+        SCHED.add(r["h"], r["ts"], name); SCHED.add(r["a"], r["ts"], name)
+    for fx in upcoming:
+        SCHED.add(fx["h"], fx["ts"], name); SCHED.add(fx["a"], fx["ts"], name)
+    for n, fx in zip(nexts, upcoming):
+        n.append([SCHED.context(fx["h"], fx["ts"]), SCHED.context(fx["a"], fx["ts"])])
 
     wanted = []
     for n in nexts:

@@ -4,7 +4,7 @@ const MC = (() => {
   // simulation settings (tuned by backtest)
   // Tuned on 9.372 matches (2023–2026, 8 leagues) against results and closing odds.
   const PARAMS = { disp: 50, pdisp: 4, shared: 0, conv: 0, kvol: 7, kvol0: 5, ks: 70, kq: 90, stretch: 1.25, xgw: 0.9, totShrink: 0.6,
-    bttsA: 0.144, bttsB: 0.757, useRat: 1, luA: 1, luD: 0.3 };
+    bttsA: 0.144, bttsB: 0.757, useRat: 1, luA: 1, luD: 0.3, restB: 0.06, contB: 0.06 };
 
   function mulberry32(a) {
     return function () {
@@ -391,7 +391,15 @@ const MC = (() => {
     const th = L.hist && L.hist.teamHfa && !opts.neutral ? (L.hist.teamHfa[String(homeId)] || 0) + (L.hist.teamHfa[String(awayId)] || 0) : 0;
     const teamHa = Math.exp(th / 4);
     const baseHa = PARAMS.useRat && L.ratHome && H.R.fromRat && A.R.fromRat && !opts.neutral ? L.ratHome[2] : Math.sqrt(hfa);
-    const sides = [[H, A, baseHa * teamHa], [A, H, 1 / (baseHa * teamHa)]].map(([X, Y, ha]) => {
+    // match context from the full calendar (every competition): short rest (< 3.6 days since the last match)
+    // and playing a continental competition. Backtest: both go with doing better than the ratings say.
+    const ctx = opts.ctx || L.ctx;
+    let cd = 0;
+    if (ctx && ctx.h && ctx.a) {
+      const sh = (c) => (c[0] != null && c[0] < 3.6 ? 1 : 0);
+      cd = (PARAMS.restB * (sh(ctx.h) - sh(ctx.a)) + PARAMS.contB * ((ctx.h[1] || 0) - (ctx.a[1] || 0))) / 2;
+    }
+    const sides = [[H, A, baseHa * teamHa * Math.exp(cd)], [A, H, 1 / (baseHa * teamHa) * Math.exp(-cd)]].map(([X, Y, ha]) => {
       const k = PARAMS.stretch;
       // lineup factors from the players on the pitch (attack of this side, defence of the other)
       const lu = opts.lu || L.lu;
@@ -425,7 +433,7 @@ const MC = (() => {
         for (const sd of sides) { sd.fin = sd.fin.map((x) => clamp(x * f, 0.02, 0.95)); sd.xg *= f; sd.pG *= f; }
       }
     }
-    return { S, hfa, halfLife, H, A, sides, lu: opts.lu || L.lu || null, rated: !!(H.R.fromRat && A.R.fromRat) };
+    return { S, hfa, halfLife, H, A, sides, lu: opts.lu || L.lu || null, rated: !!(H.R.fromRat && A.R.fromRat), ctx: ctx && ctx.h && ctx.a ? ctx : null, ctxMul: Math.exp(2 * cd) };
   }
 
   // Two model variants, chosen by backtest, simulated and combined (60% / 40%):

@@ -28,6 +28,10 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r scraper/requirements.txt
+      - name: Calendário (copas, continentais, estaduais) da temporada atual
+        continue-on-error: true
+        timeout-minutes: 20
+        run: python scraper/calendar_collect.py --current
       - name: Coletar
         run: python scraper/collect.py
       - name: Odds de fechamento da temporada atual
