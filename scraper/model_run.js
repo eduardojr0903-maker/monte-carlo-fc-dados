@@ -57,6 +57,26 @@ for (const f of fs.readdirSync(path.join(ROOT, 'data', 'db')).filter((x) => /^s\
     const markets = [];
     for (const g of s.groups.concat(s.shotGroups, s.cornerGroups || [])) for (const r of g.rows) markets.push([r.key, r.label, r4(r.p), g.id]);
     for (const r of s.scores) markets.push([r.key, r.label, r4(r.p), 'cs']);
+    // every half-goal line the bookmaker may offer (the app shows only the lines around the expected value)
+    const have = new Set(markets.map((m) => m[0]));
+    const N = sim.N;
+    const lines = (key, label, grp, f, from, to) => {
+      for (let l = from; l <= to + 1e-9; l += 1) {
+        let c = 0; for (let i = 0; i < N; i++) if (f(i) > l) c++;
+        const o = c / N, ls = String(l).replace('.', ',');
+        if (!have.has(key + '>' + l)) markets.push([key + '>' + l, label + ' mais de ' + ls, r4(o), grp]);
+        if (!have.has(key + '<' + l)) markets.push([key + '<' + l, label + ' menos de ' + ls, r4(1 - o), grp]);
+      }
+    };
+    lines('G', 'Total de gols', 'gols', (i) => sim.gH[i] + sim.gA[i], 0.5, 6.5);
+    lines('HG', names[0] + ' gols', 'tg', (i) => sim.gH[i], 0.5, 4.5);
+    lines('AG', names[1] + ' gols', 'tg', (i) => sim.gA[i], 0.5, 4.5);
+    if (sim.cH) {
+      lines('C', 'Total de escanteios', 'ct', (i) => sim.cH[i] + sim.cA[i], 3.5, 17.5);
+      lines('CHt', names[0] + ' escanteios', 'ch', (i) => sim.cH[i], 0.5, 11.5);
+      lines('CAt', names[1] + ' escanteios', 'ca', (i) => sim.cA[i], 0.5, 11.5);
+      lines('C1', '1º tempo escanteios', 'c1', (i) => sim.cH1[i] + sim.cA1[i], 0.5, 9.5);
+    }
     [0, 1].forEach((side) => {
       for (const p of sim.players[side]) {
         if (p.role !== 'T') continue;  // starters only (subs' minutes are too uncertain to bet)

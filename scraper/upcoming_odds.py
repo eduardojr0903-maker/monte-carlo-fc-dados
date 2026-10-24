@@ -22,8 +22,9 @@ S = http.Session(impersonate="chrome")
 API = "https://api.oddspapi.io/v4"
 # our league -> OddsPapi tournament id (checked against data/odds/oddspapi/tournaments.json)
 OP_TOURNAMENTS = {268: 325, 8814: 390, 47: 17, 48: 18, 87: 8, 55: 23, 54: 35, 53: 34}
-# free plan: one bookmaker per request. Bet365 Brazil (what the user sees); Bet365 international only if Brazil is empty
-BOOKS = tuple(os.environ.get("ODDSPAPI_BOOKS", "bet365.bet.br,bet365").split(","))
+# Bet365 international: same prices as the Brazilian site in practice, and far more markets on OddsPapi
+# (corners and player shots are missing from bet365.bet.br there)
+BOOKS = tuple(os.environ.get("ODDSPAPI_BOOKS", "bet365").split(","))
 PROBE = bool(os.environ.get("ODDSPAPI_PROBE"))  # probe run: only save the summary sample for each bookmaker
 # (old name matching, kept for reference) our league -> how OddsPapi names it
 OP_LEAGUES = {

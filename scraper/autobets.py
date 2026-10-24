@@ -88,6 +88,8 @@ def find(src, lid, ts, hn, an):
     for r in src:
         if r["lid"] != lid or abs((r["day"] - day).days) > 1:
             continue
+        if r.get("ts") and abs(r["ts"] - ts) > 3 * 3600:
+            continue
         s = sim(hn, r["hn"]) + sim(an, r["an"])
         if s > score:
             best, score = r, s

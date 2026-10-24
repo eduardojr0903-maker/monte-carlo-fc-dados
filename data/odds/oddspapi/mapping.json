@@ -1,0 +1,808 @@
+{
+"101": {
+"kind": "team",
+"outcomes": {
+"101": "1",
+"102": "X",
+"103": "2"
+},
+"name": "Full Time Result"
+},
+"104": {
+"kind": "team",
+"outcomes": {
+"104": "BTTS-S",
+"105": "BTTS-N"
+},
+"name": "Both Teams To Score"
+},
+"106": {
+"kind": "team",
+"outcomes": {
+"107": "G<0.5",
+"106": "G>0.5"
+},
+"name": "Over Under Full Time"
+},
+"108": {
+"kind": "team",
+"outcomes": {
+"109": "G<1.5",
+"108": "G>1.5"
+},
+"name": "Over Under Full Time"
+},
+"1010": {
+"kind": "team",
+"outcomes": {
+"1011": "G<2.5",
+"1010": "G>2.5"
+},
+"name": "Over Under Full Time"
+},
+"1012": {
+"kind": "team",
+"outcomes": {
+"1012": "G>3.5",
+"1013": "G<3.5"
+},
+"name": "Over Under Full Time"
+},
+"1014": {
+"kind": "team",
+"outcomes": {
+"1015": "G<4.5",
+"1014": "G>4.5"
+},
+"name": "Over Under Full Time"
+},
+"1016": {
+"kind": "team",
+"outcomes": {
+"1017": "G<5.5",
+"1016": "G>5.5"
+},
+"name": "Over Under Full Time"
+},
+"1018": {
+"kind": "team",
+"outcomes": {
+"1019": "G<6.5",
+"1018": "G>6.5"
+},
+"name": "Over Under Full Time"
+},
+"1020": {
+"kind": "team",
+"outcomes": {
+"1020": "G>7.5",
+"1021": "G<7.5"
+},
+"name": "Over Under Full Time"
+},
+"1022": {
+"kind": "team",
+"outcomes": {
+"1023": "G<8.5",
+"1022": "G>8.5"
+},
+"name": "Over Under Full Time"
+},
+"1060": {
+"kind": "team",
+"outcomes": {
+"1060": "H-1.5",
+"1061": "A+1.5"
+},
+"name": "Asian Handicap"
+},
+"1084": {
+"kind": "team",
+"outcomes": {
+"1085": "A-1.5",
+"1084": "H+1.5"
+},
+"name": "Asian Handicap"
+},
+"10214": {
+"kind": "team",
+"outcomes": {
+"10215": "DNB2",
+"10214": "DNB1"
+},
+"name": "Draw No Bet"
+},
+"10224": {
+"kind": "team",
+"outcomes": {
+"10224": "HG>0.5",
+"10225": "HG<0.5"
+},
+"name": "Over Under Team 1"
+},
+"10226": {
+"kind": "team",
+"outcomes": {
+"10226": "HG>1.5",
+"10227": "HG<1.5"
+},
+"name": "Over Under Team 1"
+},
+"10228": {
+"kind": "team",
+"outcomes": {
+"10229": "HG<2.5",
+"10228": "HG>2.5"
+},
+"name": "Over Under Team 1"
+},
+"10230": {
+"kind": "team",
+"outcomes": {
+"10231": "HG<3.5",
+"10230": "HG>3.5"
+},
+"name": "Over Under Team 1"
+},
+"10232": {
+"kind": "team",
+"outcomes": {
+"10232": "HG>4.5",
+"10233": "HG<4.5"
+},
+"name": "Over Under Team 1"
+},
+"10234": {
+"kind": "team",
+"outcomes": {
+"10235": "HG<5.5",
+"10234": "HG>5.5"
+},
+"name": "Over Under Team 1"
+},
+"10236": {
+"kind": "team",
+"outcomes": {
+"10236": "HG>6.5",
+"10237": "HG<6.5"
+},
+"name": "Over Under Team 1"
+},
+"10238": {
+"kind": "team",
+"outcomes": {
+"10238": "HG>7.5",
+"10239": "HG<7.5"
+},
+"name": "Over Under Team 1"
+},
+"10240": {
+"kind": "team",
+"outcomes": {
+"10241": "AG<0.5",
+"10240": "AG>0.5"
+},
+"name": "Over Under Team 2"
+},
+"10242": {
+"kind": "team",
+"outcomes": {
+"10242": "AG>1.5",
+"10243": "AG<1.5"
+},
+"name": "Over Under Team 2"
+},
+"10244": {
+"kind": "team",
+"outcomes": {
+"10245": "AG<2.5",
+"10244": "AG>2.5"
+},
+"name": "Over Under Team 2"
+},
+"10246": {
+"kind": "team",
+"outcomes": {
+"10247": "AG<3.5",
+"10246": "AG>3.5"
+},
+"name": "Over Under Team 2"
+},
+"10248": {
+"kind": "team",
+"outcomes": {
+"10248": "AG>4.5",
+"10249": "AG<4.5"
+},
+"name": "Over Under Team 2"
+},
+"10250": {
+"kind": "team",
+"outcomes": {
+"10250": "AG>5.5",
+"10251": "AG<5.5"
+},
+"name": "Over Under Team 2"
+},
+"10252": {
+"kind": "team",
+"outcomes": {
+"10252": "AG>6.5",
+"10253": "AG<6.5"
+},
+"name": "Over Under Team 2"
+},
+"10254": {
+"kind": "team",
+"outcomes": {
+"10255": "AG<7.5",
+"10254": "AG>7.5"
+},
+"name": "Over Under Team 2"
+},
+"10730": {
+"kind": "player",
+"stat": "g",
+"outcomes": {
+"10730": "1"
+},
+"name": "Anytime Goal Scorer"
+},
+"10743": {
+"kind": "player",
+"stat": "sh",
+"outcomes": {
+"10744": "1",
+"10746": "3",
+"10745": "2"
+},
+"name": "Player Shots (incl. overtime)"
+},
+"10753": {
+"kind": "player",
+"stat": "sot",
+"outcomes": {
+"10754": "1",
+"10755": "2"
+},
+"name": "Player Shots On Goal (incl. overtime)"
+},
+"10764": {
+"kind": "team",
+"outcomes": {
+"10764": "CX1",
+"10765": "CXX",
+"10766": "CX2"
+},
+"name": "Corners - 1X2"
+},
+"10767": {
+"kind": "team",
+"outcomes": {
+"10768": "C<0.5",
+"10767": "C>0.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10771": {
+"kind": "team",
+"outcomes": {
+"10772": "C<1.5",
+"10771": "C>1.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10775": {
+"kind": "team",
+"outcomes": {
+"10775": "C>2.5",
+"10776": "C<2.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10779": {
+"kind": "team",
+"outcomes": {
+"10780": "C<3.5",
+"10779": "C>3.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10783": {
+"kind": "team",
+"outcomes": {
+"10784": "C<4.5",
+"10783": "C>4.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10787": {
+"kind": "team",
+"outcomes": {
+"10787": "C>5.5",
+"10788": "C<5.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10791": {
+"kind": "team",
+"outcomes": {
+"10792": "C<6.5",
+"10791": "C>6.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10795": {
+"kind": "team",
+"outcomes": {
+"10795": "C>7.5",
+"10796": "C<7.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10799": {
+"kind": "team",
+"outcomes": {
+"10800": "C<8.5",
+"10799": "C>8.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10803": {
+"kind": "team",
+"outcomes": {
+"10803": "C>9.5",
+"10804": "C<9.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10807": {
+"kind": "team",
+"outcomes": {
+"10807": "C>10.5",
+"10808": "C<10.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10811": {
+"kind": "team",
+"outcomes": {
+"10811": "C>11.5",
+"10812": "C<11.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10815": {
+"kind": "team",
+"outcomes": {
+"10815": "C>12.5",
+"10816": "C<12.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10819": {
+"kind": "team",
+"outcomes": {
+"10819": "C>13.5",
+"10820": "C<13.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10823": {
+"kind": "team",
+"outcomes": {
+"10823": "C>14.5",
+"10824": "C<14.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10827": {
+"kind": "team",
+"outcomes": {
+"10828": "C<15.5",
+"10827": "C>15.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10831": {
+"kind": "team",
+"outcomes": {
+"10832": "C<16.5",
+"10831": "C>16.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10835": {
+"kind": "team",
+"outcomes": {
+"10836": "C<17.5",
+"10835": "C>17.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10839": {
+"kind": "team",
+"outcomes": {
+"10840": "C<18.5",
+"10839": "C>18.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"10843": {
+"kind": "team",
+"outcomes": {
+"10844": "C<19.5",
+"10843": "C>19.5"
+},
+"name": "Corners - Over Under Full Time"
+},
+"101412": {
+"kind": "team",
+"outcomes": {
+"101412": "CHt>0.5",
+"101413": "CHt<0.5"
+},
+"name": "Corners - Over Under Team 1"
+},
+"101416": {
+"kind": "team",
+"outcomes": {
+"101417": "CHt<1.5",
+"101416": "CHt>1.5"
+},
+"name": "Corners - Over Under Team 1"
+},
+"101420": {
+"kind": "team",
+"outcomes": {
+"101420": "CHt>2.5",
+"101421": "CHt<2.5"
+},
+"name": "Corners - Over Under Team 1"
+},
+"101424": {
+"kind": "team",
+"outcomes": {
+"101425": "CHt<3.5",
+"101424": "CHt>3.5"
+},
+"name": "Corners - Over Under Team 1"
+},
+"101428": {
+"kind": "team",
+"outcomes": {
+"101428": "CHt>4.5",
+"101429": "CHt<4.5"
+},
+"name": "Corners - Over Under Team 1"
+},
+"101432": {
+"kind": "team",
+"outcomes": {
+"101432": "CHt>5.5",
+"101433": "CHt<5.5"
+},
+"name": "Corners - Over Under Team 1"
+},
+"101436": {
+"kind": "team",
+"outcomes": {
+"101436": "CHt>6.5",
+"101437": "CHt<6.5"
+},
+"name": "Corners - Over Under Team 1"
+},
+"101440": {
+"kind": "team",
+"outcomes": {
+"101441": "CHt<7.5",
+"101440": "CHt>7.5"
+},
+"name": "Corners - Over Under Team 1"
+},
+"101444": {
+"kind": "team",
+"outcomes": {
+"101445": "CHt<8.5",
+"101444": "CHt>8.5"
+},
+"name": "Corners - Over Under Team 1"
+},
+"101448": {
+"kind": "team",
+"outcomes": {
+"101448": "CHt>9.5",
+"101449": "CHt<9.5"
+},
+"name": "Corners - Over Under Team 1"
+},
+"101452": {
+"kind": "team",
+"outcomes": {
+"101452": "CHt>10.5",
+"101453": "CHt<10.5"
+},
+"name": "Corners - Over Under Team 1"
+},
+"101456": {
+"kind": "team",
+"outcomes": {
+"101457": "CHt<11.5",
+"101456": "CHt>11.5"
+},
+"name": "Corners - Over Under Team 1"
+},
+"101460": {
+"kind": "team",
+"outcomes": {
+"101460": "CHt>12.5",
+"101461": "CHt<12.5"
+},
+"name": "Corners - Over Under Team 1"
+},
+"101464": {
+"kind": "team",
+"outcomes": {
+"101464": "CHt>13.5",
+"101465": "CHt<13.5"
+},
+"name": "Corners - Over Under Team 1"
+},
+"101468": {
+"kind": "team",
+"outcomes": {
+"101469": "CHt<14.5",
+"101468": "CHt>14.5"
+},
+"name": "Corners - Over Under Team 1"
+},
+"101472": {
+"kind": "team",
+"outcomes": {
+"101472": "CAt>0.5",
+"101473": "CAt<0.5"
+},
+"name": "Corners - Over Under Team 2"
+},
+"101476": {
+"kind": "team",
+"outcomes": {
+"101477": "CAt<1.5",
+"101476": "CAt>1.5"
+},
+"name": "Corners - Over Under Team 2"
+},
+"101480": {
+"kind": "team",
+"outcomes": {
+"101481": "CAt<2.5",
+"101480": "CAt>2.5"
+},
+"name": "Corners - Over Under Team 2"
+},
+"101484": {
+"kind": "team",
+"outcomes": {
+"101484": "CAt>3.5",
+"101485": "CAt<3.5"
+},
+"name": "Corners - Over Under Team 2"
+},
+"101488": {
+"kind": "team",
+"outcomes": {
+"101489": "CAt<4.5",
+"101488": "CAt>4.5"
+},
+"name": "Corners - Over Under Team 2"
+},
+"101492": {
+"kind": "team",
+"outcomes": {
+"101493": "CAt<5.5",
+"101492": "CAt>5.5"
+},
+"name": "Corners - Over Under Team 2"
+},
+"101496": {
+"kind": "team",
+"outcomes": {
+"101497": "CAt<6.5",
+"101496": "CAt>6.5"
+},
+"name": "Corners - Over Under Team 2"
+},
+"101500": {
+"kind": "team",
+"outcomes": {
+"101501": "CAt<7.5",
+"101500": "CAt>7.5"
+},
+"name": "Corners - Over Under Team 2"
+},
+"101504": {
+"kind": "team",
+"outcomes": {
+"101505": "CAt<8.5",
+"101504": "CAt>8.5"
+},
+"name": "Corners - Over Under Team 2"
+},
+"101508": {
+"kind": "team",
+"outcomes": {
+"101509": "CAt<9.5",
+"101508": "CAt>9.5"
+},
+"name": "Corners - Over Under Team 2"
+},
+"101512": {
+"kind": "team",
+"outcomes": {
+"101513": "CAt<10.5",
+"101512": "CAt>10.5"
+},
+"name": "Corners - Over Under Team 2"
+},
+"101516": {
+"kind": "team",
+"outcomes": {
+"101517": "CAt<11.5",
+"101516": "CAt>11.5"
+},
+"name": "Corners - Over Under Team 2"
+},
+"101520": {
+"kind": "team",
+"outcomes": {
+"101520": "CAt>12.5",
+"101521": "CAt<12.5"
+},
+"name": "Corners - Over Under Team 2"
+},
+"101524": {
+"kind": "team",
+"outcomes": {
+"101525": "CAt<13.5",
+"101524": "CAt>13.5"
+},
+"name": "Corners - Over Under Team 2"
+},
+"101528": {
+"kind": "team",
+"outcomes": {
+"101529": "CAt<14.5",
+"101528": "CAt>14.5"
+},
+"name": "Corners - Over Under Team 2"
+},
+"101535": {
+"kind": "team",
+"outcomes": {
+"101536": "C1<0.5",
+"101535": "C1>0.5"
+},
+"name": "Corners - Over Under First Half"
+},
+"101539": {
+"kind": "team",
+"outcomes": {
+"101539": "C1>1.5",
+"101540": "C1<1.5"
+},
+"name": "Corners - Over Under First Half"
+},
+"101543": {
+"kind": "team",
+"outcomes": {
+"101544": "C1<2.5",
+"101543": "C1>2.5"
+},
+"name": "Corners - Over Under First Half"
+},
+"101547": {
+"kind": "team",
+"outcomes": {
+"101548": "C1<3.5",
+"101547": "C1>3.5"
+},
+"name": "Corners - Over Under First Half"
+},
+"101551": {
+"kind": "team",
+"outcomes": {
+"101552": "C1<4.5",
+"101551": "C1>4.5"
+},
+"name": "Corners - Over Under First Half"
+},
+"101555": {
+"kind": "team",
+"outcomes": {
+"101556": "C1<5.5",
+"101555": "C1>5.5"
+},
+"name": "Corners - Over Under First Half"
+},
+"101559": {
+"kind": "team",
+"outcomes": {
+"101560": "C1<6.5",
+"101559": "C1>6.5"
+},
+"name": "Corners - Over Under First Half"
+},
+"101563": {
+"kind": "team",
+"outcomes": {
+"101564": "C1<7.5",
+"101563": "C1>7.5"
+},
+"name": "Corners - Over Under First Half"
+},
+"101567": {
+"kind": "team",
+"outcomes": {
+"101567": "C1>8.5",
+"101568": "C1<8.5"
+},
+"name": "Corners - Over Under First Half"
+},
+"101571": {
+"kind": "team",
+"outcomes": {
+"101572": "C1<9.5",
+"101571": "C1>9.5"
+},
+"name": "Corners - Over Under First Half"
+},
+"101575": {
+"kind": "team",
+"outcomes": {
+"101576": "C1<10.5",
+"101575": "C1>10.5"
+},
+"name": "Corners - Over Under First Half"
+},
+"101579": {
+"kind": "team",
+"outcomes": {
+"101580": "C1<11.5",
+"101579": "C1>11.5"
+},
+"name": "Corners - Over Under First Half"
+},
+"101583": {
+"kind": "team",
+"outcomes": {
+"101583": "C1>12.5",
+"101584": "C1<12.5"
+},
+"name": "Corners - Over Under First Half"
+},
+"101587": {
+"kind": "team",
+"outcomes": {
+"101588": "C1<13.5",
+"101587": "C1>13.5"
+},
+"name": "Corners - Over Under First Half"
+},
+"101591": {
+"kind": "team",
+"outcomes": {
+"101591": "C1>14.5",
+"101592": "C1<14.5"
+},
+"name": "Corners - Over Under First Half"
+},
+"101902": {
+"kind": "team",
+"outcomes": {
+"101902": "1X",
+"101903": "12",
+"101904": "X2"
+},
+"name": "Double Chance Full Time"
+}
+}

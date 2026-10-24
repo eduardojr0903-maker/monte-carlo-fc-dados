@@ -2,7 +2,7 @@ name: Odds da Bet365 (OddsPapi)
 on:
   workflow_dispatch:
   push:
-    paths: [".github/workflows/odds.yml", "scraper/upcoming_odds.py"]
+    paths: [".github/workflows/odds.yml"]
 permissions:
   contents: write
 jobs:
@@ -14,13 +14,14 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -r scraper/requirements.txt
+      - run: node scraper/model_run.js 60 20000
       - name: Odds
         env:
           ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
           ODDSPAPI_FORCE: "1"
-          ODDSPAPI_BOOKS: "bet365,pinnacle"
-          ODDSPAPI_PROBE: "1"
         run: python scraper/upcoming_odds.py
+      - name: Robô
+        run: python scraper/autobets.py
       - name: Resumo da resposta (sem a chave)
         run: |
           python - <<'PY'
@@ -44,12 +45,12 @@ jobs:
           git config user.name "monte-carlo-fc-bot"
           git config user.email "monte-carlo-fc-bot@users.noreply.github.com"
           for i in 1 2 3 4 5; do
-            git add data/odds
+            git add data/odds data/model data/autobets
             git diff --cached --quiet && exit 0
             git stash
             git pull --rebase -X ours origin main || git rebase --abort
             git stash pop
-            git add data/odds
+            git add data/odds data/model data/autobets
             git commit -m "Odds da Bet365 (OddsPapi) e listas de referência"
             git push && exit 0
             sleep 10
