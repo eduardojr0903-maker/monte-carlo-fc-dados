@@ -1,0 +1,54 @@
+name: Odds da Bet365 (OddsPapi)
+on:
+  workflow_dispatch:
+  push:
+    paths: [".github/workflows/odds.yml"]
+permissions:
+  contents: write
+jobs:
+  odds:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r scraper/requirements.txt
+      - name: Odds
+        env:
+          ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
+        run: python scraper/upcoming_odds.py
+      - name: Resumo da resposta (sem a chave)
+        run: |
+          python - <<'PY'
+          import json, os
+          p = "data/odds/upcoming/oddspapi_bet365.json"
+          if not os.path.exists(p):
+              print("sem arquivo de odds"); raise SystemExit
+          d = json.load(open(p))
+          fx = d["data"] if isinstance(d["data"], list) else d["data"].get("data", [])
+          print("jogos", len(fx))
+          if fx:
+              f = fx[0]
+              print("campos do jogo:", list(f.keys()))
+              bo = f.get("bookmakerOdds") or {}
+              print("casas:", list(bo.keys()))
+              for b, v in bo.items():
+                  print(b, "mercados:", len(v.get("markets") or {}))
+          PY
+      - name: Salvar
+        run: |
+          git config user.name "monte-carlo-fc-bot"
+          git config user.email "monte-carlo-fc-bot@users.noreply.github.com"
+          for i in 1 2 3 4 5; do
+            git add data/odds
+            git diff --cached --quiet && exit 0
+            git stash
+            git pull --rebase -X ours origin main || git rebase --abort
+            git stash pop
+            git add data/odds
+            git commit -m "Odds da Bet365 (OddsPapi) e listas de referência"
+            git push && exit 0
+            sleep 10
+          done
+          exit 1
