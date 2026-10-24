@@ -2,7 +2,7 @@ name: Odds da Bet365 (OddsPapi)
 on:
   workflow_dispatch:
   push:
-    paths: [".github/workflows/odds.yml"]
+    paths: [".github/workflows/odds.yml", "scraper/upcoming_odds.py"]
 permissions:
   contents: write
 jobs:

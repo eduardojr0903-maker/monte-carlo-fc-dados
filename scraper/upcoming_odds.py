@@ -20,7 +20,11 @@ UP = os.path.join(ROOT, "data", "odds", "upcoming")
 REF = os.path.join(ROOT, "data", "odds", "oddspapi")
 S = http.Session(impersonate="chrome")
 API = "https://api.oddspapi.io/v4"
-# our league -> how OddsPapi names it (category, tournament name candidates)
+# our league -> OddsPapi tournament id (checked against data/odds/oddspapi/tournaments.json)
+OP_TOURNAMENTS = {268: 325, 8814: 390, 47: 17, 48: 18, 87: 8, 55: 23, 54: 35, 53: 34}
+# up to 3 bookmakers per request: Bet365 Brazil (what the user sees), Bet365 international (fallback), Pinnacle (closing line)
+BOOKS = ("bet365.bet.br", "bet365", "pinnacle")
+# (old name matching, kept for reference) our league -> how OddsPapi names it
 OP_LEAGUES = {
     268: ("brazil", ("brasileiro serie a", "serie a")), 8814: ("brazil", ("brasileiro serie b", "serie b")),
     47: ("england", ("premier league",)), 48: ("england", ("championship",)), 87: ("spain", ("laliga", "la liga")),
@@ -50,7 +54,10 @@ def op_get(path, key, **params):
         r = S.get(f"{API}/{path}", params=params, timeout=90)
         if r.status_code == 200:
             return r.json()
-        print(path, "HTTP", r.status_code, r.text[:200].replace(key, "***"), flush=True)
+        msg = f"{time.strftime('%Y-%m-%d %H:%M', time.gmtime())} {path} HTTP {r.status_code} {r.text[:500].replace(key, '***')}"
+        print(msg, flush=True)
+        os.makedirs(UP, exist_ok=True)
+        open(os.path.join(UP, "oddspapi_error.txt"), "a").write(msg + "\n")
         if r.status_code == 429:
             time.sleep(5 + 5 * i)
             continue
@@ -78,28 +85,30 @@ def oddspapi():
                 json.dump(d, open(p, "w"))
                 print("OddsPapi: salvo", name, flush=True)
             time.sleep(1.2)
-    tp = os.path.join(REF, "tournaments.json")
-    if not os.path.exists(tp):
-        return
-    tours = json.load(open(tp))
-    ids = {}
-    for lid, (cat, names) in OP_LEAGUES.items():
-        for t in tours if isinstance(tours, list) else tours.get("data", []):
-            tn = (t.get("tournamentName") or t.get("name") or "").lower()
-            tc = (t.get("categoryName") or t.get("categorySlug") or "").lower()
-            if cat in tc and any(n == tn or n in tn for n in names) and "women" not in tn and "u2" not in tn:
-                ids.setdefault(lid, t.get("tournamentId") or t.get("id"))
+    ids = dict(OP_TOURNAMENTS)
     json.dump({str(k): v for k, v in ids.items()}, open(os.path.join(REF, "tournament_ids.json"), "w"))
-    print("OddsPapi: torneios", ids, flush=True)
-    if not ids:
-        return
-    d = op_get("odds-by-tournaments", key, bookmaker="bet365", tournamentIds=",".join(str(v) for v in ids.values()), oddsFormat="decimal")
+    d = op_get("odds-by-tournaments", key, bookmakers=",".join(BOOKS), tournamentIds=",".join(str(v) for v in ids.values()))
     if d is not None:
         os.makedirs(UP, exist_ok=True)
         json.dump({"fetched": int(time.time()), "tournaments": {str(k): v for k, v in ids.items()}, "data": d},
                   open(os.path.join(UP, "oddspapi_bet365.json"), "w"))
-        n = len(d) if isinstance(d, list) else len(d.get("data", []))
-        print("OddsPapi: jogos com odds", n, flush=True)
+        fx = d if isinstance(d, list) else d.get("data", [])
+        print("OddsPapi: jogos com odds", len(fx), flush=True)
+        # small sample kept in the repository (the full response is used in the run and not committed)
+        sample = []
+        for f in fx[:400]:
+            bo = f.get("bookmakerOdds") or {}
+            if any((v.get("markets") or {}) for v in bo.values()):
+                sample.append(f)
+            if len(sample) >= 2:
+                break
+        stats = {}
+        for f in fx:
+            for b, v in (f.get("bookmakerOdds") or {}).items():
+                st = stats.setdefault(b, {"jogos": 0, "mercados": 0})
+                st["jogos"] += 1; st["mercados"] += len(v.get("markets") or {})
+        json.dump({"fetched": int(time.time()), "fixtures": len(fx), "by_bookmaker": stats, "sample": sample},
+                  open(os.path.join(REF, "sample.json"), "w"))
 
 
 if __name__ == "__main__":
