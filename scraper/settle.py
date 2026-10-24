@@ -145,7 +145,12 @@ def main(bets_dir, versions_path, out_path):
         if b.get("auto") and not b.get("closeSrc") and not upd.get("closeSrc") and r.get("ts", 0) <= datetime.now(timezone.utc).timestamp():
             a = auto.get(doc_id) or b
             last = a.get("lastOdd")
-            if last:
+            try:
+                created = datetime.fromisoformat(str(a.get("created")).replace("Z", "+00:00")).timestamp()
+            except ValueError:
+                created = 0
+            # a closing price only counts if it was read after the bet was registered (and before kick-off)
+            if last and a.get("key") == b.get("key") and (a.get("lastSeen") or 0) > created + 1800:
                 upd.update({"close": last, "closeFairP": None, "clv": round(b["odd"] / last - 1, 4), "closeSrc": "bet365"})
         if upd:
             updates.append({"doc_id": doc_id, "if_version": ver, "data": upd})

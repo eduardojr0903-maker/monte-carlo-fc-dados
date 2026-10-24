@@ -113,6 +113,12 @@ def player_key_match(key, label, fx_odds):
     return best if score >= 0.82 else None
 
 
+def bet_id(fx_id, key):
+    """Document id of an automatic bet. '>' and '<' must stay distinct (over vs under of the same line)."""
+    k = key.replace(">", "o").replace("<", "u")
+    return f"auto_{fx_id}_{re.sub(r'[^A-Za-z0-9_.+-]', '_', k)}"
+
+
 def family(key):
     """Bets on the same thing count once per fixture: one line per total, one per player, one result bet..."""
     m = re.match(r"^P(\d)_(.+)_(sh|sot|g)(\d)$", key)
@@ -165,10 +171,10 @@ def main():
                 o = odds.get(key) or (player_key_match(key, label, fo) if grp == "pl" else None)
                 if not o:
                     continue
-                bid = f"auto_{fx['fx']}_{re.sub(r'[^A-Za-z0-9_.+-]', '_', key)}"
+                bid = bet_id(fx["fx"], key)
                 if bid in bets:
                     b = bets[bid]
-                    if b.get("status") == "pending" and fx["ts"] > now:
+                    if b.get("key") == key and b.get("status") == "pending" and fx["ts"] > now:
                         b["lastOdd"] = o; b["lastSeen"] = int(now); b["lastP"] = p
                         upd += 1
                     continue
