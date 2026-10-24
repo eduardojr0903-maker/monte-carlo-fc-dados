@@ -50,6 +50,8 @@ def load_league(lid):
 def main(out_path, half_life=120.0, k_prior=6.0):
     out = open(out_path, "w")
     leagues = sorted({int(os.path.basename(f).split("_")[0]) for f in glob.glob(os.path.join(RICH, "*.json"))})
+    if os.environ.get("LIDS"):  # only some leagues, e.g. LIDS=57,61
+        leagues = [l for l in leagues if str(l) in os.environ["LIDS"].split(",")]
     for lid in leagues:
         seasons = load_league(lid)
         order = sorted(seasons)
