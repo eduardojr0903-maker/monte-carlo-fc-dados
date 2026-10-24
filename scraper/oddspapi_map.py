@@ -31,7 +31,7 @@ def convert(resp, mapping, participants=None):
             continue
         hn = f.get("participant1Name") or names.get(str(f.get("participant1Id")), "")
         an = f.get("participant2Name") or names.get(str(f.get("participant2Id")), "")
-        bo = (f.get("bookmakerOdds") or {}).get("bet365") or {}
+        bo = (f.get("bookmakerOdds") or {}).get(resp.get("book") or "bet365.bet.br") or {}
         odds, players = {}, {}
         for mid, m in (bo.get("markets") or {}).items():
             mp = mapping.get(str(mid))

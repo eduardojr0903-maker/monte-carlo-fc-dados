@@ -22,8 +22,8 @@ S = http.Session(impersonate="chrome")
 API = "https://api.oddspapi.io/v4"
 # our league -> OddsPapi tournament id (checked against data/odds/oddspapi/tournaments.json)
 OP_TOURNAMENTS = {268: 325, 8814: 390, 47: 17, 48: 18, 87: 8, 55: 23, 54: 35, 53: 34}
-# up to 3 bookmakers per request: Bet365 Brazil (what the user sees), Bet365 international (fallback), Pinnacle (closing line)
-BOOKS = ("bet365.bet.br", "bet365", "pinnacle")
+# free plan: one bookmaker per request. Bet365 Brazil (what the user sees); Bet365 international only if Brazil is empty
+BOOKS = ("bet365.bet.br", "bet365")
 # (old name matching, kept for reference) our league -> how OddsPapi names it
 OP_LEAGUES = {
     268: ("brazil", ("brasileiro serie a", "serie a")), 8814: ("brazil", ("brasileiro serie b", "serie b")),
@@ -87,10 +87,18 @@ def oddspapi():
             time.sleep(1.2)
     ids = dict(OP_TOURNAMENTS)
     json.dump({str(k): v for k, v in ids.items()}, open(os.path.join(REF, "tournament_ids.json"), "w"))
-    d = op_get("odds-by-tournaments", key, bookmakers=",".join(BOOKS), tournamentIds=",".join(str(v) for v in ids.values()))
-    if d is not None:
+    d, book = None, None
+    for b in BOOKS:
+        d = op_get("odds-by-tournaments", key, bookmaker=b, tournamentIds=",".join(str(v) for v in ids.values()))
+        fx = (d if isinstance(d, list) else (d or {}).get("data", [])) or []
+        if any((f.get("bookmakerOdds") or {}).get(b, {}).get("markets") for f in fx):
+            book = b
+            break
+        print("OddsPapi:", b, "sem mercados, tentando a próxima", flush=True)
+        time.sleep(1.2)
+    if d is not None and book:
         os.makedirs(UP, exist_ok=True)
-        json.dump({"fetched": int(time.time()), "tournaments": {str(k): v for k, v in ids.items()}, "data": d},
+        json.dump({"fetched": int(time.time()), "book": book, "tournaments": {str(k): v for k, v in ids.items()}, "data": d},
                   open(os.path.join(UP, "oddspapi_bet365.json"), "w"))
         fx = d if isinstance(d, list) else d.get("data", [])
         print("OddsPapi: jogos com odds", len(fx), flush=True)
@@ -107,7 +115,7 @@ def oddspapi():
             for b, v in (f.get("bookmakerOdds") or {}).items():
                 st = stats.setdefault(b, {"jogos": 0, "mercados": 0})
                 st["jogos"] += 1; st["mercados"] += len(v.get("markets") or {})
-        json.dump({"fetched": int(time.time()), "fixtures": len(fx), "by_bookmaker": stats, "sample": sample},
+        json.dump({"fetched": int(time.time()), "book": book, "fixtures": len(fx), "by_bookmaker": stats, "sample": sample},
                   open(os.path.join(REF, "sample.json"), "w"))
 
 
