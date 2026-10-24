@@ -18,6 +18,8 @@ jobs:
         env:
           ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
           ODDSPAPI_FORCE: "1"
+          ODDSPAPI_BOOKS: "bet365,pinnacle"
+          ODDSPAPI_PROBE: "1"
         run: python scraper/upcoming_odds.py
       - name: Resumo da resposta (sem a chave)
         run: |

@@ -23,7 +23,8 @@ API = "https://api.oddspapi.io/v4"
 # our league -> OddsPapi tournament id (checked against data/odds/oddspapi/tournaments.json)
 OP_TOURNAMENTS = {268: 325, 8814: 390, 47: 17, 48: 18, 87: 8, 55: 23, 54: 35, 53: 34}
 # free plan: one bookmaker per request. Bet365 Brazil (what the user sees); Bet365 international only if Brazil is empty
-BOOKS = ("bet365.bet.br", "bet365")
+BOOKS = tuple(os.environ.get("ODDSPAPI_BOOKS", "bet365.bet.br,bet365").split(","))
+PROBE = bool(os.environ.get("ODDSPAPI_PROBE"))  # probe run: only save the summary sample for each bookmaker
 # (old name matching, kept for reference) our league -> how OddsPapi names it
 OP_LEAGUES = {
     268: ("brazil", ("brasileiro serie a", "serie a")), 8814: ("brazil", ("brasileiro serie b", "serie b")),
@@ -65,6 +66,32 @@ def op_get(path, key, **params):
     return None
 
 
+def _summary(fx, book, out):
+    """Small sample (2 fixtures) plus market types per bookmaker, kept in the repository."""
+    # small sample kept in the repository (the full response is used in the run and not committed)
+    sample = []
+    for f in fx[:400]:
+        bo = f.get("bookmakerOdds") or {}
+        if any((v.get("markets") or {}) for v in bo.values()):
+            sample.append(f)
+        if len(sample) >= 2:
+            break
+    stats = {}
+    mk = json.load(open(os.path.join(REF, "markets.json"))) if os.path.exists(os.path.join(REF, "markets.json")) else []
+    mk = {str(x.get("marketId")): x.get("marketType") or "" for x in (mk if isinstance(mk, list) else mk.get("data", []))}
+    types = {}
+    for f in fx:
+        for b, v in (f.get("bookmakerOdds") or {}).items():
+            st = stats.setdefault(b, {"jogos": 0, "mercados": 0})
+            st["jogos"] += 1; st["mercados"] += len(v.get("markets") or {})
+            seen = set(mk.get(str(m), "?" + str(m)) for m in (v.get("markets") or {}))
+            for t in seen:
+                types[t] = types.get(t, 0) + 1
+    stats["tipos_de_mercado (jogos)"] = dict(sorted(types.items(), key=lambda x: -x[1]))
+    json.dump({"fetched": int(time.time()), "book": book, "fixtures": len(fx), "by_bookmaker": stats, "sample": sample},
+              open(out, "w"))
+
+
 def oddspapi():
     key = os.environ.get("ODDSPAPI_KEY", "").strip()
     if not key:
@@ -98,38 +125,21 @@ def oddspapi():
             r = op_get("odds-by-tournaments", key, bookmaker=b, tournamentIds=",".join(ch))
             allfx += (r if isinstance(r, list) else (r or {}).get("data", [])) or []
             time.sleep(1.2)
+        if PROBE:
+            d, book = allfx, b
+            _summary(d, book, os.path.join(REF, f"probe_{b}.json"))
+            continue
         if any((f.get("bookmakerOdds") or {}).get(b, {}).get("markets") for f in allfx):
             d, book = allfx, b
             break
         print("OddsPapi:", b, "sem mercados, tentando a próxima", flush=True)
-    if d is not None and book:
+    if d is not None and book and not PROBE:
         os.makedirs(UP, exist_ok=True)
         json.dump({"fetched": int(time.time()), "book": book, "tournaments": {str(k): v for k, v in ids.items()}, "data": d},
                   open(os.path.join(UP, "oddspapi_bet365.json"), "w"))
         fx = d if isinstance(d, list) else d.get("data", [])
         print("OddsPapi: jogos com odds", len(fx), flush=True)
-        # small sample kept in the repository (the full response is used in the run and not committed)
-        sample = []
-        for f in fx[:400]:
-            bo = f.get("bookmakerOdds") or {}
-            if any((v.get("markets") or {}) for v in bo.values()):
-                sample.append(f)
-            if len(sample) >= 2:
-                break
-        stats = {}
-        mk = json.load(open(os.path.join(REF, "markets.json"))) if os.path.exists(os.path.join(REF, "markets.json")) else []
-        mk = {str(x.get("marketId")): x.get("marketType") or "" for x in (mk if isinstance(mk, list) else mk.get("data", []))}
-        types = {}
-        for f in fx:
-            for b, v in (f.get("bookmakerOdds") or {}).items():
-                st = stats.setdefault(b, {"jogos": 0, "mercados": 0})
-                st["jogos"] += 1; st["mercados"] += len(v.get("markets") or {})
-                seen = set(mk.get(str(m), "?" + str(m)) for m in (v.get("markets") or {}))
-                for t in seen:
-                    types[t] = types.get(t, 0) + 1
-        stats["tipos_de_mercado (jogos)"] = dict(sorted(types.items(), key=lambda x: -x[1]))
-        json.dump({"fetched": int(time.time()), "book": book, "fixtures": len(fx), "by_bookmaker": stats, "sample": sample},
-                  open(os.path.join(REF, "sample.json"), "w"))
+        _summary(fx, book, os.path.join(REF, "sample.json"))
 
 
 if __name__ == "__main__":
