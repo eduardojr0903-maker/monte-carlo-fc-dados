@@ -1,4 +1,5 @@
 name: Calendário completo
+# 2026-10-24: reexecução para Eredivisie e Liga Portugal
 on:
   workflow_dispatch:
   push:

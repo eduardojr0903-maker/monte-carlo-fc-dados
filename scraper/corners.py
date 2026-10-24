@@ -9,10 +9,9 @@ import sys
 import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import collect  # noqa: E402
-import history  # noqa: E402
-
-DIR = os.path.join(collect.ROOT, "data", "cache", "corners")
+# collect.py imports this module, so collect/history are imported inside the functions (no circular import)
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DIR = os.path.join(ROOT, "data", "cache", "corners")
 KEYS = ("corners", "corner_kicks", "Corners")
 
 
@@ -62,6 +61,7 @@ def save(p, data):
 
 def process_season(lid, season, s_lg, budget=10**9, verbose=True):
     """Fetch corners for finished matches of one season not yet cached. Returns number fetched."""
+    import collect
     p = path(lid, season)
     data = load(p)
     ms = [m for m in (s_lg or {}).get("fixtures", {}).get("allMatches") or []
@@ -105,6 +105,8 @@ def process_season(lid, season, s_lg, budget=10**9, verbose=True):
 
 
 def backfill(lid):
+    import collect
+    import history
     lg = collect.fm("leagues", id=lid)
     cur = (lg.get("details") or {}).get("selectedSeason") or ""
     for season in history.past_seasons(lg) + [cur]:
