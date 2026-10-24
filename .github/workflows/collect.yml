@@ -37,6 +37,17 @@ jobs:
       - name: Odds de fechamento da temporada atual
         continue-on-error: true
         run: python scraper/odds.py --current
+      - name: Robô de apostas · simular os próximos jogos
+        continue-on-error: true
+        run: node scraper/model_run.js 60 20000
+      - name: Robô de apostas · odds da Bet365
+        continue-on-error: true
+        env:
+          ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
+        run: python scraper/upcoming_odds.py
+      - name: Robô de apostas · filtrar VE ≥ 5% e registrar
+        continue-on-error: true
+        run: python scraper/autobets.py
       - name: Salvar dados no repositório
         if: always()
         run: |

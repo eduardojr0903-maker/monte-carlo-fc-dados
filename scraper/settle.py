@@ -97,6 +97,8 @@ def outcome(key, r):
 def main(bets_dir, versions_path, out_path):
     versions = json.load(open(versions_path)) if versions_path and os.path.exists(versions_path) else {}
     by_id, by_teams = load_matches()
+    ap = os.path.join(ROOT, "data", "autobets", "bets.json")
+    auto = json.load(open(ap)) if os.path.exists(ap) else {}
     odds_cache = {}
     updates = []
     for f in glob.glob(os.path.join(bets_dir, "**", "*.json"), recursive=True):
@@ -139,6 +141,12 @@ def main(bets_dir, versions_path, out_path):
                             p = fair[k] / sum(fair)
                             upd.update({"close": prices[k], "closeFairP": round(p, 4), "clv": round(b["odd"] * p - 1, 4), "closeSrc": src})
                             break
+        # automatic bets: closing line = last Bet365 price seen before kick-off (kept in data/autobets/bets.json)
+        if b.get("auto") and not b.get("closeSrc") and not upd.get("closeSrc") and r.get("ts", 0) <= datetime.now(timezone.utc).timestamp():
+            a = auto.get(doc_id) or b
+            last = a.get("lastOdd")
+            if last:
+                upd.update({"close": last, "closeFairP": None, "clv": round(b["odd"] / last - 1, 4), "closeSrc": "bet365"})
         if upd:
             updates.append({"doc_id": doc_id, "if_version": ver, "data": upd})
     json.dump(updates, open(out_path, "w"), ensure_ascii=False, indent=1)
