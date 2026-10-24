@@ -78,7 +78,8 @@ def oddspapi():
     os.makedirs(REF, exist_ok=True)
     # reference lists, downloaded once
     for name, path, params in (("tournaments.json", "tournaments", {"sportId": 10}), ("markets.json", "markets", {"sportId": 10}),
-                               ("bookmakers.json", "bookmakers", {})):
+                               ("bookmakers.json", "bookmakers", {}),
+                               ("participants.json", "participants", {"sportId": 10})):
         p = os.path.join(REF, name)
         if not os.path.exists(p):
             d = op_get(path, key, **params)
@@ -116,10 +117,17 @@ def oddspapi():
             if len(sample) >= 2:
                 break
         stats = {}
+        mk = json.load(open(os.path.join(REF, "markets.json"))) if os.path.exists(os.path.join(REF, "markets.json")) else []
+        mk = {str(x.get("marketId")): x.get("marketType") or "" for x in (mk if isinstance(mk, list) else mk.get("data", []))}
+        types = {}
         for f in fx:
             for b, v in (f.get("bookmakerOdds") or {}).items():
                 st = stats.setdefault(b, {"jogos": 0, "mercados": 0})
                 st["jogos"] += 1; st["mercados"] += len(v.get("markets") or {})
+                seen = set(mk.get(str(m), "?" + str(m)) for m in (v.get("markets") or {}))
+                for t in seen:
+                    types[t] = types.get(t, 0) + 1
+        stats["tipos_de_mercado (jogos)"] = dict(sorted(types.items(), key=lambda x: -x[1]))
         json.dump({"fetched": int(time.time()), "book": book, "fixtures": len(fx), "by_bookmaker": stats, "sample": sample},
                   open(os.path.join(REF, "sample.json"), "w"))
 
