@@ -113,6 +113,26 @@ def player_key_match(key, label, fx_odds):
     return best if score >= 0.82 else None
 
 
+def family(key):
+    """Bets on the same thing count once per fixture: one line per total, one per player, one result bet..."""
+    m = re.match(r"^P(\d)_(.+)_(sh|sot|g)(\d)$", key)
+    if m:
+        return "P" + m.group(1) + "_" + m.group(2)
+    m = re.match(r"^(G|HG|AG|C|CHt|CAt|C1|S|SH|SA|T|TH|TA)([<>])", key)
+    if m:
+        return m.group(1) + m.group(2)
+    if key in ("1", "X", "2", "1X", "X2", "12", "DNB1", "DNB2", "H-1.5", "A+1.5", "A-1.5", "H+1.5"):
+        return "res"
+    if key.startswith("BTTS"):
+        return "btts"
+    if key.startswith("CX"):
+        return "cx"
+    m = re.match(r"^C([HA])(-?[\d.]+)$", key)
+    if m:
+        return "chc"
+    return key
+
+
 def main():
     now = time.time()
     bets = json.load(open(OUT)) if os.path.exists(OUT) else {}
@@ -139,6 +159,8 @@ def main():
             if not odds and not players:
                 continue
             fo = {"players": players}
+            taken = {family(b["key"]) for b in bets.values() if b.get("fx") == fx["fx"]}
+            cands = {}
             for key, label, p, grp in fx["markets"]:
                 o = odds.get(key) or (player_key_match(key, label, fo) if grp == "pl" else None)
                 if not o:
@@ -153,16 +175,21 @@ def main():
                 ev = p * o - 1
                 if grp not in ALLOWED or ev < MIN_EV or ev > MAX_EV or p < MIN_P or o > MAX_ODD:
                     continue
-                bets[bid] = {
+                fam = family(key)
+                if fam in taken or (fam in cands and cands[fam][0] >= ev):
+                    continue
+                cands[fam] = (ev, bid, {
                     "created": datetime.now(timezone.utc).isoformat(timespec="seconds"), "comp": int(doc_id[1:]),
                     "league": M.get("league"), "h": fx["h"], "a": fx["a"], "hn": fx["hn"], "an": fx["an"],
                     "fx": fx["fx"], "ts": fx["ts"], "key": key, "label": label, "p": p, "odd": o, "ev": round(ev, 4),
                     "stake": 1, "book": BOOK, "auto": True, "src": "+".join(sorted(srcs)), "lineup": fx.get("src"),
                     "status": "pending", "profit": None, "close": None, "closeFairP": None, "clv": None, "closeSrc": None,
                     "lastOdd": o, "lastSeen": int(now), "lastP": p,
-                }
+                })
+            for ev, bid, doc in cands.values():
+                bets[bid] = doc
                 new += 1
-                print(f"  nova: {M.get('league')} {fx['hn']} x {fx['an']} · {label} @ {o} (p {p:.3f}, VE {ev * 100:+.1f}%)", flush=True)
+                print(f"  nova: {M.get('league')} {fx['hn']} x {fx['an']} · {doc['label']} @ {doc['odd']} (p {doc['p']:.3f}, VE {ev * 100:+.1f}%)", flush=True)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump(bets, open(OUT, "w"), ensure_ascii=False, separators=(",", ":"))
     print(f"apostas automáticas: {new} novas, {upd} com odd atualizada, {len(bets)} no total", flush=True)
