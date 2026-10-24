@@ -28,6 +28,8 @@ OUT = os.path.join(ROOT, "data", "autobets", "bets.json")
 MIN_EV = float(os.environ.get("MIN_EV", "0.05"))
 MIN_P = float(os.environ.get("MIN_P", "0.08"))      # skip long shots: model error dominates there
 MAX_ODD = float(os.environ.get("MAX_ODD", "12"))
+# backtest at Bet365: EV above ~25-40% is almost always a model blind spot (promoted teams, missing news), not value
+MAX_EV = float(os.environ.get("MAX_EV", "0.25"))
 BOOK = "Bet365"
 FD_DIV = {"E0": 47, "E1": 48, "SP1": 87, "I1": 55, "D1": 54, "F1": 53}
 DOC2LID = {"s325": 268, "s390": 8814, "s17": 47, "s18": 48, "s8": 87, "s23": 55, "s35": 54, "s34": 53}
@@ -147,7 +149,7 @@ def main():
                         upd += 1
                     continue
                 ev = p * o - 1
-                if grp not in ALLOWED or ev < MIN_EV or p < MIN_P or o > MAX_ODD:
+                if grp not in ALLOWED or ev < MIN_EV or ev > MAX_EV or p < MIN_P or o > MAX_ODD:
                     continue
                 bets[bid] = {
                     "created": datetime.now(timezone.utc).isoformat(timespec="seconds"), "comp": int(doc_id[1:]),
