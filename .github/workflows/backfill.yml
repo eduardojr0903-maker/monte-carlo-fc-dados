@@ -12,17 +12,22 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        lid: [268, 8814, 47, 48, 87, 55, 54, 53]
+        lid: [57, 61]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -r scraper/requirements.txt
+      - run: python scraper/backfill.py ${{ matrix.lid }}
       - run: python scraper/backfill_rich.py ${{ matrix.lid }}
       - uses: actions/upload-artifact@v4
         with:
           name: rich-${{ matrix.lid }}
           path: data/cache/rich/${{ matrix.lid }}_*.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: full-${{ matrix.lid }}
+          path: data/cache/history_full/${{ matrix.lid }}_*.json
   save:
     needs: league
     if: always()
@@ -44,8 +49,10 @@ jobs:
           mkdir -p data/cache/rich
           for i in 1 2 3 4 5; do
             git pull --rebase -X ours origin main || git rebase --abort
-            find artifacts -name '*.json' -exec cp {} data/cache/rich/ \;
-            git add data/cache/rich data/odds
+            mkdir -p data/cache/history_full
+            find artifacts -path '*rich-*' -name '*.json' -exec cp {} data/cache/rich/ \;
+            find artifacts -path '*full-*' -name '*.json' -exec cp {} data/cache/history_full/ \;
+            git add data/cache/rich data/cache/history_full data/odds
             git diff --cached --quiet && exit 0
             git commit -m "Histórico detalhado (mapa de chutes, gols, expulsões, jogadores) e odds"
             git push && exit 0

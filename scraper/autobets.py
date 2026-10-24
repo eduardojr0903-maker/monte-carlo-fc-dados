@@ -31,8 +31,8 @@ MAX_ODD = float(os.environ.get("MAX_ODD", "12"))
 # backtest at Bet365: EV above ~25-40% is almost always a model blind spot (promoted teams, missing news), not value
 MAX_EV = float(os.environ.get("MAX_EV", "0.25"))
 BOOK = "Bet365"
-FD_DIV = {"E0": 47, "E1": 48, "SP1": 87, "I1": 55, "D1": 54, "F1": 53}
-DOC2LID = {"s325": 268, "s390": 8814, "s17": 47, "s18": 48, "s8": 87, "s23": 55, "s35": 54, "s34": 53}
+FD_DIV = {"E0": 47, "E1": 48, "SP1": 87, "I1": 55, "D1": 54, "F1": 53, "N1": 57, "P1": 61}
+DOC2LID = {"s325": 268, "s390": 8814, "s17": 47, "s18": 48, "s8": 87, "s23": 55, "s35": 54, "s34": 53, "s37": 57, "s238": 61}
 # market groups the user allowed: corners, players, 1X2 & goals, team shots (correct score left out)
 ALLOWED = {"res", "dc", "hcp", "gols", "btts", "tg", "st", "sh", "sa", "tt", "th", "ta", "ct", "cx", "chc", "ch", "ca", "c1", "pl"}
 

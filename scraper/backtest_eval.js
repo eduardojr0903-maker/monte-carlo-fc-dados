@@ -7,7 +7,7 @@ if (process.argv[4]) Object.assign(MC.PARAMS, JSON.parse(process.argv[4]));
 const HL = process.argv[5] ? Number(process.argv[5]) : 6;
 const N = Number(process.env.SIMS || 3000);
 const dump = process.env.DUMP ? fs.createWriteStream(process.env.DUMP) : null;
-const LN = { 268: 'Série A', 8814: 'Série B', 47: 'Premier League', 48: 'Championship', 87: 'La Liga', 55: 'Serie A IT', 54: 'Bundesliga', 53: 'Ligue 1' };
+const LN = { 268: 'Série A', 8814: 'Série B', 47: 'Premier League', 48: 'Championship', 87: 'La Liga', 55: 'Serie A IT', 54: 'Bundesliga', 53: 'Ligue 1', 57: 'Eredivisie', 61: 'Liga Portugal' };
 const L2 = (p) => Math.log(Math.max(p, 1e-4));
 const devig = (o) => { const inv = o.map((x) => 1 / x), s = inv.reduce((a, b) => a + b, 0); return inv.map((x) => x / s); };
 const st = {};

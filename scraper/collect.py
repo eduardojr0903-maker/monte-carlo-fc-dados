@@ -100,6 +100,8 @@ LEAGUES = {
     54: ("s35", "Bundesliga", True),
     53: ("s34", "Ligue 1", True),
     48: ("s18", "Championship", True),
+    57: ("s37", "Eredivisie", True),
+    61: ("s238", "Liga Portugal", True),
 }
 POS = {0: "G", 1: "D", 2: "M", 3: "F"}
 

@@ -23,7 +23,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FULL = os.path.join(ROOT, "data", "cache", "history_full")
 CUR = os.path.join(ROOT, "data", "cache", "fotmob")
 ODDS = os.path.join(ROOT, "data", "odds")
-FD = {47: "E0", 48: "E1", 87: "SP1", 55: "I1", 54: "D1", 53: "F1"}
+FD = {47: "E0", 48: "E1", 87: "SP1", 55: "I1", 54: "D1", 53: "F1", 57: "N1", 61: "P1"}
 
 
 def norm(s):
