@@ -70,9 +70,10 @@ def oddspapi():
     if not key:
         print("OddsPapi: sem chave (secret ODDSPAPI_KEY), pulando", flush=True)
         return
-    # free plan: 250 requests/month. Skip the 03 UTC run (night in Brazil and Europe): 7 calls a day.
-    if time.gmtime().tm_hour in (2, 3, 4) and os.path.exists(os.path.join(REF, "tournament_ids.json")):
-        print("OddsPapi: madrugada, pulando para economizar a cota", flush=True)
+    # free plan: 250 requests/month, 1 bookmaker and at most 5 tournaments per request -> 2 requests per round.
+    # Three rounds a day (09, 15 and 21 UTC = 06, 12 and 18 in Brasília): about 186 requests a month.
+    if time.gmtime().tm_hour not in (9, 15, 21) and not os.environ.get("ODDSPAPI_FORCE") and os.path.exists(os.path.join(REF, "markets.json")):
+        print("OddsPapi: fora dos horários (09, 15, 21 UTC), pulando para economizar a cota", flush=True)
         return
     os.makedirs(REF, exist_ok=True)
     # reference lists, downloaded once
@@ -87,15 +88,19 @@ def oddspapi():
             time.sleep(1.2)
     ids = dict(OP_TOURNAMENTS)
     json.dump({str(k): v for k, v in ids.items()}, open(os.path.join(REF, "tournament_ids.json"), "w"))
+    tids = [str(v) for v in ids.values()]
+    chunks = [tids[i:i + 5] for i in range(0, len(tids), 5)]
     d, book = None, None
     for b in BOOKS:
-        d = op_get("odds-by-tournaments", key, bookmaker=b, tournamentIds=",".join(str(v) for v in ids.values()))
-        fx = (d if isinstance(d, list) else (d or {}).get("data", [])) or []
-        if any((f.get("bookmakerOdds") or {}).get(b, {}).get("markets") for f in fx):
-            book = b
+        allfx = []
+        for ch in chunks:
+            r = op_get("odds-by-tournaments", key, bookmaker=b, tournamentIds=",".join(ch))
+            allfx += (r if isinstance(r, list) else (r or {}).get("data", [])) or []
+            time.sleep(1.2)
+        if any((f.get("bookmakerOdds") or {}).get(b, {}).get("markets") for f in allfx):
+            d, book = allfx, b
             break
         print("OddsPapi:", b, "sem mercados, tentando a próxima", flush=True)
-        time.sleep(1.2)
     if d is not None and book:
         os.makedirs(UP, exist_ok=True)
         json.dump({"fetched": int(time.time()), "book": book, "tournaments": {str(k): v for k, v in ids.items()}, "data": d},

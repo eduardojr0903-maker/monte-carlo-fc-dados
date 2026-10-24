@@ -1,2 +1,0 @@
-2026-10-24 11:39 odds-by-tournaments HTTP 400 {"error":{"message":"Too many tournament IDs specified.","code":"INVALID_PARAMETER","details":"Please provide a maximum of 5 tournament IDs using the 'tournamentIds' query parameter."}}
-2026-10-24 11:39 odds-by-tournaments HTTP 400 {"error":{"message":"Too many tournament IDs specified.","code":"INVALID_PARAMETER","details":"Please provide a maximum of 5 tournament IDs using the 'tournamentIds' query parameter."}}
