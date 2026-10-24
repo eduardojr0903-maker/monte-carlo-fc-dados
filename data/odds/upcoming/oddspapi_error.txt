@@ -1,0 +1,1 @@
+2026-10-24 11:38 odds-by-tournaments HTTP 400 {"error":{"message":"Invalid number of bookmakers specified.","code":"INVALID_PARAMETER","details":"Please provide exactly one bookmaker using the 'bookmaker' query parameter."}}
