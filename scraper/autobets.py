@@ -27,14 +27,18 @@ UP = os.path.join(ROOT, "data", "odds", "upcoming")
 OUT = os.path.join(ROOT, "data", "autobets", "bets.json")
 MIN_EV = float(os.environ.get("MIN_EV", "0.05"))
 MIN_P = float(os.environ.get("MIN_P", "0.08"))      # skip long shots: model error dominates there
-MAX_ODD = float(os.environ.get("MAX_ODD", "12"))
+MAX_ODD = float(os.environ.get("MAX_ODD", "2.5"))  # weekend 24-25/10: odds above 2.5 lost most
 # backtest at Bet365: EV above ~25-40% is almost always a model blind spot (promoted teams, missing news), not value
 MAX_EV = float(os.environ.get("MAX_EV", "0.25"))
 BOOK = "Bet365"
 FD_DIV = {"E0": 47, "E1": 48, "SP1": 87, "I1": 55, "D1": 54, "F1": 53, "N1": 57, "P1": 61}
 DOC2LID = {"s325": 268, "s390": 8814, "s17": 47, "s18": 48, "s8": 87, "s23": 55, "s35": 54, "s34": 53, "s37": 57, "s238": 61}
 # market groups the user allowed: corners, players, 1X2 & goals, team shots (correct score left out)
-ALLOWED = {"res", "dc", "hcp", "gols", "btts", "tg", "st", "sh", "sa", "tt", "th", "ta", "ct", "cx", "chc", "ch", "ca", "c1", "pl"}
+# player markets ("pl") paused after the first weekend: the model added nothing to the bookmaker price there
+ALLOWED = {"res", "dc", "hcp", "gols", "btts", "tg", "st", "sh", "sa", "tt", "th", "ta", "ct", "cx", "chc", "ch", "ca", "c1"}
+# EV is computed on a blend of the model and the bookmaker's probability without margin (weekend fit: 0.6 model)
+W_MODEL = float(os.environ.get("W_MODEL", "0.6"))
+MARGIN_FALLBACK = 1.05  # when the other side of the market is missing
 
 
 def sim(a, b):
@@ -119,6 +123,20 @@ def bet_id(fx_id, key):
     return f"auto_{fx_id}_{re.sub(r'[^A-Za-z0-9_.+-]', '_', k)}"
 
 
+def market_prob(key, odds):
+    """Bookmaker probability without margin, using the other outcomes of the same market when available."""
+    groups = [("1", "X", "2"), ("CX1", "CXX", "CX2"), ("BTTS-S", "BTTS-N"), ("DNB1", "DNB2"),
+              ("H-1.5", "A+1.5"), ("A-1.5", "H+1.5"), ("1X", "2"), ("X2", "1"), ("12", "X")]
+    m = re.match(r"^(.+)([<>])([\d.]+)$", key)
+    if m:
+        groups = [(key, m.group(1) + ("<" if m.group(2) == ">" else ">") + m.group(3))]
+    for g in groups:
+        if key in g and all(odds.get(k) for k in g):
+            inv = [1 / odds[k] for k in g]
+            return (1 / odds[key]) / sum(inv)
+    return 1 / (odds[key] * MARGIN_FALLBACK)
+
+
 def family(key):
     """Bets on the same thing count once per fixture: one line per total, one per player, one result bet..."""
     m = re.match(r"^P(\d)_(.+)_(sh|sot|g)(\d)$", key)
@@ -178,6 +196,9 @@ def main():
                         b["lastOdd"] = o; b["lastSeen"] = int(now); b["lastP"] = p
                         upd += 1
                     continue
+                p_model = p
+                q = market_prob(key, dict(odds, **{key: o}))
+                p = W_MODEL * p_model + (1 - W_MODEL) * q
                 ev = p * o - 1
                 if grp not in ALLOWED or ev < MIN_EV or ev > MAX_EV or p < MIN_P or o > MAX_ODD:
                     continue
@@ -187,7 +208,7 @@ def main():
                 cands[fam] = (ev, bid, {
                     "created": datetime.now(timezone.utc).isoformat(timespec="seconds"), "comp": int(doc_id[1:]),
                     "league": M.get("league"), "h": fx["h"], "a": fx["a"], "hn": fx["hn"], "an": fx["an"],
-                    "fx": fx["fx"], "ts": fx["ts"], "key": key, "label": label, "p": p, "odd": o, "ev": round(ev, 4),
+                    "fx": fx["fx"], "ts": fx["ts"], "key": key, "label": label, "p": round(p, 4), "pModel": p_model, "pMarket": round(q, 4), "odd": o, "ev": round(ev, 4),
                     "stake": 1, "book": BOOK, "auto": True, "src": "+".join(sorted(srcs)), "lineup": fx.get("src"),
                     "status": "pending", "profit": None, "close": None, "closeFairP": None, "clv": None, "closeSrc": None,
                     "lastOdd": o, "lastSeen": int(now), "lastP": p,
