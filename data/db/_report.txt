@@ -1,4 +1,4 @@
-2026-10-26T15:08:43+00:00
+2026-10-26T16:26:47+00:00
 Brasileirão Série A: histórico 1520 jogos (+0), mando 1.399, 317 jogos (0 novos), 763 jogadores, xG sim, 13 próximos jogos {'sg_predicted': 8, 'last_xi': 3, None: 2}, 198 KB
 Brasileirão Série B: histórico 1520 jogos (+0), mando 1.413, 347 jogos (0 novos), 778 jogadores, xG sim, 13 próximos jogos {'last_xi': 4, None: 9}, 186 KB
 Premier League: histórico 1520 jogos (+0), mando 1.185, 80 jogos (0 novos), 456 jogadores, xG sim, 10 próximos jogos {'sg_predicted': 10}, 152 KB
