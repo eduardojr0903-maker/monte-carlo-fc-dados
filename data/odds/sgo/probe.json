@@ -1,6 +1,9 @@
 {
- "fetched": 1793313919,
- "errors": [],
+ "fetched": 1793313972,
+ "errors": [
+  "events EPL: HTTP 400 {\"success\":false,\"error\":\"The leagueID EPL is unavailable at your current subscription tier. Upgrade to unlock\"}",
+  "events BR_SERIE_A: HTTP 400 {\"success\":false,\"error\":\"The leagueID BR_SERIE_A is unavailable at your current subscription tier. Upgrade to unlock\"}"
+ ],
  "leagues": [
   [
    "MLS",
@@ -11,7 +14,12 @@
    "Champions League"
   ]
  ],
- "wanted": [],
+ "wanted": [
+  "MLS",
+  "UEFA_CHAMPIONS_LEAGUE",
+  "EPL",
+  "BR_SERIE_A"
+ ],
  "markets_bet365": {},
  "team_shot_examples": {}
 }
