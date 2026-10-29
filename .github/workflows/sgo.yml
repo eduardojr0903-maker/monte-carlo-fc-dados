@@ -1,4 +1,5 @@
 name: Teste SportsGameOdds
+# 2026-10-29 22:30: execução com a chave
 on:
   workflow_dispatch:
   push:
