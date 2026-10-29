@@ -1,5 +1,5 @@
 {
-"updated": "2026-10-29T16:19:28+00:00",
+"updated": "2026-10-29T19:16:26+00:00",
 "fixtures": {
 "5795498": {
 "league": "Premier League",
@@ -160,36 +160,6 @@
 "sources": [],
 "markets_with_odds": 0,
 "best": null
-},
-"5749723": {
-"league": "Serie A (Itália)",
-"game": "Frosinone x Lecce",
-"ts": 1793295000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-1.44,
-0.6817,
--0.0184
-]
-},
-"5749722": {
-"league": "Serie A (Itália)",
-"game": "Fiorentina x Atalanta",
-"ts": 1793303100,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-1.62,
-0.6266,
-0.0151
-]
 },
 "5749732": {
 "league": "Serie A (Itália)",
