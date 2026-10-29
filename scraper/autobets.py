@@ -87,17 +87,23 @@ def op_odds():
 
 
 def find(src, lid, ts, hn, an):
+    """Same fixture in a bookmaker list. With an exact kick-off time (OddsPapi) the league and time already pin the
+    match down, so a looser name match is enough (e.g. 'Atlético-MG' vs 'Atletico Mineiro MG'); without it (football-data)
+    the names must match closely."""
     day = datetime.fromtimestamp(ts, timezone.utc).date()
-    best, score = None, 0.0
+    best, score, timed = None, 0.0, False
     for r in src:
         if r["lid"] != lid or abs((r["day"] - day).days) > 1:
             continue
-        if r.get("ts") and abs(r["ts"] - ts) > 3 * 3600:
-            continue
+        if r.get("ts"):
+            if abs(r["ts"] - ts) > 20 * 60:
+                continue
         s = sim(hn, r["hn"]) + sim(an, r["an"])
         if s > score:
-            best, score = r, s
-    return best if score >= 1.2 else None
+            best, score, timed = r, s, bool(r.get("ts"))
+    if best is None:
+        return None
+    return best if score >= (0.8 if timed else 1.2) else None
 
 
 def player_key_match(key, label, fx_odds):
@@ -163,6 +169,7 @@ def main():
     sources = fd_odds() + op_odds()
     print("jogos com odds da casa:", len(sources), flush=True)
     new = upd = 0
+    diag = {}
     for f in sorted(glob.glob(os.path.join(ROOT, "data", "model", "s*.json"))):
         doc_id = os.path.basename(f)[:-5]
         lid = DOC2LID.get(doc_id)
@@ -180,6 +187,9 @@ def main():
                         odds.setdefault(k, v)
                     players.update(hit.get("players") or {})
                     srcs.add(hit["src"])
+            dg = {"league": M.get("league"), "game": f"{fx['hn']} x {fx['an']}", "ts": fx["ts"], "sources": sorted(srcs),
+                  "markets_with_odds": len(odds), "best": None}
+            diag[fx["fx"]] = dg
             if not odds and not players:
                 continue
             fo = {"players": players}
@@ -200,6 +210,8 @@ def main():
                 q = market_prob(key, dict(odds, **{key: o}))
                 p = W_MODEL * p_model + (1 - W_MODEL) * q
                 ev = p * o - 1
+                if grp in ALLOWED and o <= MAX_ODD and (dg["best"] is None or ev > dg["best"][3]):
+                    dg["best"] = [label, o, round(p, 4), round(ev, 4)]
                 if grp not in ALLOWED or ev < MIN_EV or ev > MAX_EV or p < MIN_P or o > MAX_ODD:
                     continue
                 fam = family(key)
@@ -219,6 +231,8 @@ def main():
                 print(f"  nova: {M.get('league')} {fx['hn']} x {fx['an']} · {doc['label']} @ {doc['odd']} (p {doc['p']:.3f}, VE {ev * 100:+.1f}%)", flush=True)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump(bets, open(OUT, "w"), ensure_ascii=False, separators=(",", ":"))
+    json.dump({"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "fixtures": diag},
+              open(os.path.join(os.path.dirname(OUT), "diag.json"), "w"), ensure_ascii=False, indent=0)
     print(f"apostas automáticas: {new} novas, {upd} com odd atualizada, {len(bets)} no total", flush=True)
 
 
