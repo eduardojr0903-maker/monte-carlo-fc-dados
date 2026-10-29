@@ -99,9 +99,12 @@ def oddspapi():
         print("OddsPapi: sem chave (secret ODDSPAPI_KEY), pulando", flush=True)
         return
     # free plan: 250 requests/month, 1 bookmaker and at most 5 tournaments per request -> 2 requests per round.
-    # Three rounds a day (09, 15 and 21 UTC = 06, 12 and 18 in Brasília): about 186 requests a month.
-    if time.gmtime().tm_hour not in (9, 15, 21) and not os.environ.get("ODDSPAPI_FORCE") and os.path.exists(os.path.join(REF, "markets.json")):
-        print("OddsPapi: fora dos horários (09, 15, 21 UTC), pulando para economizar a cota", flush=True)
+    # At most one round every 8 hours (3 a day, about 186 requests a month). GitHub delays scheduled runs by up
+    # to an hour, so the rule is based on the time of the last round, not on fixed hours.
+    last_p = os.path.join(REF, "last_round.json")
+    last = json.load(open(last_p)).get("ts", 0) if os.path.exists(last_p) else 0
+    if time.time() - last < 8 * 3600 - 300 and not os.environ.get("ODDSPAPI_FORCE"):
+        print("OddsPapi: última rodada há", round((time.time() - last) / 3600, 1), "h; próxima após 8 h (cota)", flush=True)
         return
     os.makedirs(REF, exist_ok=True)
     # reference lists, downloaded once
@@ -134,6 +137,8 @@ def oddspapi():
             d, book = allfx, b
             break
         print("OddsPapi:", b, "sem mercados, tentando a próxima", flush=True)
+    if not PROBE:
+        json.dump({"ts": int(time.time())}, open(last_p, "w"))
     if d is not None and book and not PROBE:
         os.makedirs(UP, exist_ok=True)
         json.dump({"fetched": int(time.time()), "book": book, "tournaments": {str(k): v for k, v in ids.items()}, "data": d},
