@@ -37,6 +37,7 @@ def main():
     out["leagues"] = [[l.get("leagueID"), l.get("name") or l.get("shortName")] for l in leagues]
     wanted = [l.get("leagueID") for l in leagues if any(k in (l.get("leagueID") or "").upper() for k in
               ("EPL", "LA_LIGA", "BUNDESLIGA", "SERIE_A", "LIGUE_1", "BR", "BRA", "CHAMPIONSHIP", "EREDIVISIE", "PRIMEIRA"))]
+    wanted = list(dict.fromkeys([l.get("leagueID") for l in leagues] + ["EPL", "BR_SERIE_A"]))
     out["wanted"] = wanted
     markets = defaultdict(Counter)   # league -> statID-entity-period-betType counts (Bet365 available)
     examples = {}
