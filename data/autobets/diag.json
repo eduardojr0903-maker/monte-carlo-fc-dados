@@ -1,5 +1,5 @@
 {
-"updated": "2026-10-29T23:02:10+00:00",
+"updated": "2026-10-30T01:26:29+00:00",
 "fixtures": {
 "5795498": {
 "league": "Premier League",
@@ -185,6 +185,14 @@
 "markets_with_odds": 0,
 "best": null
 },
+"5749733": {
+"league": "Serie A (Itália)",
+"game": "Como x Venezia",
+"ts": 1793532600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
 "5887666": {
 "league": "Liga Portugal",
 "game": "Casa Pia AC x Sporting CP",
@@ -205,14 +213,6 @@
 "league": "Liga Portugal",
 "game": "FC Porto x Estoril",
 "ts": 1793478600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
-},
-"5103690": {
-"league": "Brasileirão Série A",
-"game": "Grêmio x Athletico Paranaense",
-"ts": 1793320200,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
@@ -361,6 +361,14 @@
 "markets_with_odds": 0,
 "best": null
 },
+"5781792": {
+"league": "Eredivisie",
+"game": "PEC Zwolle x ADO Den Haag",
+"ts": 1793531700,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
 "5190795": {
 "league": "Brasileirão Série B",
 "game": "Criciúma x Ponte Preta",
@@ -429,6 +437,14 @@
 "league": "La Liga",
 "game": "Barcelona x Deportivo Alavés",
 "ts": 1793476800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5868116": {
+"league": "La Liga",
+"game": "Getafe x Sevilla",
+"ts": 1793538000,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
