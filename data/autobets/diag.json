@@ -1,5 +1,5 @@
 {
-"updated": "2026-10-30T01:26:29+00:00",
+"updated": "2026-10-30T04:14:39+00:00",
 "fixtures": {
 "5795498": {
 "league": "Premier League",
@@ -193,6 +193,22 @@
 "markets_with_odds": 0,
 "best": null
 },
+"5749734": {
+"league": "Serie A (Itália)",
+"game": "Frosinone x Torino",
+"ts": 1793541600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5749736": {
+"league": "Serie A (Itália)",
+"game": "Lazio x Cagliari",
+"ts": 1793541600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
 "5887666": {
 "league": "Liga Portugal",
 "game": "Casa Pia AC x Sporting CP",
@@ -213,6 +229,14 @@
 "league": "Liga Portugal",
 "game": "FC Porto x Estoril",
 "ts": 1793478600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5887664": {
+"league": "Liga Portugal",
+"game": "Arouca x Nacional",
+"ts": 1793547000,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
@@ -261,6 +285,14 @@
 "league": "Ligue 1",
 "game": "Troyes x Le Mans",
 "ts": 1793475900,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5802980": {
+"league": "Ligue 1",
+"game": "Strasbourg x Auxerre",
+"ts": 1793541600,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
@@ -321,6 +353,14 @@
 "markets_with_odds": 0,
 "best": null
 },
+"5881213": {
+"league": "Bundesliga",
+"game": "Union Berlin x Köln",
+"ts": 1793543400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
 "5781787": {
 "league": "Eredivisie",
 "game": "Feyenoord x Fortuna Sittard",
@@ -365,6 +405,30 @@
 "league": "Eredivisie",
 "game": "PEC Zwolle x ADO Den Haag",
 "ts": 1793531700,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5781794": {
+"league": "Eredivisie",
+"game": "Excelsior x FC Twente",
+"ts": 1793539800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5781790": {
+"league": "Eredivisie",
+"game": "Telstar x FC Utrecht",
+"ts": 1793539800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5781789": {
+"league": "Eredivisie",
+"game": "FC Groningen x Sparta Rotterdam",
+"ts": 1793547900,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
@@ -445,6 +509,14 @@
 "league": "La Liga",
 "game": "Getafe x Sevilla",
 "ts": 1793538000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5868118": {
+"league": "La Liga",
+"game": "Racing Santander x Real Madrid",
+"ts": 1793546100,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
