@@ -1,81 +1,6 @@
 {
-"updated": "2026-10-31T13:14:38+00:00",
+"updated": "2026-10-31T15:59:00+00:00",
 "fixtures": {
-"5795495": {
-"league": "Premier League",
-"game": "Bournemouth x Leeds",
-"ts": 1793458800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-1.88,
-0.5564,
-0.0461
-]
-},
-"5795497": {
-"league": "Premier League",
-"game": "Brentford x Nottm Forest",
-"ts": 1793458800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-1.73,
-0.5642,
--0.0239
-]
-},
-"5795499": {
-"league": "Premier League",
-"game": "Coventry x Sunderland",
-"ts": 1793458800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Sunderland",
-2.25,
-0.4378,
--0.0149
-]
-},
-"5795500": {
-"league": "Premier League",
-"game": "Hull x Ipswich",
-"ts": 1793458800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Menos de 2,5 gols",
-1.98,
-0.4925,
--0.0248
-]
-},
-"5795502": {
-"league": "Premier League",
-"game": "Man City x Brighton",
-"ts": 1793458800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-1.4,
-0.6401,
--0.1038
-]
-},
 "5795504": {
 "league": "Premier League",
 "game": "Tottenham x Crystal Palace",
@@ -87,8 +12,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.57,
-0.5477,
--0.1401
+0.5508,
+-0.1353
 ]
 },
 "5795496": {
@@ -102,8 +27,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.2,
-0.4652,
-0.0235
+0.4644,
+0.0217
 ]
 },
 "5795501": {
@@ -117,8 +42,8 @@
 "best": [
 "Menos de 2,5 gols",
 1.98,
-0.5212,
-0.032
+0.5223,
+0.0342
 ]
 },
 "5795503": {
@@ -132,128 +57,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.2,
-0.4544,
--0.0004
-]
-},
-"5836898": {
-"league": "Championship",
-"game": "Bolton x Bristol City",
-"ts": 1793458800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Menos de 2,5 gols",
-1.91,
-0.4436,
--0.1527
-]
-},
-"5836899": {
-"league": "Championship",
-"game": "Burnley x Portsmouth",
-"ts": 1793458800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Menos de 2,5 gols",
-1.93,
-0.5102,
--0.0153
-]
-},
-"5836901": {
-"league": "Championship",
-"game": "Middlesbrough x Charlton",
-"ts": 1793458800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Middlesbrough",
-1.22,
-0.7566,
--0.0769
-]
-},
-"5836902": {
-"league": "Championship",
-"game": "Millwall x Derby",
-"ts": 1793458800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-1.85,
-0.5563,
-0.0291
-]
-},
-"5836905": {
-"league": "Championship",
-"game": "Southampton x QPR",
-"ts": 1793458800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Menos de 2,5 gols",
-2.38,
-0.4174,
--0.0066
-]
-},
-"5836907": {
-"league": "Championship",
-"game": "Swansea x Blackburn",
-"ts": 1793458800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-1.91,
-0.5389,
-0.0294
-]
-},
-"5836908": {
-"league": "Championship",
-"game": "West Ham x West Brom",
-"ts": 1793458800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Menos de 2,5 gols",
-2.2,
-0.4356,
--0.0416
-]
-},
-"5836909": {
-"league": "Championship",
-"game": "Wolves x Cardiff",
-"ts": 1793458800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Wolves",
-1.62,
-0.5907,
--0.0431
+0.455,
+0.0009
 ]
 },
 "5749739": {
@@ -391,21 +196,6 @@
 -0.0087
 ]
 },
-"5887669": {
-"league": "Liga Portugal",
-"game": "Moreirense x Estrela da Amadora",
-"ts": 1793460600,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Estrela da Amadora",
-2.45,
-0.4086,
-0.0012
-]
-},
 "5887670": {
 "league": "Liga Portugal",
 "game": "FC Porto x Estoril",
@@ -447,8 +237,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.9,
-0.5391,
-0.0242
+0.539,
+0.0241
 ]
 },
 "5887668": {
@@ -617,81 +407,6 @@
 0.031
 ]
 },
-"5881206": {
-"league": "Bundesliga",
-"game": "Augsburg x Freiburg",
-"ts": 1793457000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-1.44,
-0.7012,
-0.0098
-]
-},
-"5881207": {
-"league": "Bundesliga",
-"game": "Leverkusen x VfB Stuttgart",
-"ts": 1793457000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-1.3,
-0.7523,
--0.0219
-]
-},
-"5881209": {
-"league": "Bundesliga",
-"game": "M'gladbach x Paderborn",
-"ts": 1793457000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória M'gladbach",
-1.95,
-0.4989,
--0.0271
-]
-},
-"5881212": {
-"league": "Bundesliga",
-"game": "Schalke 04 x RB Leipzig",
-"ts": 1793457000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória RB Leipzig",
-1.8,
-0.6024,
-0.0843
-]
-},
-"5881214": {
-"league": "Bundesliga",
-"game": "Werder Bremen x Hoffenheim",
-"ts": 1793457000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Hoffenheim",
-2.3,
-0.4299,
--0.0112
-]
-},
 "5881208": {
 "league": "Bundesliga",
 "game": "Bayern München x Dortmund",
@@ -737,21 +452,6 @@
 -0.0385
 ]
 },
-"5781787": {
-"league": "Eredivisie",
-"game": "Feyenoord x Fortuna Sittard",
-"ts": 1793460600,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Feyenoord",
-1.17,
-0.8542,
--0.0006
-]
-},
 "5781793": {
 "league": "Eredivisie",
 "game": "PSV Eindhoven x Willem II",
@@ -763,8 +463,8 @@
 "best": [
 "Vitória PSV Eindhoven",
 1.08,
-0.8923,
--0.0363
+0.8922,
+-0.0364
 ]
 },
 "5781791": {
@@ -793,8 +493,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.36,
-0.6851,
--0.0682
+0.6846,
+-0.069
 ]
 },
 "5781788": {
@@ -823,8 +523,8 @@
 "best": [
 "Vitória PEC Zwolle",
 2.25,
-0.466,
-0.0484
+0.4658,
+0.048
 ]
 },
 "5781794": {
@@ -944,21 +644,6 @@
 "markets_with_odds": 0,
 "best": null
 },
-"5868119": {
-"league": "La Liga",
-"game": "Rayo Vallecano x Celta Vigo",
-"ts": 1793459700,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-2.1,
-0.4713,
--0.0104
-]
-},
 "5868112": {
 "league": "La Liga",
 "game": "Real Betis x Málaga",
@@ -970,8 +655,8 @@
 "best": [
 "Vitória Real Betis",
 1.33,
-0.7591,
-0.0096
+0.7609,
+0.012
 ]
 },
 "5868115": {
@@ -985,8 +670,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.22,
-0.7425,
--0.0942
+0.7427,
+-0.0939
 ]
 },
 "5868116": {
@@ -1000,8 +685,8 @@
 "best": [
 "Vitória Sevilla",
 2.4,
-0.4026,
--0.0338
+0.3985,
+-0.0435
 ]
 },
 "5868118": {
@@ -1015,8 +700,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.53,
-0.678,
-0.0373
+0.6753,
+0.0332
 ]
 },
 "5868114": {
@@ -1028,10 +713,10 @@
 ],
 "markets_with_odds": 5,
 "best": [
-"Menos de 2,5 gols",
-1.88,
-0.5135,
--0.0347
+"Mais de 2,5 gols",
+1.98,
+0.4875,
+-0.0348
 ]
 },
 "5868111": {
@@ -1053,8 +738,8 @@
 "best": [
 "Mais de 2,5 gols",
 2.2,
-0.4694,
-0.0326
+0.4663,
+0.0259
 ]
 }
 }
