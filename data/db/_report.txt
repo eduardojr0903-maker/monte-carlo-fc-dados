@@ -1,11 +1,11 @@
-2026-11-01T16:04:58+00:00
+2026-11-01T19:14:20+00:00
 Brasileirão Série A: histórico 1520 jogos (+0), mando 1.402, 329 jogos (0 novos), 763 jogadores, xG sim, 10 próximos jogos {'sg_predicted': 10}, 195 KB
-Brasileirão Série B: histórico 1520 jogos (+0), mando 1.415, 354 jogos (0 novos), 779 jogadores, xG sim, 16 próximos jogos {'last_xi': 7, None: 9}, 189 KB
-Premier League: histórico 1520 jogos (+0), mando 1.206, 88 jogos (0 novos), 462 jogadores, xG sim, 12 próximos jogos {'confirmed': 1, 'sg_predicted': 1, None: 10}, 152 KB
-La Liga: histórico 1520 jogos (+0), mando 1.291, 105 jogos (1 novos), 489 jogadores, xG sim, 13 próximos jogos {'sg_predicted': 4, 'fotmob_predicted': 1, None: 8}, 154 KB
-Serie A (Itália): histórico 1521 jogos (+0), mando 1.101, 94 jogos (1 novos), 499 jogadores, xG sim, 14 próximos jogos {'fotmob_predicted': 4, None: 10}, 150 KB
-Bundesliga: histórico 1224 jogos (+0), mando 1.301, 70 jogos (0 novos), 419 jogadores, xG sim, 10 próximos jogos {'confirmed': 1, None: 9}, 130 KB
-Ligue 1: histórico 1298 jogos (+0), mando 1.22, 76 jogos (0 novos), 432 jogadores, xG sim, 13 próximos jogos {'confirmed': 2, 'sg_predicted': 3, None: 8}, 134 KB
+Brasileirão Série B: histórico 1520 jogos (+0), mando 1.415, 354 jogos (0 novos), 782 jogadores, xG sim, 16 próximos jogos {'confirmed': 1, 'last_xi': 6, None: 9}, 190 KB
+Premier League: histórico 1520 jogos (+0), mando 1.203, 89 jogos (1 novos), 459 jogadores, xG sim, 11 próximos jogos {'sg_predicted': 1, None: 10}, 151 KB
+La Liga: histórico 1520 jogos (+0), mando 1.279, 106 jogos (1 novos), 491 jogadores, xG sim, 12 próximos jogos {'confirmed': 1, 'fotmob_predicted': 1, None: 8, 'sg_predicted': 2}, 153 KB
+Serie A (Itália): histórico 1521 jogos (+0), mando 1.106, 97 jogos (3 novos), 512 jogadores, xG sim, 13 próximos jogos {'fotmob_predicted': 3, None: 10}, 150 KB
+Bundesliga: histórico 1224 jogos (+0), mando 1.303, 72 jogos (2 novos), 417 jogadores, xG sim, 9 próximos jogos {None: 9}, 129 KB
+Ligue 1: histórico 1298 jogos (+0), mando 1.247, 79 jogos (3 novos), 433 jogadores, xG sim, 11 próximos jogos {'confirmed': 1, 'sg_predicted': 2, None: 8}, 132 KB
 Championship: histórico 2226 jogos (+0), mando 1.252, 156 jogos (0 novos), 625 jogadores, xG sim, 24 próximos jogos {'last_xi': 9, 'sg_predicted': 3, None: 12}, 204 KB
-Eredivisie: histórico 1239 jogos (+0), mando 1.136, 98 jogos (2 novos), 446 jogadores, xG sim, 9 próximos jogos {None: 9}, 133 KB
-Liga Portugal: histórico 1224 jogos (+0), mando 1.125, 84 jogos (0 novos), 449 jogadores, xG sim, 14 próximos jogos {'fotmob_predicted': 5, None: 9}, 141 KB
+Eredivisie: histórico 1239 jogos (+0), mando 1.133, 99 jogos (1 novos), 448 jogadores, xG sim, 9 próximos jogos {None: 9}, 133 KB
+Liga Portugal: histórico 1224 jogos (+0), mando 1.129, 85 jogos (1 novos), 449 jogadores, xG sim, 12 próximos jogos {'fotmob_predicted': 3, None: 9}, 138 KB

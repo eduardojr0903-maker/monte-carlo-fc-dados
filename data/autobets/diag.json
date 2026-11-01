@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-01T16:05:17+00:00",
+"updated": "2026-11-01T19:14:37+00:00",
 "fixtures": {
 "5795503": {
 "league": "Premier League",
@@ -12,8 +12,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.2,
-0.4676,
-0.0287
+0.4649,
+0.0227
 ]
 },
 "5836911": {
@@ -88,21 +88,6 @@
 "markets_with_odds": 0,
 "best": null
 },
-"5749735": {
-"league": "Serie A (Itália)",
-"game": "Juventus x Napoli",
-"ts": 1793562300,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-2.03,
-0.5093,
-0.0338
-]
-},
 "5749738": {
 "league": "Serie A (Itália)",
 "game": "Sassuolo x Fiorentina",
@@ -114,8 +99,8 @@
 "best": [
 "Vitória Fiorentina",
 2.35,
-0.4243,
--0.0029
+0.423,
+-0.0059
 ]
 },
 "5749731": {
@@ -129,38 +114,8 @@
 "best": [
 "Vitória Atalanta",
 1.5,
-0.6809,
-0.0213
-]
-},
-"5887663": {
-"league": "Liga Portugal",
-"game": "Académico Viseu x Rio Ave",
-"ts": 1793556000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-1.9,
-0.5367,
-0.0198
-]
-},
-"5887668": {
-"league": "Liga Portugal",
-"game": "Marítimo x Santa Clara",
-"ts": 1793556000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-2.4,
-0.3988,
--0.0428
+0.6807,
+0.021
 ]
 },
 "5887665": {
@@ -174,8 +129,8 @@
 "best": [
 "Vitória Braga",
 1.76,
-0.5678,
--0.0006
+0.5683,
+0.0001
 ]
 },
 "5887671": {
@@ -189,8 +144,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.4,
-0.6637,
--0.0709
+0.6613,
+-0.0742
 ]
 },
 "5887667": {
@@ -204,8 +159,8 @@
 "best": [
 "Mais de 2,5 gols",
 2.2,
-0.4526,
--0.0043
+0.4483,
+-0.0137
 ]
 },
 "5103698": {
@@ -232,21 +187,6 @@
 "markets_with_odds": 0,
 "best": null
 },
-"5802977": {
-"league": "Ligue 1",
-"game": "Marseille x Toulouse",
-"ts": 1793562300,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-1.53,
-0.6302,
--0.0358
-]
-},
 "5802975": {
 "league": "Ligue 1",
 "game": "Lorient x Brest",
@@ -258,17 +198,9 @@
 "best": [
 "Mais de 2,5 gols",
 2.05,
-0.4898,
-0.004
+0.4903,
+0.0051
 ]
-},
-"5190792": {
-"league": "Brasileirão Série B",
-"game": "Londrina x América-MG",
-"ts": 1793559600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
 },
 "5190797": {
 "league": "Brasileirão Série B",
@@ -310,29 +242,6 @@
 "markets_with_odds": 0,
 "best": null
 },
-"5868114": {
-"league": "La Liga",
-"game": "Elche x Valencia",
-"ts": 1793554200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-1.98,
-0.4931,
--0.0236
-]
-},
-"5868111": {
-"league": "La Liga",
-"game": "Athletic Club x Real Sociedad",
-"ts": 1793563200,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
-},
 "5868113": {
 "league": "La Liga",
 "game": "Deportivo A Coruña x Osasuna",
@@ -344,8 +253,8 @@
 "best": [
 "Mais de 2,5 gols",
 2.2,
-0.4673,
-0.0281
+0.4716,
+0.0376
 ]
 }
 }
