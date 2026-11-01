@@ -1,106 +1,171 @@
 {
-"updated": "2026-11-01T19:14:37+00:00",
+"updated": "2026-11-01T22:05:55+00:00",
 "fixtures": {
 "5795503": {
 "league": "Premier League",
 "game": "Newcastle x Everton",
 "ts": 1793649600,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 5,
+"markets_with_odds": 148,
 "best": [
 "Menos de 2,5 gols",
 2.2,
-0.4649,
-0.0227
+0.4653,
+0.0238
 ]
 },
 "5836911": {
 "league": "Championship",
 "game": "Blackburn x Stoke",
 "ts": 1793735100,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 152,
+"best": [
+"Mais de 2,5 gols",
+2.05,
+0.51,
+0.0455
+]
 },
 "5836920": {
 "league": "Championship",
 "game": "Charlton x Bolton",
 "ts": 1793735100,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 152,
+"best": [
+"Ambas marcam: sim",
+1.77,
+0.5681,
+0.0055
+]
 },
 "5836912": {
 "league": "Championship",
 "game": "Derby x Norwich",
 "ts": 1793735100,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 154,
+"best": [
+"Derby com mais escanteios",
+2.37,
+0.4351,
+0.0312
+]
 },
 "5836913": {
 "league": "Championship",
 "game": "Portsmouth x Swansea",
 "ts": 1793735100,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 150,
+"best": [
+"Portsmouth com mais escanteios",
+2.37,
+0.5286,
+0.2528
+]
 },
 "5836914": {
 "league": "Championship",
 "game": "Preston x Sheff Utd",
 "ts": 1793735100,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 154,
+"best": [
+"Total mais de 10,5 escanteios",
+2.25,
+0.4588,
+0.0322
+]
 },
 "5836915": {
 "league": "Championship",
 "game": "QPR x Burnley",
 "ts": 1793735100,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 146,
+"best": [
+"QPR (empate anula)",
+1.8,
+0.5574,
+0.0034
+]
 },
 "5836916": {
 "league": "Championship",
 "game": "Watford x Lincoln",
 "ts": 1793735100,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 152,
+"best": [
+"Lincoln menos de 4,5 escanteios",
+2.2,
+0.5253,
+0.1556
+]
 },
 "5836910": {
 "league": "Championship",
 "game": "Birmingham x Millwall",
 "ts": 1793736000,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 156,
+"best": [
+"Birmingham mais de 5,5 escanteios",
+2.25,
+0.5175,
+0.1644
+]
 },
 "5836917": {
 "league": "Championship",
 "game": "West Brom x Southampton",
 "ts": 1793736000,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 154,
+"best": [
+"Southampton menos de 4,5 escanteios",
+2.2,
+0.4861,
+0.0694
+]
 },
 "5749738": {
 "league": "Serie A (Itália)",
 "game": "Sassuolo x Fiorentina",
 "ts": 1793640600,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 5,
+"markets_with_odds": 111,
 "best": [
 "Vitória Fiorentina",
 2.35,
-0.423,
--0.0059
+0.4228,
+-0.0063
 ]
 },
 "5749731": {
@@ -108,29 +173,15 @@
 "game": "Atalanta x Parma",
 "ts": 1793648700,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 5,
+"markets_with_odds": 145,
 "best": [
 "Vitória Atalanta",
 1.5,
-0.6807,
-0.021
-]
-},
-"5887665": {
-"league": "Liga Portugal",
-"game": "Braga x Famalicão",
-"ts": 1793565000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Braga",
-1.76,
-0.5683,
-0.0001
+0.6841,
+0.0262
 ]
 },
 "5887671": {
@@ -138,14 +189,15 @@
 "game": "Benfica x Alverca",
 "ts": 1793650500,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 5,
+"markets_with_odds": 146,
 "best": [
-"Mais de 2,5 gols",
-1.4,
-0.6613,
--0.0742
+"Alverca menos de 3,5 escanteios",
+1.69,
+0.6195,
+0.0469
 ]
 },
 "5887667": {
@@ -153,108 +205,137 @@
 "game": "Gil Vicente x Vitória de Guimarães",
 "ts": 1793650500,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 5,
+"markets_with_odds": 146,
 "best": [
-"Mais de 2,5 gols",
-2.2,
-0.4483,
--0.0137
+"Gil Vicente gols menos de 2,5",
+2.1,
+0.6932,
+0.4557
 ]
 },
 "5103698": {
 "league": "Brasileirão Série A",
 "game": "RB Bragantino x Santos",
 "ts": 1793660400,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 150,
+"best": [
+"Total menos de 10,5 escanteios",
+2.25,
+0.4478,
+0.0075
+]
 },
 "5103703": {
 "league": "Brasileirão Série A",
 "game": "Chapecoense x Mirassol",
 "ts": 1793745000,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 132,
+"best": [
+"Mirassol gols menos de 1,5",
+1.87,
+0.531,
+-0.0069
+]
 },
 "5103700": {
 "league": "Brasileirão Série A",
 "game": "Internacional x Coritiba",
 "ts": 1793752200,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 147,
+"best": [
+"Internacional mais de 6,5 escanteios",
+1.8,
+0.5673,
+0.0212
+]
 },
 "5802975": {
 "league": "Ligue 1",
 "game": "Lorient x Brest",
 "ts": 1793648700,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 5,
+"markets_with_odds": 142,
 "best": [
-"Mais de 2,5 gols",
-2.05,
-0.4903,
-0.0051
+"Brest (empate anula)",
+2.1,
+0.4914,
+0.032
 ]
-},
-"5190797": {
-"league": "Brasileirão Série B",
-"game": "Cuiabá x São Bernardo",
-"ts": 1793568600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
-},
-"5190790": {
-"league": "Brasileirão Série B",
-"game": "Novorizontino x Operário-PR",
-"ts": 1793568600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
 },
 "5190793": {
 "league": "Brasileirão Série B",
 "game": "Fortaleza x Atlético-GO",
 "ts": 1793646000,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 146,
+"best": [
+"Total menos de 10,5 escanteios",
+2.1,
+0.4734,
+-0.0059
+]
 },
 "5190791": {
 "league": "Brasileirão Série B",
 "game": "Athletic Club MG x Ceará",
 "ts": 1793653200,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 144,
+"best": [
+"Athletic Club MG mais de 1,5",
+2.5,
+0.4044,
+0.0109
+]
 },
 "5190794": {
 "league": "Brasileirão Série B",
 "game": "Goiás x CRB",
 "ts": 1793662200,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 150,
+"best": [
+"CRB menos de 4,5 escanteios",
+2.5,
+0.4042,
+0.0105
+]
 },
 "5868113": {
 "league": "La Liga",
 "game": "Deportivo A Coruña x Osasuna",
 "ts": 1793649600,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 5,
+"markets_with_odds": 143,
 "best": [
 "Mais de 2,5 gols",
 2.2,
-0.4716,
-0.0376
+0.4671,
+0.0276
 ]
 }
 }
