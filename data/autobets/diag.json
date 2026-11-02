@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-02T10:36:41+00:00",
+"updated": "2026-11-02T13:40:15+00:00",
 "fixtures": {
 "5795503": {
 "league": "Premier League",
@@ -153,8 +153,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.4,
-0.6673,
--0.0658
+0.6674,
+-0.0657
 ]
 },
 "5887667": {
@@ -212,6 +212,22 @@
 "markets_with_odds": 0,
 "best": null
 },
+"5103695": {
+"league": "Brasileirão Série A",
+"game": "Botafogo x Atlético-MG",
+"ts": 1793838600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5103696": {
+"league": "Brasileirão Série A",
+"game": "São Paulo x Corinthians",
+"ts": 1793838600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
 "5802975": {
 "league": "Ligue 1",
 "game": "Lorient x Brest",
@@ -262,8 +278,8 @@
 "best": [
 "Mais de 2,5 gols",
 2.2,
-0.4695,
-0.0329
+0.4694,
+0.0327
 ]
 }
 }
