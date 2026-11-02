@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-02T19:19:13+00:00",
+"updated": "2026-11-02T22:06:56+00:00",
 "fixtures": {
 "5836911": {
 "league": "Championship",
@@ -97,14 +97,6 @@
 "markets_with_odds": 0,
 "best": null
 },
-"5103698": {
-"league": "Brasileirão Série A",
-"game": "RB Bragantino x Santos",
-"ts": 1793660400,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
-},
 "5103703": {
 "league": "Brasileirão Série A",
 "game": "Chapecoense x Mirassol",
@@ -149,14 +141,6 @@
 "league": "Brasileirão Série A",
 "game": "São Paulo x Corinthians",
 "ts": 1793838600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
-},
-"5190791": {
-"league": "Brasileirão Série B",
-"game": "Athletic Club MG x Ceará",
-"ts": 1793653200,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
