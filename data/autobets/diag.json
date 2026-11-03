@@ -1,101 +1,196 @@
 {
-"updated": "2026-11-03T07:37:01+00:00",
+"updated": "2026-11-03T10:18:08+00:00",
 "fixtures": {
 "5836911": {
 "league": "Championship",
 "game": "Blackburn x Stoke",
 "ts": 1793735100,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"football-data",
+"oddspapi"
+],
+"markets_with_odds": 146,
+"best": [
+"Blackburn (empate anula)",
+2.5,
+0.504,
+0.2599
+]
 },
 "5836920": {
 "league": "Championship",
 "game": "Charlton x Bolton",
 "ts": 1793735100,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"football-data",
+"oddspapi"
+],
+"markets_with_odds": 152,
+"best": [
+"Charlton (empate anula)",
+2.5,
+0.4926,
+0.2316
+]
 },
 "5836912": {
 "league": "Championship",
 "game": "Derby x Norwich",
 "ts": 1793735100,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"football-data",
+"oddspapi"
+],
+"markets_with_odds": 146,
+"best": [
+"Derby mais de 4,5 escanteios",
+1.97,
+0.5191,
+0.0227
+]
 },
 "5836913": {
 "league": "Championship",
 "game": "Portsmouth x Swansea",
 "ts": 1793735100,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"football-data",
+"oddspapi"
+],
+"markets_with_odds": 146,
+"best": [
+"Portsmouth com mais escanteios",
+2.37,
+0.5351,
+0.2681
+]
 },
 "5836914": {
 "league": "Championship",
 "game": "Preston x Sheff Utd",
 "ts": 1793735100,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"football-data",
+"oddspapi"
+],
+"markets_with_odds": 154,
+"best": [
+"Preston com mais escanteios",
+2.5,
+0.4138,
+0.0346
+]
 },
 "5836915": {
 "league": "Championship",
 "game": "QPR x Burnley",
 "ts": 1793735100,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"football-data"
+],
+"markets_with_odds": 5,
+"best": [
+"Menos de 2,5 gols",
+2.1,
+0.4648,
+-0.0238
+]
 },
 "5836916": {
 "league": "Championship",
 "game": "Watford x Lincoln",
 "ts": 1793735100,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"football-data",
+"oddspapi"
+],
+"markets_with_odds": 150,
+"best": [
+"Watford mais de 5,5 escanteios",
+2.5,
+0.5111,
+0.2776
+]
 },
 "5836910": {
 "league": "Championship",
 "game": "Birmingham x Millwall",
 "ts": 1793736000,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"football-data",
+"oddspapi"
+],
+"markets_with_odds": 150,
+"best": [
+"Birmingham ou empate",
+1.8,
+0.6931,
+0.2476
+]
 },
 "5836917": {
 "league": "Championship",
 "game": "West Brom x Southampton",
 "ts": 1793736000,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"football-data",
+"oddspapi"
+],
+"markets_with_odds": 154,
+"best": [
+"West Brom com mais escanteios",
+2.5,
+0.4888,
+0.222
+]
 },
 "5836919": {
 "league": "Championship",
 "game": "Cardiff x West Ham",
 "ts": 1793821500,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"football-data",
+"oddspapi"
+],
+"markets_with_odds": 152,
+"best": [
+"Cardiff com mais escanteios",
+2.1,
+0.4967,
+0.0431
+]
 },
 "5836921": {
 "league": "Championship",
 "game": "Wrexham x Middlesbrough",
 "ts": 1793821500,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"football-data",
+"oddspapi"
+],
+"markets_with_odds": 154,
+"best": [
+"Menos de 4,5 gols",
+1.33,
+0.7931,
+0.0548
+]
 },
 "5836918": {
 "league": "Championship",
 "game": "Bristol City x Wolves",
 "ts": 1793822400,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"football-data",
+"oddspapi"
+],
+"markets_with_odds": 154,
+"best": [
+"Menos de 4,5 gols",
+1.33,
+0.7945,
+0.0567
+]
 },
 "5103703": {
 "league": "Brasileirão Série A",
@@ -109,9 +204,16 @@
 "league": "Brasileirão Série A",
 "game": "Internacional x Coritiba",
 "ts": 1793752200,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 147,
+"best": [
+"Internacional mais de 6,5 escanteios",
+1.8,
+0.5681,
+0.0226
+]
 },
 "5103701": {
 "league": "Brasileirão Série A",
@@ -125,9 +227,16 @@
 "league": "Brasileirão Série A",
 "game": "Flamengo x Grêmio",
 "ts": 1793831400,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 150,
+"best": [
+"Total de escanteios mais de 3,5",
+1.003,
+0.9857,
+-0.0113
+]
 },
 "5103695": {
 "league": "Brasileirão Série A",
