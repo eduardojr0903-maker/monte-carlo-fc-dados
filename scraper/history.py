@@ -53,6 +53,8 @@ def collect(lid, lg, fm, team_stats, cache_dir, budget, delay):
         full = os.path.join(cache_dir + "_full", f"{lid}_{season.replace('/', '-')}.json")
         c = _load(full) or _load(path) or {"fixtures": None, "m": {}}
         if c["fixtures"] is None:
+            if new >= budget:
+                continue
             s_lg = fm("leagues", id=lid, season=season.replace("/", "%2F"))
             fx = []
             for m in (s_lg or {}).get("fixtures", {}).get("allMatches") or []:
@@ -88,8 +90,8 @@ def collect(lid, lg, fm, team_stats, cache_dir, budget, delay):
             time.sleep(delay + random.random() * 0.3)
         _save(path, c)
         data[season] = {k: v for k, v in c["m"].items() if v}
-        if new >= budget:
-            break
+        # no early break: seasons already cached (history_full from backfill.yml) are always used, even when
+        # this run's download budget is spent (otherwise a league added late got no history at all)
     return data, new
 
 
