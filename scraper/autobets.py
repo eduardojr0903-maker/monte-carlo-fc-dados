@@ -143,6 +143,69 @@ def market_prob(key, odds):
     return 1 / (odds[key] * MARGIN_FALLBACK)
 
 
+MAX_CORR = float(os.environ.get("MAX_CORR", "0.30"))  # bets on the same fixture must not move together more than this
+
+
+def load_sims(doc_id):
+    p = os.path.join(ROOT, "data", "model", f"sims_{doc_id}.json")
+    return json.load(open(p)) if os.path.exists(p) else {}
+
+
+def sim_outcomes(key, S):
+    """Win (1) / lose (0) / void (None) of a market key in each simulated match (same rules as settle.py)."""
+    if not S or not S.get("gH"):
+        return None
+    gH, gA = S["gH"], S["gA"]
+    n = len(gH)
+    m = re.match(r"^(G|HG|AG|C|CHt|CAt|C1|S|SH|SA|T|TH|TA)([<>])([\d.]+)$", key)
+    if m:
+        k, op, line = m.group(1), m.group(2), float(m.group(3))
+        arrs = {"G": [gH[i] + gA[i] for i in range(n)], "HG": gH, "AG": gA}
+        if S.get("cH"):
+            arrs.update({"C": [S["cH"][i] + S["cA"][i] for i in range(n)], "CHt": S["cH"], "CAt": S["cA"],
+                         "C1": [S["cH1"][i] + S["cA1"][i] for i in range(n)]})
+        if S.get("sH"):
+            arrs.update({"S": [S["sH"][i] + S["sA"][i] for i in range(n)], "SH": S["sH"], "SA": S["sA"],
+                         "T": [S["tH"][i] + S["tA"][i] for i in range(n)], "TH": S["tH"], "TA": S["tA"]})
+        v = arrs.get(k)
+        if v is None:
+            return None
+        return [1 if (x > line if op == ">" else x < line) else 0 for x in v]
+    d = [gH[i] - gA[i] for i in range(n)]
+    simple = {"1": lambda i: d[i] > 0, "X": lambda i: d[i] == 0, "2": lambda i: d[i] < 0, "1X": lambda i: d[i] >= 0,
+              "X2": lambda i: d[i] <= 0, "12": lambda i: d[i] != 0, "BTTS-S": lambda i: gH[i] > 0 and gA[i] > 0,
+              "BTTS-N": lambda i: not (gH[i] > 0 and gA[i] > 0), "H-1.5": lambda i: d[i] >= 2, "A+1.5": lambda i: d[i] <= 1,
+              "A-1.5": lambda i: d[i] <= -2, "H+1.5": lambda i: d[i] >= -1}
+    if key in simple:
+        return [1 if simple[key](i) else 0 for i in range(n)]
+    if key in ("DNB1", "DNB2"):
+        return [None if d[i] == 0 else (1 if (d[i] > 0) == (key == "DNB1") else 0) for i in range(n)]
+    if key in ("CX1", "CXX", "CX2") and S.get("cH"):
+        c = [S["cH"][i] - S["cA"][i] for i in range(n)]
+        f = {"CX1": lambda x: x > 0, "CXX": lambda x: x == 0, "CX2": lambda x: x < 0}[key]
+        return [1 if f(x) else 0 for x in c]
+    m = re.match(r"^C([HA])(-?[\d.]+)$", key)
+    if m and S.get("cH"):
+        line = float(m.group(2))
+        return [1 if ((S["cH"][i] - S["cA"][i]) if m.group(1) == "H" else (S["cA"][i] - S["cH"][i])) + line > 0 else 0 for i in range(n)]
+    return None
+
+
+def corr(a, b):
+    """Correlation (phi) of two win/lose vectors, ignoring simulations where either is void."""
+    if a is None or b is None:
+        return 0.0
+    pairs = [(x, y) for x, y in zip(a, b) if x is not None and y is not None]
+    n = len(pairs)
+    if n < 50:
+        return 0.0
+    sx = sum(x for x, _ in pairs); sy = sum(y for _, y in pairs); sxy = sum(x * y for x, y in pairs)
+    vx = sx * (n - sx); vy = sy * (n - sy)
+    if vx <= 0 or vy <= 0:
+        return 0.0
+    return (n * sxy - sx * sy) / (vx * vy) ** 0.5
+
+
 def family(key):
     """Bets on the same thing count once per fixture: one line per total, one per player, one result bet..."""
     m = re.match(r"^P(\d)_(.+)_(sh|sot|g)(\d)$", key)
@@ -168,12 +231,13 @@ def main():
     bets = json.load(open(OUT)) if os.path.exists(OUT) else {}
     sources = fd_odds() + op_odds()
     print("jogos com odds da casa:", len(sources), flush=True)
-    new = upd = 0
+    new = upd = dropped = 0
     diag = {}
     for f in sorted(glob.glob(os.path.join(ROOT, "data", "model", "s*.json"))):
         doc_id = os.path.basename(f)[:-5]
         lid = DOC2LID.get(doc_id)
         M = json.load(open(f))
+        sims = load_sims(doc_id)
         for fx in M.get("fixtures", []):
             if fx["ts"] < now + 600:
                 continue
@@ -194,7 +258,7 @@ def main():
                 continue
             fo = {"players": players}
             taken = {family(b["key"]) for b in bets.values() if b.get("fx") == fx["fx"]}
-            cands = {}
+            cands = []
             for key, label, p, grp in fx["markets"]:
                 o = odds.get(key) or (player_key_match(key, label, fo) if grp == "pl" else None)
                 if not o:
@@ -215,17 +279,30 @@ def main():
                 if grp not in ALLOWED or ev < MIN_EV or ev > MAX_EV or p < MIN_P or o > MAX_ODD:
                     continue
                 fam = family(key)
-                if fam in taken or (fam in cands and cands[fam][0] >= ev):
+                if fam in taken:
                     continue
-                cands[fam] = (ev, bid, {
+                cands.append((ev, bid, fam, {
                     "created": datetime.now(timezone.utc).isoformat(timespec="seconds"), "comp": int(doc_id[1:]),
                     "league": M.get("league"), "h": fx["h"], "a": fx["a"], "hn": fx["hn"], "an": fx["an"],
                     "fx": fx["fx"], "ts": fx["ts"], "key": key, "label": label, "p": round(p, 4), "pModel": p_model, "pMarket": round(q, 4), "odd": o, "ev": round(ev, 4),
                     "stake": 1, "book": BOOK, "auto": True, "src": "+".join(sorted(srcs)), "lineup": fx.get("src"),
                     "status": "pending", "profit": None, "close": None, "closeFairP": None, "clv": None, "closeSrc": None,
                     "lastOdd": o, "lastSeen": int(now), "lastP": p,
-                })
-            for ev, bid, doc in cands.values():
+                }))
+            # highest EV first; skip a bet that moves together with one already chosen (or already registered) for this
+            # fixture, e.g. "Cruzeiro under 1.5 goals" and "Bahia or draw"
+            S = sims.get(fx["fx"])
+            chosen = [sim_outcomes(b["key"], S) for b in bets.values() if b.get("fx") == fx["fx"]]
+            fams = set()
+            for ev, bid, fam, doc in sorted(cands, key=lambda c: -c[0]):
+                if fam in fams:
+                    continue
+                vec = sim_outcomes(doc["key"], S)
+                rho = max([abs(corr(vec, c)) for c in chosen] or [0.0])
+                if rho > MAX_CORR:
+                    dropped += 1
+                    continue
+                chosen.append(vec); fams.add(fam)
                 bets[bid] = doc
                 new += 1
                 print(f"  nova: {M.get('league')} {fx['hn']} x {fx['an']} · {doc['label']} @ {doc['odd']} (p {doc['p']:.3f}, VE {ev * 100:+.1f}%)", flush=True)
@@ -233,7 +310,7 @@ def main():
     json.dump(bets, open(OUT, "w"), ensure_ascii=False, separators=(",", ":"))
     json.dump({"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "fixtures": diag},
               open(os.path.join(os.path.dirname(OUT), "diag.json"), "w"), ensure_ascii=False, indent=0)
-    print(f"apostas automáticas: {new} novas, {upd} com odd atualizada, {len(bets)} no total", flush=True)
+    print(f"apostas automáticas: {new} novas, {dropped} descartadas por correlação, {upd} com odd atualizada, {len(bets)} no total", flush=True)
 
 
 if __name__ == "__main__":

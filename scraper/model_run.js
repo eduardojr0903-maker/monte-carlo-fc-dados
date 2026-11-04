@@ -37,6 +37,7 @@ for (const f of fs.readdirSync(path.join(ROOT, 'data', 'db')).filter((x) => /^s\
   const docId = f.slice(0, -5);
   const L = unpack(JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'db', f), 'utf8')));
   const out = { updated: new Date().toISOString(), league: L.name, comp: L.comp, fixtures: [] };
+  const sims = {};
   for (const fx of L.next) {
     if (fx[1] < now + 3600 || fx[1] > now + HOURS * 3600) continue;
     const [hi, ai] = [fx[2], fx[3]];
@@ -86,9 +87,15 @@ for (const f of fs.readdirSync(path.join(ROOT, 'data', 'db')).filter((x) => /^s\
         add('g', 1, p.goal[0], 'marcar a qualquer momento');
       }
     });
+    // sample of simulated matches (not committed) so the robot can measure how correlated two bets are
+    const K = Math.min(3000, sim.N), step = sim.N / K;
+    const pick = (arr) => { if (!arr) return null; const o = new Array(K); for (let i = 0; i < K; i++) o[i] = arr[Math.floor(i * step)]; return o; };
+    sims[String(fx[0])] = { gH: pick(sim.gH), gA: pick(sim.gA), sH: pick(sim.sH), sA: pick(sim.sA), tH: pick(sim.tH), tA: pick(sim.tA),
+      cH: pick(sim.cH), cA: pick(sim.cA), cH1: pick(sim.cH1), cA1: pick(sim.cA1) };
     out.fixtures.push({ fx: String(fx[0]), ts: fx[1], h: hId, a: aId, hn: names[0], an: names[1], src: fx[4],
       means: s.means, corners: s.cornerMeans || null, markets });
     console.log(L.name, names.join(' x '), markets.length, 'mercados');
   }
   fs.writeFileSync(path.join(outDir, docId + '.json'), JSON.stringify(out));
+  fs.writeFileSync(path.join(outDir, 'sims_' + docId + '.json'), JSON.stringify(sims));
 }
