@@ -1,20 +1,19 @@
 {
-"updated": "2026-11-04T04:17:19+00:00",
+"updated": "2026-11-04T07:42:40+00:00",
 "fixtures": {
 "5836919": {
 "league": "Championship",
 "game": "Cardiff x West Ham",
 "ts": 1793821500,
 "sources": [
-"football-data",
-"oddspapi"
+"football-data"
 ],
-"markets_with_odds": 152,
+"markets_with_odds": 5,
 "best": [
-"Cardiff com mais escanteios",
-2.1,
-0.4936,
-0.0366
+"Mais de 2,5 gols",
+1.4,
+0.6438,
+-0.0987
 ]
 },
 "5836921": {
@@ -22,10 +21,9 @@
 "game": "Wrexham x Middlesbrough",
 "ts": 1793821500,
 "sources": [
-"football-data",
-"oddspapi"
+"football-data"
 ],
-"markets_with_odds": 154,
+"markets_with_odds": 5,
 "best": [
 "Menos de 2,5 gols",
 2.3,
@@ -38,121 +36,87 @@
 "game": "Bristol City x Wolves",
 "ts": 1793822400,
 "sources": [
-"football-data",
-"oddspapi"
+"football-data"
 ],
-"markets_with_odds": 154,
+"markets_with_odds": 5,
 "best": [
-"Menos de 4,5 gols",
-1.33,
-0.7994,
-0.0632
+"Menos de 2,5 gols",
+2.1,
+0.484,
+0.0164
 ]
 },
 "5103701": {
 "league": "Brasileirão Série A",
 "game": "Athletico Paranaense x Vasco da Gama",
 "ts": 1793831400,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 150,
-"best": [
-"Total de escanteios mais de 3,5",
-1.004,
-0.981,
--0.015
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5103694": {
 "league": "Brasileirão Série A",
 "game": "Flamengo x Grêmio",
 "ts": 1793831400,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 150,
-"best": [
-"Grêmio gols menos de 0,5",
-1.87,
-0.5483,
-0.0253
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5103695": {
 "league": "Brasileirão Série A",
 "game": "Botafogo x Atlético-MG",
 "ts": 1793838600,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 150,
-"best": [
-"Botafogo gols menos de 1,5",
-2.2,
-0.4865,
-0.0702
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5103696": {
 "league": "Brasileirão Série A",
 "game": "São Paulo x Corinthians",
 "ts": 1793838600,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 150,
-"best": [
-"São Paulo gols menos de 1,5",
-2.2,
-0.5283,
-0.1623
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5103697": {
 "league": "Brasileirão Série A",
 "game": "Palmeiras x Remo",
 "ts": 1793917800,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 146,
-"best": [
-"Palmeiras menos de 8,5 escanteios",
-1.69,
-0.6133,
-0.0365
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5103699": {
 "league": "Brasileirão Série A",
 "game": "Cruzeiro x Bahia",
 "ts": 1793925000,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 146,
-"best": [
-"Bahia menos de 4,5 escanteios",
-1.97,
-0.5248,
-0.0338
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5881218": {
+"league": "Bundesliga",
+"game": "Hamburger SV x M'gladbach",
+"ts": 1793993400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5781802": {
+"league": "Eredivisie",
+"game": "Willem II x PEC Zwolle",
+"ts": 1793991600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5190799": {
 "league": "Brasileirão Série B",
 "game": "Botafogo SP x Londrina",
 "ts": 1793917800,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 145,
-"best": [
-"Total de escanteios mais de 3,5",
-1.001,
-0.9865,
--0.0125
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 }
 }
 }
