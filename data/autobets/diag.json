@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-04T16:19:15+00:00",
+"updated": "2026-11-04T17:08:45+00:00",
 "fixtures": {
 "5836919": {
 "league": "Championship",
@@ -113,6 +113,14 @@
 "league": "Brasileirão Série B",
 "game": "Botafogo SP x Londrina",
 "ts": 1793917800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5904794": {
+"league": "Süper Lig (Turquia)",
+"game": "Gaziantep FK x Kasımpaşa",
+"ts": 1793984400,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
