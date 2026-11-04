@@ -1,50 +1,13 @@
 {
-"updated": "2026-11-04T17:08:45+00:00",
+"updated": "2026-11-04T19:48:28+00:00",
 "fixtures": {
-"5836919": {
-"league": "Championship",
-"game": "Cardiff x West Ham",
-"ts": 1793821500,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-1.4,
-0.6561,
--0.0815
-]
-},
-"5836921": {
-"league": "Championship",
-"game": "Wrexham x Middlesbrough",
-"ts": 1793821500,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Menos de 2,5 gols",
-2.3,
-0.4615,
-0.0615
-]
-},
-"5836918": {
-"league": "Championship",
-"game": "Bristol City x Wolves",
-"ts": 1793822400,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Menos de 2,5 gols",
-2.1,
-0.484,
-0.0164
-]
+"5749749": {
+"league": "Serie A (Itália)",
+"game": "Venezia x Udinese",
+"ts": 1793994300,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5103701": {
 "league": "Brasileirão Série A",
@@ -94,25 +57,58 @@
 "markets_with_odds": 0,
 "best": null
 },
-"5811786": {
+"5802989": {
+"league": "Ligue 1",
+"game": "Toulouse x Strasbourg",
+"ts": 1793994300,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5881218": {
+"league": "Bundesliga",
+"game": "Hamburger SV x M'gladbach",
+"ts": 1793993400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5781802": {
+"league": "Eredivisie",
+"game": "Willem II x PEC Zwolle",
+"ts": 1793991600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5811806": {
 "league": "Pro League (Bélgica)",
-"game": "Kortrijk x KV Mechelen",
-"ts": 1793820600,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória KV Mechelen",
-2.5,
-0.4054,
-0.0134
-]
+"game": "Standard Liège x SK Beveren",
+"ts": 1793994300,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5190799": {
 "league": "Brasileirão Série B",
 "game": "Botafogo SP x Londrina",
 "ts": 1793917800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5881724": {
+"league": "2. Bundesliga",
+"game": "Dynamo Dresden x Greuther Fürth",
+"ts": 1793986200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5881718": {
+"league": "2. Bundesliga",
+"game": "Eintracht Braunschweig x Energie Cottbus",
+"ts": 1793986200,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
