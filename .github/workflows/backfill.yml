@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        lid: [57, 61]
+        lid: [40, 71, 64, 140, 86, 146, 110]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

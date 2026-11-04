@@ -102,6 +102,13 @@ LEAGUES = {
     48: ("s18", "Championship", True),
     57: ("s37", "Eredivisie", True),
     61: ("s238", "Liga Portugal", True),
+    40: ("s38", "Pro League (Bélgica)", True),
+    71: ("s52", "Süper Lig (Turquia)", True),
+    64: ("s36", "Premiership (Escócia)", True),
+    140: ("s54", "LaLiga 2", True),
+    86: ("s53", "Serie B (Itália)", True),
+    146: ("s44", "2. Bundesliga", True),
+    110: ("s182", "Ligue 2", True),
 }
 POS = {0: "G", 1: "D", 2: "M", 3: "F"}
 
@@ -642,7 +649,8 @@ def main(argv):
                 srcs[n[4]] = srcs.get(n[4], 0) + 1
             hinfo = f"histórico {hist['nMatches']} jogos (+{hnew}), mando {hist['hfa']}, " if hist else ""
             report.append(f"{name}: {hinfo}{len(doc['matches'])} jogos ({new} novos), {len(doc['players'])} jogadores, xG {'sim' if doc['hasXg'] else 'não'}, "
-                          f"{len(doc['next'])} próximos jogos {srcs}, {size // 1024} KB")
+                          f"{len(doc['next'])} próximos jogos {srcs}, {size // 1024} KB "
+                          f"[FotMob: {((lg.get('details') or {}).get('name') or '?')} / {((lg.get('details') or {}).get('country') or '?')}]")
         except Exception as e:  # noqa: BLE001
             report.append(f"{name}: FALHOU ({e})")
         if budget <= 0:

@@ -18,7 +18,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -r scraper/requirements.txt
-      - run: node scraper/model_run.js 60 20000
+      - run: node scraper/model_run.js 48 20000
       - name: Odds
         env:
           ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}

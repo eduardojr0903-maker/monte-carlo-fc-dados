@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import backtest_build as bb  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DOC2LID = {325: 268, 390: 8814, 17: 47, 18: 48, 8: 87, 23: 55, 35: 54, 34: 53, 37: 57, 238: 61}
+DOC2LID = {325: 268, 390: 8814, 17: 47, 18: 48, 8: 87, 23: 55, 35: 54, 34: 53, 37: 57, 238: 61, 38: 40, 52: 71, 36: 64, 54: 140, 53: 86, 44: 146, 182: 110}
 
 
 def load_matches():

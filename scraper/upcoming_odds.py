@@ -15,13 +15,17 @@ import time
 
 from curl_cffi import requests as http
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from collect import LEAGUES  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 UP = os.path.join(ROOT, "data", "odds", "upcoming")
 REF = os.path.join(ROOT, "data", "odds", "oddspapi")
 S = http.Session(impersonate="chrome")
 API = "https://api.oddspapi.io/v4"
 # our league -> OddsPapi tournament id (checked against data/odds/oddspapi/tournaments.json)
-OP_TOURNAMENTS = {268: 325, 8814: 390, 47: 17, 48: 18, 87: 8, 55: 23, 54: 35, 53: 34, 57: 37, 61: 238}
+MONTH_LIMIT = int(os.environ.get("ODDSPAPI_MONTH_LIMIT", "240"))
+OP_TOURNAMENTS = {268: 325, 8814: 390, 47: 17, 48: 18, 87: 8, 55: 23, 54: 35, 53: 34, 57: 37, 61: 238, 40: 38, 71: 52, 64: 36, 140: 54, 86: 53, 146: 44, 110: 182}
 # Bet365 international: same prices as the Brazilian site in practice, and far more markets on OddsPapi
 # (corners and player shots are missing from bet365.bet.br there)
 BOOKS = tuple(os.environ.get("ODDSPAPI_BOOKS", "bet365").split(","))
@@ -102,7 +106,8 @@ def oddspapi():
     # At most one round every 8 hours (3 a day, about 186 requests a month). GitHub delays scheduled runs by up
     # to an hour, so the rule is based on the time of the last round, not on fixed hours.
     last_p = os.path.join(REF, "last_round.json")
-    last = json.load(open(last_p)).get("ts", 0) if os.path.exists(last_p) else 0
+    state = json.load(open(last_p)) if os.path.exists(last_p) else {}
+    last = state.get("ts", 0)
     if time.time() - last < 8 * 3600 - 300 and not os.environ.get("ODDSPAPI_FORCE"):
         print("OddsPapi: última rodada há", round((time.time() - last) / 3600, 1), "h; próxima após 8 h (cota)", flush=True)
         return
@@ -118,10 +123,31 @@ def oddspapi():
                 json.dump(d, open(p, "w"))
                 print("OddsPapi: salvo", name, flush=True)
             time.sleep(1.2)
-    ids = dict(OP_TOURNAMENTS)
-    json.dump({str(k): v for k, v in ids.items()}, open(os.path.join(REF, "tournament_ids.json"), "w"))
+    # only leagues with a fixture in the robot's window (data/model, written by model_run.js just before)
+    import glob as _glob
+    comps = set()
+    for f in _glob.glob(os.path.join(ROOT, "data", "model", "s*.json")):
+        try:
+            mdl = json.load(open(f))
+        except Exception:  # noqa: BLE001
+            continue
+        if any(fx.get("ts", 0) > time.time() for fx in mdl.get("fixtures", [])):
+            comps.add(int(mdl.get("comp") or 0))
+    comp2lid = {int(v[0][1:]): k for k, v in LEAGUES.items()}
+    ids = {comp2lid[c]: OP_TOURNAMENTS[comp2lid[c]] for c in comps if comp2lid.get(c) in OP_TOURNAMENTS}
+    json.dump({str(k): v for k, v in OP_TOURNAMENTS.items()}, open(os.path.join(REF, "tournament_ids.json"), "w"))
+    if not ids:
+        print("OddsPapi: nenhuma liga com jogo na janela, pulando", flush=True)
+        return
     tids = [str(v) for v in ids.values()]
     chunks = [tids[i:i + 5] for i in range(0, len(tids), 5)]
+    # monthly quota guard (free plan: 250 requests a month; keep a margin)
+    month = time.strftime("%Y-%m", time.gmtime())
+    used = state.get("used", 0) if state.get("month") == month else 0
+    if used + len(chunks) > MONTH_LIMIT and not os.environ.get("ODDSPAPI_FORCE"):
+        print(f"OddsPapi: cota do mês quase no fim ({used} usadas), pulando", flush=True)
+        return
+    print(f"OddsPapi: {len(ids)} ligas com jogo, {len(chunks)} consultas (mês: {used} usadas)", flush=True)
     d, book = None, None
     for b in BOOKS:
         allfx = []
@@ -138,7 +164,8 @@ def oddspapi():
             break
         print("OddsPapi:", b, "sem mercados, tentando a próxima", flush=True)
     if not PROBE:
-        json.dump({"ts": int(time.time())}, open(last_p, "w"))
+        n_req = len(chunks) * (BOOKS.index(book) + 1 if book in BOOKS else len(BOOKS))
+        json.dump({"ts": int(time.time()), "month": month, "used": used + n_req}, open(last_p, "w"))
     if d is not None and book and not PROBE:
         os.makedirs(UP, exist_ok=True)
         json.dump({"fetched": int(time.time()), "book": book, "tournaments": {str(k): v for k, v in ids.items()}, "data": d},
