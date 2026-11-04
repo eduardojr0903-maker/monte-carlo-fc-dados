@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-03T22:09:57+00:00",
+"updated": "2026-11-04T01:30:54+00:00",
 "fixtures": {
 "5836919": {
 "league": "Championship",
@@ -12,8 +12,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.4,
-0.6436,
--0.0989
+0.6438,
+-0.0987
 ]
 },
 "5836921": {
@@ -27,8 +27,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.3,
-0.4655,
-0.0706
+0.4615,
+0.0615
 ]
 },
 "5836918": {
@@ -42,17 +42,9 @@
 "best": [
 "Menos de 2,5 gols",
 2.1,
-0.4839,
-0.0162
+0.4841,
+0.0166
 ]
-},
-"5103700": {
-"league": "Brasileirão Série A",
-"game": "Internacional x Coritiba",
-"ts": 1793752200,
-"sources": [],
-"markets_with_odds": 0,
-"best": null
 },
 "5103701": {
 "league": "Brasileirão Série A",
