@@ -129,6 +129,10 @@ def bet_id(fx_id, key):
     return f"auto_{fx_id}_{re.sub(r'[^A-Za-z0-9_.+-]', '_', k)}"
 
 
+CONFIG = os.path.join(ROOT, "data", "autobets", "config.json")
+EXCLUDED = set((json.load(open(CONFIG)) if os.path.exists(CONFIG) else {}).get("exclude_leagues", []))
+
+
 def market_prob(key, odds):
     """Bookmaker probability without margin, using the other outcomes of the same market when available."""
     groups = [("1", "X", "2"), ("CX1", "CXX", "CX2"), ("BTTS-S", "BTTS-N"), ("DNB1", "DNB2"),
@@ -237,6 +241,8 @@ def main():
         doc_id = os.path.basename(f)[:-5]
         lid = DOC2LID.get(doc_id)
         M = json.load(open(f))
+        if M.get("league") in EXCLUDED:
+            continue  # league switched off in data/autobets/config.json
         sims = load_sims(doc_id)
         for fx in M.get("fixtures", []):
             if fx["ts"] < now + 600:
