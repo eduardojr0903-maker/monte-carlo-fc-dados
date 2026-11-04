@@ -1,6 +1,14 @@
 {
-"updated": "2026-11-04T07:42:40+00:00",
+"updated": "2026-11-04T10:29:04+00:00",
 "fixtures": {
+"5795508": {
+"league": "Premier League",
+"game": "Everton x Coventry",
+"ts": 1793995200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
 "5836919": {
 "league": "Championship",
 "game": "Cardiff x West Ham",
@@ -12,8 +20,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.4,
-0.6438,
--0.0987
+0.6569,
+-0.0803
 ]
 },
 "5836921": {
@@ -45,6 +53,30 @@
 0.484,
 0.0164
 ]
+},
+"5836927": {
+"league": "Championship",
+"game": "Derby x Bolton",
+"ts": 1793995200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5749749": {
+"league": "Serie A (Itália)",
+"game": "Venezia x Udinese",
+"ts": 1793994300,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5887675": {
+"league": "Liga Portugal",
+"game": "Famalicão x Arouca",
+"ts": 1793997900,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5103701": {
 "league": "Brasileirão Série A",
@@ -94,6 +126,14 @@
 "markets_with_odds": 0,
 "best": null
 },
+"5802989": {
+"league": "Ligue 1",
+"game": "Toulouse x Strasbourg",
+"ts": 1793994300,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
 "5881218": {
 "league": "Bundesliga",
 "game": "Hamburger SV x M'gladbach",
@@ -114,6 +154,14 @@
 "league": "Brasileirão Série B",
 "game": "Botafogo SP x Londrina",
 "ts": 1793917800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5868128": {
+"league": "La Liga",
+"game": "Sevilla x Deportivo Alavés",
+"ts": 1793995200,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
