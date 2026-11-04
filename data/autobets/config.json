@@ -1,12 +1,9 @@
 {
  "exclude_leagues": [
-  "Pro League (Bélgica)",
-  "Süper Lig (Turquia)",
-  "Premiership (Escócia)",
   "LaLiga 2",
   "Serie B (Itália)",
-  "2. Bundesliga",
   "Ligue 2"
  ],
- "_nota": "nomes exatamente como aparecem em Minhas apostas; o robô deixa de registrar apostas nessas ligas. As 7 ligas novas ficam aqui até o backtest."
+ "_nota": "nomes exatamente como aparecem em Minhas apostas; o robô deixa de registrar apostas nessas ligas. As 7 ligas novas ficam aqui até o backtest.",
+ "_backtest_2026_11_04": "Ligadas após backtest (2023-26, ~7.000 jogos): Pro League, Süper Lig, Premiership, 2. Bundesliga. Desligadas: LaLiga 2, Serie B, Ligue 2 (1X2 bem pior que a Pinnacle, empates subestimados, CLV -5% a -7%)."
 }

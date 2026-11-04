@@ -90,8 +90,10 @@ const MC = (() => {
     ms.forEach((m, k) => {
       const w = isFinite(halfLife) ? Math.pow(0.5, k / halfLife) : 1;
       const home = m[1] === idx;
-      const f = home ? [m[5], m[6], m[7], m[3]] : [m[8], m[9], m[10], m[4]];
-      const o = home ? [m[8], m[9], m[10], m[4]] : [m[5], m[6], m[7], m[3]];
+      // a match without xG (-1) counts its goals instead, so missing xG never lowers a team's quality
+      const hx = m[7] >= 0 ? m[7] : m[3], ax = m[10] >= 0 ? m[10] : m[4];
+      const f = home ? [m[5], m[6], hx, m[3]] : [m[8], m[9], ax, m[4]];
+      const o = home ? [m[8], m[9], ax, m[4]] : [m[5], m[6], hx, m[3]];
       a.n += w; a.w2 += w * w;
       a.sh += w * f[0]; a.sot += w * f[1]; a.xg += w * f[2]; a.g += w * f[3];
       a.osh += w * o[0]; a.osot += w * o[1]; a.oxg += w * o[2]; a.og += w * o[3];
@@ -154,19 +156,20 @@ const MC = (() => {
       }
       return { shPer, sotRate, gPerShot, xgPerShot: null, hfa, games: hMP, hasXg: false };
     }
-    let n = 0, sh = 0, sot = 0, xg = 0, g = 0, hq = 0, aq = 0, games = 0;
+    let n = 0, sh = 0, sot = 0, xg = 0, g = 0, hq = 0, aq = 0, games = 0, nx = 0;
     for (const m of L.matches) {
       if (m[5] < 0) continue;
       games++; n += 2;
       const hx = m[7] >= 0 ? m[7] : m[3], ax = m[10] >= 0 ? m[10] : m[4];
       sh += m[5] + m[8]; sot += m[6] + m[9]; g += m[3] + m[4];
-      if (m[7] >= 0 && m[10] >= 0) xg += m[7] + m[10];
+      xg += hx + ax; nx += m[7] >= 0 && m[10] >= 0 ? 1 : 0;
       hq += m[3] + hx; aq += m[4] + ax;
     }
     const shPer = n > 0 ? sh / n : 12.5;
     const sotRate = sh > 0 ? sot / sh : 0.34;
     const gPerShot = sh > 0 ? g / sh : 0.105;
-    const xgPerShot = L.hasXg !== false && sh > 0 && xg > 0 ? xg / sh : null;
+    // xG only counts when most matches have it (otherwise it is just goals again)
+    const xgPerShot = L.hasXg !== false && sh > 0 && xg > 0 && nx >= 0.5 * games ? xg / sh : null;
     let hfa = 1.2;
     if (games >= 10 && aq > 0) {
       const w = Math.min(1, games / 150);
