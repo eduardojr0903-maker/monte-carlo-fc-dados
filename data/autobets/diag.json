@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-04T15:21:33+00:00",
+"updated": "2026-11-04T16:19:15+00:00",
 "fixtures": {
 "5836919": {
 "league": "Championship",
@@ -103,10 +103,10 @@
 ],
 "markets_with_odds": 5,
 "best": [
-"Mais de 2,5 gols",
-1.8,
-0.5302,
--0.0456
+"Vitória KV Mechelen",
+2.5,
+0.4054,
+0.0134
 ]
 },
 "5190799": {
