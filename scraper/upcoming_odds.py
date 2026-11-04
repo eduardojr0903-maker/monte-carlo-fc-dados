@@ -24,7 +24,8 @@ REF = os.path.join(ROOT, "data", "odds", "oddspapi")
 S = http.Session(impersonate="chrome")
 API = "https://api.oddspapi.io/v4"
 # our league -> OddsPapi tournament id (checked against data/odds/oddspapi/tournaments.json)
-MONTH_LIMIT = int(os.environ.get("ODDSPAPI_MONTH_LIMIT", "240"))
+PLAN_LIMIT = int(os.environ.get("ODDSPAPI_PLAN_LIMIT", "250"))   # free plan
+WARN_AT = int(os.environ.get("ODDSPAPI_WARN_AT", "200"))
 OP_TOURNAMENTS = {268: 325, 8814: 390, 47: 17, 48: 18, 87: 8, 55: 23, 54: 35, 53: 34, 57: 37, 61: 238, 40: 38, 71: 52, 64: 36, 140: 54, 86: 53, 146: 44, 110: 182}
 # Bet365 international: same prices as the Brazilian site in practice, and far more markets on OddsPapi
 # (corners and player shots are missing from bet365.bet.br there)
@@ -144,9 +145,9 @@ def oddspapi():
     # monthly quota guard (free plan: 250 requests a month; keep a margin)
     month = time.strftime("%Y-%m", time.gmtime())
     used = state.get("used", 0) if state.get("month") == month else 0
-    if used + len(chunks) > MONTH_LIMIT and not os.environ.get("ODDSPAPI_FORCE"):
-        print(f"OddsPapi: cota do mês quase no fim ({used} usadas), pulando", flush=True)
-        return
+    # no blocking: the user decides on the paid plan; the daily sync warns from WARN_AT on (see last_round.json)
+    if used + len(chunks) > WARN_AT:
+        print(f"OddsPapi: AVISO, {used + len(chunks)} de {PLAN_LIMIT} consultas do mês", flush=True)
     print(f"OddsPapi: {len(ids)} ligas com jogo, {len(chunks)} consultas (mês: {used} usadas)", flush=True)
     d, book = None, None
     for b in BOOKS:
@@ -165,7 +166,9 @@ def oddspapi():
         print("OddsPapi:", b, "sem mercados, tentando a próxima", flush=True)
     if not PROBE:
         n_req = len(chunks) * (BOOKS.index(book) + 1 if book in BOOKS else len(BOOKS))
-        json.dump({"ts": int(time.time()), "month": month, "used": used + n_req}, open(last_p, "w"))
+        tot = used + n_req
+        json.dump({"ts": int(time.time()), "month": month, "used": tot, "limit": PLAN_LIMIT,
+                   "warn": tot >= WARN_AT}, open(last_p, "w"))
     if d is not None and book and not PROBE:
         os.makedirs(UP, exist_ok=True)
         json.dump({"fetched": int(time.time()), "book": book, "tournaments": {str(k): v for k, v in ids.items()}, "data": d},
