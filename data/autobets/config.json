@@ -1,4 +1,12 @@
 {
- "exclude_leagues": [],
- "_nota": "nomes exatamente como aparecem em Minhas apostas; o robô deixa de registrar apostas nessas ligas"
+ "exclude_leagues": [
+  "Pro League (Bélgica)",
+  "Süper Lig (Turquia)",
+  "Premiership (Escócia)",
+  "LaLiga 2",
+  "Serie B (Itália)",
+  "2. Bundesliga",
+  "Ligue 2"
+ ],
+ "_nota": "nomes exatamente como aparecem em Minhas apostas; o robô deixa de registrar apostas nessas ligas. As 7 ligas novas ficam aqui até o backtest."
 }
