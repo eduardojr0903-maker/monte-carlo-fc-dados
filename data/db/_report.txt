@@ -1,4 +1,4 @@
-2026-11-05T07:54:47+00:00
+2026-11-05T10:39:27+00:00
 Brasileirão Série A: histórico 1520 jogos (+0), mando 1.402, 336 jogos (0 novos), 760 jogadores, xG sim, 3 próximos jogos {'sg_predicted': 3}, 187 KB [FotMob: Série A / BRA]
 Brasileirão Série B: histórico 1520 jogos (+0), mando 1.412, 360 jogos (0 novos), 793 jogadores, xG sim, 10 próximos jogos {'last_xi': 10}, 192 KB [FotMob: Série B / BRA]
 Premier League: histórico 1520 jogos (+0), mando 1.198, 90 jogos (0 novos), 481 jogadores, xG sim, 10 próximos jogos {'sg_predicted': 10}, 157 KB [FotMob: Premier League / ENG]
@@ -7,8 +7,8 @@ Serie A (Itália): histórico 1521 jogos (+0), mando 1.101, 100 jogos (0 novos),
 Bundesliga: histórico 1224 jogos (+0), mando 1.303, 72 jogos (0 novos), 435 jogadores, xG sim, 9 próximos jogos {'sg_predicted': 9}, 136 KB [FotMob: Bundesliga / GER]
 Ligue 1: histórico 1298 jogos (+0), mando 1.244, 81 jogos (0 novos), 448 jogadores, xG sim, 9 próximos jogos {'sg_predicted': 9}, 136 KB [FotMob: Ligue 1 / FRA]
 Championship: histórico 2226 jogos (+0), mando 1.24, 168 jogos (0 novos), 633 jogadores, xG sim, 12 próximos jogos {'last_xi': 12}, 199 KB [FotMob: Championship / ENG]
-Eredivisie: histórico 1239 jogos (+0), mando 1.133, 99 jogos (0 novos), 486 jogadores, xG sim, 9 próximos jogos {'sg_predicted': 9}, 142 KB [FotMob: Eredivisie / NED]
-Liga Portugal: histórico 1224 jogos (+0), mando 1.143, 90 jogos (0 novos), 495 jogadores, xG sim, 9 próximos jogos {'sg_predicted': 4, 'last_xi': 5}, 145 KB [FotMob: Liga Portugal / POR]
+Eredivisie: histórico 1239 jogos (+0), mando 1.133, 99 jogos (0 novos), 482 jogadores, xG sim, 9 próximos jogos {'sg_predicted': 9}, 141 KB [FotMob: Eredivisie / NED]
+Liga Portugal: histórico 1224 jogos (+0), mando 1.143, 90 jogos (0 novos), 489 jogadores, xG sim, 9 próximos jogos {'sg_predicted': 4, 'last_xi': 5}, 145 KB [FotMob: Liga Portugal / POR]
 Pro League (Bélgica): histórico 1269 jogos (+0), mando 1.276, 90 jogos (0 novos), 470 jogadores, xG sim, 9 próximos jogos {'sg_predicted': 3, 'last_xi': 6}, 147 KB [FotMob: First Division A / BEL]
 Süper Lig (Turquia): histórico 1370 jogos (+0), mando 1.311, 90 jogos (0 novos), 462 jogadores, xG sim, 9 próximos jogos {'sg_predicted': 8, 'last_xi': 1}, 142 KB [FotMob: Süper Lig / TUR]
 Premiership (Escócia): histórico 912 jogos (+0), mando 1.251, 69 jogos (0 novos), 316 jogadores, xG sim, 6 próximos jogos {'last_xi': 4, 'sg_predicted': 2}, 106 KB [FotMob: Premiership / SCO]

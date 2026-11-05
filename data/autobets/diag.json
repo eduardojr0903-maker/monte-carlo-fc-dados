@@ -1,260 +1,149 @@
 {
-"updated": "2026-11-05T07:55:28+00:00",
+"updated": "2026-11-05T10:39:53+00:00",
 "fixtures": {
 "5795508": {
 "league": "Premier League",
 "game": "Everton x Coventry",
 "ts": 1793995200,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 144,
-"best": [
-"Menos de 2,5 gols",
-2.15,
-0.4945,
-0.0632
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5836927": {
 "league": "Championship",
 "game": "Derby x Bolton",
 "ts": 1793995200,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 148,
-"best": [
-"Total de escanteios mais de 3,5",
-1.004,
-0.9808,
--0.0152
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5749749": {
 "league": "Serie A (Itália)",
 "game": "Venezia x Udinese",
 "ts": 1793994300,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 108,
-"best": [
-"Mais de 2,5 gols",
-1.76,
-0.6072,
-0.0687
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5887675": {
 "league": "Liga Portugal",
 "game": "Famalicão x Arouca",
 "ts": 1793997900,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 138,
-"best": [
-"Menos de 2,5 gols",
-1.82,
-0.5448,
--0.0084
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5103697": {
 "league": "Brasileirão Série A",
 "game": "Palmeiras x Remo",
 "ts": 1793917800,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 146,
-"best": [
-"Palmeiras menos de 8,5 escanteios",
-1.69,
-0.6112,
-0.033
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5103699": {
 "league": "Brasileirão Série A",
 "game": "Cruzeiro x Bahia",
 "ts": 1793925000,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 148,
-"best": [
-"Bahia ou empate",
-2.1,
-0.5107,
-0.0724
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5103702": {
 "league": "Brasileirão Série A",
 "game": "Vitória x Fluminense",
 "ts": 1794006000,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 140,
-"best": [
-"Fluminense (empate anula)",
-1.77,
-0.6048,
-0.0705
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5802989": {
 "league": "Ligue 1",
 "game": "Toulouse x Strasbourg",
 "ts": 1793994300,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 147,
-"best": [
-"Vitória Toulouse",
-2.02,
-0.5002,
-0.0103
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5881218": {
 "league": "Bundesliga",
 "game": "Hamburger SV x M'gladbach",
 "ts": 1793993400,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 108,
-"best": [
-"M'gladbach (empate anula)",
-2.0,
-0.5034,
-0.0068
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5781802": {
 "league": "Eredivisie",
 "game": "Willem II x PEC Zwolle",
 "ts": 1793991600,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 147,
-"best": [
-"PEC Zwolle (empate anula)",
-1.63,
-0.6285,
-0.0245
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5811806": {
 "league": "Pro League (Bélgica)",
 "game": "Standard Liège x SK Beveren",
 "ts": 1793994300,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 145,
-"best": [
-"Standard Liège menos de 4,5 escanteios",
-2.37,
-0.4265,
-0.0109
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5190799": {
 "league": "Brasileirão Série B",
 "game": "Botafogo SP x Londrina",
 "ts": 1793917800,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 146,
-"best": [
-"Total de escanteios mais de 3,5",
-1.001,
-0.9864,
--0.0126
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5190802": {
 "league": "Brasileirão Série B",
 "game": "Operário-PR x Sport Recife",
 "ts": 1794004200,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 146,
-"best": [
-"Sport Recife menos de 4,5 escanteios",
-1.97,
-0.5253,
-0.0349
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5881724": {
 "league": "2. Bundesliga",
 "game": "Dynamo Dresden x Greuther Fürth",
 "ts": 1793986200,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 125,
-"best": [
-"Dynamo Dresden menos de 5,5 escanteios",
-2.1,
-0.4868,
-0.0223
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5881718": {
 "league": "2. Bundesliga",
 "game": "Eintracht Braunschweig x Energie Cottbus",
 "ts": 1793986200,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 146,
-"best": [
-"Eintracht Braunschweig menos de 5,5 escanteios",
-2.1,
-0.4764,
-0.0004
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5904794": {
 "league": "Süper Lig (Turquia)",
 "game": "Gaziantep FK x Kasımpaşa",
 "ts": 1793984400,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 123,
-"best": [
-"Kasımpaşa menos de 3,5 escanteios",
-2.37,
-0.4181,
--0.0092
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5904795": {
+"league": "Süper Lig (Turquia)",
+"game": "Eyüpspor x Kocaelispor",
+"ts": 1794047400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 },
 "5868128": {
 "league": "La Liga",
 "game": "Sevilla x Deportivo Alavés",
 "ts": 1793995200,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 135,
-"best": [
-"1º tempo mais de 4,5 escanteios",
-2.5,
-0.3972,
--0.0071
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null
 }
 }
 }
