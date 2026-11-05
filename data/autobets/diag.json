@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-05T19:30:23+00:00",
+"updated": "2026-11-05T22:21:28+00:00",
 "fixtures": {
 "5795508": {
 "league": "Premier League",
@@ -169,6 +169,14 @@
 "markets_with_odds": 0,
 "best": null
 },
+"5749740": {
+"league": "Serie A (Itália)",
+"game": "Roma x Sassuolo",
+"ts": 1794080700,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
 "5887675": {
 "league": "Liga Portugal",
 "game": "Famalicão x Arouca",
@@ -193,10 +201,10 @@
 "markets_with_odds": 0,
 "best": null
 },
-"5103697": {
-"league": "Brasileirão Série A",
-"game": "Palmeiras x Remo",
-"ts": 1793917800,
+"5887679": {
+"league": "Liga Portugal",
+"game": "Sporting CP x Moreirense",
+"ts": 1794083400,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
@@ -229,6 +237,14 @@
 "league": "Ligue 1",
 "game": "Auxerre x Paris FC",
 "ts": 1794074400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5802987": {
+"league": "Ligue 1",
+"game": "PSG x Troyes",
+"ts": 1794081900,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
@@ -305,6 +321,14 @@
 "markets_with_odds": 0,
 "best": null
 },
+"5793974": {
+"league": "Premiership (Escócia)",
+"game": "St. Mirren x Rangers",
+"ts": 1794081600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
 "5781802": {
 "league": "Eredivisie",
 "game": "Willem II x PEC Zwolle",
@@ -325,6 +349,14 @@
 "league": "Eredivisie",
 "game": "ADO Den Haag x Sparta Rotterdam",
 "ts": 1794073500,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5781800": {
+"league": "Eredivisie",
+"game": "Excelsior x Go Ahead Eagles",
+"ts": 1794081600,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
@@ -353,10 +385,18 @@
 "markets_with_odds": 0,
 "best": null
 },
-"5190799": {
-"league": "Brasileirão Série B",
-"game": "Botafogo SP x Londrina",
-"ts": 1793917800,
+"5811804": {
+"league": "Pro League (Bélgica)",
+"game": "RAAL La Louvière x Cercle Brugge",
+"ts": 1794080700,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5811800": {
+"league": "Pro League (Bélgica)",
+"game": "Royal Antwerp x Lommel",
+"ts": 1794080700,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
@@ -501,6 +541,14 @@
 "league": "La Liga",
 "game": "Osasuna x Athletic Club",
 "ts": 1794072600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5868129": {
+"league": "La Liga",
+"game": "Valencia x Real Madrid",
+"ts": 1794081600,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
