@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-05T10:39:53+00:00",
+"updated": "2026-11-05T13:48:31+00:00",
 "fixtures": {
 "5795508": {
 "league": "Premier League",
@@ -9,10 +9,42 @@
 "markets_with_odds": 0,
 "best": null
 },
+"5795511": {
+"league": "Premier League",
+"game": "Leeds x Tottenham",
+"ts": 1794054600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
 "5836927": {
 "league": "Championship",
 "game": "Derby x Bolton",
 "ts": 1793995200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5836924": {
+"league": "Championship",
+"game": "Bristol City x Norwich",
+"ts": 1794054600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5836928": {
+"league": "Championship",
+"game": "Portsmouth x Stoke",
+"ts": 1794054600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5836933": {
+"league": "Championship",
+"game": "Wrexham x Wolves",
+"ts": 1794054600,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
@@ -121,6 +153,30 @@
 "markets_with_odds": 0,
 "best": null
 },
+"5881721": {
+"league": "2. Bundesliga",
+"game": "Holstein Kiel x Arminia Bielefeld",
+"ts": 1794052800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5881723": {
+"league": "2. Bundesliga",
+"game": "1. FC Nürnberg x Darmstadt",
+"ts": 1794052800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5881725": {
+"league": "2. Bundesliga",
+"game": "VfL Osnabrück x Kaiserslautern",
+"ts": 1794052800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
 "5904794": {
 "league": "Süper Lig (Turquia)",
 "game": "Gaziantep FK x Kasımpaşa",
@@ -137,10 +193,26 @@
 "markets_with_odds": 0,
 "best": null
 },
+"5904802": {
+"league": "Süper Lig (Turquia)",
+"game": "Samsunspor x Konyaspor",
+"ts": 1794056400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
 "5868128": {
 "league": "La Liga",
 "game": "Sevilla x Deportivo Alavés",
 "ts": 1793995200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null
+},
+"5868125": {
+"league": "La Liga",
+"game": "Málaga x Racing Santander",
+"ts": 1794056400,
 "sources": [],
 "markets_with_odds": 0,
 "best": null
