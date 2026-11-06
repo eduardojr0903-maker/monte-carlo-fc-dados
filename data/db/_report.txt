@@ -1,6 +1,6 @@
-2026-11-06T01:45:26+00:00
-Brasileirão Série A: histórico 1520 jogos (+0), mando 1.407, 337 jogos (1 novos), 756 jogadores, xG sim, 1 próximos jogos {'sg_predicted': 1}, 184 KB [FotMob: Série A / BRA]
-Brasileirão Série B: histórico 1520 jogos (+0), mando 1.416, 361 jogos (1 novos), 793 jogadores, xG sim, 9 próximos jogos {'last_xi': 9}, 191 KB [FotMob: Série B / BRA]
+2026-11-06T04:24:37+00:00
+Brasileirão Série A: histórico 1520 jogos (+0), mando 1.409, 338 jogos (1 novos), 756 jogadores, xG sim, 1 próximos jogos {'sg_predicted': 1}, 184 KB [FotMob: Série A / BRA]
+Brasileirão Série B: histórico 1520 jogos (+0), mando 1.416, 361 jogos (0 novos), 793 jogadores, xG sim, 9 próximos jogos {'last_xi': 9}, 191 KB [FotMob: Série B / BRA]
 Premier League: histórico 1520 jogos (+0), mando 1.198, 90 jogos (0 novos), 459 jogadores, xG sim, 10 próximos jogos {'sg_predicted': 10}, 155 KB [FotMob: Premier League / ENG]
 La Liga: histórico 1520 jogos (+0), mando 1.283, 109 jogos (0 novos), 490 jogadores, xG sim, 10 próximos jogos {'sg_predicted': 10}, 155 KB [FotMob: LaLiga / ESP]
 Serie A (Itália): histórico 1521 jogos (+0), mando 1.101, 100 jogos (0 novos), 502 jogadores, xG sim, 10 próximos jogos {'fotmob_predicted': 10}, 152 KB [FotMob: Serie A / ITA]
