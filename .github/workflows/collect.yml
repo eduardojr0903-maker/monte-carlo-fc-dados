@@ -45,7 +45,7 @@ jobs:
         env:
           ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
         run: python scraper/upcoming_odds.py
-      - name: Robô de apostas · filtrar VE ≥ 5% e registrar
+      - name: Robô de apostas · filtrar VE ≥ 8% e registrar
         continue-on-error: true
         run: python scraper/autobets.py
       - name: Resultados para liquidar as apostas no app

@@ -209,7 +209,9 @@ def bet_id(fx_id, key):
 
 
 CONFIG = os.path.join(ROOT, "data", "autobets", "config.json")
-EXCLUDED = set((json.load(open(CONFIG)) if os.path.exists(CONFIG) else {}).get("exclude_leagues", []))
+_CFG = json.load(open(CONFIG)) if os.path.exists(CONFIG) else {}
+EXCLUDED = set(_CFG.get("exclude_leagues", []))
+EXCL_FAM = {k: set(v) for k, v in _CFG.get("exclude_families", {}).items()}  # league -> market families switched off
 
 
 def market_prob(key, odds):
@@ -373,7 +375,7 @@ def main():
                 if grp not in ALLOWED or ev < MIN_EV or ev > MAX_EV or p < MIN_P or o > MAX_ODD or o < MIN_ODD:
                     continue
                 fam = family(key)
-                if fam in taken:
+                if fam in taken or fam in EXCL_FAM.get(M.get("league"), ()):
                     continue
                 cands.append((ev, bid, fam, {
                     "created": datetime.now(timezone.utc).isoformat(timespec="seconds"), "comp": int(doc_id[1:]),

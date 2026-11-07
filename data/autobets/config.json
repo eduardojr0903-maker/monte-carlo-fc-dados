@@ -2,19 +2,17 @@
  "exclude_leagues": [
   "LaLiga 2",
   "Serie B (Itália)",
-  "Ligue 2",
-  "Bundesliga (Áustria)",
-  "Super League (Suíça)",
-  "Superliga (Dinamarca)",
-  "Super League (Grécia)",
-  "Ekstraklasa (Polônia)",
-  "Eliteserien (Noruega)",
-  "Allsvenskan (Suécia)",
-  "Liga Profesional (Argentina)",
-  "Liga MX (México)",
-  "MLS (EUA)",
-  "J1 League (Japão)"
+  "Ligue 2"
  ],
- "_nota": "nomes exatamente como aparecem em Minhas apostas; o robô não registra apostas nessas ligas (nem gasta consultas da OddsPapi com elas). As 12 ligas de 07/11 ficam aqui até o backtest.",
- "_backtest_2026_11_04": "Ligadas após backtest (2023-26, ~7.000 jogos): Pro League, Süper Lig, Premiership, 2. Bundesliga. Desligadas: LaLiga 2, Serie B, Ligue 2 (1X2 bem pior que a Pinnacle, empates subestimados, CLV -5% a -7%)."
+ "_nota": "nomes exatamente como aparecem em Minhas apostas; o robô não registra apostas nessas ligas (nem gasta consultas da OddsPapi com elas). exclude_families desliga só alguns mercados numa liga ('res' = 1X2, dupla chance, empate anula, handicap).",
+ "_backtest_2026_11_04": "Ligadas após backtest (2023-26, ~7.000 jogos): Pro League, Süper Lig, Premiership, 2. Bundesliga. Desligadas: LaLiga 2, Serie B, Ligue 2 (1X2 bem pior que a Pinnacle, empates subestimados, CLV -5% a -7%).",
+ "exclude_families": {
+  "Super League (Grécia)": [
+   "res"
+  ],
+  "Ekstraklasa (Polônia)": [
+   "res"
+  ]
+ },
+ "_backtest_2026_11_07": "11 ligas novas (2022-26, ~10.700 jogos), 1X2 contra o fechamento da Pinnacle: Noruega +0,009, México +0,012, MLS +0,015, Suécia +0,015, Suíça +0,016, Japão +0,021, Áustria +0,024, Argentina +0,026, Dinamarca +0,030 (ligadas). Polônia +0,042 e Grécia +0,058: resultado desligado; gols e escanteios ligados (Grécia gols melhor que a Pinnacle, -0,005, ROI +9,5% em 91 apostas). Escanteios bateram a base nas 11. Sem odds históricas de gols/escanteios nas outras 10: validação ao vivo."
 }
