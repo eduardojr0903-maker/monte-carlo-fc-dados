@@ -85,7 +85,7 @@ def _summary(fx, book, out):
     stats = {}
     mk = json.load(open(os.path.join(REF, "markets.json"))) if os.path.exists(os.path.join(REF, "markets.json")) else []
     mk = {str(x.get("marketId")): x.get("marketType") or "" for x in (mk if isinstance(mk, list) else mk.get("data", []))}
-    types = {}
+    types, active = {}, {}
     for f in fx:
         for b, v in (f.get("bookmakerOdds") or {}).items():
             st = stats.setdefault(b, {"jogos": 0, "mercados": 0})
@@ -93,7 +93,13 @@ def _summary(fx, book, out):
             seen = set(mk.get(str(m), "?" + str(m)) for m in (v.get("markets") or {}))
             for t in seen:
                 types[t] = types.get(t, 0) + 1
+            # markets with at least one price open for betting (suspended prices are ignored by the robot)
+            live = set(mk.get(str(m), "?" + str(m)) for m, mv in (v.get("markets") or {}).items()
+                       if any(pl.get("active") for o in (mv.get("outcomes") or {}).values() for pl in (o.get("players") or {}).values()))
+            for t in live:
+                active[t] = active.get(t, 0) + 1
     stats["tipos_de_mercado (jogos)"] = dict(sorted(types.items(), key=lambda x: -x[1]))
+    stats["abertos (jogos)"] = dict(sorted(active.items(), key=lambda x: -x[1]))
     json.dump({"fetched": int(time.time()), "book": book, "fixtures": len(fx), "by_bookmaker": stats, "sample": sample},
               open(out, "w"))
 
