@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-07T19:41:07+00:00",
+"updated": "2026-11-07T22:29:45+00:00",
 "fixtures": {
 "1000019623": {
 "league": "Liga Profesional (Argentina)",
@@ -12,8 +12,8 @@
 "best": [
 "Vitória Instituto",
 1.86,
-0.5556,
-0.0335
+0.5585,
+0.0388
 ],
 "matched": [
 "football-data: Instituto x Newells Old Boys"
@@ -30,8 +30,8 @@
 "best": [
 "Vitória Lanús",
 1.62,
-0.6067,
--0.0172
+0.6069,
+-0.0169
 ],
 "matched": [
 "football-data: Central Cordoba x Lanus"
@@ -48,8 +48,8 @@
 "best": [
 "Vitória Brighton",
 1.9,
-0.5222,
--0.0077
+0.5245,
+-0.0034
 ],
 "matched": [
 "football-data: Brighton x Brentford"
@@ -66,8 +66,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.38,
-0.4248,
-0.011
+0.4293,
+0.0217
 ],
 "matched": [
 "football-data: Crystal Palace x Liverpool"
@@ -84,8 +84,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.73,
-0.5802,
-0.0038
+0.5833,
+0.0092
 ],
 "matched": [
 "football-data: Ipswich x Bournemouth"
@@ -102,8 +102,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.83,
-0.539,
--0.0137
+0.5416,
+-0.0089
 ],
 "matched": [
 "football-data: Sunderland x Chelsea"
@@ -120,8 +120,8 @@
 "best": [
 "Vitória Man United",
 2.1,
-0.4838,
-0.016
+0.4839,
+0.0161
 ],
 "matched": [
 "football-data: Man United x Aston Villa"
@@ -174,8 +174,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.2,
-0.454,
--0.0013
+0.4571,
+0.0057
 ],
 "matched": [
 "football-data: AEK x Levadeiakos"
@@ -192,8 +192,8 @@
 "best": [
 "Mais de 2,5 gols",
 2.05,
-0.5176,
-0.0611
+0.5139,
+0.0535
 ],
 "matched": [
 "football-data: Asteras Tripolis x Kalamata"
@@ -210,8 +210,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.15,
-0.4672,
-0.0046
+0.4664,
+0.0028
 ],
 "matched": [
 "football-data: Iraklis x Panathinaikos"
@@ -228,8 +228,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.98,
-0.496,
--0.018
+0.4964,
+-0.017
 ],
 "matched": [
 "football-data: OFI Crete x Atromitos"
@@ -246,8 +246,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.05,
-0.4778,
--0.0205
+0.477,
+-0.0221
 ],
 "matched": [
 "football-data: Olympiakos x PAOK"
@@ -340,8 +340,8 @@
 "best": [
 "Vitória Sarpsborg 08",
 2.1,
-0.5047,
-0.0599
+0.5056,
+0.0618
 ],
 "matched": [
 "football-data: HamKam x Sarpsborg 08"
@@ -429,8 +429,8 @@
 "best": [
 "Vitória Jagiellonia Białystok",
 2.15,
-0.4541,
--0.0237
+0.4564,
+-0.0188
 ],
 "matched": [
 "football-data: Jagiellonia x GKS Katowice"
@@ -469,8 +469,8 @@
 "best": [
 "Vitória St. Gallen",
 2.25,
-0.3863,
--0.1309
+0.3878,
+-0.1274
 ],
 "matched": [
 "football-data: St. Gallen x Lugano"
@@ -487,8 +487,8 @@
 "best": [
 "Vitória Servette",
 1.81,
-0.5443,
--0.0149
+0.5492,
+-0.0059
 ],
 "matched": [
 "football-data: Servette x Zurich"
@@ -505,8 +505,8 @@
 "best": [
 "Vitória Thun",
 2.05,
-0.4836,
--0.0086
+0.4849,
+-0.006
 ],
 "matched": [
 "football-data: Thun x Basel"
@@ -521,10 +521,10 @@
 ],
 "markets_with_odds": 5,
 "best": [
-"Vitória Napoli",
-2.25,
-0.4817,
-0.0839
+"Mais de 2,5 gols",
+1.73,
+0.5582,
+-0.0343
 ],
 "matched": [
 "football-data: Napoli x Lazio"
@@ -539,10 +539,10 @@
 ],
 "markets_with_odds": 5,
 "best": [
-"Mais de 2,5 gols",
-2.1,
-0.5143,
-0.0801
+"Vitória Milan",
+1.8,
+0.5443,
+-0.0202
 ],
 "matched": [
 "football-data: Genoa x Milan"
@@ -559,8 +559,8 @@
 "best": [
 "Vitória Atalanta",
 2.05,
-0.5167,
-0.0593
+0.5151,
+0.056
 ],
 "matched": [
 "football-data: Monza x Atalanta"
@@ -577,8 +577,8 @@
 "best": [
 "Vitória Inter",
 1.91,
-0.5613,
-0.0721
+0.5598,
+0.0692
 ],
 "matched": [
 "football-data: Inter x Como"
@@ -595,29 +595,11 @@
 "best": [
 "Mais de 2,5 gols",
 1.8,
-0.5355,
--0.0361
+0.5336,
+-0.0396
 ],
 "matched": [
 "football-data: Fiorentina x Juventus"
-]
-},
-"5887674": {
-"league": "Liga Portugal",
-"game": "Estoril x Marítimo",
-"ts": 1794151800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Menos de 2,5 gols",
-1.9,
-0.5092,
--0.0324
-],
-"matched": [
-"football-data: Estoril x Maritimo"
 ]
 },
 "5887676": {
@@ -631,8 +613,8 @@
 "best": [
 "Mais de 2,5 gols",
 2.05,
-0.4873,
--0.001
+0.4851,
+-0.0056
 ],
 "matched": [
 "football-data: Nacional x Academico Viseu"
@@ -649,8 +631,8 @@
 "best": [
 "Mais de 2,5 gols",
 2.5,
-0.4061,
-0.0152
+0.4069,
+0.0171
 ],
 "matched": [
 "football-data: Santa Clara x Gil Vicente"
@@ -667,8 +649,8 @@
 "best": [
 "Menos de 2,5 gols",
 1.95,
-0.5069,
--0.0116
+0.5071,
+-0.0112
 ],
 "matched": [
 "football-data: Guimaraes x Porto"
@@ -698,145 +680,11 @@
 "best": [
 "Menos de 2,5 gols",
 2.03,
-0.4993,
-0.0136
+0.4997,
+0.0144
 ],
 "matched": [
 "football-data: Rio Ave x Sp Braga"
-]
-},
-"5071489": {
-"league": "MLS (EUA)",
-"game": "Montreal x Vancouver",
-"ts": 1794085200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Vancouver",
-1.61,
-0.6073,
--0.0223
-],
-"matched": [
-"football-data: CF Montreal x Vancouver Whitecaps"
-]
-},
-"5071485": {
-"league": "MLS (EUA)",
-"game": "Chicago x Columbus",
-"ts": 1794085200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Chicago",
-1.96,
-0.4984,
--0.0231
-],
-"matched": [
-"football-data: Chicago Fire x Columbus Crew"
-]
-},
-"5071487": {
-"league": "MLS (EUA)",
-"game": "DC United x NYCFC",
-"ts": 1794085200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória NYCFC",
-2.2,
-0.4225,
--0.0706
-],
-"matched": [
-"football-data: DC United x New York City"
-]
-},
-"5071486": {
-"league": "MLS (EUA)",
-"game": "Cincinnati x Nashville SC",
-"ts": 1794085200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Nashville SC",
-2.45,
-0.3897,
--0.0453
-],
-"matched": [
-"football-data: FC Cincinnati x Nashville SC"
-]
-},
-"5071488": {
-"league": "MLS (EUA)",
-"game": "Inter Miami CF x Charlotte FC",
-"ts": 1794085200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": null,
-"matched": [
-"football-data: Inter Miami x Charlotte"
-]
-},
-"5071491": {
-"league": "MLS (EUA)",
-"game": "Orlando x New England",
-"ts": 1794085200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Orlando",
-1.91,
-0.4375,
--0.1644
-],
-"matched": [
-"football-data: Orlando City x New England Revolution"
-]
-},
-"5071492": {
-"league": "MLS (EUA)",
-"game": "Philadelphia x Toronto",
-"ts": 1794085200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": null,
-"matched": [
-"football-data: Philadelphia Union x Toronto FC"
-]
-},
-"5071490": {
-"league": "MLS (EUA)",
-"game": "NY Red Bulls x Atlanta United",
-"ts": 1794085200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória NY Red Bulls",
-1.81,
-0.4997,
--0.0956
-],
-"matched": [
-"football-data: New York Red Bulls x Atlanta Utd"
 ]
 },
 "5071493": {
@@ -850,8 +698,8 @@
 "best": [
 "Vitória Portland",
 1.66,
-0.5654,
--0.0614
+0.5634,
+-0.0647
 ],
 "matched": [
 "football-data: Austin FC x Portland Timbers"
@@ -868,8 +716,8 @@
 "best": [
 "Vitória Dallas",
 2.05,
-0.4801,
--0.0157
+0.4785,
+-0.0192
 ],
 "matched": [
 "football-data: FC Dallas x Colorado Rapids"
@@ -899,8 +747,8 @@
 "best": [
 "Vitória Minnesota",
 1.68,
-0.5703,
--0.0419
+0.572,
+-0.0391
 ],
 "matched": [
 "football-data: Minnesota United x San Jose Earthquakes"
@@ -917,8 +765,8 @@
 "best": [
 "Vitória Salt Lake",
 1.71,
-0.5243,
--0.1034
+0.5239,
+-0.1041
 ],
 "matched": [
 "football-data: Real Salt Lake x Los Angeles Galaxy"
@@ -948,29 +796,11 @@
 "best": [
 "Vitória Seattle Sounders",
 1.81,
-0.449,
--0.1873
+0.4491,
+-0.1871
 ],
 "matched": [
 "football-data: Seattle Sounders x Los Angeles FC"
-]
-},
-"1000014637": {
-"league": "Liga MX (México)",
-"game": "Atlas x Pachuca",
-"ts": 1794092400,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Atlas",
-2.2,
-0.3976,
--0.1253
-],
-"matched": [
-"football-data: Atlas x Pachuca"
 ]
 },
 "1000014638": {
@@ -1069,8 +899,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.62,
-0.6256,
-0.0135
+0.6297,
+0.0202
 ],
 "matched": [
 "football-data: Rennes x Lille"
@@ -1085,10 +915,10 @@
 ],
 "markets_with_odds": 5,
 "best": [
-"Vitória Nice",
-2.0,
-0.4831,
--0.0339
+"Mais de 2,5 gols",
+1.73,
+0.5649,
+-0.0227
 ],
 "matched": [
 "football-data: Angers x Nice"
@@ -1105,8 +935,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.93,
-0.5502,
-0.0619
+0.5453,
+0.0524
 ],
 "matched": [
 "football-data: Brest x Lyon"
@@ -1123,8 +953,8 @@
 "best": [
 "Mais de 2,5 gols",
 2.03,
-0.5168,
-0.049
+0.5201,
+0.0558
 ],
 "matched": [
 "football-data: Le Havre x Lorient"
@@ -1141,8 +971,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.62,
-0.6191,
-0.0029
+0.6138,
+-0.0057
 ],
 "matched": [
 "football-data: Le Mans x Monaco"
@@ -1172,8 +1002,8 @@
 "best": [
 "Vitória Leverkusen",
 1.8,
-0.4516,
--0.1871
+0.4506,
+-0.1889
 ],
 "matched": [
 "football-data: FC Koln x Leverkusen"
@@ -1190,8 +1020,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.3,
-0.4149,
--0.0457
+0.4164,
+-0.0423
 ],
 "matched": [
 "football-data: Freiburg x Union Berlin"
@@ -1221,8 +1051,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.5,
-0.3909,
--0.0227
+0.3752,
+-0.062
 ],
 "matched": [
 "football-data: Hearts x Falkirk"
@@ -1304,8 +1134,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.5,
-0.3574,
--0.1064
+0.3559,
+-0.1103
 ],
 "matched": [
 "football-data: Utrecht x Nijmegen"
@@ -1335,8 +1165,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.73,
-0.5562,
--0.0377
+0.5569,
+-0.0366
 ],
 "matched": [
 "football-data: Gent x Kortrijk"
@@ -1353,8 +1183,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.3,
-0.4246,
--0.0235
+0.4256,
+-0.021
 ],
 "matched": [
 "football-data: St. Gilloise x Genk"
@@ -1371,8 +1201,8 @@
 "best": [
 "Vitória St.Truiden",
 1.75,
-0.5306,
--0.0715
+0.5338,
+-0.0659
 ],
 "matched": [
 "football-data: St Truiden x Waregem"
@@ -1420,8 +1250,8 @@
 "best": [
 "Vitória Nordsjælland",
 1.61,
-0.5548,
--0.1067
+0.555,
+-0.1064
 ],
 "matched": [
 "football-data: Randers FC x Nordsjaelland"
@@ -1439,24 +1269,6 @@
 "matched": [
 "football-data: Midtjylland x Sonderjyske"
 ]
-},
-"5190807": {
-"league": "Brasileirão Série B",
-"game": "Cuiabá x Juventude",
-"ts": 1794092400,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
-},
-"5190808": {
-"league": "Brasileirão Série B",
-"game": "Vila Nova x Criciúma",
-"ts": 1794092400,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
 },
 "5190806": {
 "league": "Brasileirão Série B",
@@ -1518,8 +1330,8 @@
 "best": [
 "Vitória IFK Göteborg",
 2.25,
-0.3793,
--0.1467
+0.3788,
+-0.1478
 ],
 "matched": [
 "football-data: Goteborg x Malmo FF"
@@ -1590,8 +1402,8 @@
 "best": [
 "Vitória Bochum",
 1.8,
-0.5727,
-0.0308
+0.5692,
+0.0246
 ],
 "matched": [
 "football-data: Bochum x Karlsruhe"
@@ -1621,8 +1433,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.2,
-0.4416,
--0.0285
+0.4446,
+-0.0219
 ],
 "matched": [
 "football-data: Magdeburg x St Pauli"
@@ -1652,8 +1464,8 @@
 "best": [
 "Vitória Austria Wien",
 2.5,
-0.3827,
--0.0432
+0.3848,
+-0.0379
 ],
 "matched": [
 "football-data: Tirol x Austria Vienna"
@@ -1670,8 +1482,8 @@
 "best": [
 "Vitória Salzburg",
 2.1,
-0.431,
--0.0949
+0.4357,
+-0.0851
 ],
 "matched": [
 "football-data: Sturm Graz x Salzburg"
@@ -1688,8 +1500,8 @@
 "best": [
 "Vitória Rizespor",
 1.81,
-0.5719,
-0.0351
+0.572,
+0.0353
 ],
 "matched": [
 "football-data: Rizespor x Erzurumspor"
@@ -1755,8 +1567,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.67,
-0.6041,
-0.0089
+0.6077,
+0.0148
 ],
 "matched": [
 "football-data: Elche x Betis"
@@ -1773,8 +1585,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.38,
-0.3968,
--0.0557
+0.3983,
+-0.0521
 ],
 "matched": [
 "football-data: Sociedad x Vallecano"
@@ -1791,8 +1603,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.93,
-0.5289,
-0.0207
+0.5282,
+0.0194
 ],
 "matched": [
 "football-data: Celta x Levante"
@@ -1809,8 +1621,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.0,
-0.4981,
--0.0039
+0.499,
+-0.002
 ],
 "matched": [
 "football-data: Villarreal x Getafe"
@@ -1827,8 +1639,8 @@
 "best": [
 "Vitória Barcelona",
 1.83,
-0.5056,
--0.0747
+0.5083,
+-0.0699
 ],
 "matched": [
 "football-data: Ath Madrid x Barcelona"
