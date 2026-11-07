@@ -32,8 +32,8 @@ MAX_ODD = float(os.environ.get("MAX_ODD", "2.5"))  # weekend 24-25/10: odds abov
 # backtest at Bet365: EV above ~25-40% is almost always a model blind spot (promoted teams, missing news), not value
 MAX_EV = float(os.environ.get("MAX_EV", "0.25"))
 BOOK = "Bet365"
-FD_DIV = {"E0": 47, "E1": 48, "SP1": 87, "I1": 55, "D1": 54, "F1": 53, "N1": 57, "P1": 61, "B1": 40, "T1": 71, "SC0": 64, "SP2": 140, "I2": 86, "D2": 146, "F2": 110}
-DOC2LID = {"s325": 268, "s390": 8814, "s17": 47, "s18": 48, "s8": 87, "s23": 55, "s35": 54, "s34": 53, "s37": 57, "s238": 61, "s38": 40, "s52": 71, "s36": 64, "s54": 140, "s53": 86, "s44": 146, "s182": 110}
+FD_DIV = {"E0": 47, "E1": 48, "SP1": 87, "I1": 55, "D1": 54, "F1": 53, "N1": 57, "P1": 61, "B1": 40, "T1": 71, "SC0": 64, "SP2": 140, "I2": 86, "D2": 146, "F2": 110, "G1": 135}
+DOC2LID = {"s325": 268, "s390": 8814, "s17": 47, "s18": 48, "s8": 87, "s23": 55, "s35": 54, "s34": 53, "s37": 57, "s238": 61, "s38": 40, "s52": 71, "s36": 64, "s54": 140, "s53": 86, "s44": 146, "s45": 38, "s215": 69, "s39": 46, "s185": 135, "s202": 196, "s172": 122, "s20": 59, "s40": 67, "s155": 112, "s27464": 230, "s242": 130, "s196": 223, "s182": 110}
 # market groups the user allowed: corners, players, 1X2 & goals, team shots (correct score left out)
 # player markets ("pl") paused after the first weekend: the model added nothing to the bookmaker price there
 ALLOWED = {"res", "dc", "hcp", "gols", "btts", "tg", "st", "sh", "sa", "tt", "th", "ta", "ct", "cx", "chc", "ch", "ca", "c1"}
@@ -70,6 +70,36 @@ def fd_odds():
                 o[k] = v
         if o:
             out.append({"lid": lid, "day": day, "hn": r["HomeTeam"], "an": r["AwayTeam"], "odds": o, "src": "football-data"})
+    return out
+
+
+# football-data "new leagues" fixtures (one file, Country + League columns, 1X2 only)
+FD_NEW = {("Austria", "Bundesliga"): 38, ("Switzerland", "Super League"): 69, ("Denmark", "Superliga"): 46, ("Poland", "Ekstraklasa"): 196, ("Norway", "Eliteserien"): 59, ("Sweden", "Allsvenskan"): 67, ("Argentina", "Liga Profesional"): 112, ("Mexico", "Liga MX"): 230, ("USA", "MLS"): 130, ("Japan", "J1 League"): 223, ("Brazil", "Serie A"): 268}
+
+
+def fd_new_odds():
+    out = []
+    p = os.path.join(UP, "fd_new_fixtures.csv")
+    if not os.path.exists(p):
+        return out
+    for r in csv.DictReader(open(p, encoding="utf-8-sig")):
+        lid = FD_NEW.get(((r.get("Country") or "").strip(), (r.get("League") or "").strip()))
+        if not lid:
+            continue
+        try:
+            day = datetime.strptime(r["Date"], "%d/%m/%Y").date()
+        except (KeyError, ValueError):
+            continue
+        o = {}
+        for k, col in (("1", "B365H"), ("X", "B365D"), ("2", "B365A")):
+            try:
+                v = float(r.get(col) or 0)
+            except ValueError:
+                v = 0
+            if v > 1:
+                o[k] = v
+        if o:
+            out.append({"lid": lid, "day": day, "hn": r["Home"], "an": r["Away"], "odds": o, "src": "football-data"})
     return out
 
 
@@ -282,7 +312,7 @@ def family(key):
 def main():
     now = time.time()
     bets = json.load(open(OUT)) if os.path.exists(OUT) else {}
-    sources = fd_odds() + op_odds()
+    sources = fd_odds() + fd_new_odds() + op_odds()
     print("jogos com odds da casa:", len(sources), flush=True)
     new = upd = dropped = 0
     diag = {}

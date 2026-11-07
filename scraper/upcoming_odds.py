@@ -26,9 +26,9 @@ API = "https://api.oddspapi.io/v4"
 # our league -> OddsPapi tournament id (checked against data/odds/oddspapi/tournaments.json)
 PLAN_LIMIT = int(os.environ.get("ODDSPAPI_PLAN_LIMIT", "250"))   # free plan
 WARN_AT = int(os.environ.get("ODDSPAPI_WARN_AT", "200"))
-# 07/11: one round every 12 h (2 a day, up to 4 requests each -> at most ~240 a month, fits the free plan)
-INTERVAL_H = float(os.environ.get("ODDSPAPI_INTERVAL_H", "12"))
-OP_TOURNAMENTS = {268: 325, 8814: 390, 47: 17, 48: 18, 87: 8, 55: 23, 54: 35, 53: 34, 57: 37, 61: 238, 40: 38, 71: 52, 64: 36, 140: 54, 86: 53, 146: 44, 110: 182}
+# 07/11: one round a day (at most 5 leagues per request: 26 leagues = 6 requests -> ~180 a month, fits the free plan)
+DAILY_HOUR = int(os.environ.get("ODDSPAPI_DAILY_HOUR", "9"))
+OP_TOURNAMENTS = {268: 325, 8814: 390, 47: 17, 48: 18, 87: 8, 55: 23, 54: 35, 53: 34, 57: 37, 61: 238, 40: 38, 71: 52, 64: 36, 140: 54, 86: 53, 146: 44, 110: 182, 38: 45, 69: 215, 46: 39, 135: 185, 196: 202, 122: 172, 59: 20, 67: 40, 112: 155, 230: 27464, 130: 242, 223: 196}
 # Bet365 international: same prices as the Brazilian site in practice, and far more markets on OddsPapi
 # (corners and player shots are missing from bet365.bet.br there)
 BOOKS = tuple(os.environ.get("ODDSPAPI_BOOKS", "bet365").split(","))
@@ -112,13 +112,18 @@ def oddspapi():
         print("OddsPapi: sem chave (secret ODDSPAPI_KEY), pulando", flush=True)
         return
     # free plan: 250 requests/month, 1 bookmaker and at most 5 tournaments per request -> 2 requests per round.
-    # At most one round every INTERVAL_H hours. GitHub delays scheduled runs by up
+    # One round a day. GitHub delays scheduled runs by up
     # to an hour, so the rule is based on the time of the last round, not on fixed hours.
     last_p = os.path.join(REF, "last_round.json")
     state = json.load(open(last_p)) if os.path.exists(last_p) else {}
     last = state.get("ts", 0)
-    if time.time() - last < INTERVAL_H * 3600 - 600 and not os.environ.get("ODDSPAPI_FORCE"):
-        print("OddsPapi: última rodada há", round((time.time() - last) / 3600, 1), f"h; próxima após {INTERVAL_H:g} h (cota)", flush=True)
+    # 07/11: one round a day, the first run from DAILY_HOUR (Brasília time) on; it covers the next 48 h of games
+    brt = lambda t: time.gmtime(t - 3 * 3600)
+    now_b, last_b = brt(time.time()), brt(last)
+    done_today = last and (now_b.tm_year, now_b.tm_yday) == (last_b.tm_year, last_b.tm_yday) and last_b.tm_hour >= DAILY_HOUR
+    if (done_today or now_b.tm_hour < DAILY_HOUR) and not os.environ.get("ODDSPAPI_FORCE"):
+        print(f"OddsPapi: uma rodada por dia a partir das {DAILY_HOUR}h de Brasília (cota); última há",
+              round((time.time() - last) / 3600, 1), "h", flush=True)
         return
     os.makedirs(REF, exist_ok=True)
     # reference lists, downloaded once
@@ -143,6 +148,12 @@ def oddspapi():
         if any(fx.get("ts", 0) > time.time() for fx in mdl.get("fixtures", [])):
             comps.add(int(mdl.get("comp") or 0))
     comp2lid = {int(v[0][1:]): k for k, v in LEAGUES.items()}
+    # leagues switched off in the robot are not queried (saves quota)
+    try:
+        excl = set(json.load(open(os.path.join(ROOT, "data", "autobets", "config.json"))).get("exclude_leagues") or [])
+    except Exception:  # noqa: BLE001
+        excl = set()
+    comps = {c for c in comps if LEAGUES.get(comp2lid.get(c), (None, None))[1] not in excl}
     ids = {comp2lid[c]: OP_TOURNAMENTS[comp2lid[c]] for c in comps if comp2lid.get(c) in OP_TOURNAMENTS}
     json.dump({str(k): v for k, v in OP_TOURNAMENTS.items()}, open(os.path.join(REF, "tournament_ids.json"), "w"))
     if not ids:

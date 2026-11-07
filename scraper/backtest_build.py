@@ -23,7 +23,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FULL = os.path.join(ROOT, "data", "cache", "history_full")
 CUR = os.path.join(ROOT, "data", "cache", "fotmob")
 ODDS = os.path.join(ROOT, "data", "odds")
-FD = {47: "E0", 48: "E1", 87: "SP1", 55: "I1", 54: "D1", 53: "F1", 57: "N1", 61: "P1", 40: "B1", 71: "T1", 64: "SC0", 140: "SP2", 86: "I2", 146: "D2", 110: "F2"}
+FD = {47: "E0", 48: "E1", 87: "SP1", 55: "I1", 54: "D1", 53: "F1", 57: "N1", 61: "P1", 40: "B1", 71: "T1", 64: "SC0", 140: "SP2", 86: "I2", 146: "D2", 110: "F2", 135: "G1"}
+# football-data "new leagues" (one file per country, all seasons; 1X2 closing odds only)
+FD_NEW = {38: "AUT", 69: "SWZ", 46: "DNK", 196: "POL", 59: "NOR", 67: "SWE", 112: "ARG", 230: "MEX", 130: "USA", 223: "JPN"}
 
 
 def norm(s):
@@ -39,7 +41,8 @@ def season_key(lid, season):
 
 def load_odds(lid):
     rows = []
-    files = glob.glob(os.path.join(ODDS, f"{FD[lid]}_*.csv")) if lid in FD else ([os.path.join(ODDS, "BRA.csv")] if lid == 268 else [])
+    files = glob.glob(os.path.join(ODDS, f"{FD[lid]}_*.csv")) if lid in FD else ([os.path.join(ODDS, "BRA.csv")] if lid == 268 else
+                                                                               [os.path.join(ODDS, f"{FD_NEW[lid]}.csv")] if lid in FD_NEW else [])
     for f in files:
         if not os.path.exists(f):
             continue

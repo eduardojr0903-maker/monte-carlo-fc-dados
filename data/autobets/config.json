@@ -2,8 +2,20 @@
  "exclude_leagues": [
   "LaLiga 2",
   "Serie B (Itália)",
-  "Ligue 2"
+  "Ligue 2",
+  "Bundesliga (Áustria)",
+  "Super League (Suíça)",
+  "Superliga (Dinamarca)",
+  "Super League (Grécia)",
+  "Ekstraklasa (Polônia)",
+  "1. Liga (Rep. Tcheca)",
+  "Eliteserien (Noruega)",
+  "Allsvenskan (Suécia)",
+  "Liga Profesional (Argentina)",
+  "Liga MX (México)",
+  "MLS (EUA)",
+  "J1 League (Japão)"
  ],
- "_nota": "nomes exatamente como aparecem em Minhas apostas; o robô deixa de registrar apostas nessas ligas. As 7 ligas novas ficam aqui até o backtest.",
+ "_nota": "nomes exatamente como aparecem em Minhas apostas; o robô não registra apostas nessas ligas (nem gasta consultas da OddsPapi com elas). As 12 ligas de 07/11 ficam aqui até o backtest.",
  "_backtest_2026_11_04": "Ligadas após backtest (2023-26, ~7.000 jogos): Pro League, Süper Lig, Premiership, 2. Bundesliga. Desligadas: LaLiga 2, Serie B, Ligue 2 (1X2 bem pior que a Pinnacle, empates subestimados, CLV -5% a -7%)."
 }

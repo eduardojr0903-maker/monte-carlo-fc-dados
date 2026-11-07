@@ -109,6 +109,18 @@ LEAGUES = {
     86: ("s53", "Serie B (Itália)", True),
     146: ("s44", "2. Bundesliga", True),
     110: ("s182", "Ligue 2", True),
+    38: ("s45", "Bundesliga (Áustria)", True),
+    69: ("s215", "Super League (Suíça)", True),
+    46: ("s39", "Superliga (Dinamarca)", True),
+    135: ("s185", "Super League (Grécia)", True),
+    196: ("s202", "Ekstraklasa (Polônia)", True),
+    122: ("s172", "1. Liga (Rep. Tcheca)", True),
+    59: ("s20", "Eliteserien (Noruega)", True),
+    67: ("s40", "Allsvenskan (Suécia)", True),
+    112: ("s155", "Liga Profesional (Argentina)", True),
+    230: ("s27464", "Liga MX (México)", True),
+    130: ("s242", "MLS (EUA)", True),
+    223: ("s196", "J1 League (Japão)", True),
 }
 POS = {0: "G", 1: "D", 2: "M", 3: "F"}
 
