@@ -1,26 +1,6 @@
 {
-"updated": "2026-11-07T14:50:37+00:00",
+"updated": "2026-11-07T16:40:01+00:00",
 "fixtures": {
-"5795513": {
-"league": "Premier League",
-"game": "Nottm Forest x Man City",
-"ts": 1794072600,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 35,
-"best": [
-"Menos de 2,5 gols",
-2.3,
-0.4262,
--0.0196
-],
-"matched": [
-"football-data: Nott'm Forest x Man City",
-"oddspapi: Nottingham Forest x Manchester City"
-]
-},
 "5795506": {
 "league": "Premier League",
 "game": "Brighton x Brentford",
@@ -33,8 +13,8 @@
 "best": [
 "Vitória Brighton",
 1.9,
-0.527,
-0.0013
+0.5284,
+0.004
 ],
 "matched": [
 "football-data: Brighton x Brentford",
@@ -108,29 +88,11 @@
 "best": [
 "Vitória Man United",
 2.1,
-0.4843,
-0.0171
+0.4618,
+-0.0303
 ],
 "matched": [
 "football-data: Man United x Aston Villa"
-]
-},
-"5749747": {
-"league": "Serie A (Itália)",
-"game": "Parma x Bologna",
-"ts": 1794070800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-2.1,
-0.4885,
-0.0259
-],
-"matched": [
-"football-data: Parma x Bologna"
 ]
 },
 "5749740": {
@@ -339,8 +301,8 @@
 "best": [
 "Menos de 2,5 gols",
 1.95,
-0.5072,
--0.0109
+0.5075,
+-0.0103
 ],
 "matched": [
 "football-data: Guimaraes x Porto",
@@ -527,24 +489,6 @@
 "best": null,
 "matched": [
 "football-data: Lens x Marseille"
-]
-},
-"5881223": {
-"league": "Bundesliga",
-"game": "VfB Stuttgart x Werder Bremen",
-"ts": 1794072600,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória VfB Stuttgart",
-1.65,
-0.6024,
--0.006
-],
-"matched": [
-"football-data: Stuttgart x Werder Bremen"
 ]
 },
 "5881216": {
@@ -825,26 +769,6 @@
 "oddspapi: FC Utrecht x NEC Nijmegen"
 ]
 },
-"5811803": {
-"league": "Pro League (Bélgica)",
-"game": "OH Leuven x KV Mechelen",
-"ts": 1794071700,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 35,
-"best": [
-"Mais de 2,5 gols",
-1.8,
-0.5857,
-0.0543
-],
-"matched": [
-"football-data: Oud-Heverlee Leuven x Mechelen",
-"oddspapi: Oud-Heverlee Leuven x Yellow-Red KV Mechelen"
-]
-},
 "5811804": {
 "league": "Pro League (Bélgica)",
 "game": "RAAL La Louvière x Cercle Brugge",
@@ -1112,8 +1036,8 @@
 "best": [
 "Vitória Hertha BSC",
 2.05,
-0.5191,
-0.0641
+0.519,
+0.064
 ],
 "matched": [
 "football-data: Hertha x Wolfsburg",
@@ -1180,46 +1104,6 @@
 "oddspapi: 1. FC Magdeburg x FC St. Pauli"
 ]
 },
-"5904800": {
-"league": "Süper Lig (Turquia)",
-"game": "Galatasaray x Amed Sportif",
-"ts": 1794067200,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 37,
-"best": [
-"Menos de 3,5 gols",
-1.69,
-0.5827,
--0.0152
-],
-"matched": [
-"football-data: Galatasaray x Amedspor",
-"oddspapi: Galatasaray Istanbul x Amed Sportif Faaliyetler"
-]
-},
-"5904798": {
-"league": "Süper Lig (Turquia)",
-"game": "Göztepe x Başakşehir",
-"ts": 1794067200,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 35,
-"best": [
-"Mais de 2,5 gols",
-1.62,
-0.6184,
-0.0017
-],
-"matched": [
-"football-data: Goztep x Buyuksehyr",
-"oddspapi: Goztepe Izmir x Istanbul Basaksehir"
-]
-},
 "5904797": {
 "league": "Süper Lig (Turquia)",
 "game": "Rizespor x Erzurumspor FK",
@@ -1232,8 +1116,8 @@
 "best": [
 "Vitória Rizespor",
 1.81,
-0.5748,
-0.0404
+0.5734,
+0.0378
 ],
 "matched": [
 "football-data: Rizespor x Erzurumspor",
@@ -1252,8 +1136,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.3,
-0.4103,
--0.0562
+0.4115,
+-0.0536
 ],
 "matched": [
 "football-data: Corum x Fenerbahce",
@@ -1272,8 +1156,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.7,
-0.5574,
--0.0525
+0.5532,
+-0.0596
 ],
 "matched": [
 "football-data: Alanyaspor x Trabzonspor",
@@ -1299,15 +1183,6 @@
 "football-data: Besiktas x Genclerbirligi",
 "oddspapi: Besiktas Istanbul x Genclerbirligi SK"
 ]
-},
-"5868126": {
-"league": "La Liga",
-"game": "Osasuna x Athletic Club",
-"ts": 1794072600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
 },
 "5868129": {
 "league": "La Liga",
@@ -1351,8 +1226,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.38,
-0.3958,
--0.058
+0.398,
+-0.0527
 ],
 "matched": [
 "football-data: Sociedad x Vallecano"
@@ -1369,8 +1244,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.93,
-0.5297,
-0.0223
+0.5275,
+0.0182
 ],
 "matched": [
 "football-data: Celta x Levante"
@@ -1387,8 +1262,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.0,
-0.4957,
--0.0087
+0.4985,
+-0.0029
 ],
 "matched": [
 "football-data: Villarreal x Getafe"
@@ -1404,10 +1279,10 @@
 ],
 "markets_with_odds": 37,
 "best": [
-"Menos de 3,5 gols",
-1.96,
-0.5148,
-0.009
+"Vitória Barcelona",
+1.83,
+0.5051,
+-0.0757
 ],
 "matched": [
 "football-data: Ath Madrid x Barcelona",
