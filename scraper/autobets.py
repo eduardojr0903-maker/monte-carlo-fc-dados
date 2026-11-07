@@ -106,6 +106,40 @@ def find(src, lid, ts, hn, an):
     return best if score >= (0.8 if timed else 1.2) else None
 
 
+def match_score(r, lid, ts, hn, an):
+    """Name score of one bookmaker fixture against one of our fixtures, or None when league/date/time rule it out."""
+    if r["lid"] != lid:
+        return None
+    day = datetime.fromtimestamp(ts, timezone.utc).date()
+    if abs((r["day"] - day).days) > 1:
+        return None
+    if r.get("ts") and abs(r["ts"] - ts) > 20 * 60:
+        return None
+    s = sim(hn, r["hn"]) + sim(an, r["an"])
+    return s if s >= (0.8 if r.get("ts") else 1.2) else None
+
+
+def assign_sources(sources, fixtures):
+    """One-to-one link between bookmaker fixtures and our fixtures: a bookmaker fixture goes only to the fixture it
+    matches best, and only if that fixture has no better bookmaker fixture from the same source.
+    Without this, when a game was still missing from OddsPapi, another game at the same kick-off with loosely similar
+    names (Paderborn x Frankfurt ~ RB Leipzig x FC Augsburg) lent it its prices.
+    fixtures: [(key, lid, ts, hn, an)]. Returns {key: [source rows]}."""
+    best_fx = {}
+    for i, r in enumerate(sources):
+        sc = [(match_score(r, lid, ts, hn, an), key) for key, lid, ts, hn, an in fixtures]
+        sc = [x for x in sc if x[0] is not None]
+        if sc:
+            best_fx[i] = max(sc)
+    out = {}
+    for i, (s, key) in best_fx.items():
+        cur = out.setdefault(key, {})
+        src = sources[i]["src"]
+        if src not in cur or s > cur[src][0]:
+            cur[src] = (s, sources[i])
+    return {k: [r for _, r in v.values()] for k, v in out.items()}
+
+
 def player_key_match(key, label, fx_odds):
     """Player market keys carry the FotMob player id; bookmaker player markets carry the name. Match by name."""
     m = re.match(r"^P(\d)_(.+)_(sh|sot|g)(\d)$", key)
@@ -237,6 +271,12 @@ def main():
     print("jogos com odds da casa:", len(sources), flush=True)
     new = upd = dropped = 0
     diag = {}
+    allfx = []
+    for f in sorted(glob.glob(os.path.join(ROOT, "data", "model", "s*.json"))):
+        lid0 = DOC2LID.get(os.path.basename(f)[:-5])
+        for fx in json.load(open(f)).get("fixtures", []):
+            allfx.append((fx["fx"], lid0, fx["ts"], fx["hn"], fx["an"]))
+    linked = assign_sources(sources, allfx)
     for f in sorted(glob.glob(os.path.join(ROOT, "data", "model", "s*.json"))):
         doc_id = os.path.basename(f)[:-5]
         lid = DOC2LID.get(doc_id)
@@ -247,18 +287,17 @@ def main():
         for fx in M.get("fixtures", []):
             if fx["ts"] < now + 600:
                 continue
-            cand = [s for s in sources if s["lid"] == lid]
-            # merge odds of every source for this fixture
+            # merge odds of every source linked to this fixture (one bookmaker fixture per source)
             odds, players, srcs = {}, {}, set()
-            for s in cand:
-                hit = find([s], lid, fx["ts"], fx["hn"], fx["an"])
+            for hit in linked.get(fx["fx"], []):
                 if hit:
                     for k, v in hit["odds"].items():
                         odds.setdefault(k, v)
                     players.update(hit.get("players") or {})
                     srcs.add(hit["src"])
             dg = {"league": M.get("league"), "game": f"{fx['hn']} x {fx['an']}", "ts": fx["ts"], "sources": sorted(srcs),
-                  "markets_with_odds": len(odds), "best": None}
+                  "markets_with_odds": len(odds), "best": None,
+                  "matched": [f"{h['src']}: {h['hn']} x {h['an']}" for h in linked.get(fx["fx"], [])]}
             diag[fx["fx"]] = dg
             if not odds and not players:
                 continue
