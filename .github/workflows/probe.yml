@@ -1,0 +1,21 @@
+name: Sonda FotMob
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r scraper/requirements.txt
+      - run: |
+          cd scraper && python - <<'PY'
+          from collect import fm
+          al = fm("allLeagues", locale="en") or {}
+          for grp in al.get("countries") or []:
+              if grp.get("ccode") in ("AUT","SUI","CHE","DEN","GRE","POL","CZE","NOR","SWE","ARG","MEX","USA","JPN"):
+                  print(grp.get("ccode"), [(l["id"], l["name"]) for l in grp["leagues"]][:6])
+          PY
