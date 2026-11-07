@@ -26,6 +26,8 @@ API = "https://api.oddspapi.io/v4"
 # our league -> OddsPapi tournament id (checked against data/odds/oddspapi/tournaments.json)
 PLAN_LIMIT = int(os.environ.get("ODDSPAPI_PLAN_LIMIT", "250"))   # free plan
 WARN_AT = int(os.environ.get("ODDSPAPI_WARN_AT", "200"))
+# 07/11: one round every 12 h (2 a day, up to 4 requests each -> at most ~240 a month, fits the free plan)
+INTERVAL_H = float(os.environ.get("ODDSPAPI_INTERVAL_H", "12"))
 OP_TOURNAMENTS = {268: 325, 8814: 390, 47: 17, 48: 18, 87: 8, 55: 23, 54: 35, 53: 34, 57: 37, 61: 238, 40: 38, 71: 52, 64: 36, 140: 54, 86: 53, 146: 44, 110: 182}
 # Bet365 international: same prices as the Brazilian site in practice, and far more markets on OddsPapi
 # (corners and player shots are missing from bet365.bet.br there)
@@ -110,13 +112,13 @@ def oddspapi():
         print("OddsPapi: sem chave (secret ODDSPAPI_KEY), pulando", flush=True)
         return
     # free plan: 250 requests/month, 1 bookmaker and at most 5 tournaments per request -> 2 requests per round.
-    # At most one round every 8 hours (3 a day, about 186 requests a month). GitHub delays scheduled runs by up
+    # At most one round every INTERVAL_H hours. GitHub delays scheduled runs by up
     # to an hour, so the rule is based on the time of the last round, not on fixed hours.
     last_p = os.path.join(REF, "last_round.json")
     state = json.load(open(last_p)) if os.path.exists(last_p) else {}
     last = state.get("ts", 0)
-    if time.time() - last < 8 * 3600 - 300 and not os.environ.get("ODDSPAPI_FORCE"):
-        print("OddsPapi: última rodada há", round((time.time() - last) / 3600, 1), "h; próxima após 8 h (cota)", flush=True)
+    if time.time() - last < INTERVAL_H * 3600 - 600 and not os.environ.get("ODDSPAPI_FORCE"):
+        print("OddsPapi: última rodada há", round((time.time() - last) / 3600, 1), f"h; próxima após {INTERVAL_H:g} h (cota)", flush=True)
         return
     os.makedirs(REF, exist_ok=True)
     # reference lists, downloaded once
