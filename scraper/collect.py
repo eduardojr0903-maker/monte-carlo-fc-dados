@@ -114,7 +114,6 @@ LEAGUES = {
     46: ("s39", "Superliga (Dinamarca)", True),
     135: ("s185", "Super League (Grécia)", True),
     196: ("s202", "Ekstraklasa (Polônia)", True),
-    122: ("s172", "1. Liga (Rep. Tcheca)", True),
     59: ("s20", "Eliteserien (Noruega)", True),
     67: ("s40", "Allsvenskan (Suécia)", True),
     112: ("s155", "Liga Profesional (Argentina)", True),

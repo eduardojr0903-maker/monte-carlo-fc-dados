@@ -19,7 +19,7 @@ from collect import fm, LEAGUES  # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "data", "calendar")
 COUNTRIES = {"BRA", "ENG", "ESP", "ITA", "GER", "FRA", "NED", "POR", "BEL", "TUR", "SCO",
-             "AUT", "SUI", "DEN", "GRE", "POL", "CZE", "NOR", "SWE", "ARG", "MEX", "USA", "JPN"}
+             "AUT", "SUI", "DEN", "GRE", "POL", "NOR", "SWE", "ARG", "MEX", "USA", "JPN"}
 INTL_KEYS = ("champions league", "europa league", "conference league", "libertadores", "sudamericana",
              "recopa", "super cup", "club world cup", "supercup", "uefa super", "intercontinental")
 FIRST_YEAR = 2022

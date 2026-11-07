@@ -28,7 +28,7 @@ PLAN_LIMIT = int(os.environ.get("ODDSPAPI_PLAN_LIMIT", "250"))   # free plan
 WARN_AT = int(os.environ.get("ODDSPAPI_WARN_AT", "200"))
 # 07/11: one round a day (at most 5 leagues per request: 26 leagues = 6 requests -> ~180 a month, fits the free plan)
 DAILY_HOUR = int(os.environ.get("ODDSPAPI_DAILY_HOUR", "9"))
-OP_TOURNAMENTS = {268: 325, 8814: 390, 47: 17, 48: 18, 87: 8, 55: 23, 54: 35, 53: 34, 57: 37, 61: 238, 40: 38, 71: 52, 64: 36, 140: 54, 86: 53, 146: 44, 110: 182, 38: 45, 69: 215, 46: 39, 135: 185, 196: 202, 122: 172, 59: 20, 67: 40, 112: 155, 230: 27464, 130: 242, 223: 196}
+OP_TOURNAMENTS = {268: 325, 8814: 390, 47: 17, 48: 18, 87: 8, 55: 23, 54: 35, 53: 34, 57: 37, 61: 238, 40: 38, 71: 52, 64: 36, 140: 54, 86: 53, 146: 44, 110: 182, 38: 45, 69: 215, 46: 39, 135: 185, 196: 202, 59: 20, 67: 40, 112: 155, 230: 27464, 130: 242, 223: 196}
 # Bet365 international: same prices as the Brazilian site in practice, and far more markets on OddsPapi
 # (corners and player shots are missing from bet365.bet.br there)
 BOOKS = tuple(os.environ.get("ODDSPAPI_BOOKS", "bet365").split(","))

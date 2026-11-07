@@ -33,7 +33,7 @@ MAX_ODD = float(os.environ.get("MAX_ODD", "2.5"))  # weekend 24-25/10: odds abov
 MAX_EV = float(os.environ.get("MAX_EV", "0.25"))
 BOOK = "Bet365"
 FD_DIV = {"E0": 47, "E1": 48, "SP1": 87, "I1": 55, "D1": 54, "F1": 53, "N1": 57, "P1": 61, "B1": 40, "T1": 71, "SC0": 64, "SP2": 140, "I2": 86, "D2": 146, "F2": 110, "G1": 135}
-DOC2LID = {"s325": 268, "s390": 8814, "s17": 47, "s18": 48, "s8": 87, "s23": 55, "s35": 54, "s34": 53, "s37": 57, "s238": 61, "s38": 40, "s52": 71, "s36": 64, "s54": 140, "s53": 86, "s44": 146, "s45": 38, "s215": 69, "s39": 46, "s185": 135, "s202": 196, "s172": 122, "s20": 59, "s40": 67, "s155": 112, "s27464": 230, "s242": 130, "s196": 223, "s182": 110}
+DOC2LID = {"s325": 268, "s390": 8814, "s17": 47, "s18": 48, "s8": 87, "s23": 55, "s35": 54, "s34": 53, "s37": 57, "s238": 61, "s38": 40, "s52": 71, "s36": 64, "s54": 140, "s53": 86, "s44": 146, "s45": 38, "s215": 69, "s39": 46, "s185": 135, "s202": 196, "s20": 59, "s40": 67, "s155": 112, "s27464": 230, "s242": 130, "s196": 223, "s182": 110}
 # market groups the user allowed: corners, players, 1X2 & goals, team shots (correct score left out)
 # player markets ("pl") paused after the first weekend: the model added nothing to the bookmaker price there
 ALLOWED = {"res", "dc", "hcp", "gols", "btts", "tg", "st", "sh", "sa", "tt", "th", "ta", "ct", "cx", "chc", "ch", "ca", "c1"}
