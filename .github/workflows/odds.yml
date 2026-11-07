@@ -1,8 +1,7 @@
 name: Odds da Bet365 (OddsPapi)
+# manual only: every run spends OddsPapi quota (the daily round runs inside "Coletar dados")
 on:
   workflow_dispatch:
-  push:
-    paths: [".github/workflows/odds.yml", "scraper/autobets.py"]
 permissions:
   contents: write
 
