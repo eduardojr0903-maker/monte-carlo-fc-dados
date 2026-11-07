@@ -25,8 +25,9 @@ from backtest_build import norm  # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 UP = os.path.join(ROOT, "data", "odds", "upcoming")
 OUT = os.path.join(ROOT, "data", "autobets", "bets.json")
-MIN_EV = float(os.environ.get("MIN_EV", "0.05"))
+MIN_EV = float(os.environ.get("MIN_EV", "0.08"))  # 07/11: user rule, EV of at least 8%
 MIN_P = float(os.environ.get("MIN_P", "0.08"))      # skip long shots: model error dominates there
+MIN_ODD = float(os.environ.get("MIN_ODD", "1.6"))  # 07/11: user rule, odds from 1.60 to 2.50 (easier to place)
 MAX_ODD = float(os.environ.get("MAX_ODD", "2.5"))  # weekend 24-25/10: odds above 2.5 lost most
 # backtest at Bet365: EV above ~25-40% is almost always a model blind spot (promoted teams, missing news), not value
 MAX_EV = float(os.environ.get("MAX_EV", "0.25"))
@@ -117,6 +118,20 @@ def match_score(r, lid, ts, hn, an):
         return None
     s = sim(hn, r["hn"]) + sim(an, r["an"])
     return s if s >= (0.8 if r.get("ts") else 1.2) else None
+
+
+def consistent(hits, tol=0.08):
+    """Safety check: when both sources have a fixture, their 1X2 and over/under 2.5 prices must tell the same story
+    (implied probabilities within 8 points). A large gap means one of them is a different game."""
+    fd = next((h for h in hits if h["src"] == "football-data"), None)
+    op = next((h for h in hits if h["src"] == "oddspapi"), None)
+    if not fd or not op:
+        return True
+    for k in ("1", "X", "2", "G>2.5", "G<2.5"):
+        a, b = fd["odds"].get(k), op["odds"].get(k)
+        if a and b and abs(1 / a - 1 / b) > tol:
+            return False
+    return True
 
 
 def assign_sources(sources, fixtures):
@@ -289,7 +304,11 @@ def main():
                 continue
             # merge odds of every source linked to this fixture (one bookmaker fixture per source)
             odds, players, srcs = {}, {}, set()
-            for hit in linked.get(fx["fx"], []):
+            hits = linked.get(fx["fx"], [])
+            if not consistent(hits):
+                print("OddsPapi diverge da football-data, jogo ignorado:", fx["hn"], "x", fx["an"], flush=True)
+                hits = [h for h in hits if h["src"] != "oddspapi"]
+            for hit in hits:
                 if hit:
                     for k, v in hit["odds"].items():
                         odds.setdefault(k, v)
@@ -319,9 +338,9 @@ def main():
                 q = market_prob(key, dict(odds, **{key: o}))
                 p = W_MODEL * p_model + (1 - W_MODEL) * q
                 ev = p * o - 1
-                if grp in ALLOWED and o <= MAX_ODD and (dg["best"] is None or ev > dg["best"][3]):
+                if grp in ALLOWED and MIN_ODD <= o <= MAX_ODD and (dg["best"] is None or ev > dg["best"][3]):
                     dg["best"] = [label, o, round(p, 4), round(ev, 4)]
-                if grp not in ALLOWED or ev < MIN_EV or ev > MAX_EV or p < MIN_P or o > MAX_ODD:
+                if grp not in ALLOWED or ev < MIN_EV or ev > MAX_EV or p < MIN_P or o > MAX_ODD or o < MIN_ODD:
                     continue
                 fam = family(key)
                 if fam in taken:
