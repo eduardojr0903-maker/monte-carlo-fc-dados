@@ -1,24 +1,6 @@
 {
-"updated": "2026-11-08T19:04:42+00:00",
+"updated": "2026-11-08T21:55:42+00:00",
 "fixtures": {
-"1000019620": {
-"league": "Liga Profesional (Argentina)",
-"game": "Central Córdoba de Santiago x Lanús",
-"ts": 1794177000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Lanús",
-1.62,
-0.6057,
--0.0188
-],
-"matched": [
-"football-data: Central Cordoba x Lanus"
-]
-},
 "5105046": {
 "league": "Eliteserien (Noruega)",
 "game": "Kristiansund x Vålerenga",
@@ -27,37 +9,6 @@
 "markets_with_odds": 0,
 "best": null,
 "matched": []
-},
-"5887673": {
-"league": "Liga Portugal",
-"game": "Estrela da Amadora x Benfica",
-"ts": 1794169800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": null,
-"matched": [
-"football-data: Estrela x Benfica"
-]
-},
-"5887677": {
-"league": "Liga Portugal",
-"game": "Rio Ave x Braga",
-"ts": 1794169800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Menos de 2,5 gols",
-2.03,
-0.5019,
-0.0189
-],
-"matched": [
-"football-data: Rio Ave x Sp Braga"
-]
 },
 "1000014641": {
 "league": "Liga MX (México)",
@@ -94,24 +45,6 @@
 "matched": [
 "football-data: Club Leon x Guadalajara Chivas"
 ]
-},
-"5190803": {
-"league": "Brasileirão Série B",
-"game": "Ceará x América-MG",
-"ts": 1794176100,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
-},
-"5190804": {
-"league": "Brasileirão Série B",
-"game": "Goiás x Ponte Preta",
-"ts": 1794176100,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
 }
 }
 }
