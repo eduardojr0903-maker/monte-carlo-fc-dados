@@ -610,6 +610,11 @@ def write_doc(doc_id, doc):
     keys = ("teams", "matches", "players", "next", "logos", "hist", "rat", "ratHome", "luTeam", "cor", "corBase")
     out = {k: v for k, v in doc.items() if k not in keys}
     out["pack"] = json.dumps({k: doc[k] for k in keys}, ensure_ascii=False, separators=(",", ":"))
+    # over the cap (MLS, Argentina...): drop the players with the fewest minutes until it fits
+    players = list(doc["players"])
+    while len(json.dumps(out, ensure_ascii=False, separators=(",", ":")).encode()) > 250_000 and len(players) > 100:
+        players = sorted(sorted(players, key=lambda x: -(x[6] or 0))[:int(len(players) * 0.95)], key=lambda x: (x[2], -x[6]))
+        out["pack"] = json.dumps({k: (players if k == "players" else doc[k]) for k in keys}, ensure_ascii=False, separators=(",", ":"))
     path = os.path.join(OUT, f"{doc_id}.json")
     with open(path, "w", encoding="utf-8") as fh:
         json.dump(out, fh, ensure_ascii=False, separators=(",", ":"))

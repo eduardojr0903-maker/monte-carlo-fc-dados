@@ -15,6 +15,7 @@ from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DAYS = int(os.environ.get("RESULTS_DAYS", "10"))
+MAX_BYTES = 240_000  # the app's database refuses documents over 256 KiB
 
 
 def main():
@@ -51,8 +52,16 @@ def main():
                 continue
             if b.get("lastOdd") and (b.get("lastSeen") or 0) > created + 1800 and b.get("ts", 0) <= now:
                 close[bid] = b["lastOdd"]
-    doc = {"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-           "pack": json.dumps({"m": m, "close": close}, separators=(",", ":"), ensure_ascii=False)}
+    # drop the oldest matches until the document fits
+    order = sorted(m, key=lambda k: m[k][0])
+    while True:
+        doc = {"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+               "pack": json.dumps({"m": m, "close": close}, separators=(",", ":"), ensure_ascii=False)}
+        if len(json.dumps(doc, ensure_ascii=False).encode()) <= MAX_BYTES or not order:
+            break
+        for k in order[:max(1, len(order) // 10)]:
+            m.pop(k, None)
+        order = order[max(1, len(order) // 10):]
     out = os.path.join(ROOT, "data", "db", "results.json")
     json.dump(doc, open(out, "w"), ensure_ascii=False, separators=(",", ":"))
     print("resultados:", len(m), "jogos,", len(close), "fechamentos,", os.path.getsize(out) // 1024, "KB")
