@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-08T07:31:49+00:00",
+"updated": "2026-11-08T10:15:00+00:00",
 "fixtures": {
 "1000019620": {
 "league": "Liga Profesional (Argentina)",
@@ -85,7 +85,7 @@
 "Mais de 2,5 gols",
 1.83,
 0.5411,
--0.0098
+-0.0097
 ],
 "matched": [
 "football-data: Sunderland x Chelsea"
@@ -174,8 +174,8 @@
 "best": [
 "Mais de 2,5 gols",
 2.05,
-0.5137,
-0.053
+0.5138,
+0.0533
 ],
 "matched": [
 "football-data: Asteras Tripolis x Kalamata"
@@ -228,8 +228,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.05,
-0.4777,
--0.0208
+0.4775,
+-0.0211
 ],
 "matched": [
 "football-data: Olympiakos x PAOK"
@@ -388,8 +388,8 @@
 "best": [
 "Vitória St. Gallen",
 2.25,
-0.3878,
--0.1274
+0.3877,
+-0.1276
 ],
 "matched": [
 "football-data: St. Gallen x Lugano"
@@ -424,8 +424,8 @@
 "best": [
 "Vitória Thun",
 2.05,
-0.4849,
--0.006
+0.4922,
+0.009
 ],
 "matched": [
 "football-data: Thun x Basel"
@@ -496,8 +496,8 @@
 "best": [
 "Vitória Inter",
 1.91,
-0.5598,
-0.0692
+0.5593,
+0.0682
 ],
 "matched": [
 "football-data: Inter x Como"
@@ -532,8 +532,8 @@
 "best": [
 "Mais de 2,5 gols",
 2.05,
-0.4891,
-0.0027
+0.4892,
+0.0028
 ],
 "matched": [
 "football-data: Nacional x Academico Viseu"
@@ -568,8 +568,8 @@
 "best": [
 "Menos de 2,5 gols",
 1.95,
-0.5118,
--0.002
+0.512,
+-0.0016
 ],
 "matched": [
 "football-data: Guimaraes x Porto"
@@ -618,7 +618,7 @@
 "Vitória Querétaro",
 1.76,
 0.5409,
--0.048
+-0.0481
 ],
 "matched": [
 "football-data: Queretaro x Puebla"
@@ -919,8 +919,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.73,
-0.5568,
--0.0367
+0.5567,
+-0.037
 ],
 "matched": [
 "football-data: Gent x Kortrijk"
@@ -960,24 +960,6 @@
 ],
 "matched": [
 "football-data: St Truiden x Waregem"
-]
-},
-"5739543": {
-"league": "Superliga (Dinamarca)",
-"game": "FC København x Brøndby IF",
-"ts": 1794135600,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória FC København",
-1.66,
-0.5405,
--0.1027
-],
-"matched": [
-"football-data: FC Copenhagen x Brondby"
 ]
 },
 "5739546": {
@@ -1075,8 +1057,8 @@
 "best": [
 "Vitória IFK Göteborg",
 2.25,
-0.3787,
--0.1479
+0.3786,
+-0.1482
 ],
 "matched": [
 "football-data: Goteborg x Malmo FF"
@@ -1209,8 +1191,8 @@
 "best": [
 "Vitória Austria Wien",
 2.5,
-0.3848,
--0.0379
+0.3624,
+-0.0939
 ],
 "matched": [
 "football-data: Tirol x Austria Vienna"
@@ -1227,29 +1209,11 @@
 "best": [
 "Vitória Salzburg",
 2.1,
-0.4345,
--0.0876
+0.451,
+-0.053
 ],
 "matched": [
 "football-data: Sturm Graz x Salzburg"
-]
-},
-"5904797": {
-"league": "Süper Lig (Turquia)",
-"game": "Rizespor x Erzurumspor FK",
-"ts": 1794133800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Rizespor",
-1.81,
-0.5722,
-0.0358
-],
-"matched": [
-"football-data: Rizespor x Erzurumspor"
 ]
 },
 "5904799": {
@@ -1330,8 +1294,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.38,
-0.4014,
--0.0447
+0.4016,
+-0.0441
 ],
 "matched": [
 "football-data: Sociedad x Vallecano"
@@ -1384,8 +1348,8 @@
 "best": [
 "Vitória Barcelona",
 1.83,
-0.5066,
--0.0729
+0.5067,
+-0.0728
 ],
 "matched": [
 "football-data: Ath Madrid x Barcelona"
