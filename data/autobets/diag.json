@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-08T04:27:44+00:00",
+"updated": "2026-11-08T07:31:49+00:00",
 "fixtures": {
 "1000019620": {
 "league": "Liga Profesional (Argentina)",
@@ -30,8 +30,8 @@
 "best": [
 "Vitória Brighton",
 1.9,
-0.5245,
--0.0034
+0.5243,
+-0.0038
 ],
 "matched": [
 "football-data: Brighton x Brentford"
@@ -49,7 +49,7 @@
 "Menos de 2,5 gols",
 2.38,
 0.4293,
-0.0217
+0.0218
 ],
 "matched": [
 "football-data: Crystal Palace x Liverpool"
@@ -210,8 +210,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.98,
-0.4964,
--0.017
+0.4961,
+-0.0177
 ],
 "matched": [
 "football-data: OFI Crete x Atromitos"
@@ -234,33 +234,6 @@
 "matched": [
 "football-data: Olympiakos x PAOK"
 ]
-},
-"5803651": {
-"league": "J1 League (Japão)",
-"game": "Gamba Osaka x Cerezo Osaka",
-"ts": 1794117600,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Gamba Osaka",
-2.2,
-0.397,
--0.1267
-],
-"matched": [
-"football-data: Gamba Osaka x Cerezo Osaka"
-]
-},
-"5803649": {
-"league": "J1 League (Japão)",
-"game": "JEF United Chiba x Mito Hollyhock",
-"ts": 1794124800,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
 },
 "5105041": {
 "league": "Eliteserien (Noruega)",
@@ -286,8 +259,8 @@
 "best": [
 "Vitória Sarpsborg 08",
 2.1,
-0.5056,
-0.0618
+0.5046,
+0.0597
 ],
 "matched": [
 "football-data: HamKam x Sarpsborg 08"
@@ -304,8 +277,8 @@
 "best": [
 "Vitória Lillestrøm",
 1.75,
-0.5801,
-0.0152
+0.5803,
+0.0156
 ],
 "matched": [
 "football-data: Lillestrom x Aalesund"
@@ -627,7 +600,7 @@
 "Menos de 2,5 gols",
 2.03,
 0.4995,
-0.0139
+0.0141
 ],
 "matched": [
 "football-data: Rio Ave x Sp Braga"
@@ -644,8 +617,8 @@
 "best": [
 "Vitória Querétaro",
 1.76,
-0.541,
--0.0478
+0.5409,
+-0.048
 ],
 "matched": [
 "football-data: Queretaro x Puebla"
@@ -662,8 +635,8 @@
 "best": [
 "Vitória Chivas",
 2.05,
-0.4558,
--0.0656
+0.4547,
+-0.0679
 ],
 "matched": [
 "football-data: Club Leon x Guadalajara Chivas"
@@ -964,8 +937,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.3,
-0.4268,
--0.0184
+0.4266,
+-0.0188
 ],
 "matched": [
 "football-data: St. Gilloise x Genk"
@@ -1031,8 +1004,8 @@
 "best": [
 "Vitória Nordsjælland",
 1.61,
-0.555,
--0.1064
+0.5554,
+-0.1057
 ],
 "matched": [
 "football-data: Randers FC x Nordsjaelland"
@@ -1254,8 +1227,8 @@
 "best": [
 "Vitória Salzburg",
 2.1,
-0.4355,
--0.0855
+0.4345,
+-0.0876
 ],
 "matched": [
 "football-data: Sturm Graz x Salzburg"
@@ -1375,8 +1348,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.93,
-0.5284,
-0.0198
+0.5282,
+0.0194
 ],
 "matched": [
 "football-data: Celta x Levante"
