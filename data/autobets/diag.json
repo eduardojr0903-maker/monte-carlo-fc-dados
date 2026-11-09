@@ -1,4 +1,14 @@
 {
-"updated": "2026-11-09T19:12:49+00:00",
-"fixtures": {}
+"updated": "2026-11-09T22:04:51+00:00",
+"fixtures": {
+"5190812": {
+"league": "Brasileirão Série B",
+"game": "Londrina x Náutico",
+"ts": 1794434400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+}
+}
 }
