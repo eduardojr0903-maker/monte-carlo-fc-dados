@@ -1,23 +1,14 @@
 {
-"updated": "2026-11-09T13:32:53+00:00",
+"updated": "2026-11-09T16:23:16+00:00",
 "fixtures": {
 "5105046": {
 "league": "Eliteserien (Noruega)",
 "game": "Kristiansund x Vålerenga",
 "ts": 1794247200,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 37,
-"best": [
-"Mais de 3,5 gols",
-1.8,
-0.5263,
--0.0527
-],
-"matched": [
-"oddspapi: Kristiansund BK x Vaalerenga IF"
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 }
 }
 }

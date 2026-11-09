@@ -1,10 +1,10 @@
-2026-11-09T13:32:13+00:00
+2026-11-09T16:20:16+00:00
 Brasileirão Série A: histórico 1520 jogos (+0), mando 1.405, 339 jogos (0 novos), 752 jogadores, xG sim, 2 próximos jogos {'sg_predicted': 2}, 184 KB [FotMob: Série A / BRA]
 Brasileirão Série B: histórico 1520 jogos (+0), mando 1.41, 370 jogos (0 novos), 791 jogadores, xG sim, 10 próximos jogos {'last_xi': 1, None: 9}, 185 KB [FotMob: Série B / BRA]
 Premier League: histórico 1520 jogos (+0), mando 1.208, 100 jogos (0 novos), 464 jogadores, xG sim, 0 próximos jogos {}, 144 KB [FotMob: Premier League / ENG]
 La Liga: histórico 1520 jogos (+0), mando 1.271, 119 jogos (0 novos), 492 jogadores, xG sim, 0 próximos jogos {}, 144 KB [FotMob: LaLiga / ESP]
 Serie A (Itália): histórico 1521 jogos (+0), mando 1.113, 110 jogos (0 novos), 506 jogadores, xG sim, 0 próximos jogos {}, 138 KB [FotMob: Serie A / ITA]
-Bundesliga: histórico 1224 jogos (+0), mando 1.297, 81 jogos (0 novos), 422 jogadores, xG sim, 0 próximos jogos {}, 122 KB [FotMob: Bundesliga / GER]
+Bundesliga: histórico 1224 jogos (+0), mando 1.297, 81 jogos (0 novos), 422 jogadores, xG sim, 0 próximos jogos {}, 123 KB [FotMob: Bundesliga / GER]
 Ligue 1: histórico 1298 jogos (+0), mando 1.235, 90 jogos (0 novos), 434 jogadores, xG sim, 0 próximos jogos {}, 125 KB [FotMob: Ligue 1 / FRA]
 Championship: histórico 2226 jogos (+0), mando 1.24, 180 jogos (0 novos), 602 jogadores, xG sim, 0 próximos jogos {}, 179 KB [FotMob: Championship / ENG]
 Eredivisie: histórico 1239 jogos (+0), mando 1.139, 108 jogos (0 novos), 452 jogadores, xG sim, 0 próximos jogos {}, 129 KB [FotMob: Eredivisie / NED]
