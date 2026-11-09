@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-08T21:55:42+00:00",
+"updated": "2026-11-09T01:27:21+00:00",
 "fixtures": {
 "5105046": {
 "league": "Eliteserien (Noruega)",
@@ -9,42 +9,6 @@
 "markets_with_odds": 0,
 "best": null,
 "matched": []
-},
-"1000014641": {
-"league": "Liga MX (México)",
-"game": "Querétaro x Puebla",
-"ts": 1794182400,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Querétaro",
-1.76,
-0.5406,
--0.0485
-],
-"matched": [
-"football-data: Queretaro x Puebla"
-]
-},
-"1000014642": {
-"league": "Liga MX (México)",
-"game": "León x Chivas",
-"ts": 1794190200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Chivas",
-2.05,
-0.4547,
--0.0679
-],
-"matched": [
-"football-data: Club Leon x Guadalajara Chivas"
-]
 }
 }
 }
