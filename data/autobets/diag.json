@@ -1,14 +1,23 @@
 {
-"updated": "2026-11-10T10:10:36+00:00",
+"updated": "2026-11-10T13:15:46+00:00",
 "fixtures": {
 "5190812": {
 "league": "Brasileirão Série B",
 "game": "Londrina x Náutico",
 "ts": 1794434400,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 23,
+"best": [
+"Menos de 2,5 gols",
+2.25,
+0.4243,
+-0.0453
+],
+"matched": [
+"oddspapi: Londrina EC PR x Nautico PE"
+]
 }
 }
 }
