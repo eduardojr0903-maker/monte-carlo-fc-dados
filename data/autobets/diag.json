@@ -1,10 +1,28 @@
 {
-"updated": "2026-11-10T21:58:18+00:00",
+"updated": "2026-11-11T01:23:50+00:00",
 "fixtures": {
 "5190812": {
 "league": "Brasileirão Série B",
 "game": "Londrina x Náutico",
 "ts": 1794434400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5190809": {
+"league": "Brasileirão Série B",
+"game": "Ponte Preta x Operário-PR",
+"ts": 1794520800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5190810": {
+"league": "Brasileirão Série B",
+"game": "São Bernardo x Athletic Club MG",
+"ts": 1794524400,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
