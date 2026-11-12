@@ -1,41 +1,23 @@
 {
-"updated": "2026-11-12T10:22:20+00:00",
+"updated": "2026-11-12T13:34:28+00:00",
 "fixtures": {
 "5190809": {
 "league": "Brasileirão Série B",
 "game": "Ponte Preta x Operário-PR",
 "ts": 1794520800,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 35,
-"best": [
-"Menos de 2,5 gols",
-2.04,
-0.5163,
-0.0533
-],
-"matched": [
-"oddspapi: AA Ponte Preta SP x Operario Ferroviario EC PR"
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
 "5190810": {
 "league": "Brasileirão Série B",
 "game": "São Bernardo x Athletic Club MG",
 "ts": 1794524400,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 35,
-"best": [
-"Menos de 2,5 gols",
-1.87,
-0.5148,
--0.0373
-],
-"matched": [
-"oddspapi: Sao Bernardo FC x Athletic Club Sjdr MG"
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 }
 }
 }
