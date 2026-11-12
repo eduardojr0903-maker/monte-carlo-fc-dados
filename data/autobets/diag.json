@@ -1,19 +1,73 @@
 {
-"updated": "2026-11-12T19:14:52+00:00",
+"updated": "2026-11-12T22:04:25+00:00",
 "fixtures": {
-"5190809": {
-"league": "Brasileirão Série B",
-"game": "Ponte Preta x Operário-PR",
-"ts": 1794520800,
+"5103708": {
+"league": "Brasileirão Série A",
+"game": "Mirassol x Atlético-MG",
+"ts": 1794691800,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
 "matched": []
 },
-"5190810": {
+"5190811": {
 "league": "Brasileirão Série B",
-"game": "São Bernardo x Athletic Club MG",
-"ts": 1794524400,
+"game": "América-MG x Avaí",
+"ts": 1794684600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5190814": {
+"league": "Brasileirão Série B",
+"game": "Atlético-GO x Cuiabá",
+"ts": 1794684600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5190817": {
+"league": "Brasileirão Série B",
+"game": "CRB x Ceará",
+"ts": 1794684600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5190815": {
+"league": "Brasileirão Série B",
+"game": "Criciúma x Novorizontino",
+"ts": 1794684600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5190813": {
+"league": "Brasileirão Série B",
+"game": "Fortaleza x Vila Nova",
+"ts": 1794684600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5190818": {
+"league": "Brasileirão Série B",
+"game": "Juventude x Botafogo SP",
+"ts": 1794684600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5190816": {
+"league": "Brasileirão Série B",
+"game": "Sport Recife x Goiás",
+"ts": 1794684600,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
