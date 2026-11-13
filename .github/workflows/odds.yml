@@ -23,6 +23,12 @@ jobs:
           ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
           ODDSPAPI_FORCE: "1"
         run: python scraper/upcoming_odds.py
+      - name: Guardar as odds para as próximas coletas do dia
+        if: hashFiles('data/odds/upcoming/oddspapi_bet365.json') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: data/odds/upcoming/oddspapi_bet365.json
+          key: oddspapi-${{ github.run_id }}
       - name: Robô
         run: python scraper/autobets.py
       - name: Resultados para liquidar as apostas no app

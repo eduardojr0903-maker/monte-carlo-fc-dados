@@ -40,11 +40,24 @@ jobs:
       - name: Robô de apostas · simular os próximos jogos
         continue-on-error: true
         run: node scraper/model_run.js 48 20000
+      # the Bet365 odds are fetched once a day; the other runs of the day reuse them from the Actions cache
+      - name: Robô de apostas · recuperar as odds da Bet365 do dia
+        uses: actions/cache/restore@v4
+        with:
+          path: data/odds/upcoming/oddspapi_bet365.json
+          key: oddspapi-${{ github.run_id }}
+          restore-keys: oddspapi-
       - name: Robô de apostas · odds da Bet365
         continue-on-error: true
         env:
           ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
         run: python scraper/upcoming_odds.py
+      - name: Robô de apostas · guardar as odds da Bet365
+        if: hashFiles('data/odds/upcoming/oddspapi_bet365.json') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: data/odds/upcoming/oddspapi_bet365.json
+          key: oddspapi-${{ github.run_id }}
       - name: Robô de apostas · filtrar VE ≥ 8% e registrar
         continue-on-error: true
         run: python scraper/autobets.py
