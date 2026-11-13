@@ -1,10 +1,28 @@
 {
-"updated": "2026-11-12T22:04:25+00:00",
+"updated": "2026-11-13T01:30:17+00:00",
 "fixtures": {
+"1000014556": {
+"league": "Liga MX (México)",
+"game": "Querétaro x Monterrey",
+"ts": 1794697200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5103708": {
 "league": "Brasileirão Série A",
 "game": "Mirassol x Atlético-MG",
 "ts": 1794691800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5103573": {
+"league": "Brasileirão Série A",
+"game": "Chapecoense x Vasco da Gama",
+"ts": 1794699000,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
