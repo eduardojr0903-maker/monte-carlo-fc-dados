@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-13T16:11:25+00:00",
+"updated": "2026-11-13T18:09:56+00:00",
 "fixtures": {
 "1000014556": {
 "league": "Liga MX (México)",
@@ -30,8 +30,8 @@
 "best": [
 "Vitória Mirassol",
 1.91,
-0.4371,
--0.1651
+0.4552,
+-0.1307
 ],
 "matched": [
 "football-data: Mirassol x Atletico-MG"
