@@ -1,4 +1,4 @@
-2026-11-13T04:10:41+00:00
+2026-11-13T07:36:37+00:00
 Brasileirão Série A: histórico 1520 jogos (+0), mando 1.405, 339 jogos (0 novos), 753 jogadores, xG sim, 11 próximos jogos {'sg_predicted': 9, None: 2}, 193 KB [FotMob: Série A / BRA]
 Brasileirão Série B: histórico 1520 jogos (+0), mando 1.408, 373 jogos (0 novos), 807 jogadores, xG sim, 9 próximos jogos {'last_xi': 7, None: 2}, 192 KB [FotMob: Série B / BRA]
 Premier League: histórico 1520 jogos (+0), mando 1.208, 100 jogos (0 novos), 464 jogadores, xG sim, 0 próximos jogos {}, 144 KB [FotMob: Premier League / ENG]
@@ -12,7 +12,7 @@ Liga Portugal: histórico 1224 jogos (+0), mando 1.14, 98 jogos (0 novos), 459 j
 Pro League (Bélgica): histórico 1269 jogos (+0), mando 1.282, 99 jogos (0 novos), 449 jogadores, xG sim, 1 próximos jogos {'sg_predicted': 1}, 135 KB [FotMob: First Division A / BEL]
 Süper Lig (Turquia): histórico 1370 jogos (+0), mando 1.291, 99 jogos (0 novos), 429 jogadores, xG sim, 0 próximos jogos {}, 128 KB [FotMob: Süper Lig / TUR]
 Premiership (Escócia): histórico 912 jogos (+0), mando 1.218, 75 jogos (0 novos), 304 jogadores, xG sim, 0 próximos jogos {}, 97 KB [FotMob: Premiership / SCO]
-LaLiga 2: histórico 1872 jogos (+0), mando 1.308, 140 jogos (0 novos), 612 jogadores, xG sim, 12 próximos jogos {'sg_predicted': 6, 'last_xi': 4, None: 2}, 181 KB [FotMob: LaLiga2 / ESP]
+LaLiga 2: histórico 1872 jogos (+0), mando 1.308, 140 jogos (0 novos), 614 jogadores, xG sim, 12 próximos jogos {'sg_predicted': 6, 'last_xi': 4, None: 2}, 181 KB [FotMob: LaLiga2 / ESP]
 Serie B (Itália): histórico 1559 jogos (+0), mando 1.2, 110 jogos (0 novos), 491 jogadores, xG sim, 1 próximos jogos {'sg_predicted': 1}, 144 KB [FotMob: Serie B / ITA]
 2. Bundesliga: histórico 1224 jogos (+0), mando 1.249, 99 jogos (0 novos), 420 jogadores, xG sim, 2 próximos jogos {None: 2}, 128 KB [FotMob: 2. Bundesliga / GER]
 Ligue 2: histórico 1371 jogos (+0), mando 1.164, 108 jogos (0 novos), 449 jogadores, xG sim, 5 próximos jogos {None: 5}, 126 KB [FotMob: Ligue 2 / FRA]
@@ -26,4 +26,4 @@ Allsvenskan (Suécia): histórico 960 jogos (+0), mando 1.173, 224 jogos (0 novo
 Liga Profesional (Argentina): histórico 1899 jogos (+0), mando 1.276, 240 jogos (0 novos), 858 jogadores, xG sim, 1 próximos jogos {None: 1}, 224 KB [FotMob: Liga Profesional / ARG]
 Liga MX (México): histórico 1344 jogos (+0), mando 1.215, 143 jogos (0 novos), 481 jogadores, xG sim, 4 próximos jogos {'last_xi': 1, None: 3}, 143 KB [FotMob: Liga MX / MEX]
 MLS (EUA): histórico 2072 jogos (+0), mando 1.3, 510 jogos (0 novos), 915 jogadores, xG sim, 2 próximos jogos {None: 2}, 240 KB [FotMob: MLS / USA]
-J1 League (Japão): histórico 1572 jogos (+0), mando 1.137, 140 jogos (0 novos), 550 jogadores, xG sim, 3 próximos jogos {None: 3}, 156 KB [FotMob: J. League / JPN]
+J1 League (Japão): histórico 1572 jogos (+0), mando 1.137, 140 jogos (0 novos), 550 jogadores, xG sim, 10 próximos jogos {None: 10}, 157 KB [FotMob: J. League / JPN]
