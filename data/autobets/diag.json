@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-14T07:27:35+00:00",
+"updated": "2026-11-14T10:09:57+00:00",
 "fixtures": {
 "1000014556": {
 "league": "Liga MX (México)",
@@ -30,8 +30,8 @@
 "best": [
 "Vitória Mirassol",
 1.91,
-0.47,
--0.1023
+0.4695,
+-0.1033
 ],
 "matched": [
 "football-data: Mirassol x Atletico-MG"
@@ -42,12 +42,19 @@
 "game": "Chapecoense x Vasco da Gama",
 "ts": 1794699000,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 3,
-"best": null,
+"markets_with_odds": 35,
+"best": [
+"Ambas marcam: sim",
+1.87,
+0.5281,
+-0.0125
+],
 "matched": [
-"football-data: Chapecoense-SC x Vasco"
+"football-data: Chapecoense-SC x Vasco",
+"oddspapi: Chapecoense SC x CR Vasco da Gama RJ"
 ]
 },
 "5190811": {
@@ -99,10 +106,19 @@
 "league": "Brasileirão Série B",
 "game": "Juventude x Botafogo SP",
 "ts": 1794684600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 33,
+"best": [
+"Ambas marcam: sim",
+2.1,
+0.4825,
+0.0132
+],
+"matched": [
+"oddspapi: EC Juventude RS x Botafogo FC SP"
+]
 },
 "5190816": {
 "league": "Brasileirão Série B",
