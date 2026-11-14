@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-14T16:06:46+00:00",
+"updated": "2026-11-14T19:22:39+00:00",
 "fixtures": {
 "1000014556": {
 "league": "Liga MX (México)",
@@ -56,78 +56,6 @@
 "football-data: Chapecoense-SC x Vasco",
 "oddspapi: Chapecoense SC x CR Vasco da Gama RJ"
 ]
-},
-"5190811": {
-"league": "Brasileirão Série B",
-"game": "América-MG x Avaí",
-"ts": 1794684600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
-},
-"5190814": {
-"league": "Brasileirão Série B",
-"game": "Atlético-GO x Cuiabá",
-"ts": 1794684600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
-},
-"5190817": {
-"league": "Brasileirão Série B",
-"game": "CRB x Ceará",
-"ts": 1794684600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
-},
-"5190815": {
-"league": "Brasileirão Série B",
-"game": "Criciúma x Novorizontino",
-"ts": 1794684600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
-},
-"5190813": {
-"league": "Brasileirão Série B",
-"game": "Fortaleza x Vila Nova",
-"ts": 1794684600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
-},
-"5190818": {
-"league": "Brasileirão Série B",
-"game": "Juventude x Botafogo SP",
-"ts": 1794684600,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 33,
-"best": [
-"Ambas marcam: sim",
-2.1,
-0.4825,
-0.0132
-],
-"matched": [
-"oddspapi: EC Juventude RS x Botafogo FC SP"
-]
-},
-"5190816": {
-"league": "Brasileirão Série B",
-"game": "Sport Recife x Goiás",
-"ts": 1794684600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
 }
 }
 }
