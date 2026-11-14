@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-13T22:09:13+00:00",
+"updated": "2026-11-14T01:27:04+00:00",
 "fixtures": {
 "1000014556": {
 "league": "Liga MX (México)",
@@ -12,8 +12,8 @@
 "best": [
 "Vitória Monterrey",
 1.96,
-0.4531,
--0.1119
+0.4536,
+-0.1109
 ],
 "matched": [
 "football-data: Queretaro x Monterrey"
