@@ -1,25 +1,4 @@
 {
-"updated": "2026-11-14T22:14:17+00:00",
-"fixtures": {
-"5103573": {
-"league": "Brasileirão Série A",
-"game": "Chapecoense x Vasco da Gama",
-"ts": 1794699000,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 35,
-"best": [
-"Ambas marcam: sim",
-1.87,
-0.528,
--0.0126
-],
-"matched": [
-"football-data: Chapecoense-SC x Vasco",
-"oddspapi: Chapecoense SC x CR Vasco da Gama RJ"
-]
-}
-}
+"updated": "2026-11-15T01:45:53+00:00",
+"fixtures": {}
 }
