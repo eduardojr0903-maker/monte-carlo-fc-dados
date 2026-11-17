@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-17T13:51:29+00:00",
+"updated": "2026-11-17T16:40:51+00:00",
 "fixtures": {
 "5103711": {
 "league": "Brasileirão Série A",
@@ -13,8 +13,8 @@
 "best": [
 "Coritiba (empate anula)",
 2.37,
-0.4395,
-0.0416
+0.4397,
+0.042
 ],
 "matched": [
 "football-data: Coritiba x Santos",
@@ -33,8 +33,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.25,
-0.4623,
-0.0401
+0.4624,
+0.0404
 ],
 "matched": [
 "football-data: Remo x Chapecoense-SC",
@@ -53,8 +53,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.01,
-0.4692,
--0.0568
+0.4695,
+-0.0562
 ],
 "matched": [
 "football-data: Cruzeiro x Palmeiras",
