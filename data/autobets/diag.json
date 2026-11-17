@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-17T19:42:40+00:00",
+"updated": "2026-11-17T22:31:33+00:00",
 "fixtures": {
 "5103711": {
 "league": "Brasileirão Série A",
@@ -53,8 +53,8 @@
 "best": [
 "Cruzeiro (empate anula)",
 1.97,
-0.4884,
--0.0378
+0.4905,
+-0.0337
 ],
 "matched": [
 "football-data: Cruzeiro x Palmeiras",
@@ -73,8 +73,8 @@
 "best": [
 "Menos de 3,5 gols",
 1.62,
-0.6183,
-0.0016
+0.6041,
+-0.0213
 ],
 "matched": [
 "football-data: Flamengo RJ x Athletico-PR",
@@ -92,8 +92,8 @@
 "best": [
 "Vitória Corinthians",
 1.79,
-0.4993,
--0.1062
+0.5086,
+-0.0895
 ],
 "matched": [
 "football-data: Corinthians x Botafogo RJ"
@@ -110,11 +110,49 @@
 "best": [
 "Vitória Grêmio",
 2.2,
-0.3895,
--0.143
+0.3548,
+-0.2193
 ],
 "matched": [
 "football-data: Gremio x Bahia"
+]
+},
+"5103705": {
+"league": "Brasileirão Série A",
+"game": "Vasco da Gama x Internacional",
+"ts": 1795127400,
+"sources": [
+"football-data"
+],
+"markets_with_odds": 3,
+"best": [
+"Vitória Vasco da Gama",
+1.61,
+0.6107,
+-0.0167
+],
+"matched": [
+"football-data: Vasco x Internacional"
+]
+},
+"5103712": {
+"league": "Brasileirão Série A",
+"game": "Vitória x RB Bragantino",
+"ts": 1795127400,
+"sources": [
+"football-data",
+"oddspapi"
+],
+"markets_with_odds": 148,
+"best": [
+"RB Bragantino menos de 4,5 escanteios",
+2.1,
+0.4556,
+-0.0432
+],
+"matched": [
+"football-data: Vitoria x Bragantino",
+"oddspapi: EC Vitoria BA x Red Bull Bragantino SP"
 ]
 }
 }
