@@ -1,4 +1,4 @@
-2026-11-17T01:52:39+00:00
+2026-11-17T04:32:51+00:00
 Brasileirão Série A: histórico 1520 jogos (+0), mando 1.401, 341 jogos (0 novos), 762 jogadores, xG sim, 19 próximos jogos {'sg_predicted': 9, None: 10}, 200 KB [FotMob: Série A / BRA]
 Brasileirão Série B: histórico 1520 jogos (+0), mando 1.412, 380 jogos (0 novos), 803 jogadores, xG sim, 2 próximos jogos {None: 2}, 185 KB [FotMob: Série B / BRA]
 Premier League: histórico 1520 jogos (+0), mando 1.208, 100 jogos (0 novos), 464 jogadores, xG sim, 10 próximos jogos {'sg_predicted': 10}, 153 KB [FotMob: Premier League / ENG]
@@ -25,5 +25,5 @@ Eliteserien (Noruega): histórico 960 jogos (+0), mando 1.275, 208 jogos (0 novo
 Allsvenskan (Suécia): histórico 960 jogos (+0), mando 1.173, 224 jogos (0 novos), 480 jogadores, xG sim, 8 próximos jogos {'sg_predicted': 8}, 141 KB [FotMob: Allsvenskan / SWE]
 Liga Profesional (Argentina): histórico 1899 jogos (+0), mando 1.276, 240 jogos (0 novos), 858 jogadores, xG sim, 7 próximos jogos {None: 7}, 228 KB [FotMob: Liga Profesional / ARG]
 Liga MX (México): histórico 1344 jogos (+0), mando 1.212, 144 jogos (0 novos), 482 jogadores, xG sim, 13 próximos jogos {'last_xi': 1, None: 12}, 146 KB [FotMob: Liga MX / MEX]
-MLS (EUA): histórico 2072 jogos (+0), mando 1.3, 510 jogos (0 novos), 916 jogadores, xG sim, 9 próximos jogos {'sg_predicted': 2, None: 7}, 240 KB [FotMob: MLS / USA]
+MLS (EUA): histórico 2072 jogos (+0), mando 1.3, 510 jogos (0 novos), 916 jogadores, xG sim, 10 próximos jogos {'sg_predicted': 2, None: 8}, 240 KB [FotMob: MLS / USA]
 J1 League (Japão): histórico 1572 jogos (+0), mando 1.137, 140 jogos (0 novos), 566 jogadores, xG sim, 10 próximos jogos {'last_xi': 6, None: 4}, 164 KB [FotMob: J. League / JPN]

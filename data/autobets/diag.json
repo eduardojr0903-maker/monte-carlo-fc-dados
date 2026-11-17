@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-17T01:53:23+00:00",
+"updated": "2026-11-17T04:33:33+00:00",
 "fixtures": {
 "5103711": {
 "league": "Brasileirão Série A",
@@ -13,7 +13,7 @@
 "Coritiba (empate anula)",
 2.37,
 0.4393,
-0.041
+0.0412
 ],
 "matched": [
 "oddspapi: Coritiba FC PR x Santos FC SP"
@@ -66,8 +66,8 @@
 "best": [
 "Menos de 3,5 gols",
 1.62,
-0.6062,
--0.0179
+0.6063,
+-0.0178
 ],
 "matched": [
 "oddspapi: CR Flamengo RJ x CA Paranaense PR"
