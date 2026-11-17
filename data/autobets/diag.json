@@ -1,11 +1,12 @@
 {
-"updated": "2026-11-17T10:48:30+00:00",
+"updated": "2026-11-17T13:51:29+00:00",
 "fixtures": {
 "5103711": {
 "league": "Brasileirão Série A",
 "game": "Coritiba x Santos",
 "ts": 1795041000,
 "sources": [
+"football-data",
 "oddspapi"
 ],
 "markets_with_odds": 35,
@@ -16,6 +17,7 @@
 0.0416
 ],
 "matched": [
+"football-data: Coritiba x Santos",
 "oddspapi: Coritiba FC PR x Santos FC SP"
 ]
 },
@@ -24,6 +26,7 @@
 "game": "Remo x Chapecoense",
 "ts": 1795042800,
 "sources": [
+"football-data",
 "oddspapi"
 ],
 "markets_with_odds": 35,
@@ -34,6 +37,7 @@
 0.0401
 ],
 "matched": [
+"football-data: Remo x Chapecoense-SC",
 "oddspapi: Clube do Remo PA x Chapecoense SC"
 ]
 },
@@ -42,6 +46,7 @@
 "game": "Cruzeiro x Palmeiras",
 "ts": 1795044600,
 "sources": [
+"football-data",
 "oddspapi"
 ],
 "markets_with_odds": 35,
@@ -52,6 +57,7 @@
 -0.0568
 ],
 "matched": [
+"football-data: Cruzeiro x Palmeiras",
 "oddspapi: Cruzeiro EC MG x SE Palmeiras SP"
 ]
 },
@@ -60,6 +66,7 @@
 "game": "Flamengo x Athletico Paranaense",
 "ts": 1795044600,
 "sources": [
+"football-data",
 "oddspapi"
 ],
 "markets_with_odds": 37,
@@ -70,6 +77,7 @@
 -0.0178
 ],
 "matched": [
+"football-data: Flamengo RJ x Athletico-PR",
 "oddspapi: CR Flamengo RJ x CA Paranaense PR"
 ]
 },
@@ -77,19 +85,37 @@
 "league": "Brasileirão Série A",
 "game": "Corinthians x Botafogo",
 "ts": 1795048200,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 3,
+"best": [
+"Vitória Corinthians",
+1.79,
+0.4993,
+-0.1062
+],
+"matched": [
+"football-data: Corinthians x Botafogo RJ"
+]
 },
 "5103710": {
 "league": "Brasileirão Série A",
 "game": "Grêmio x Bahia",
 "ts": 1795048200,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 3,
+"best": [
+"Vitória Grêmio",
+2.2,
+0.3895,
+-0.143
+],
+"matched": [
+"football-data: Gremio x Bahia"
+]
 }
 }
 }
