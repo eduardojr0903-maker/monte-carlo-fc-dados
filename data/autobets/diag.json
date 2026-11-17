@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-17T08:01:36+00:00",
+"updated": "2026-11-17T10:48:30+00:00",
 "fixtures": {
 "5103711": {
 "league": "Brasileirão Série A",
@@ -46,10 +46,10 @@
 ],
 "markets_with_odds": 35,
 "best": [
-"Vitória Palmeiras",
-2.45,
-0.3853,
--0.056
+"Menos de 2,5 gols",
+2.01,
+0.4692,
+-0.0568
 ],
 "matched": [
 "oddspapi: Cruzeiro EC MG x SE Palmeiras SP"
@@ -77,37 +77,19 @@
 "league": "Brasileirão Série A",
 "game": "Corinthians x Botafogo",
 "ts": 1795048200,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 35,
-"best": [
-"Ambas marcam: sim",
-1.77,
-0.5454,
--0.0347
-],
-"matched": [
-"oddspapi: SC Corinthians SP x Botafogo FR RJ"
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
 "5103710": {
 "league": "Brasileirão Série A",
 "game": "Grêmio x Bahia",
 "ts": 1795048200,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 35,
-"best": [
-"Bahia (empate anula)",
-2.2,
-0.4787,
-0.0532
-],
-"matched": [
-"oddspapi: Gremio FB Porto Alegrense RS x EC Bahia BA"
-]
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 }
 }
 }
