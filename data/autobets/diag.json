@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-17T04:33:33+00:00",
+"updated": "2026-11-17T08:01:36+00:00",
 "fixtures": {
 "5103711": {
 "league": "Brasileirão Série A",
@@ -12,8 +12,8 @@
 "best": [
 "Coritiba (empate anula)",
 2.37,
-0.4393,
-0.0412
+0.4395,
+0.0416
 ],
 "matched": [
 "oddspapi: Coritiba FC PR x Santos FC SP"
@@ -30,8 +30,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.25,
-0.4616,
-0.0386
+0.4623,
+0.0401
 ],
 "matched": [
 "oddspapi: Clube do Remo PA x Chapecoense SC"
@@ -48,8 +48,8 @@
 "best": [
 "Vitória Palmeiras",
 2.45,
-0.3855,
--0.0556
+0.3853,
+-0.056
 ],
 "matched": [
 "oddspapi: Cruzeiro EC MG x SE Palmeiras SP"
