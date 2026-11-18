@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-18T16:43:18+00:00",
+"updated": "2026-11-18T19:39:09+00:00",
 "fixtures": {
 "5803660": {
 "league": "J1 League (Japão)",
@@ -23,6 +23,33 @@
 "league": "J1 League (Japão)",
 "game": "Vissel Kobe x Mito Hollyhock",
 "ts": 1795168800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5105051": {
+"league": "Eliteserien (Noruega)",
+"game": "Molde x Bodø/Glimt",
+"ts": 1795197600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5804042": {
+"league": "Ekstraklasa (Polônia)",
+"game": "Piast Gliwice x Korona Kielce",
+"ts": 1795194000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5804043": {
+"league": "Ekstraklasa (Polônia)",
+"game": "Pogoń Szczecin x Śląsk Wrocław",
+"ts": 1795203000,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -97,8 +124,8 @@
 "best": [
 "Vitória Palmeiras",
 2.4,
-0.3766,
--0.0961
+0.3765,
+-0.0963
 ],
 "matched": [
 "football-data: Cruzeiro x Palmeiras"
@@ -168,8 +195,8 @@
 "best": [
 "Vitória Vasco da Gama",
 1.61,
-0.6108,
--0.0166
+0.6217,
+0.001
 ],
 "matched": [
 "football-data: Vasco x Internacional"
@@ -199,12 +226,48 @@
 "best": [
 "Vitória São Paulo",
 2.35,
-0.3644,
--0.1436
+0.3725,
+-0.1246
 ],
 "matched": [
 "football-data: Sao Paulo x Fluminense"
 ]
+},
+"5881226": {
+"league": "Bundesliga",
+"game": "Bayern München x Köln",
+"ts": 1795203000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5739551": {
+"league": "Superliga (Dinamarca)",
+"game": "AGF x Lyngby",
+"ts": 1795197600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5881726": {
+"league": "2. Bundesliga",
+"game": "Arminia Bielefeld x Magdeburg",
+"ts": 1795195800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5881728": {
+"league": "2. Bundesliga",
+"game": "Darmstadt x FC Heidenheim",
+"ts": 1795195800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 }
 }
 }
