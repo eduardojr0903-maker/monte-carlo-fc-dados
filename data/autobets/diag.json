@@ -1,6 +1,15 @@
 {
-"updated": "2026-11-18T22:33:15+00:00",
+"updated": "2026-11-18T23:53:55+00:00",
 "fixtures": {
+"1000023194": {
+"league": "Liga Profesional (Argentina)",
+"game": "Vélez Sarsfield x Belgrano",
+"ts": 1795215600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5803660": {
 "league": "J1 League (Japão)",
 "game": "Kashima Antlers x Shimizu S-Pulse",
@@ -127,46 +136,6 @@
 "oddspapi: Seattle Sounders x Real Salt Lake"
 ]
 },
-"5103707": {
-"league": "Brasileirão Série A",
-"game": "Corinthians x Botafogo",
-"ts": 1795048200,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 35,
-"best": [
-"Menos de 2,5 gols",
-1.91,
-0.5195,
--0.0078
-],
-"matched": [
-"football-data: Corinthians x Botafogo RJ",
-"oddspapi: SC Corinthians SP x Botafogo FR RJ"
-]
-},
-"5103710": {
-"league": "Brasileirão Série A",
-"game": "Grêmio x Bahia",
-"ts": 1795048200,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 35,
-"best": [
-"Bahia (empate anula)",
-1.97,
-0.5076,
--0.0001
-],
-"matched": [
-"football-data: Gremio x Bahia",
-"oddspapi: Gremio FB Porto Alegrense RS x EC Bahia BA"
-]
-},
 "5103705": {
 "league": "Brasileirão Série A",
 "game": "Vasco da Gama x Internacional",
@@ -274,8 +243,8 @@
 "best": [
 "Vitória Arminia Bielefeld",
 2.25,
-0.4284,
--0.0361
+0.4281,
+-0.0369
 ],
 "matched": [
 "oddspapi: Arminia Bielefeld x 1. FC Magdeburg"
