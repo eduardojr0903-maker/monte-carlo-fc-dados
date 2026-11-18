@@ -1,6 +1,33 @@
 {
-"updated": "2026-11-18T07:58:31+00:00",
+"updated": "2026-11-18T10:47:10+00:00",
 "fixtures": {
+"5803660": {
+"league": "J1 League (Japão)",
+"game": "Kashima Antlers x Shimizu S-Pulse",
+"ts": 1795168800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803661": {
+"league": "J1 League (Japão)",
+"game": "Kashiwa Reysol x JEF United Chiba",
+"ts": 1795168800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803667": {
+"league": "J1 League (Japão)",
+"game": "Vissel Kobe x Mito Hollyhock",
+"ts": 1795168800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "6580833": {
 "league": "MLS (EUA)",
 "game": "Orlando x Cincinnati",
@@ -29,10 +56,10 @@
 ],
 "markets_with_odds": 35,
 "best": [
-"Coritiba (empate anula)",
-2.37,
-0.4351,
-0.0311
+"Menos de 2,5 gols",
+2.03,
+0.4667,
+-0.0527
 ],
 "matched": [
 "football-data: Coritiba x Santos",
@@ -50,9 +77,9 @@
 "markets_with_odds": 35,
 "best": [
 "Menos de 2,5 gols",
-2.25,
-0.4626,
-0.0408
+2.1,
+0.4731,
+-0.0066
 ],
 "matched": [
 "football-data: Remo x Chapecoense-SC",
@@ -64,19 +91,17 @@
 "game": "Cruzeiro x Palmeiras",
 "ts": 1795044600,
 "sources": [
-"football-data",
-"oddspapi"
+"football-data"
 ],
-"markets_with_odds": 35,
+"markets_with_odds": 3,
 "best": [
-"Cruzeiro (empate anula)",
-1.97,
-0.4905,
--0.0337
+"Vitória Palmeiras",
+2.4,
+0.3766,
+-0.0961
 ],
 "matched": [
-"football-data: Cruzeiro x Palmeiras",
-"oddspapi: Cruzeiro EC MG x SE Palmeiras SP"
+"football-data: Cruzeiro x Palmeiras"
 ]
 },
 "5103704": {
@@ -84,19 +109,12 @@
 "game": "Flamengo x Athletico Paranaense",
 "ts": 1795044600,
 "sources": [
-"football-data",
-"oddspapi"
+"football-data"
 ],
-"markets_with_odds": 37,
-"best": [
-"Menos de 3,5 gols",
-1.62,
-0.6045,
--0.0207
-],
+"markets_with_odds": 3,
+"best": null,
 "matched": [
-"football-data: Flamengo RJ x Athletico-PR",
-"oddspapi: CR Flamengo RJ x CA Paranaense PR"
+"football-data: Flamengo RJ x Athletico-PR"
 ]
 },
 "5103707": {
@@ -104,17 +122,19 @@
 "game": "Corinthians x Botafogo",
 "ts": 1795048200,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 3,
+"markets_with_odds": 35,
 "best": [
-"Vitória Corinthians",
-1.79,
-0.5075,
--0.0916
+"Menos de 2,5 gols",
+1.91,
+0.519,
+-0.0087
 ],
 "matched": [
-"football-data: Corinthians x Botafogo RJ"
+"football-data: Corinthians x Botafogo RJ",
+"oddspapi: SC Corinthians SP x Botafogo FR RJ"
 ]
 },
 "5103710": {
@@ -122,17 +142,19 @@
 "game": "Grêmio x Bahia",
 "ts": 1795048200,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 3,
+"markets_with_odds": 35,
 "best": [
-"Vitória Grêmio",
+"Bahia (empate anula)",
 2.2,
-0.3813,
--0.1611
+0.4901,
+0.0781
 ],
 "matched": [
-"football-data: Gremio x Bahia"
+"football-data: Gremio x Bahia",
+"oddspapi: Gremio FB Porto Alegrense RS x EC Bahia BA"
 ]
 },
 "5103705": {
@@ -158,19 +180,12 @@
 "game": "Vitória x RB Bragantino",
 "ts": 1795127400,
 "sources": [
-"football-data",
-"oddspapi"
+"football-data"
 ],
-"markets_with_odds": 148,
-"best": [
-"RB Bragantino menos de 4,5 escanteios",
-2.1,
-0.4552,
--0.044
-],
+"markets_with_odds": 3,
+"best": null,
 "matched": [
-"football-data: Vitoria x Bragantino",
-"oddspapi: EC Vitoria BA x Red Bull Bragantino SP"
+"football-data: Vitoria x Bragantino"
 ]
 },
 "5103706": {
