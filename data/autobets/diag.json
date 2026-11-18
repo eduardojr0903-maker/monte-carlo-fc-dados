@@ -1,28 +1,91 @@
 {
-"updated": "2026-11-18T19:39:09+00:00",
+"updated": "2026-11-18T19:39:37+00:00",
 "fixtures": {
 "5803660": {
 "league": "J1 League (Japão)",
 "game": "Kashima Antlers x Shimizu S-Pulse",
 "ts": 1795168800,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 35,
+"best": [
+"Ambas marcam: sim",
+1.92,
+0.5042,
+-0.032
+],
+"matched": [
+"oddspapi: Kashima Antlers x Shimizu S-Pulse"
+]
 },
 "5803661": {
 "league": "J1 League (Japão)",
 "game": "Kashiwa Reysol x JEF United Chiba",
 "ts": 1795168800,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 35,
+"best": [
+"Menos de 2,5 gols",
+2.3,
+0.4177,
+-0.0393
+],
+"matched": [
+"oddspapi: Kashiwa Reysol x JEF United Chiba"
+]
 },
 "5803667": {
 "league": "J1 League (Japão)",
 "game": "Vissel Kobe x Mito Hollyhock",
 "ts": 1795168800,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 35,
+"best": [
+"Ambas marcam: sim",
+1.97,
+0.492,
+-0.0308
+],
+"matched": [
+"oddspapi: Vissel Kobe x Mito Hollyhock"
+]
+},
+"5105051": {
+"league": "Eliteserien (Noruega)",
+"game": "Molde x Bodø/Glimt",
+"ts": 1795197600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5804042": {
+"league": "Ekstraklasa (Polônia)",
+"game": "Piast Gliwice x Korona Kielce",
+"ts": 1795194000,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 35,
+"best": [
+"Vitória Piast Gliwice",
+2.5,
+0.4018,
+0.0044
+],
+"matched": [
+"oddspapi: GKS Piast Gliwice x Korona Kielce"
+]
+},
+"5804043": {
+"league": "Ekstraklasa (Polônia)",
+"game": "Pogoń Szczecin x Śląsk Wrocław",
+"ts": 1795203000,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -59,19 +122,37 @@
 "league": "MLS (EUA)",
 "game": "Orlando x Cincinnati",
 "ts": 1795134600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 37,
+"best": [
+"Vitória Cincinnati",
+2.5,
+0.4382,
+0.0956
+],
+"matched": [
+"oddspapi: Orlando City SC x FC Cincinnati"
+]
 },
 "6580834": {
 "league": "MLS (EUA)",
 "game": "Seattle Sounders x Salt Lake",
 "ts": 1795143600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 35,
+"best": [
+"Mais de 3,5 gols",
+2.25,
+0.4155,
+-0.0651
+],
+"matched": [
+"oddspapi: Seattle Sounders x Real Salt Lake"
+]
 },
 "5103711": {
 "league": "Brasileirão Série A",
@@ -84,9 +165,9 @@
 "markets_with_odds": 35,
 "best": [
 "Menos de 2,5 gols",
-2.03,
-0.4667,
--0.0527
+2.05,
+0.4645,
+-0.0477
 ],
 "matched": [
 "football-data: Coritiba x Santos",
@@ -103,10 +184,10 @@
 ],
 "markets_with_odds": 35,
 "best": [
-"Menos de 2,5 gols",
-2.1,
-0.4727,
--0.0073
+"Ambas marcam: sim",
+1.87,
+0.5294,
+-0.01
 ],
 "matched": [
 "football-data: Remo x Chapecoense-SC",
@@ -118,17 +199,19 @@
 "game": "Cruzeiro x Palmeiras",
 "ts": 1795044600,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 3,
+"markets_with_odds": 35,
 "best": [
-"Vitória Palmeiras",
-2.4,
-0.3765,
--0.0963
+"Menos de 2,5 gols",
+2.1,
+0.4545,
+-0.0456
 ],
 "matched": [
-"football-data: Cruzeiro x Palmeiras"
+"football-data: Cruzeiro x Palmeiras",
+"oddspapi: Cruzeiro EC MG x SE Palmeiras SP"
 ]
 },
 "5103704": {
@@ -136,12 +219,19 @@
 "game": "Flamengo x Athletico Paranaense",
 "ts": 1795044600,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 3,
-"best": null,
+"markets_with_odds": 37,
+"best": [
+"Menos de 3,5 gols",
+1.62,
+0.6035,
+-0.0223
+],
 "matched": [
-"football-data: Flamengo RJ x Athletico-PR"
+"football-data: Flamengo RJ x Athletico-PR",
+"oddspapi: CR Flamengo RJ x CA Paranaense PR"
 ]
 },
 "5103707": {
@@ -175,9 +265,9 @@
 "markets_with_odds": 35,
 "best": [
 "Bahia (empate anula)",
-2.2,
-0.4901,
-0.0781
+1.97,
+0.5076,
+-0.0001
 ],
 "matched": [
 "football-data: Gremio x Bahia",
@@ -189,9 +279,10 @@
 "game": "Vasco da Gama x Internacional",
 "ts": 1795127400,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 3,
+"markets_with_odds": 35,
 "best": [
 "Vitória Vasco da Gama",
 1.61,
@@ -199,7 +290,8 @@
 0.001
 ],
 "matched": [
-"football-data: Vasco x Internacional"
+"football-data: Vasco x Internacional",
+"oddspapi: CR Vasco da Gama RJ x SC Internacional RS"
 ]
 },
 "5103712": {
@@ -207,12 +299,19 @@
 "game": "Vitória x RB Bragantino",
 "ts": 1795127400,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 3,
-"best": null,
+"markets_with_odds": 35,
+"best": [
+"Menos de 2,5 gols",
+1.96,
+0.4803,
+-0.0586
+],
 "matched": [
-"football-data: Vitoria x Bragantino"
+"football-data: Vitoria x Bragantino",
+"oddspapi: EC Vitoria BA x Red Bull Bragantino SP"
 ]
 },
 "5103706": {
@@ -220,17 +319,73 @@
 "game": "São Paulo x Fluminense",
 "ts": 1795134600,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 3,
+"markets_with_odds": 33,
 "best": [
-"Vitória São Paulo",
-2.35,
-0.3725,
--0.1246
+"Fluminense (empate anula)",
+2.1,
+0.4947,
+0.0388
 ],
 "matched": [
-"football-data: Sao Paulo x Fluminense"
+"football-data: Sao Paulo x Fluminense",
+"oddspapi: Sao Paulo FC SP x Fluminense FC RJ"
+]
+},
+"5881226": {
+"league": "Bundesliga",
+"game": "Bayern München x Köln",
+"ts": 1795203000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5739551": {
+"league": "Superliga (Dinamarca)",
+"game": "AGF x Lyngby",
+"ts": 1795197600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5881726": {
+"league": "2. Bundesliga",
+"game": "Arminia Bielefeld x Magdeburg",
+"ts": 1795195800,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 35,
+"best": [
+"Vitória Arminia Bielefeld",
+2.25,
+0.4284,
+-0.0361
+],
+"matched": [
+"oddspapi: Arminia Bielefeld x 1. FC Magdeburg"
+]
+},
+"5881728": {
+"league": "2. Bundesliga",
+"game": "Darmstadt x FC Heidenheim",
+"ts": 1795195800,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 35,
+"best": [
+"Vitória FC Heidenheim",
+1.97,
+0.504,
+-0.0071
+],
+"matched": [
+"oddspapi: SV Darmstadt 98 x 1. FC Heidenheim"
 ]
 },
 "5881226": {
