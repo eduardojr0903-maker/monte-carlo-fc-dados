@@ -2,7 +2,7 @@
 
 data/photos/t{team id}.json = {"updated", "team", "p": {player id: small WEBP data URI}}
 The app cannot load images from other sites, so each photo is a 64 px WEBP embedded as a data URI
-(about 3 KB; a squad stays well under the database's 256 KiB per document).
+(48 px, about 1.5 KB; a squad stays well under the database's 256 KiB per document).
 Photos come from FotMob (the player ids in the league documents are FotMob ids) and are cached in
 data/cache/photos/{player id}.txt (empty file = FotMob has no photo). Run weekly.
 """
@@ -23,7 +23,8 @@ CACHE = os.path.join(ROOT, "data", "cache", "photos")
 OUT = os.path.join(ROOT, "data", "photos")
 BUDGET = int(os.environ.get("PHOTO_BUDGET", "6000"))  # new downloads per run
 REFRESH_DAYS = int(os.environ.get("PHOTO_REFRESH_DAYS", "120"))  # re-check missing photos after this
-MAX_PER_TEAM = 45
+MAX_PER_TEAM = 30
+SIZE = 48
 MAX_BYTES = 240_000
 SESSION = requests.Session()
 SESSION.headers["User-Agent"] = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
@@ -34,9 +35,22 @@ def fetch(pid):
     if r.status_code != 200 or len(r.content) < 1500:
         return ""
     im = Image.open(io.BytesIO(r.content)).convert("RGBA")
-    im.thumbnail((64, 64), Image.LANCZOS)
+    im.thumbnail((SIZE, SIZE), Image.LANCZOS)
     buf = io.BytesIO()
-    im.save(buf, "WEBP", quality=72, method=6)
+    im.save(buf, "WEBP", quality=65, method=6)
+    return "data:image/webp;base64," + base64.b64encode(buf.getvalue()).decode()
+
+
+def shrink(uri):
+    """Photos cached at an older, larger size are scaled down on the way out."""
+    raw = base64.b64decode(uri.split(",", 1)[1])
+    im = Image.open(io.BytesIO(raw))
+    if max(im.size) <= SIZE:
+        return uri
+    im = im.convert("RGBA")
+    im.thumbnail((SIZE, SIZE), Image.LANCZOS)
+    buf = io.BytesIO()
+    im.save(buf, "WEBP", quality=65, method=6)
     return "data:image/webp;base64," + base64.b64encode(buf.getvalue()).decode()
 
 
@@ -91,7 +105,7 @@ def main():
         for pid in squads[tid]:
             uri = photo(pid, {"new": BUDGET, "got": 0})  # cache only
             if uri:
-                p[pid] = uri
+                p[pid] = shrink(uri)
         while len(json.dumps(p)) > MAX_BYTES and p:
             p.pop(next(reversed(p)))
         path = os.path.join(OUT, f"t{tid}.json")
