@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-18T04:36:52+00:00",
+"updated": "2026-11-18T07:58:31+00:00",
 "fixtures": {
 "6580833": {
 "league": "MLS (EUA)",
@@ -31,8 +31,8 @@
 "best": [
 "Coritiba (empate anula)",
 2.37,
-0.4347,
-0.0302
+0.4351,
+0.0311
 ],
 "matched": [
 "football-data: Coritiba x Santos",
@@ -110,8 +110,8 @@
 "best": [
 "Vitória Corinthians",
 1.79,
-0.5086,
--0.0895
+0.5075,
+-0.0916
 ],
 "matched": [
 "football-data: Corinthians x Botafogo RJ"
@@ -128,8 +128,8 @@
 "best": [
 "Vitória Grêmio",
 2.2,
-0.3552,
--0.2185
+0.3813,
+-0.1611
 ],
 "matched": [
 "football-data: Gremio x Bahia"
