@@ -1,6 +1,15 @@
 {
-"updated": "2026-11-17T22:31:33+00:00",
+"updated": "2026-11-18T01:57:57+00:00",
 "fixtures": {
+"6580833": {
+"league": "MLS (EUA)",
+"game": "Orlando x Cincinnati",
+"ts": 1795134600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5103711": {
 "league": "Brasileirão Série A",
 "game": "Coritiba x Santos",
@@ -73,8 +82,8 @@
 "best": [
 "Menos de 3,5 gols",
 1.62,
-0.6041,
--0.0213
+0.6045,
+-0.0207
 ],
 "matched": [
 "football-data: Flamengo RJ x Athletico-PR",
@@ -110,8 +119,8 @@
 "best": [
 "Vitória Grêmio",
 2.2,
-0.3548,
--0.2193
+0.3552,
+-0.2185
 ],
 "matched": [
 "football-data: Gremio x Bahia"
@@ -128,8 +137,8 @@
 "best": [
 "Vitória Vasco da Gama",
 1.61,
-0.6107,
--0.0167
+0.6108,
+-0.0166
 ],
 "matched": [
 "football-data: Vasco x Internacional"
@@ -153,6 +162,24 @@
 "matched": [
 "football-data: Vitoria x Bragantino",
 "oddspapi: EC Vitoria BA x Red Bull Bragantino SP"
+]
+},
+"5103706": {
+"league": "Brasileirão Série A",
+"game": "São Paulo x Fluminense",
+"ts": 1795134600,
+"sources": [
+"football-data"
+],
+"markets_with_odds": 3,
+"best": [
+"Vitória São Paulo",
+2.35,
+0.3644,
+-0.1436
+],
+"matched": [
+"football-data: Sao Paulo x Fluminense"
 ]
 }
 }
