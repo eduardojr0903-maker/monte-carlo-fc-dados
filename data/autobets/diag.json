@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-19T19:43:52+00:00",
+"updated": "2026-11-19T22:31:53+00:00",
 "fixtures": {
 "1000023194": {
 "league": "Liga Profesional (Argentina)",
@@ -14,6 +14,15 @@
 "league": "Liga Profesional (Argentina)",
 "game": "Defensa y Justicia x Barracas Central",
 "ts": 1795284000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"1000023199": {
+"league": "Liga Profesional (Argentina)",
+"game": "Argentinos Juniors x Independiente",
+"ts": 1795291200,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -372,8 +381,8 @@
 "best": [
 "Vitória Piast Gliwice",
 2.5,
-0.4156,
-0.0391
+0.4158,
+0.0394
 ],
 "matched": [
 "oddspapi: GKS Piast Gliwice x Korona Kielce"
@@ -469,6 +478,15 @@
 "best": null,
 "matched": []
 },
+"5749757": {
+"league": "Serie A (Itália)",
+"game": "Napoli x Torino",
+"ts": 1795290300,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "6580833": {
 "league": "MLS (EUA)",
 "game": "Orlando x Cincinnati",
@@ -498,8 +516,8 @@
 "best": [
 "Mais de 3,5 gols",
 2.2,
-0.4203,
--0.0753
+0.4205,
+-0.075
 ],
 "matched": [
 "oddspapi: Seattle Sounders x Real Salt Lake"
@@ -509,6 +527,15 @@
 "league": "MLS (EUA)",
 "game": "New England x Philadelphia",
 "ts": 1795287600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"6580836": {
+"league": "MLS (EUA)",
+"game": "Dallas x Portland",
+"ts": 1795294800,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -541,46 +568,6 @@
 "best": null,
 "matched": []
 },
-"5103705": {
-"league": "Brasileirão Série A",
-"game": "Vasco da Gama x Internacional",
-"ts": 1795127400,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 35,
-"best": [
-"Vitória Vasco da Gama",
-1.61,
-0.6157,
--0.0088
-],
-"matched": [
-"football-data: Vasco x Internacional",
-"oddspapi: CR Vasco da Gama RJ x SC Internacional RS"
-]
-},
-"5103712": {
-"league": "Brasileirão Série A",
-"game": "Vitória x RB Bragantino",
-"ts": 1795127400,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 148,
-"best": [
-"RB Bragantino menos de 4,5 escanteios",
-2.1,
-0.4585,
--0.0372
-],
-"matched": [
-"football-data: Vitoria x Bragantino",
-"oddspapi: EC Vitoria BA x Red Bull Bragantino SP"
-]
-},
 "5103706": {
 "league": "Brasileirão Série A",
 "game": "São Paulo x Fluminense",
@@ -608,6 +595,15 @@
 "best": null,
 "matched": []
 },
+"5103722": {
+"league": "Brasileirão Série A",
+"game": "Bahia x Coritiba",
+"ts": 1795293000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5802999": {
 "league": "Ligue 1",
 "game": "Troyes x Le Havre",
@@ -621,6 +617,42 @@
 "league": "Ligue 1",
 "game": "Nice x PSG",
 "ts": 1795277700,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5802991": {
+"league": "Ligue 1",
+"game": "Lens x Toulouse",
+"ts": 1795290300,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5802992": {
+"league": "Ligue 1",
+"game": "Lille x Lyon",
+"ts": 1795290300,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5802995": {
+"league": "Ligue 1",
+"game": "Monaco x Auxerre",
+"ts": 1795290300,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5802998": {
+"league": "Ligue 1",
+"game": "Strasbourg x Brest",
+"ts": 1795290300,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -734,6 +766,15 @@
 "best": null,
 "matched": []
 },
+"5793981": {
+"league": "Premiership (Escócia)",
+"game": "Motherwell x Rangers",
+"ts": 1795291200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5781805": {
 "league": "Eredivisie",
 "game": "NEC Nijmegen x PSV Eindhoven",
@@ -756,6 +797,24 @@
 "league": "Eredivisie",
 "game": "Feyenoord x Excelsior",
 "ts": 1795283100,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5781808": {
+"league": "Eredivisie",
+"game": "FC Groningen x SC Heerenveen",
+"ts": 1795291200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5781807": {
+"league": "Eredivisie",
+"game": "Telstar x PEC Zwolle",
+"ts": 1795291200,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -792,6 +851,24 @@
 "league": "Pro League (Bélgica)",
 "game": "Genk x RAAL La Louvière",
 "ts": 1795281300,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5811815": {
+"league": "Pro League (Bélgica)",
+"game": "KV Mechelen x Club Brugge",
+"ts": 1795290300,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5811817": {
+"league": "Pro League (Bélgica)",
+"game": "Zulte Waregem x Royal Antwerp",
+"ts": 1795290300,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -853,8 +930,8 @@
 "best": [
 "Vitória FC Heidenheim",
 1.97,
-0.5035,
--0.0081
+0.5038,
+-0.0075
 ],
 "matched": [
 "oddspapi: SV Darmstadt 98 x 1. FC Heidenheim"
@@ -990,6 +1067,15 @@
 "league": "La Liga",
 "game": "Sevilla x Real Betis",
 "ts": 1795282200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5868139": {
+"league": "La Liga",
+"game": "Real Madrid x Celta Vigo",
+"ts": 1795291200,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
