@@ -1,10 +1,19 @@
 {
-"updated": "2026-11-19T16:44:23+00:00",
+"updated": "2026-11-19T19:43:52+00:00",
 "fixtures": {
 "1000023194": {
 "league": "Liga Profesional (Argentina)",
 "game": "Vélez Sarsfield x Belgrano",
 "ts": 1795215600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"1000023196": {
+"league": "Liga Profesional (Argentina)",
+"game": "Defensa y Justicia x Barracas Central",
+"ts": 1795284000,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -59,6 +68,15 @@
 "league": "Premier League",
 "game": "Tottenham x Ipswich",
 "ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5795523": {
+"league": "Premier League",
+"game": "Newcastle x Arsenal",
+"ts": 1795282200,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -158,6 +176,15 @@
 "league": "Championship",
 "game": "Wolves x Charlton",
 "ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5943296": {
+"league": "Super League (Grécia)",
+"game": "Kalamata x AEK Athens",
+"ts": 1795282200,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -316,6 +343,24 @@
 "best": null,
 "matched": []
 },
+"5105050": {
+"league": "Eliteserien (Noruega)",
+"game": "Vålerenga x Start",
+"ts": 1795280400,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 37,
+"best": [
+"Mais de 3,5 gols",
+1.8,
+0.5146,
+-0.0736
+],
+"matched": [
+"oddspapi: Vaalerenga IF x IK Start"
+]
+},
 "5804042": {
 "league": "Ekstraklasa (Polônia)",
 "game": "Piast Gliwice x Korona Kielce",
@@ -327,8 +372,8 @@
 "best": [
 "Vitória Piast Gliwice",
 2.5,
-0.4157,
-0.0392
+0.4156,
+0.0391
 ],
 "matched": [
 "oddspapi: GKS Piast Gliwice x Korona Kielce"
@@ -361,6 +406,42 @@
 "best": null,
 "matched": []
 },
+"5804044": {
+"league": "Ekstraklasa (Polônia)",
+"game": "Radomiak Radom x Wisła Kraków",
+"ts": 1795288500,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5804300": {
+"league": "Super League (Suíça)",
+"game": "Lugano x Grasshopper",
+"ts": 1795280400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5804302": {
+"league": "Super League (Suíça)",
+"game": "Young Boys x Thun",
+"ts": 1795280400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5804301": {
+"league": "Super League (Suíça)",
+"game": "Sion x Servette",
+"ts": 1795289400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5749753": {
 "league": "Serie A (Itália)",
 "game": "Como x Cagliari",
@@ -374,6 +455,15 @@
 "league": "Serie A (Itália)",
 "game": "Lazio x Lecce",
 "ts": 1795269600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5749758": {
+"league": "Serie A (Itália)",
+"game": "Parma x Roma",
+"ts": 1795280400,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -415,6 +505,15 @@
 "oddspapi: Seattle Sounders x Real Salt Lake"
 ]
 },
+"6580838": {
+"league": "MLS (EUA)",
+"game": "New England x Philadelphia",
+"ts": 1795287600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "1000014643": {
 "league": "Liga MX (México)",
 "game": "Puebla x San Luis",
@@ -454,8 +553,8 @@
 "best": [
 "Vitória Vasco da Gama",
 1.61,
-0.6158,
--0.0085
+0.6157,
+-0.0088
 ],
 "matched": [
 "football-data: Vasco x Internacional",
@@ -499,6 +598,15 @@
 "matched": [
 "football-data: Sao Paulo x Fluminense"
 ]
+},
+"5103717": {
+"league": "Brasileirão Série A",
+"game": "Palmeiras x Flamengo",
+"ts": 1795289400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
 "5802999": {
 "league": "Ligue 1",
@@ -572,6 +680,15 @@
 "best": null,
 "matched": []
 },
+"5881230": {
+"league": "Bundesliga",
+"game": "Schalke 04 x VfB Stuttgart",
+"ts": 1795282200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5793976": {
 "league": "Premiership (Escócia)",
 "game": "Celtic x St. Mirren",
@@ -608,10 +725,37 @@
 "best": null,
 "matched": []
 },
+"5793977": {
+"league": "Premiership (Escócia)",
+"game": "Dundee FC x Hearts",
+"ts": 1795283100,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5781805": {
 "league": "Eredivisie",
 "game": "NEC Nijmegen x PSV Eindhoven",
 "ts": 1795275000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5781811": {
+"league": "Eredivisie",
+"game": "FC Utrecht x Cambuur",
+"ts": 1795283100,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5781806": {
+"league": "Eredivisie",
+"game": "Feyenoord x Excelsior",
+"ts": 1795283100,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -643,6 +787,15 @@
 "matched": [
 "oddspapi: Royal Charleroi SC x St. Truidense VV"
 ]
+},
+"5811813": {
+"league": "Pro League (Bélgica)",
+"game": "Genk x RAAL La Louvière",
+"ts": 1795281300,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
 "5739551": {
 "league": "Superliga (Dinamarca)",
@@ -700,8 +853,8 @@
 "best": [
 "Vitória FC Heidenheim",
 1.97,
-0.5036,
--0.008
+0.5035,
+-0.0081
 ],
 "matched": [
 "oddspapi: SV Darmstadt 98 x 1. FC Heidenheim"
@@ -734,6 +887,15 @@
 "best": null,
 "matched": []
 },
+"5881733": {
+"league": "2. Bundesliga",
+"game": "St. Pauli x Bochum",
+"ts": 1795289400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5846026": {
 "league": "Bundesliga (Áustria)",
 "game": "LASK x Hartberg",
@@ -747,6 +909,15 @@
 "league": "Bundesliga (Áustria)",
 "game": "WSG Tirol x Austria Lustenau",
 "ts": 1795276800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5846025": {
+"league": "Bundesliga (Áustria)",
+"game": "Grazer AK x Rapid Wien",
+"ts": 1795285800,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -810,6 +981,15 @@
 "league": "La Liga",
 "game": "Rayo Vallecano x Valencia",
 "ts": 1795274100,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5868140": {
+"league": "La Liga",
+"game": "Sevilla x Real Betis",
+"ts": 1795282200,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
