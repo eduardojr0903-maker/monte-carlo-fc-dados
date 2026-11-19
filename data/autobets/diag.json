@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-18T23:53:55+00:00",
+"updated": "2026-11-19T01:57:17+00:00",
 "fixtures": {
 "1000023194": {
 "league": "Liga Profesional (Argentina)",
@@ -39,8 +39,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.3,
-0.4177,
--0.0393
+0.4178,
+-0.0392
 ],
 "matched": [
 "oddspapi: Kashiwa Reysol x JEF United Chiba"
@@ -136,6 +136,15 @@
 "oddspapi: Seattle Sounders x Real Salt Lake"
 ]
 },
+"1000014643": {
+"league": "Liga MX (México)",
+"game": "Puebla x San Luis",
+"ts": 1795222800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5103705": {
 "league": "Brasileirão Série A",
 "game": "Vasco da Gama x Internacional",
@@ -148,8 +157,8 @@
 "best": [
 "Vitória Vasco da Gama",
 1.61,
-0.6102,
--0.0176
+0.6113,
+-0.0158
 ],
 "matched": [
 "football-data: Vasco x Internacional",
@@ -168,8 +177,8 @@
 "best": [
 "Menos de 2,5 gols",
 1.96,
-0.4803,
--0.0586
+0.4799,
+-0.0593
 ],
 "matched": [
 "football-data: Vitoria x Bragantino",
@@ -188,8 +197,8 @@
 "best": [
 "Fluminense (empate anula)",
 2.1,
-0.4885,
-0.0259
+0.4867,
+0.0222
 ],
 "matched": [
 "football-data: Sao Paulo x Fluminense",
@@ -261,8 +270,8 @@
 "best": [
 "Vitória FC Heidenheim",
 1.97,
-0.504,
--0.0071
+0.5034,
+-0.0084
 ],
 "matched": [
 "oddspapi: SV Darmstadt 98 x 1. FC Heidenheim"
