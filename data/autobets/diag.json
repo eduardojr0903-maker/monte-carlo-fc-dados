@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-19T04:39:12+00:00",
+"updated": "2026-11-19T08:02:32+00:00",
 "fixtures": {
 "1000023194": {
 "league": "Liga Profesional (Argentina)",
@@ -21,8 +21,8 @@
 "best": [
 "Ambas marcam: sim",
 1.92,
-0.5042,
--0.032
+0.5045,
+-0.0314
 ],
 "matched": [
 "oddspapi: Kashima Antlers x Shimizu S-Pulse"
@@ -62,6 +62,78 @@
 ],
 "matched": [
 "oddspapi: Vissel Kobe x Mito Hollyhock"
+]
+},
+"5803663": {
+"league": "J1 League (Japão)",
+"game": "Kyoto Sanga FC x Urawa Red Diamonds",
+"ts": 1795237200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803664": {
+"league": "J1 League (Japão)",
+"game": "Machida Zelvia x V-Varen Nagasaki",
+"ts": 1795237200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803665": {
+"league": "J1 League (Japão)",
+"game": "Sanfrecce Hiroshima x Yokohama F.Marinos",
+"ts": 1795237200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803666": {
+"league": "J1 League (Japão)",
+"game": "Tokyo Verdy x Nagoya Grampus",
+"ts": 1795237200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803658": {
+"league": "J1 League (Japão)",
+"game": "Cerezo Osaka x FC Tokyo",
+"ts": 1795240800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803662": {
+"league": "J1 League (Japão)",
+"game": "Kawasaki Frontale x Avispa Fukuoka",
+"ts": 1795240800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803659": {
+"league": "J1 League (Japão)",
+"game": "Gamba Osaka x Fagiano Okayama FC",
+"ts": 1795244400,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 35,
+"best": [
+"Fagiano Okayama FC (empate anula)",
+2.37,
+0.4544,
+0.0769
+],
+"matched": [
+"oddspapi: Gamba Osaka x Fagiano Okayama"
 ]
 },
 "5105051": {
@@ -175,8 +247,8 @@
 "best": [
 "Vitória Vasco da Gama",
 1.61,
-0.6118,
--0.015
+0.6158,
+-0.0085
 ],
 "matched": [
 "football-data: Vasco x Internacional",
@@ -215,8 +287,8 @@
 "best": [
 "Fluminense (empate anula)",
 2.1,
-0.4866,
-0.0219
+0.4881,
+0.0249
 ],
 "matched": [
 "football-data: Sao Paulo x Fluminense",
