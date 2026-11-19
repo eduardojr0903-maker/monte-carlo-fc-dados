@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-19T01:57:17+00:00",
+"updated": "2026-11-19T04:39:12+00:00",
 "fixtures": {
 "1000023194": {
 "league": "Liga Profesional (Argentina)",
@@ -84,8 +84,8 @@
 "best": [
 "Vitória Piast Gliwice",
 2.5,
-0.4018,
-0.0044
+0.402,
+0.0049
 ],
 "matched": [
 "oddspapi: GKS Piast Gliwice x Korona Kielce"
@@ -145,6 +145,24 @@
 "best": null,
 "matched": []
 },
+"1000014644": {
+"league": "Liga MX (México)",
+"game": "Juárez x Atlas",
+"ts": 1795230000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"1000014645": {
+"league": "Liga MX (México)",
+"game": "Tijuana x Atlante",
+"ts": 1795230600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5103705": {
 "league": "Brasileirão Série A",
 "game": "Vasco da Gama x Internacional",
@@ -157,8 +175,8 @@
 "best": [
 "Vitória Vasco da Gama",
 1.61,
-0.6113,
--0.0158
+0.6118,
+-0.015
 ],
 "matched": [
 "football-data: Vasco x Internacional",
@@ -177,8 +195,8 @@
 "best": [
 "Menos de 2,5 gols",
 1.96,
-0.4799,
--0.0593
+0.4808,
+-0.0577
 ],
 "matched": [
 "football-data: Vitoria x Bragantino",
@@ -197,8 +215,8 @@
 "best": [
 "Fluminense (empate anula)",
 2.1,
-0.4867,
-0.0222
+0.4866,
+0.0219
 ],
 "matched": [
 "football-data: Sao Paulo x Fluminense",
