@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-19T14:00:47+00:00",
+"updated": "2026-11-19T16:44:23+00:00",
 "fixtures": {
 "1000023194": {
 "league": "Liga Profesional (Argentina)",
@@ -14,6 +14,51 @@
 "league": "Premier League",
 "game": "Man City x Fulham",
 "ts": 1795264200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5795515": {
+"league": "Premier League",
+"game": "Bournemouth x Nottm Forest",
+"ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5795516": {
+"league": "Premier League",
+"game": "Aston Villa x Sunderland",
+"ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5795518": {
+"league": "Premier League",
+"game": "Chelsea x Leeds",
+"ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5795519": {
+"league": "Premier League",
+"game": "Coventry x Crystal Palace",
+"ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5795524": {
+"league": "Premier League",
+"game": "Tottenham x Ipswich",
+"ts": 1795273200,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -41,6 +86,78 @@
 "league": "Championship",
 "game": "Southampton x Derby",
 "ts": 1795264200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836934": {
+"league": "Championship",
+"game": "Bolton x Portsmouth",
+"ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836936": {
+"league": "Championship",
+"game": "Lincoln x Wrexham",
+"ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836937": {
+"league": "Championship",
+"game": "Middlesbrough x Bristol City",
+"ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836940": {
+"league": "Championship",
+"game": "Sheff Utd x Watford",
+"ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836942": {
+"league": "Championship",
+"game": "Stoke x Birmingham",
+"ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836943": {
+"league": "Championship",
+"game": "Swansea x West Brom",
+"ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836944": {
+"league": "Championship",
+"game": "West Ham x Preston",
+"ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836945": {
+"league": "Championship",
+"game": "Wolves x Charlton",
+"ts": 1795273200,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -129,8 +246,8 @@
 "best": [
 "Menos de 3,5 gols",
 1.63,
-0.6287,
-0.0248
+0.6298,
+0.0266
 ],
 "matched": [
 "oddspapi: Sanfrecce Hiroshima x Yokohama F Marinos"
@@ -190,6 +307,15 @@
 "best": null,
 "matched": []
 },
+"5105049": {
+"league": "Eliteserien (Noruega)",
+"game": "HamKam x Fredrikstad",
+"ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5804042": {
 "league": "Ekstraklasa (Polônia)",
 "game": "Piast Gliwice x Korona Kielce",
@@ -226,6 +352,15 @@
 "best": null,
 "matched": []
 },
+"5804048": {
+"league": "Ekstraklasa (Polônia)",
+"game": "Zagłębie Lubin x Górnik Zabrze",
+"ts": 1795278600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5749753": {
 "league": "Serie A (Itália)",
 "game": "Como x Cagliari",
@@ -255,8 +390,8 @@
 "best": [
 "Cincinnati (empate anula)",
 1.87,
-0.557,
-0.0415
+0.5432,
+0.0157
 ],
 "matched": [
 "oddspapi: Orlando City SC x FC Cincinnati"
@@ -374,10 +509,109 @@
 "best": null,
 "matched": []
 },
+"5802996": {
+"league": "Ligue 1",
+"game": "Nice x PSG",
+"ts": 1795277700,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5881226": {
 "league": "Bundesliga",
 "game": "Bayern München x Köln",
 "ts": 1795203000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5881225": {
+"league": "Bundesliga",
+"game": "Leverkusen x Paderborn",
+"ts": 1795271400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5881227": {
+"league": "Bundesliga",
+"game": "M'gladbach x Dortmund",
+"ts": 1795271400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5881228": {
+"league": "Bundesliga",
+"game": "Frankfurt x Hoffenheim",
+"ts": 1795271400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5881229": {
+"league": "Bundesliga",
+"game": "Elversberg x Freiburg",
+"ts": 1795271400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5881231": {
+"league": "Bundesliga",
+"game": "Union Berlin x RB Leipzig",
+"ts": 1795271400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5793976": {
+"league": "Premiership (Escócia)",
+"game": "Celtic x St. Mirren",
+"ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5793978": {
+"league": "Premiership (Escócia)",
+"game": "Falkirk x St. Johnstone",
+"ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5793979": {
+"league": "Premiership (Escócia)",
+"game": "Hibernian x Dundee United",
+"ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5793980": {
+"league": "Premiership (Escócia)",
+"game": "Kilmarnock x Aberdeen",
+"ts": 1795273200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5781805": {
+"league": "Eredivisie",
+"game": "NEC Nijmegen x PSV Eindhoven",
+"ts": 1795275000,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -391,6 +625,24 @@
 "markets_with_odds": 0,
 "best": null,
 "matched": []
+},
+"5811812": {
+"league": "Pro League (Bélgica)",
+"game": "Sporting Charleroi x St.Truiden",
+"ts": 1795273200,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 35,
+"best": [
+"Mais de 3,5 gols",
+2.25,
+0.4431,
+-0.003
+],
+"matched": [
+"oddspapi: Royal Charleroi SC x St. Truidense VV"
+]
 },
 "5739551": {
 "league": "Superliga (Dinamarca)",
@@ -419,6 +671,15 @@
 "best": null,
 "matched": []
 },
+"5107663": {
+"league": "Allsvenskan (Suécia)",
+"game": "GAIS x Västerås SK",
+"ts": 1795278600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5881726": {
 "league": "2. Bundesliga",
 "game": "Arminia Bielefeld x Magdeburg",
@@ -439,8 +700,8 @@
 "best": [
 "Vitória FC Heidenheim",
 1.97,
-0.5033,
--0.0085
+0.5036,
+-0.008
 ],
 "matched": [
 "oddspapi: SV Darmstadt 98 x 1. FC Heidenheim"
@@ -473,6 +734,24 @@
 "best": null,
 "matched": []
 },
+"5846026": {
+"league": "Bundesliga (Áustria)",
+"game": "LASK x Hartberg",
+"ts": 1795276800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5846027": {
+"league": "Bundesliga (Áustria)",
+"game": "WSG Tirol x Austria Lustenau",
+"ts": 1795276800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5904807": {
 "league": "Süper Lig (Turquia)",
 "game": "Gençlerbirliği x Gaziantep FK",
@@ -500,6 +779,15 @@
 "best": null,
 "matched": []
 },
+"5904810": {
+"league": "Süper Lig (Turquia)",
+"game": "Kocaelispor x Fenerbahçe",
+"ts": 1795276800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5868132": {
 "league": "La Liga",
 "game": "Athletic Club x Espanyol",
@@ -513,6 +801,15 @@
 "league": "La Liga",
 "game": "Deportivo Alavés x Deportivo A Coruña",
 "ts": 1795266000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5868138": {
+"league": "La Liga",
+"game": "Rayo Vallecano x Valencia",
+"ts": 1795274100,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
