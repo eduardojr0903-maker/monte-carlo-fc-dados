@@ -1,10 +1,46 @@
 {
-"updated": "2026-11-19T10:49:14+00:00",
+"updated": "2026-11-19T14:00:47+00:00",
 "fixtures": {
 "1000023194": {
 "league": "Liga Profesional (Argentina)",
 "game": "Vélez Sarsfield x Belgrano",
 "ts": 1795215600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5795522": {
+"league": "Premier League",
+"game": "Man City x Fulham",
+"ts": 1795264200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836938": {
+"league": "Championship",
+"game": "Millwall x QPR",
+"ts": 1795264200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836939": {
+"league": "Championship",
+"game": "Norwich x Cardiff",
+"ts": 1795264200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836941": {
+"league": "Championship",
+"game": "Southampton x Derby",
+"ts": 1795264200,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -145,6 +181,15 @@
 "best": null,
 "matched": []
 },
+"5105052": {
+"league": "Eliteserien (Noruega)",
+"game": "Tromsø x Viking",
+"ts": 1795266000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5804042": {
 "league": "Ekstraklasa (Polônia)",
 "game": "Piast Gliwice x Korona Kielce",
@@ -156,8 +201,8 @@
 "best": [
 "Vitória Piast Gliwice",
 2.5,
-0.402,
-0.0049
+0.4157,
+0.0392
 ],
 "matched": [
 "oddspapi: GKS Piast Gliwice x Korona Kielce"
@@ -167,6 +212,33 @@
 "league": "Ekstraklasa (Polônia)",
 "game": "Pogoń Szczecin x Śląsk Wrocław",
 "ts": 1795203000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5804040": {
+"league": "Ekstraklasa (Polônia)",
+"game": "Cracovia x Jagiellonia Białystok",
+"ts": 1795268700,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5749753": {
+"league": "Serie A (Itália)",
+"game": "Como x Cagliari",
+"ts": 1795269600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5749755": {
+"league": "Serie A (Itália)",
+"game": "Lazio x Lecce",
+"ts": 1795269600,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -183,8 +255,8 @@
 "best": [
 "Cincinnati (empate anula)",
 1.87,
-0.5568,
-0.0413
+0.557,
+0.0415
 ],
 "matched": [
 "oddspapi: Orlando City SC x FC Cincinnati"
@@ -329,6 +401,24 @@
 "best": null,
 "matched": []
 },
+"5107661": {
+"league": "Allsvenskan (Suécia)",
+"game": "AIK x Degerfors",
+"ts": 1795269600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5107666": {
+"league": "Allsvenskan (Suécia)",
+"game": "Mjällby x Malmö FF",
+"ts": 1795269600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5881726": {
 "league": "2. Bundesliga",
 "game": "Arminia Bielefeld x Magdeburg",
@@ -356,6 +446,33 @@
 "oddspapi: SV Darmstadt 98 x 1. FC Heidenheim"
 ]
 },
+"5881729": {
+"league": "2. Bundesliga",
+"game": "Hannover 96 x Greuther Fürth",
+"ts": 1795262400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5881732": {
+"league": "2. Bundesliga",
+"game": "1. FC Nürnberg x Eintracht Braunschweig",
+"ts": 1795262400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5881734": {
+"league": "2. Bundesliga",
+"game": "Wolfsburg x Holstein Kiel",
+"ts": 1795262400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5904807": {
 "league": "Süper Lig (Turquia)",
 "game": "Gençlerbirliği x Gaziantep FK",
@@ -365,10 +482,37 @@
 "best": null,
 "matched": []
 },
+"5904806": {
+"league": "Süper Lig (Turquia)",
+"game": "Amed Sportif x Rizespor",
+"ts": 1795266000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5904809": {
+"league": "Süper Lig (Turquia)",
+"game": "Galatasaray x Samsunspor",
+"ts": 1795266000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5868132": {
 "league": "La Liga",
 "game": "Athletic Club x Espanyol",
 "ts": 1795204800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5868131": {
+"league": "La Liga",
+"game": "Deportivo Alavés x Deportivo A Coruña",
+"ts": 1795266000,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
