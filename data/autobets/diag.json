@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-20T01:53:35+00:00",
+"updated": "2026-11-20T04:38:23+00:00",
 "fixtures": {
 "1000023194": {
 "league": "Liga Profesional (Argentina)",
@@ -228,8 +228,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.3,
-0.4178,
--0.0392
+0.4177,
+-0.0393
 ],
 "matched": [
 "oddspapi: Kashiwa Reysol x JEF United Chiba"
@@ -282,8 +282,8 @@
 "best": [
 "Menos de 3,5 gols",
 1.63,
-0.6298,
-0.0266
+0.6297,
+0.0264
 ],
 "matched": [
 "oddspapi: Sanfrecce Hiroshima x Yokohama F Marinos"
@@ -363,8 +363,8 @@
 "best": [
 "Mais de 3,5 gols",
 1.8,
-0.5146,
--0.0736
+0.5142,
+-0.0745
 ],
 "matched": [
 "oddspapi: Vaalerenga IF x IK Start"
@@ -487,24 +487,6 @@
 "best": null,
 "matched": []
 },
-"6580834": {
-"league": "MLS (EUA)",
-"game": "Seattle Sounders x Salt Lake",
-"ts": 1795143600,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 35,
-"best": [
-"Mais de 3,5 gols",
-2.2,
-0.4205,
--0.075
-],
-"matched": [
-"oddspapi: Seattle Sounders x Real Salt Lake"
-]
-},
 "6580838": {
 "league": "MLS (EUA)",
 "game": "New England x Philadelphia",
@@ -594,6 +576,15 @@
 "matched": [
 "oddspapi: Pumas UNAM x CF Monterrey"
 ]
+},
+"1000014649": {
+"league": "Liga MX (México)",
+"game": "Tigres x América",
+"ts": 1795316400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
 "5103717": {
 "league": "Brasileirão Série A",
@@ -948,8 +939,8 @@
 "best": [
 "Vitória FC Heidenheim",
 1.97,
-0.5036,
--0.0079
+0.5045,
+-0.0062
 ],
 "matched": [
 "oddspapi: SV Darmstadt 98 x 1. FC Heidenheim"
