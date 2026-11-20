@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-20T04:38:23+00:00",
+"updated": "2026-11-20T08:02:25+00:00",
 "fixtures": {
 "1000023194": {
 "league": "Liga Profesional (Argentina)",
@@ -568,10 +568,10 @@
 ],
 "markets_with_odds": 35,
 "best": [
-"Menos de 2,5 gols",
-2.25,
-0.4372,
--0.0162
+"Monterrey (empate anula)",
+1.8,
+0.5425,
+-0.0235
 ],
 "matched": [
 "oddspapi: Pumas UNAM x CF Monterrey"
