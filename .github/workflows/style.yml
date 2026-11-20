@@ -12,7 +12,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        lid: [268]
+        lid: [38, 40, 46, 47, 48, 53, 54, 55, 57, 59, 61, 64, 67, 69, 71, 86, 87, 110, 112, 122, 130, 135, 140, 146, 196, 223, 230, 8814]
+      max-parallel: 14
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
