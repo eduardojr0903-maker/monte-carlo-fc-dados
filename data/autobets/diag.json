@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-20T19:17:39+00:00",
+"updated": "2026-11-20T19:51:25+00:00",
 "fixtures": {
 "1000023194": {
 "league": "Liga Profesional (Argentina)",
@@ -148,8 +148,8 @@
 "best": [
 "Menos de 2,5 gols",
 2.1,
-0.4611,
--0.0317
+0.4614,
+-0.0311
 ],
 "matched": [
 "football-data: Coventry x Crystal Palace"
@@ -864,8 +864,8 @@
 "best": [
 "Vitória Lech Poznań",
 1.95,
-0.4922,
--0.0402
+0.4924,
+-0.0399
 ],
 "matched": [
 "football-data: GKS Katowice x Lech Poznan"
@@ -1126,6 +1126,24 @@
 "best": null,
 "matched": [
 "football-data: Milan x Frosinone"
+]
+},
+"5749751": {
+"league": "Serie A (Itália)",
+"game": "Atalanta x Inter",
+"ts": 1795376700,
+"sources": [
+"football-data"
+],
+"markets_with_odds": 5,
+"best": [
+"Vitória Inter",
+1.6,
+0.6187,
+-0.0101
+],
+"matched": [
+"football-data: Atalanta x Inter"
 ]
 },
 "6580838": {
@@ -1471,6 +1489,19 @@
 ],
 "matched": [
 "football-data: Lorient x Rennes"
+]
+},
+"5802994": {
+"league": "Ligue 1",
+"game": "Marseille x Le Mans",
+"ts": 1795376700,
+"sources": [
+"football-data"
+],
+"markets_with_odds": 5,
+"best": null,
+"matched": [
+"football-data: Marseille x Le Mans"
 ]
 },
 "5881225": {
@@ -2192,8 +2223,8 @@
 "best": [
 "Vitória Hannover 96",
 1.7,
-0.5735,
--0.0251
+0.575,
+-0.0226
 ],
 "matched": [
 "football-data: Hannover x Greuther Furth"
@@ -2210,8 +2241,8 @@
 "best": [
 "Vitória 1. FC Nürnberg",
 1.7,
-0.5018,
--0.147
+0.5022,
+-0.1463
 ],
 "matched": [
 "football-data: Nurnberg x Braunschweig"
@@ -2228,8 +2259,8 @@
 "best": [
 "Vitória Wolfsburg",
 1.67,
-0.5457,
--0.0888
+0.5463,
+-0.0877
 ],
 "matched": [
 "football-data: Wolfsburg x Holstein Kiel"
@@ -2247,8 +2278,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.7,
-0.5866,
--0.0027
+0.5862,
+-0.0035
 ],
 "matched": [
 "football-data: St Pauli x Bochum",
@@ -2279,8 +2310,8 @@
 "best": [
 "Vitória Kaiserslautern",
 2.15,
-0.4788,
-0.0294
+0.4771,
+0.0257
 ],
 "matched": [
 "football-data: Kaiserslautern x Dresden"
@@ -2297,8 +2328,8 @@
 "best": [
 "Mais de 2,5 gols",
 1.62,
-0.6191,
-0.003
+0.6157,
+-0.0026
 ],
 "matched": [
 "football-data: Karlsruhe x Osnabruck"
