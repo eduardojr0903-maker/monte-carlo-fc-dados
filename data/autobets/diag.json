@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-19T22:31:53+00:00",
+"updated": "2026-11-20T01:53:35+00:00",
 "fixtures": {
 "1000023194": {
 "league": "Liga Profesional (Argentina)",
@@ -247,7 +247,7 @@
 "Ambas marcam: sim",
 2.02,
 0.4861,
--0.0181
+-0.018
 ],
 "matched": [
 "oddspapi: Vissel Kobe x Mito Hollyhock"
@@ -487,24 +487,6 @@
 "best": null,
 "matched": []
 },
-"6580833": {
-"league": "MLS (EUA)",
-"game": "Orlando x Cincinnati",
-"ts": 1795134600,
-"sources": [
-"oddspapi"
-],
-"markets_with_odds": 37,
-"best": [
-"Cincinnati (empate anula)",
-1.87,
-0.5432,
-0.0157
-],
-"matched": [
-"oddspapi: Orlando City SC x FC Cincinnati"
-]
-},
 "6580834": {
 "league": "MLS (EUA)",
 "game": "Seattle Sounders x Salt Lake",
@@ -541,6 +523,15 @@
 "best": null,
 "matched": []
 },
+"6580837": {
+"league": "MLS (EUA)",
+"game": "Inter Miami CF x Columbus",
+"ts": 1795302000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "1000014643": {
 "league": "Liga MX (México)",
 "game": "Puebla x San Luis",
@@ -568,22 +559,40 @@
 "best": null,
 "matched": []
 },
-"5103706": {
-"league": "Brasileirão Série A",
-"game": "São Paulo x Fluminense",
-"ts": 1795134600,
+"1000014647": {
+"league": "Liga MX (México)",
+"game": "Pachuca x Toluca",
+"ts": 1795301400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"1000014646": {
+"league": "Liga MX (México)",
+"game": "Santos x León",
+"ts": 1795302000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"1000014648": {
+"league": "Liga MX (México)",
+"game": "Pumas x Monterrey",
+"ts": 1795309200,
 "sources": [
-"football-data"
+"oddspapi"
 ],
-"markets_with_odds": 3,
+"markets_with_odds": 35,
 "best": [
-"Vitória São Paulo",
-2.35,
-0.3759,
--0.1165
+"Menos de 2,5 gols",
+2.25,
+0.4372,
+-0.0162
 ],
 "matched": [
-"football-data: Sao Paulo x Fluminense"
+"oddspapi: Pumas UNAM x CF Monterrey"
 ]
 },
 "5103717": {
@@ -599,6 +608,15 @@
 "league": "Brasileirão Série A",
 "game": "Bahia x Coritiba",
 "ts": 1795293000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5103723": {
+"league": "Brasileirão Série A",
+"game": "Chapecoense x Cruzeiro",
+"ts": 1795305600,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -930,8 +948,8 @@
 "best": [
 "Vitória FC Heidenheim",
 1.97,
-0.5038,
--0.0075
+0.5036,
+-0.0079
 ],
 "matched": [
 "oddspapi: SV Darmstadt 98 x 1. FC Heidenheim"
