@@ -1,19 +1,6 @@
 {
-"updated": "2026-11-22T11:57:50+00:00",
+"updated": "2026-11-22T20:15:31+00:00",
 "fixtures": {
-"1000023195": {
-"league": "Liga Profesional (Argentina)",
-"game": "Rosario Central x Gimnasia Mendoza",
-"ts": 1795374000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": null,
-"matched": [
-"football-data: Rosario Central x Gimnasia Mendoza"
-]
-},
 "1000023193": {
 "league": "Liga Profesional (Argentina)",
 "game": "River Plate x Lanús",
@@ -68,46 +55,6 @@
 "football-data: Gimnasia L.P. x Newells Old Boys"
 ]
 },
-"5795520": {
-"league": "Premier League",
-"game": "Hull x Brighton",
-"ts": 1795356000,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 144,
-"best": [
-"Brighton menos de 5,5 escanteios",
-2.2,
-0.4829,
-0.0624
-],
-"matched": [
-"football-data: Hull x Brighton",
-"oddspapi: Hull City x Brighton & Hove Albion"
-]
-},
-"5795521": {
-"league": "Premier League",
-"game": "Liverpool x Man United",
-"ts": 1795365000,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 148,
-"best": [
-"Liverpool mais de 6,5 escanteios",
-2.5,
-0.3957,
--0.0107
-],
-"matched": [
-"football-data: Liverpool x Man United",
-"oddspapi: Liverpool FC x Manchester United"
-]
-},
 "5795517": {
 "league": "Premier League",
 "game": "Brentford x Everton",
@@ -120,98 +67,85 @@
 "best": [
 "Vitória Brentford",
 2.15,
-0.4819,
-0.036
+0.4852,
+0.0431
 ],
 "matched": [
 "football-data: Brentford x Everton",
 "oddspapi: Brentford FC x Everton FC"
 ]
 },
-"5943297": {
-"league": "Super League (Grécia)",
-"game": "Levadiakos x Atromitos",
-"ts": 1795356000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Levadiakos",
-2.45,
-0.4396,
-0.077
-],
-"matched": [
-"football-data: Levadeiakos x Atromitos"
-]
-},
-"5943300": {
-"league": "Super League (Grécia)",
-"game": "Panetolikos x NFC Volos",
-"ts": 1795359600,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Panetolikos",
-2.25,
-0.4148,
--0.0667
-],
-"matched": [
-"football-data: Panetolikos x Volos NFC"
-]
-},
-"5943299": {
-"league": "Super League (Grécia)",
-"game": "Panathinaikos x OFI Crete",
-"ts": 1795361400,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
+"5836946": {
+"league": "Championship",
+"game": "Bristol City x Wrexham",
+"ts": 1795549500,
+"sources": [],
+"markets_with_odds": 0,
 "best": null,
-"matched": [
-"football-data: Panathinaikos x OFI Crete"
-]
+"matched": []
 },
-"5943298": {
-"league": "Super League (Grécia)",
-"game": "Olympiacos x Iraklis",
-"ts": 1795366800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Menos de 2,5 gols",
-2.5,
-0.3818,
--0.0455
-],
-"matched": [
-"football-data: Olympiakos x Iraklis"
-]
+"5836947": {
+"league": "Championship",
+"game": "Cardiff x Preston",
+"ts": 1795549500,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
-"5943301": {
-"league": "Super League (Grécia)",
-"game": "PAOK Thessaloniki x Kifisia FC",
-"ts": 1795368600,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Menos de 2,5 gols",
-2.35,
-0.43,
-0.0104
-],
-"matched": [
-"football-data: PAOK x Kifisia"
-]
+"5836948": {
+"league": "Championship",
+"game": "Charlton x Lincoln",
+"ts": 1795549500,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836949": {
+"league": "Championship",
+"game": "Middlesbrough x Swansea",
+"ts": 1795549500,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836950": {
+"league": "Championship",
+"game": "Norwich x QPR",
+"ts": 1795549500,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836951": {
+"league": "Championship",
+"game": "Portsmouth x West Ham",
+"ts": 1795549500,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836952": {
+"league": "Championship",
+"game": "Sheff Utd x Southampton",
+"ts": 1795549500,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836953": {
+"league": "Championship",
+"game": "Wolves x Derby",
+"ts": 1795550400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
 "5943295": {
 "league": "Super League (Grécia)",
@@ -224,114 +158,11 @@
 "best": [
 "Menos de 2,5 gols",
 1.73,
-0.5633,
--0.0256
+0.5625,
+-0.0268
 ],
 "matched": [
 "football-data: Asteras Tripolis x Aris"
-]
-},
-"5105055": {
-"league": "Eliteserien (Noruega)",
-"game": "Aalesund x Rosenborg",
-"ts": 1795363200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Rosenborg",
-1.67,
-0.5263,
--0.121
-],
-"matched": [
-"football-data: Aalesund x Rosenborg"
-]
-},
-"5105053": {
-"league": "Eliteserien (Noruega)",
-"game": "KFUM x Brann",
-"ts": 1795363200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": null,
-"matched": [
-"football-data: KFUM Oslo x Brann"
-]
-},
-"5105054": {
-"league": "Eliteserien (Noruega)",
-"game": "Kristiansund x Sandefjord",
-"ts": 1795363200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Sandefjord",
-2.38,
-0.4116,
--0.0204
-],
-"matched": [
-"football-data: Kristiansund x Sandefjord"
-]
-},
-"5105056": {
-"league": "Eliteserien (Noruega)",
-"game": "Sarpsborg 08 x Lillestrøm",
-"ts": 1795371300,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Sarpsborg 08",
-2.2,
-0.4398,
--0.0324
-],
-"matched": [
-"football-data: Sarpsborg 08 x Lillestrom"
-]
-},
-"5804041": {
-"league": "Ekstraklasa (Polônia)",
-"game": "GKS Katowice x Lech Poznań",
-"ts": 1795355100,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Lech Poznań",
-1.95,
-0.4935,
--0.0377
-],
-"matched": [
-"football-data: GKS Katowice x Lech Poznan"
-]
-},
-"5804047": {
-"league": "Ekstraklasa (Polônia)",
-"game": "Wisła Płock x Legia Warszawa",
-"ts": 1795365000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Legia Warszawa",
-2.18,
-0.4424,
--0.0355
-],
-"matched": [
-"football-data: Wisla Plock x Legia"
 ]
 },
 "5804046": {
@@ -342,129 +173,6 @@
 "markets_with_odds": 0,
 "best": null,
 "matched": []
-},
-"5804303": {
-"league": "Super League (Suíça)",
-"game": "FC Zürich x St. Gallen",
-"ts": 1795352400,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória St. Gallen",
-1.94,
-0.5018,
--0.0265
-],
-"matched": [
-"football-data: Zurich x St. Gallen"
-]
-},
-"5804298": {
-"league": "Super League (Suíça)",
-"game": "Basel x Luzern",
-"ts": 1795361400,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Basel",
-2.22,
-0.4447,
--0.0127
-],
-"matched": [
-"football-data: Basel x Luzern"
-]
-},
-"5804299": {
-"league": "Super League (Suíça)",
-"game": "Lausanne x FC Vaduz",
-"ts": 1795361400,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Lausanne",
-2.12,
-0.4489,
--0.0483
-],
-"matched": [
-"football-data: Lausanne x Vaduz"
-]
-},
-"5749752": {
-"league": "Serie A (Itália)",
-"game": "Bologna x Udinese",
-"ts": 1795356000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Bologna",
-1.7,
-0.5695,
--0.0319
-],
-"matched": [
-"football-data: Bologna x Udinese"
-]
-},
-"5749759": {
-"league": "Serie A (Itália)",
-"game": "Sassuolo x Genoa",
-"ts": 1795356000,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 126,
-"best": [
-"Mais de 2,5 gols",
-1.91,
-0.524,
-0.0008
-],
-"matched": [
-"football-data: Sassuolo x Genoa",
-"oddspapi: Sassuolo Calcio x Genoa CFC"
-]
-},
-"5749750": {
-"league": "Serie A (Itália)",
-"game": "Milan x Frosinone",
-"ts": 1795366800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": null,
-"matched": [
-"football-data: Milan x Frosinone"
-]
-},
-"5749751": {
-"league": "Serie A (Itália)",
-"game": "Atalanta x Inter",
-"ts": 1795376700,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Inter",
-1.6,
-0.6166,
--0.0135
-],
-"matched": [
-"football-data: Atalanta x Inter"
-]
 },
 "5749756": {
 "league": "Serie A (Itália)",
@@ -477,29 +185,11 @@
 "best": [
 "Mais de 2,5 gols",
 1.62,
-0.6168,
--0.0008
+0.6132,
+-0.0067
 ],
 "matched": [
 "football-data: Monza x Fiorentina"
-]
-},
-"6665006": {
-"league": "MLS (EUA)",
-"game": "Nashville SC x Cincinnati",
-"ts": 1795381200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Cincinnati",
-2.46,
-0.2625,
--0.3542
-],
-"matched": [
-"football-data: Nashville SC x FC Cincinnati"
 ]
 },
 "6580835": {
@@ -513,8 +203,8 @@
 "best": [
 "Vitória Chicago",
 1.61,
-0.6093,
--0.0189
+0.6176,
+-0.0057
 ],
 "matched": [
 "football-data: Chicago Fire x Charlotte"
@@ -559,8 +249,8 @@
 "best": [
 "Total menos de 9,5 escanteios",
 2.5,
-0.4276,
-0.069
+0.4275,
+0.0687
 ],
 "matched": [
 "football-data: Guadalajara Chivas x Cruz Azul",
@@ -583,19 +273,6 @@
 ],
 "matched": [
 "football-data: Queretaro x Necaxa"
-]
-},
-"5103721": {
-"league": "Brasileirão Série A",
-"game": "Athletico Paranaense x Remo",
-"ts": 1795374000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": null,
-"matched": [
-"football-data: Athletico-PR x Remo"
 ]
 },
 "5103714": {
@@ -661,269 +338,23 @@
 "best": null,
 "matched": []
 },
-"5802997": {
-"league": "Ligue 1",
-"game": "Paris FC x Angers",
-"ts": 1795356000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Menos de 2,5 gols",
-2.3,
-0.4174,
--0.0399
-],
-"matched": [
-"football-data: Paris FC x Angers"
-]
-},
-"5802993": {
-"league": "Ligue 1",
-"game": "Lorient x Rennes",
-"ts": 1795364100,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-1.91,
-0.5491,
-0.0489
-],
-"matched": [
-"football-data: Lorient x Rennes"
-]
-},
-"5802994": {
-"league": "Ligue 1",
-"game": "Marseille x Le Mans",
-"ts": 1795376700,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 147,
-"best": [
-"Mais de 3,5 gols",
-2.25,
-0.4669,
-0.0506
-],
-"matched": [
-"football-data: Marseille x Le Mans",
-"oddspapi: Olympique Marseille x Le Mans FC"
-]
-},
-"5881224": {
-"league": "Bundesliga",
-"game": "Augsburg x Mainz",
-"ts": 1795357800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Mainz",
-2.38,
-0.3932,
--0.0642
-],
-"matched": [
-"football-data: Augsburg x Mainz"
-]
-},
-"5881232": {
-"league": "Bundesliga",
-"game": "Werder Bremen x Hamburger SV",
-"ts": 1795365000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Werder Bremen",
-1.67,
-0.5775,
--0.0356
-],
-"matched": [
-"football-data: Werder Bremen x Hamburg"
-]
-},
-"5781804": {
-"league": "Eredivisie",
-"game": "Ajax x ADO Den Haag",
-"ts": 1795354200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
+"5793966": {
+"league": "Premiership (Escócia)",
+"game": "Hibernian x Dundee FC",
+"ts": 1795549500,
+"sources": [],
+"markets_with_odds": 0,
 "best": null,
-"matched": [
-"football-data: Ajax x Den Haag"
-]
+"matched": []
 },
-"5781810": {
-"league": "Eredivisie",
-"game": "Sparta Rotterdam x AZ Alkmaar",
-"ts": 1795354200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória AZ Alkmaar",
-1.73,
-0.5081,
--0.121
-],
-"matched": [
-"football-data: Sparta Rotterdam x AZ Alkmaar"
-]
-},
-"5781809": {
-"league": "Eredivisie",
-"game": "Go Ahead Eagles x Fortuna Sittard",
-"ts": 1795362300,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Go Ahead Eagles",
-1.62,
-0.5817,
--0.0576
-],
-"matched": [
-"football-data: Go Ahead Eagles x For Sittard"
-]
-},
-"5811814": {
-"league": "Pro League (Bélgica)",
-"game": "Kortrijk x Union St.Gilloise",
-"ts": 1795359600,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Menos de 2,5 gols",
-2.3,
-0.434,
--0.0017
-],
-"matched": [
-"football-data: Kortrijk x St. Gilloise"
-]
-},
-"5811809": {
-"league": "Pro League (Bélgica)",
-"game": "Anderlecht x OH Leuven",
-"ts": 1795368600,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 148,
-"best": [
-"Mais de 3,5 gols",
-2.37,
-0.4318,
-0.0233
-],
-"matched": [
-"football-data: Anderlecht x Oud-Heverlee Leuven",
-"oddspapi: RSC Anderlecht x Oud-Heverlee Leuven"
-]
-},
-"5811816": {
-"league": "Pro League (Bélgica)",
-"game": "Lommel x Standard Liège",
-"ts": 1795371300,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Standard Liège",
-2.05,
-0.48,
--0.016
-],
-"matched": [
-"football-data: Lommel SK x Standard"
-]
-},
-"5739553": {
-"league": "Superliga (Dinamarca)",
-"game": "AC Horsens x Silkeborg",
-"ts": 1795352400,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória AC Horsens",
-2.28,
-0.463,
-0.0556
-],
-"matched": [
-"football-data: Horsens x Silkeborg"
-]
-},
-"5739550": {
-"league": "Superliga (Dinamarca)",
-"game": "Viborg x Randers FC",
-"ts": 1795352400,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
+"5793969": {
+"league": "Premiership (Escócia)",
+"game": "Rangers x Aberdeen",
+"ts": 1795550400,
+"sources": [],
+"markets_with_odds": 0,
 "best": null,
-"matched": [
-"football-data: Viborg x Randers FC"
-]
-},
-"5739548": {
-"league": "Superliga (Dinamarca)",
-"game": "Sønderjyske x OB",
-"ts": 1795359600,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória OB",
-2.24,
-0.441,
--0.0121
-],
-"matched": [
-"football-data: Sonderjyske x Odense"
-]
-},
-"5739552": {
-"league": "Superliga (Dinamarca)",
-"game": "Nordsjælland x FC København",
-"ts": 1795366800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória FC København",
-2.48,
-0.3612,
--0.1042
-],
-"matched": [
-"football-data: Nordsjaelland x FC Copenhagen"
-]
+"matched": []
 },
 "5739549": {
 "league": "Superliga (Dinamarca)",
@@ -936,21 +367,12 @@
 "best": [
 "Vitória Brøndby IF",
 2.5,
-0.4087,
-0.0217
+0.4083,
+0.0208
 ],
 "matched": [
 "football-data: Brondby x Midtjylland"
 ]
-},
-"1000022607": {
-"league": "Brasileirão Série B",
-"game": "Criciúma x Fortaleza",
-"ts": 1795374000,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
 },
 "1000022606": {
 "league": "Brasileirão Série B",
@@ -960,55 +382,6 @@
 "markets_with_odds": 0,
 "best": null,
 "matched": []
-},
-"5107665": {
-"league": "Allsvenskan (Suécia)",
-"game": "Häcken x Elfsborg",
-"ts": 1795352400,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Häcken",
-1.84,
-0.5014,
--0.0774
-],
-"matched": [
-"football-data: Hacken x Elfsborg"
-]
-},
-"5107668": {
-"league": "Allsvenskan (Suécia)",
-"game": "Sirius x Djurgården",
-"ts": 1795352400,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Sirius",
-2.28,
-0.4201,
--0.0421
-],
-"matched": [
-"football-data: Sirius x Djurgarden"
-]
-},
-"5107667": {
-"league": "Allsvenskan (Suécia)",
-"game": "Brommapojkarna x Halmstads BK",
-"ts": 1795361400,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": null,
-"matched": [
-"football-data: Brommapojkarna x Halmstad"
-]
 },
 "5107662": {
 "league": "Allsvenskan (Suécia)",
@@ -1022,8 +395,8 @@
 "best": [
 "Ambas marcam: sim",
 1.92,
-0.512,
--0.0169
+0.5151,
+-0.0109
 ],
 "matched": [
 "football-data: Hammarby x Goteborg",
@@ -1041,111 +414,11 @@
 "best": [
 "Vitória Kalmar FF",
 2.1,
-0.5116,
-0.0743
+0.5115,
+0.0742
 ],
 "matched": [
 "football-data: Orgryte x Kalmar"
-]
-},
-"5846023": {
-"league": "Bundesliga (Áustria)",
-"game": "Altach x Sturm Graz",
-"ts": 1795354200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Sturm Graz",
-1.92,
-0.5021,
--0.0359
-],
-"matched": [
-"football-data: Altach x Sturm Graz"
-]
-},
-"5846028": {
-"league": "Bundesliga (Áustria)",
-"game": "Wolfsberger AC x Ried",
-"ts": 1795354200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": null,
-"matched": [
-"football-data: Wolfsberger AC x Ried"
-]
-},
-"5846024": {
-"league": "Bundesliga (Áustria)",
-"game": "Austria Wien x Salzburg",
-"ts": 1795363200,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 143,
-"best": [
-"Vitória Salzburg",
-1.67,
-0.6275,
-0.0479
-],
-"matched": [
-"football-data: Austria Vienna x Salzburg",
-"oddspapi: FK Austria Wien x FC Salzburg"
-]
-},
-"5904804": {
-"league": "Süper Lig (Turquia)",
-"game": "Kasımpaşa x Alanyaspor",
-"ts": 1795352400,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Menos de 2,5 gols",
-1.95,
-0.5156,
-0.0055
-],
-"matched": [
-"football-data: Kasimpasa x Alanyaspor"
-]
-},
-"5904808": {
-"league": "Süper Lig (Turquia)",
-"game": "Konyaspor x Beşiktaş",
-"ts": 1795352400,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-1.7,
-0.5593,
--0.0491
-],
-"matched": [
-"football-data: Konyaspor x Besiktas"
-]
-},
-"5904803": {
-"league": "Süper Lig (Turquia)",
-"game": "Trabzonspor x Eyüpspor",
-"ts": 1795363200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": null,
-"matched": [
-"football-data: Trabzonspor x Eyupspor"
 ]
 },
 "5904805": {
@@ -1159,85 +432,11 @@
 "best": [
 "Vitória Başakşehir",
 1.76,
-0.5403,
--0.0491
+0.5385,
+-0.0523
 ],
 "matched": [
 "football-data: Buyuksehyr x Corum"
-]
-},
-"5868133": {
-"league": "La Liga",
-"game": "Barcelona x Villarreal",
-"ts": 1795352400,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 157,
-"best": [
-"Barcelona gols menos de 3,5",
-1.69,
-0.6584,
-0.1127
-],
-"matched": [
-"football-data: Barcelona x Villarreal",
-"oddspapi: FC Barcelona x Villarreal CF"
-]
-},
-"5868137": {
-"league": "La Liga",
-"game": "Racing Santander x Real Sociedad",
-"ts": 1795360500,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Real Sociedad",
-2.0,
-0.4788,
--0.0425
-],
-"matched": [
-"football-data: Santander x Sociedad"
-]
-},
-"5868136": {
-"league": "La Liga",
-"game": "Osasuna x Málaga",
-"ts": 1795368600,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-2.0,
-0.5107,
-0.0213
-],
-"matched": [
-"football-data: Osasuna x Malaga"
-]
-},
-"5868134": {
-"league": "La Liga",
-"game": "Getafe x Atlético Madrid",
-"ts": 1795377600,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Menos de 2,5 gols",
-1.8,
-0.5751,
-0.0352
-],
-"matched": [
-"football-data: Getafe x Ath Madrid"
 ]
 },
 "5868135": {
@@ -1251,8 +450,8 @@
 "best": [
 "Vitória Levante",
 2.15,
-0.488,
-0.0492
+0.4921,
+0.058
 ],
 "matched": [
 "football-data: Levante x Elche"
