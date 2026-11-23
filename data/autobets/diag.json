@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-23T02:15:44+00:00",
+"updated": "2026-11-23T13:12:50+00:00",
 "fixtures": {
 "1000023198": {
 "league": "Liga Profesional (Argentina)",
@@ -12,8 +12,8 @@
 "best": [
 "Vitória Gimnasia LP",
 2.14,
-0.4795,
-0.0262
+0.4762,
+0.0192
 ],
 "matched": [
 "football-data: Gimnasia L.P. x Newells Old Boys"
@@ -24,19 +24,17 @@
 "game": "Brentford x Everton",
 "ts": 1795464000,
 "sources": [
-"football-data",
-"oddspapi"
+"football-data"
 ],
-"markets_with_odds": 146,
+"markets_with_odds": 5,
 "best": [
 "Vitória Brentford",
 2.15,
-0.4852,
-0.0431
+0.4846,
+0.042
 ],
 "matched": [
-"football-data: Brentford x Everton",
-"oddspapi: Brentford FC x Everton FC"
+"football-data: Brentford x Everton"
 ]
 },
 "5836946": {
@@ -122,12 +120,84 @@
 "best": [
 "Menos de 2,5 gols",
 1.73,
-0.5624,
--0.0271
+0.5639,
+-0.0244
 ],
 "matched": [
 "football-data: Asteras Tripolis x Aris"
 ]
+},
+"5803668": {
+"league": "J1 League (Japão)",
+"game": "Avispa Fukuoka x Yokohama F.Marinos",
+"ts": 1795600800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803672": {
+"league": "J1 League (Japão)",
+"game": "Fagiano Okayama FC x Shimizu S-Pulse",
+"ts": 1795600800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803670": {
+"league": "J1 League (Japão)",
+"game": "FC Tokyo x Sanfrecce Hiroshima",
+"ts": 1795600800,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 139,
+"best": [
+"FC Tokyo menos de 3,5 escanteios",
+2.3,
+0.4451,
+0.0238
+],
+"matched": [
+"oddspapi: FC Tokyo x Sanfrecce Hiroshima"
+]
+},
+"5803669": {
+"league": "J1 League (Japão)",
+"game": "JEF United Chiba x Nagoya Grampus",
+"ts": 1795600800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803671": {
+"league": "J1 League (Japão)",
+"game": "Mito Hollyhock x Tokyo Verdy",
+"ts": 1795600800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803674": {
+"league": "J1 League (Japão)",
+"game": "V-Varen Nagasaki x Kawasaki Frontale",
+"ts": 1795600800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803673": {
+"league": "J1 League (Japão)",
+"game": "Urawa Red Diamonds x Cerezo Osaka",
+"ts": 1795602600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
 "5804046": {
 "league": "Ekstraklasa (Polônia)",
@@ -167,17 +237,17 @@
 "best": [
 "Vitória St. Louis City",
 2.36,
-0.426,
-0.0053
+0.4239,
+0.0004
 ],
 "matched": [
 "football-data: St. Louis City x Los Angeles FC"
 ]
 },
-"1000022851": {
-"league": "Liga MX (México)",
-"game": "8th ranked x 1st ranked",
-"ts": 1795564800,
+"6580839": {
+"league": "MLS (EUA)",
+"game": "San Jose x Houston",
+"ts": 1795575600,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -185,7 +255,7 @@
 },
 "1000022852": {
 "league": "Liga MX (México)",
-"game": "8th ranked x 1st ranked",
+"game": "León x Cruz Azul",
 "ts": 1795564800,
 "sources": [],
 "markets_with_odds": 0,
@@ -194,7 +264,16 @@
 },
 "1000022853": {
 "league": "Liga MX (México)",
-"game": "8th ranked x 1st ranked",
+"game": "Monterrey x América",
+"ts": 1795564800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"1000022851": {
+"league": "Liga MX (México)",
+"game": "Pachuca x Chivas",
 "ts": 1795564800,
 "sources": [],
 "markets_with_odds": 0,
@@ -259,10 +338,19 @@
 "league": "Premiership (Escócia)",
 "game": "Rangers x Aberdeen",
 "ts": 1795550400,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 37,
+"best": [
+"Mais de 3,5 gols",
+2.05,
+0.5004,
+0.0258
+],
+"matched": [
+"oddspapi: Glasgow Rangers x Aberdeen FC"
+]
 },
 "5739549": {
 "league": "Superliga (Dinamarca)",
@@ -275,8 +363,8 @@
 "best": [
 "Vitória Brøndby IF",
 2.5,
-0.4083,
-0.0208
+0.4081,
+0.0204
 ],
 "matched": [
 "football-data: Brondby x Midtjylland"
@@ -287,19 +375,12 @@
 "game": "Hammarby x IFK Göteborg",
 "ts": 1795456800,
 "sources": [
-"football-data",
-"oddspapi"
+"football-data"
 ],
-"markets_with_odds": 37,
-"best": [
-"Ambas marcam: sim",
-1.92,
-0.515,
--0.0113
-],
+"markets_with_odds": 3,
+"best": null,
 "matched": [
-"football-data: Hammarby x Goteborg",
-"oddspapi: Hammarby IF x IFK Goteborg"
+"football-data: Hammarby x Goteborg"
 ]
 },
 "5107664": {
@@ -343,17 +424,19 @@
 "game": "Levante x Elche",
 "ts": 1795464000,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 5,
+"markets_with_odds": 144,
 "best": [
 "Vitória Levante",
 2.15,
-0.49,
-0.0536
+0.4902,
+0.0539
 ],
 "matched": [
-"football-data: Levante x Elche"
+"football-data: Levante x Elche",
+"oddspapi: Levante UD x Elche CF"
 ]
 }
 }
