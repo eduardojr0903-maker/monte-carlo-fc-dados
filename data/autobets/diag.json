@@ -1,42 +1,6 @@
 {
-"updated": "2026-11-22T20:15:31+00:00",
+"updated": "2026-11-23T02:15:44+00:00",
 "fixtures": {
-"1000023193": {
-"league": "Liga Profesional (Argentina)",
-"game": "River Plate x Lanús",
-"ts": 1795384800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória River Plate",
-1.61,
-0.5706,
--0.0813
-],
-"matched": [
-"football-data: River Plate x Lanus"
-]
-},
-"1000023192": {
-"league": "Liga Profesional (Argentina)",
-"game": "Instituto x Huracán",
-"ts": 1795395600,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Instituto",
-2.02,
-0.5217,
-0.0537
-],
-"matched": [
-"football-data: Instituto x Huracan"
-]
-},
 "1000023198": {
 "league": "Liga Profesional (Argentina)",
 "game": "Gimnasia LP x Newell's Old Boys",
@@ -48,8 +12,8 @@
 "best": [
 "Vitória Gimnasia LP",
 2.14,
-0.4816,
-0.0306
+0.4795,
+0.0262
 ],
 "matched": [
 "football-data: Gimnasia L.P. x Newells Old Boys"
@@ -158,8 +122,8 @@
 "best": [
 "Menos de 2,5 gols",
 1.73,
-0.5625,
--0.0268
+0.5624,
+-0.0271
 ],
 "matched": [
 "football-data: Asteras Tripolis x Aris"
@@ -185,39 +149,12 @@
 "best": [
 "Mais de 2,5 gols",
 1.62,
-0.6132,
--0.0067
+0.6113,
+-0.0097
 ],
 "matched": [
 "football-data: Monza x Fiorentina"
 ]
-},
-"6580835": {
-"league": "MLS (EUA)",
-"game": "Chicago x Charlotte FC",
-"ts": 1795390200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Chicago",
-1.61,
-0.6176,
--0.0057
-],
-"matched": [
-"football-data: Chicago Fire x Charlotte"
-]
-},
-"6665007": {
-"league": "MLS (EUA)",
-"game": "Vancouver x Salt Lake",
-"ts": 1795397400,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
 },
 "6580840": {
 "league": "MLS (EUA)",
@@ -230,86 +167,48 @@
 "best": [
 "Vitória St. Louis City",
 2.36,
-0.4241,
-0.0009
+0.426,
+0.0053
 ],
 "matched": [
 "football-data: St. Louis City x Los Angeles FC"
 ]
 },
-"1000014650": {
+"1000022851": {
 "league": "Liga MX (México)",
-"game": "Chivas x Cruz Azul",
-"ts": 1795388820,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 148,
-"best": [
-"Total menos de 9,5 escanteios",
-2.5,
-0.4275,
-0.0687
-],
-"matched": [
-"football-data: Guadalajara Chivas x Cruz Azul",
-"oddspapi: CD Guadalajara x CF Cruz Azul"
-]
+"game": "8th ranked x 1st ranked",
+"ts": 1795564800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
-"1000014651": {
+"1000022852": {
 "league": "Liga MX (México)",
-"game": "Querétaro x Necaxa",
-"ts": 1795396200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Querétaro",
-2.02,
-0.4069,
--0.1782
-],
-"matched": [
-"football-data: Queretaro x Necaxa"
-]
+"game": "8th ranked x 1st ranked",
+"ts": 1795564800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
-"5103714": {
-"league": "Brasileirão Série A",
-"game": "Fluminense x Mirassol",
-"ts": 1795383000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Fluminense",
-1.63,
-0.5906,
--0.0374
-],
-"matched": [
-"football-data: Fluminense x Mirassol"
-]
+"1000022853": {
+"league": "Liga MX (México)",
+"game": "8th ranked x 1st ranked",
+"ts": 1795564800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
-"5103718": {
-"league": "Brasileirão Série A",
-"game": "RB Bragantino x Vasco da Gama",
-"ts": 1795386600,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Vasco da Gama",
-2.1,
-0.3878,
--0.1856
-],
-"matched": [
-"football-data: Bragantino x Vasco"
-]
+"1000022854": {
+"league": "Liga MX (México)",
+"game": "Toluca x Atlas",
+"ts": 1795564800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
 "5103720": {
 "league": "Brasileirão Série A",
@@ -333,6 +232,15 @@
 "league": "Brasileirão Série A",
 "game": "Santos x Grêmio",
 "ts": 1795478400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5103733": {
+"league": "Brasileirão Série A",
+"game": "Chapecoense x Palmeiras",
+"ts": 1795554000,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -374,15 +282,6 @@
 "football-data: Brondby x Midtjylland"
 ]
 },
-"1000022606": {
-"league": "Brasileirão Série B",
-"game": "Atlético-GO x Vila Nova",
-"ts": 1795383000,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
-},
 "5107662": {
 "league": "Allsvenskan (Suécia)",
 "game": "Hammarby x IFK Göteborg",
@@ -395,8 +294,8 @@
 "best": [
 "Ambas marcam: sim",
 1.92,
-0.5151,
--0.0109
+0.515,
+-0.0113
 ],
 "matched": [
 "football-data: Hammarby x Goteborg",
@@ -432,8 +331,8 @@
 "best": [
 "Vitória Başakşehir",
 1.76,
-0.5385,
--0.0523
+0.5384,
+-0.0525
 ],
 "matched": [
 "football-data: Buyuksehyr x Corum"
@@ -450,8 +349,8 @@
 "best": [
 "Vitória Levante",
 2.15,
-0.4921,
-0.058
+0.49,
+0.0536
 ],
 "matched": [
 "football-data: Levante x Elche"
