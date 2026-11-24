@@ -1,41 +1,14 @@
 {
-"updated": "2026-11-23T13:12:50+00:00",
+"updated": "2026-11-24T02:46:10+00:00",
 "fixtures": {
-"1000023198": {
+"1000023197": {
 "league": "Liga Profesional (Argentina)",
-"game": "Gimnasia LP x Newell's Old Boys",
-"ts": 1795464000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Gimnasia LP",
-2.14,
-0.4762,
-0.0192
-],
-"matched": [
-"football-data: Gimnasia L.P. x Newells Old Boys"
-]
-},
-"5795517": {
-"league": "Premier League",
-"game": "Brentford x Everton",
-"ts": 1795464000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Brentford",
-2.15,
-0.4846,
-0.042
-],
-"matched": [
-"football-data: Brentford x Everton"
-]
+"game": "Boca Juniors x Independiente Rivadavia",
+"ts": 1795651200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
 "5836946": {
 "league": "Championship",
@@ -109,23 +82,50 @@
 "best": null,
 "matched": []
 },
-"5943295": {
-"league": "Super League (Grécia)",
-"game": "Asteras Tripolis x Aris Thessaloniki",
-"ts": 1795446000,
+"5836954": {
+"league": "Championship",
+"game": "Bolton x West Brom",
+"ts": 1795635900,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836955": {
+"league": "Championship",
+"game": "Burnley x Birmingham",
+"ts": 1795635900,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836957": {
+"league": "Championship",
+"game": "Watford x Blackburn",
+"ts": 1795635900,
 "sources": [
-"football-data"
+"oddspapi"
 ],
-"markets_with_odds": 5,
+"markets_with_odds": 148,
 "best": [
-"Menos de 2,5 gols",
-1.73,
-0.5639,
--0.0244
+"Blackburn mais de 1,5",
+2.5,
+0.4169,
+0.0421
 ],
 "matched": [
-"football-data: Asteras Tripolis x Aris"
+"oddspapi: Watford FC x Blackburn Rovers"
 ]
+},
+"5836956": {
+"league": "Championship",
+"game": "Stoke x Millwall",
+"ts": 1795636800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
 "5803668": {
 "league": "J1 League (Japão)",
@@ -199,51 +199,6 @@
 "best": null,
 "matched": []
 },
-"5804046": {
-"league": "Ekstraklasa (Polônia)",
-"game": "Wieczysta Kraków x Motor Lublin",
-"ts": 1795456800,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
-},
-"5749756": {
-"league": "Serie A (Itália)",
-"game": "Monza x Fiorentina",
-"ts": 1795463100,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Mais de 2,5 gols",
-1.62,
-0.6113,
--0.0097
-],
-"matched": [
-"football-data: Monza x Fiorentina"
-]
-},
-"6580840": {
-"league": "MLS (EUA)",
-"game": "St. Louis City x LAFC",
-"ts": 1795482000,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória St. Louis City",
-2.36,
-0.4239,
-0.0004
-],
-"matched": [
-"football-data: St. Louis City x Los Angeles FC"
-]
-},
 "6580839": {
 "league": "MLS (EUA)",
 "game": "San Jose x Houston",
@@ -253,64 +208,10 @@
 "best": null,
 "matched": []
 },
-"1000022852": {
-"league": "Liga MX (México)",
-"game": "León x Cruz Azul",
-"ts": 1795564800,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
-},
-"1000022853": {
-"league": "Liga MX (México)",
-"game": "Monterrey x América",
-"ts": 1795564800,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
-},
-"1000022851": {
-"league": "Liga MX (México)",
-"game": "Pachuca x Chivas",
-"ts": 1795564800,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
-},
 "1000022854": {
 "league": "Liga MX (México)",
 "game": "Toluca x Atlas",
-"ts": 1795564800,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
-},
-"5103720": {
-"league": "Brasileirão Série A",
-"game": "Internacional x Vitória",
-"ts": 1795473000,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
-},
-"5103715": {
-"league": "Brasileirão Série A",
-"game": "Botafogo x São Paulo",
-"ts": 1795474800,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
-},
-"5103716": {
-"league": "Brasileirão Série A",
-"game": "Santos x Grêmio",
-"ts": 1795478400,
+"ts": 1795654800,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -320,6 +221,15 @@
 "league": "Brasileirão Série A",
 "game": "Chapecoense x Palmeiras",
 "ts": 1795554000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5103719": {
+"league": "Brasileirão Série A",
+"game": "Atlético-MG x Corinthians",
+"ts": 1795647600,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -350,93 +260,6 @@
 ],
 "matched": [
 "oddspapi: Glasgow Rangers x Aberdeen FC"
-]
-},
-"5739549": {
-"league": "Superliga (Dinamarca)",
-"game": "Brøndby IF x FC Midtjylland",
-"ts": 1795456800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Brøndby IF",
-2.5,
-0.4081,
-0.0204
-],
-"matched": [
-"football-data: Brondby x Midtjylland"
-]
-},
-"5107662": {
-"league": "Allsvenskan (Suécia)",
-"game": "Hammarby x IFK Göteborg",
-"ts": 1795456800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": null,
-"matched": [
-"football-data: Hammarby x Goteborg"
-]
-},
-"5107664": {
-"league": "Allsvenskan (Suécia)",
-"game": "Örgryte x Kalmar FF",
-"ts": 1795456800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Kalmar FF",
-2.1,
-0.5115,
-0.0742
-],
-"matched": [
-"football-data: Orgryte x Kalmar"
-]
-},
-"5904805": {
-"league": "Süper Lig (Turquia)",
-"game": "Başakşehir x Çorum FK",
-"ts": 1795453200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 5,
-"best": [
-"Vitória Başakşehir",
-1.76,
-0.5384,
--0.0525
-],
-"matched": [
-"football-data: Buyuksehyr x Corum"
-]
-},
-"5868135": {
-"league": "La Liga",
-"game": "Levante x Elche",
-"ts": 1795464000,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 144,
-"best": [
-"Vitória Levante",
-2.15,
-0.4902,
-0.0539
-],
-"matched": [
-"football-data: Levante x Elche",
-"oddspapi: Levante UD x Elche CF"
 ]
 }
 }
