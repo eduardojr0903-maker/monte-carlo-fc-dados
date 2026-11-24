@@ -1,120 +1,208 @@
 {
-"updated": "2026-11-24T02:46:10+00:00",
+"updated": "2026-11-24T14:15:10+00:00",
 "fixtures": {
 "1000023197": {
 "league": "Liga Profesional (Argentina)",
 "game": "Boca Juniors x Independiente Rivadavia",
 "ts": 1795651200,
-"sources": [],
-"markets_with_odds": 0,
+"sources": [
+"football-data"
+],
+"markets_with_odds": 3,
 "best": null,
-"matched": []
+"matched": [
+"football-data: Boca Juniors x Ind. Rivadavia"
+]
 },
 "5836946": {
 "league": "Championship",
 "game": "Bristol City x Wrexham",
 "ts": 1795549500,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 5,
+"best": [
+"Mais de 2,5 gols",
+2.2,
+0.4497,
+-0.0107
+],
+"matched": [
+"football-data: Bristol City x Wrexham"
+]
 },
 "5836947": {
 "league": "Championship",
 "game": "Cardiff x Preston",
 "ts": 1795549500,
-"sources": [],
-"markets_with_odds": 0,
+"sources": [
+"football-data"
+],
+"markets_with_odds": 5,
 "best": null,
-"matched": []
+"matched": [
+"football-data: Cardiff x Preston"
+]
 },
 "5836948": {
 "league": "Championship",
 "game": "Charlton x Lincoln",
 "ts": 1795549500,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 5,
+"best": [
+"Mais de 2,5 gols",
+2.1,
+0.4796,
+0.0072
+],
+"matched": [
+"football-data: Charlton x Lincoln"
+]
 },
 "5836949": {
 "league": "Championship",
 "game": "Middlesbrough x Swansea",
 "ts": 1795549500,
-"sources": [],
-"markets_with_odds": 0,
+"sources": [
+"football-data"
+],
+"markets_with_odds": 5,
 "best": null,
-"matched": []
+"matched": [
+"football-data: Middlesbrough x Swansea"
+]
 },
 "5836950": {
 "league": "Championship",
 "game": "Norwich x QPR",
 "ts": 1795549500,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 5,
+"best": [
+"Menos de 2,5 gols",
+2.2,
+0.4389,
+-0.0343
+],
+"matched": [
+"football-data: Norwich x QPR"
+]
 },
 "5836951": {
 "league": "Championship",
 "game": "Portsmouth x West Ham",
 "ts": 1795549500,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data",
+"oddspapi"
+],
+"markets_with_odds": 148,
+"best": [
+"West Ham menos de 5,5 escanteios",
+1.97,
+0.5194,
+0.0233
+],
+"matched": [
+"football-data: Portsmouth x West Ham",
+"oddspapi: Portsmouth FC x West Ham United"
+]
 },
 "5836952": {
 "league": "Championship",
 "game": "Sheff Utd x Southampton",
 "ts": 1795549500,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 5,
+"best": [
+"Mais de 2,5 gols",
+1.73,
+0.5791,
+0.0019
+],
+"matched": [
+"football-data: Sheffield United x Southampton"
+]
 },
 "5836953": {
 "league": "Championship",
 "game": "Wolves x Derby",
 "ts": 1795550400,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 5,
+"best": [
+"Mais de 2,5 gols",
+1.67,
+0.6001,
+0.0021
+],
+"matched": [
+"football-data: Wolves x Derby"
+]
 },
 "5836954": {
 "league": "Championship",
 "game": "Bolton x West Brom",
 "ts": 1795635900,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 5,
+"best": [
+"Mais de 2,5 gols",
+1.73,
+0.587,
+0.0155
+],
+"matched": [
+"football-data: Bolton x West Brom"
+]
 },
 "5836955": {
 "league": "Championship",
 "game": "Burnley x Birmingham",
 "ts": 1795635900,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 5,
+"best": [
+"Mais de 2,5 gols",
+1.73,
+0.563,
+-0.026
+],
+"matched": [
+"football-data: Burnley x Birmingham"
+]
 },
 "5836957": {
 "league": "Championship",
 "game": "Watford x Blackburn",
 "ts": 1795635900,
 "sources": [
+"football-data",
 "oddspapi"
 ],
 "markets_with_odds": 148,
 "best": [
-"Blackburn mais de 1,5",
-2.5,
-0.4169,
-0.0421
+"Mais de 2,5 gols",
+1.91,
+0.5211,
+-0.0047
 ],
 "matched": [
+"football-data: Watford x Blackburn",
 "oddspapi: Watford FC x Blackburn Rovers"
 ]
 },
@@ -122,55 +210,91 @@
 "league": "Championship",
 "game": "Stoke x Millwall",
 "ts": 1795636800,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 5,
+"best": [
+"Mais de 2,5 gols",
+2.0,
+0.519,
+0.038
+],
+"matched": [
+"football-data: Stoke x Millwall"
+]
 },
 "5803668": {
 "league": "J1 League (Japão)",
 "game": "Avispa Fukuoka x Yokohama F.Marinos",
 "ts": 1795600800,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 3,
+"best": [
+"Vitória Yokohama F.Marinos",
+2.2,
+0.4108,
+-0.0961
+],
+"matched": [
+"football-data: Avispa Fukuoka x Yokohama F. Marinos"
+]
 },
 "5803672": {
 "league": "J1 League (Japão)",
 "game": "Fagiano Okayama FC x Shimizu S-Pulse",
 "ts": 1795600800,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 3,
+"best": [
+"Vitória Fagiano Okayama FC",
+2.0,
+0.4952,
+-0.0096
+],
+"matched": [
+"football-data: Okayama x Shimizu S-Pulse"
+]
 },
 "5803670": {
 "league": "J1 League (Japão)",
 "game": "FC Tokyo x Sanfrecce Hiroshima",
 "ts": 1795600800,
 "sources": [
-"oddspapi"
+"football-data"
 ],
-"markets_with_odds": 139,
+"markets_with_odds": 3,
 "best": [
-"FC Tokyo menos de 3,5 escanteios",
+"Vitória FC Tokyo",
 2.3,
-0.4451,
-0.0238
+0.3926,
+-0.0971
 ],
 "matched": [
-"oddspapi: FC Tokyo x Sanfrecce Hiroshima"
+"football-data: FC Tokyo x Sanfrecce Hiroshima"
 ]
 },
 "5803669": {
 "league": "J1 League (Japão)",
 "game": "JEF United Chiba x Nagoya Grampus",
 "ts": 1795600800,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 3,
+"best": [
+"Vitória Nagoya Grampus",
+2.1,
+0.4293,
+-0.0985
+],
+"matched": [
+"football-data: Chiba x Nagoya Grampus"
+]
 },
 "5803671": {
 "league": "J1 League (Japão)",
@@ -185,70 +309,152 @@
 "league": "J1 League (Japão)",
 "game": "V-Varen Nagasaki x Kawasaki Frontale",
 "ts": 1795600800,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 3,
+"best": [
+"Vitória Kawasaki Frontale",
+1.81,
+0.4865,
+-0.1194
+],
+"matched": [
+"football-data: V-Varen Nagasaki x Kawasaki Frontale"
+]
 },
 "5803673": {
 "league": "J1 League (Japão)",
 "game": "Urawa Red Diamonds x Cerezo Osaka",
 "ts": 1795602600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data",
+"oddspapi"
+],
+"markets_with_odds": 141,
+"best": [
+"Vitória Urawa Red Diamonds",
+1.76,
+0.5525,
+-0.0276
+],
+"matched": [
+"football-data: Urawa Reds x Cerezo Osaka",
+"oddspapi: Urawa Red Diamonds x Cerezo Osaka"
+]
 },
 "6580839": {
 "league": "MLS (EUA)",
 "game": "San Jose x Houston",
 "ts": 1795575600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 3,
+"best": [
+"Vitória San Jose",
+2.05,
+0.5403,
+0.1076
+],
+"matched": [
+"football-data: San Jose Earthquakes x Houston Dynamo"
+]
 },
 "1000022854": {
 "league": "Liga MX (México)",
 "game": "Toluca x Atlas",
 "ts": 1795654800,
-"sources": [],
-"markets_with_odds": 0,
+"sources": [
+"football-data"
+],
+"markets_with_odds": 3,
 "best": null,
-"matched": []
+"matched": [
+"football-data: Toluca x Atlas"
+]
+},
+"1000022853": {
+"league": "Liga MX (México)",
+"game": "Monterrey x América",
+"ts": 1795662600,
+"sources": [
+"football-data"
+],
+"markets_with_odds": 3,
+"best": [
+"Vitória Monterrey",
+2.33,
+0.3895,
+-0.0924
+],
+"matched": [
+"football-data: Monterrey x Club America"
+]
 },
 "5103733": {
 "league": "Brasileirão Série A",
 "game": "Chapecoense x Palmeiras",
 "ts": 1795554000,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 3,
+"best": [
+"Vitória Palmeiras",
+2.05,
+0.5871,
+0.2036
+],
+"matched": [
+"football-data: Chapecoense-SC x Palmeiras",
+"oddspapi: Chapecoense SC x SE Palmeiras SP"
+]
 },
 "5103719": {
 "league": "Brasileirão Série A",
 "game": "Atlético-MG x Corinthians",
 "ts": 1795647600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data"
+],
+"markets_with_odds": 3,
+"best": [
+"Vitória Atlético-MG",
+2.33,
+0.459,
+0.0694
+],
+"matched": [
+"football-data: Atletico-MG x Corinthians"
+]
 },
 "5793966": {
 "league": "Premiership (Escócia)",
 "game": "Hibernian x Dundee FC",
 "ts": 1795549500,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"football-data",
+"oddspapi"
+],
+"markets_with_odds": 150,
+"best": [
+"Mais de 2,5 gols",
+1.67,
+0.5945,
+-0.0071
+],
+"matched": [
+"football-data: Hibernian x Dundee",
+"oddspapi: Hibernian FC x Dundee FC"
+]
 },
 "5793969": {
 "league": "Premiership (Escócia)",
 "game": "Rangers x Aberdeen",
 "ts": 1795550400,
 "sources": [
+"football-data",
 "oddspapi"
 ],
 "markets_with_odds": 37,
@@ -259,6 +465,7 @@
 0.0258
 ],
 "matched": [
+"football-data: Rangers x Aberdeen",
 "oddspapi: Glasgow Rangers x Aberdeen FC"
 ]
 }
