@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-25T00:25:33+00:00",
+"updated": "2026-11-25T09:05:22+00:00",
 "fixtures": {
 "1000023197": {
 "league": "Liga Profesional (Argentina)",
@@ -19,17 +19,19 @@
 "game": "Bolton x West Brom",
 "ts": 1795635900,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 5,
+"markets_with_odds": 152,
 "best": [
-"Mais de 2,5 gols",
-1.73,
-0.5871,
-0.0156
+"Bolton com mais escanteios",
+2.3,
+0.4586,
+0.0547
 ],
 "matched": [
-"football-data: Bolton x West Brom"
+"football-data: Bolton x West Brom",
+"oddspapi: Bolton Wanderers x West Bromwich Albion"
 ]
 },
 "5836955": {
@@ -37,17 +39,19 @@
 "game": "Burnley x Birmingham",
 "ts": 1795635900,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 5,
+"markets_with_odds": 144,
 "best": [
-"Mais de 2,5 gols",
-1.73,
-0.5647,
--0.023
+"Burnley mais de 4,5 escanteios",
+1.97,
+0.5289,
+0.042
 ],
 "matched": [
-"football-data: Burnley x Birmingham"
+"football-data: Burnley x Birmingham",
+"oddspapi: Burnley FC x Birmingham City"
 ]
 },
 "5836957": {
@@ -88,136 +92,22 @@
 "football-data: Stoke x Millwall"
 ]
 },
-"5803668": {
-"league": "J1 League (Japão)",
-"game": "Avispa Fukuoka x Yokohama F.Marinos",
-"ts": 1795600800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Yokohama F.Marinos",
-2.2,
-0.4108,
--0.0961
-],
-"matched": [
-"football-data: Avispa Fukuoka x Yokohama F. Marinos"
-]
-},
-"5803672": {
-"league": "J1 League (Japão)",
-"game": "Fagiano Okayama FC x Shimizu S-Pulse",
-"ts": 1795600800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Fagiano Okayama FC",
-2.0,
-0.4952,
--0.0096
-],
-"matched": [
-"football-data: Okayama x Shimizu S-Pulse"
-]
-},
-"5803670": {
-"league": "J1 League (Japão)",
-"game": "FC Tokyo x Sanfrecce Hiroshima",
-"ts": 1795600800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória FC Tokyo",
-2.3,
-0.3922,
--0.0979
-],
-"matched": [
-"football-data: FC Tokyo x Sanfrecce Hiroshima"
-]
-},
-"5803669": {
-"league": "J1 League (Japão)",
-"game": "JEF United Chiba x Nagoya Grampus",
-"ts": 1795600800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Nagoya Grampus",
-2.1,
-0.4293,
--0.0985
-],
-"matched": [
-"football-data: Chiba x Nagoya Grampus"
-]
-},
-"5803671": {
-"league": "J1 League (Japão)",
-"game": "Mito Hollyhock x Tokyo Verdy",
-"ts": 1795600800,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
-},
-"5803674": {
-"league": "J1 League (Japão)",
-"game": "V-Varen Nagasaki x Kawasaki Frontale",
-"ts": 1795600800,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Kawasaki Frontale",
-1.81,
-0.4865,
--0.1194
-],
-"matched": [
-"football-data: V-Varen Nagasaki x Kawasaki Frontale"
-]
-},
 "5803673": {
 "league": "J1 League (Japão)",
 "game": "Urawa Red Diamonds x Cerezo Osaka",
 "ts": 1795602600,
 "sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 141,
-"best": [
-"Vitória Urawa Red Diamonds",
-1.76,
-0.5514,
--0.0295
-],
-"matched": [
-"football-data: Urawa Reds x Cerezo Osaka",
-"oddspapi: Urawa Red Diamonds x Cerezo Osaka"
-]
-},
-"6580839": {
-"league": "MLS (EUA)",
-"game": "San Jose x Houston",
-"ts": 1795575600,
-"sources": [
 "football-data"
 ],
 "markets_with_odds": 3,
-"best": null,
+"best": [
+"Vitória Urawa Red Diamonds",
+1.76,
+0.5513,
+-0.0298
+],
 "matched": [
-"football-data: San Jose Earthquakes x Houston Dynamo"
+"football-data: Urawa Reds x Cerezo Osaka"
 ]
 },
 "1000022854": {
@@ -225,12 +115,19 @@
 "game": "Toluca x Atlas",
 "ts": 1795654800,
 "sources": [
-"football-data"
+"football-data",
+"oddspapi"
 ],
-"markets_with_odds": 3,
-"best": null,
+"markets_with_odds": 147,
+"best": [
+"Total menos de 10,5 escanteios",
+2.25,
+0.4687,
+0.0546
+],
 "matched": [
-"football-data: Toluca x Atlas"
+"football-data: Toluca x Atlas",
+"oddspapi: Deportivo Toluca FC x Atlas FC"
 ]
 },
 "1000022853": {
@@ -244,11 +141,47 @@
 "best": [
 "Vitória Monterrey",
 2.33,
-0.3896,
--0.0923
+0.4009,
+-0.066
 ],
 "matched": [
 "football-data: Monterrey x Club America"
+]
+},
+"1000022851": {
+"league": "Liga MX (México)",
+"game": "Pachuca x Chivas",
+"ts": 1795741200,
+"sources": [
+"football-data"
+],
+"markets_with_odds": 3,
+"best": [
+"Vitória Chivas",
+2.5,
+0.4056,
+0.0141
+],
+"matched": [
+"football-data: Pachuca x Guadalajara Chivas"
+]
+},
+"1000022852": {
+"league": "Liga MX (México)",
+"game": "León x Cruz Azul",
+"ts": 1795749000,
+"sources": [
+"football-data"
+],
+"markets_with_odds": 3,
+"best": [
+"Vitória Cruz Azul",
+2.15,
+0.4882,
+0.0495
+],
+"matched": [
+"football-data: Club Leon x Cruz Azul"
 ]
 },
 "5103719": {
@@ -259,12 +192,7 @@
 "football-data"
 ],
 "markets_with_odds": 3,
-"best": [
-"Vitória Atlético-MG",
-2.33,
-0.4673,
-0.0888
-],
+"best": null,
 "matched": [
 "football-data: Atletico-MG x Corinthians"
 ]
