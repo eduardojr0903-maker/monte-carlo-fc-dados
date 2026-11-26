@@ -1,18 +1,23 @@
 {
-"updated": "2026-11-25T19:48:53+00:00",
+"updated": "2026-11-26T04:05:23+00:00",
 "fixtures": {
-"1000023197": {
-"league": "Liga Profesional (Argentina)",
-"game": "Boca Juniors x Independiente Rivadavia",
-"ts": 1795651200,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
+"5795533": {
+"league": "Premier League",
+"game": "Nottm Forest x Chelsea",
+"ts": 1795809600,
+"sources": [],
+"markets_with_odds": 0,
 "best": null,
-"matched": [
-"football-data: Boca Juniors x Ind. Rivadavia"
-]
+"matched": []
+},
+"5836965": {
+"league": "Championship",
+"game": "Southampton x Middlesbrough",
+"ts": 1795809600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
 "5804054": {
 "league": "Ekstraklasa (Polônia)",
@@ -41,43 +46,32 @@
 "best": null,
 "matched": []
 },
-"1000022854": {
-"league": "Liga MX (México)",
-"game": "Toluca x Atlas",
-"ts": 1795654800,
-"sources": [
-"football-data",
-"oddspapi"
-],
-"markets_with_odds": 147,
-"best": [
-"Total menos de 10,5 escanteios",
-2.25,
-0.4687,
-0.0546
-],
-"matched": [
-"football-data: Toluca x Atlas",
-"oddspapi: Deportivo Toluca FC x Atlas FC"
-]
+"5887685": {
+"league": "Liga Portugal",
+"game": "Marítimo x Nacional",
+"ts": 1795810500,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
-"1000022853": {
-"league": "Liga MX (México)",
-"game": "Monterrey x América",
-"ts": 1795662600,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": [
-"Vitória Monterrey",
-2.33,
-0.4014,
--0.0648
-],
-"matched": [
-"football-data: Monterrey x Club America"
-]
+"6580842": {
+"league": "MLS (EUA)",
+"game": "Columbus x Inter Miami CF",
+"ts": 1795827600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"6665016": {
+"league": "MLS (EUA)",
+"game": "Salt Lake x Vancouver",
+"ts": 1795834800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
 "1000022851": {
 "league": "Liga MX (México)",
@@ -90,8 +84,8 @@
 "best": [
 "Vitória Chivas",
 2.5,
-0.4056,
-0.0141
+0.405,
+0.0126
 ],
 "matched": [
 "football-data: Pachuca x Guadalajara Chivas"
@@ -108,24 +102,11 @@
 "best": [
 "Vitória Cruz Azul",
 2.15,
-0.4882,
-0.0495
+0.4934,
+0.0609
 ],
 "matched": [
 "football-data: Club Leon x Cruz Azul"
-]
-},
-"5103719": {
-"league": "Brasileirão Série A",
-"game": "Atlético-MG x Corinthians",
-"ts": 1795647600,
-"sources": [
-"football-data"
-],
-"markets_with_odds": 3,
-"best": null,
-"matched": [
-"football-data: Atletico-MG x Corinthians"
 ]
 },
 "5103726": {
@@ -140,6 +121,15 @@
 "matched": [
 "football-data: Sao Paulo x Remo"
 ]
+},
+"5103724": {
+"league": "Brasileirão Série A",
+"game": "Fluminense x Cruzeiro",
+"ts": 1795820400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
 },
 "5803002": {
 "league": "Ligue 1",
@@ -186,6 +176,15 @@
 "best": null,
 "matched": []
 },
+"1000022608": {
+"league": "Brasileirão Série B",
+"game": "Vila Nova x Atlético-GO",
+"ts": 1795820400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5881735": {
 "league": "2. Bundesliga",
 "game": "Bochum x Darmstadt",
@@ -226,6 +225,15 @@
 "league": "Süper Lig (Turquia)",
 "game": "Rizespor x Kasımpaşa",
 "ts": 1795798800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5868146": {
+"league": "La Liga",
+"game": "Levante x Racing Santander",
+"ts": 1795809600,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
