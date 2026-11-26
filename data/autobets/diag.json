@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-26T04:05:23+00:00",
+"updated": "2026-11-26T17:26:37+00:00",
 "fixtures": {
 "5795533": {
 "league": "Premier League",
@@ -10,10 +10,217 @@
 "best": null,
 "matched": []
 },
+"5795531": {
+"league": "Premier League",
+"game": "Leeds x Coventry",
+"ts": 1795878000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5795532": {
+"league": "Premier League",
+"game": "Man United x Brentford",
+"ts": 1795878000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5836965": {
 "league": "Championship",
 "game": "Southampton x Middlesbrough",
 "ts": 1795809600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836959": {
+"league": "Championship",
+"game": "Blackburn x Charlton",
+"ts": 1795869000,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 35,
+"best": [
+"Mais de 2,5 gols",
+1.86,
+0.5224,
+-0.0284
+],
+"matched": [
+"oddspapi: Blackburn Rovers x Charlton Athletic"
+]
+},
+"5836961": {
+"league": "Championship",
+"game": "Lincoln x Wolves",
+"ts": 1795869000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836963": {
+"league": "Championship",
+"game": "Preston x Norwich",
+"ts": 1795869000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836958": {
+"league": "Championship",
+"game": "Birmingham x Bolton",
+"ts": 1795878000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836960": {
+"league": "Championship",
+"game": "Derby x Watford",
+"ts": 1795878000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836962": {
+"league": "Championship",
+"game": "Millwall x Burnley",
+"ts": 1795878000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836964": {
+"league": "Championship",
+"game": "QPR x Sheff Utd",
+"ts": 1795878000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836967": {
+"league": "Championship",
+"game": "West Brom x Bristol City",
+"ts": 1795878000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836968": {
+"league": "Championship",
+"game": "West Ham x Stoke",
+"ts": 1795878000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5836969": {
+"league": "Championship",
+"game": "Wrexham x Portsmouth",
+"ts": 1795878000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5943305": {
+"league": "Super League (Grécia)",
+"game": "Iraklis x Panetolikos",
+"ts": 1795878000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5943308": {
+"league": "Super League (Grécia)",
+"game": "NFC Volos x Asteras Tripolis",
+"ts": 1795878000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803678": {
+"league": "J1 League (Japão)",
+"game": "Kyoto Sanga FC x Cerezo Osaka",
+"ts": 1795842000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803682": {
+"league": "J1 League (Japão)",
+"game": "Shimizu S-Pulse x Urawa Red Diamonds",
+"ts": 1795842000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803675": {
+"league": "J1 League (Japão)",
+"game": "Kashima Antlers x Fagiano Okayama FC",
+"ts": 1795845600,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 137,
+"best": [
+"Kashima Antlers menos de 4,5 escanteios",
+2.37,
+0.4372,
+0.0361
+],
+"matched": [
+"oddspapi: Kashima Antlers x Fagiano Okayama"
+]
+},
+"5803683": {
+"league": "J1 League (Japão)",
+"game": "Vissel Kobe x JEF United Chiba",
+"ts": 1795845600,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5803676": {
+"league": "J1 League (Japão)",
+"game": "Kashiwa Reysol x Sanfrecce Hiroshima",
+"ts": 1795849200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5105057": {
+"league": "Eliteserien (Noruega)",
+"game": "Bodø/Glimt x KFUM",
+"ts": 1795878000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5105059": {
+"league": "Eliteserien (Noruega)",
+"game": "Rosenborg x Molde",
+"ts": 1795885200,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -37,10 +244,73 @@
 "best": null,
 "matched": []
 },
+"5804056": {
+"league": "Ekstraklasa (Polônia)",
+"game": "Widzew Łódź x Zagłębie Lubin",
+"ts": 1795873500,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5804055": {
+"league": "Ekstraklasa (Polônia)",
+"game": "Śląsk Wrocław x GKS Katowice",
+"ts": 1795883400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5804309": {
+"league": "Super League (Suíça)",
+"game": "FC Vaduz x FC Zürich",
+"ts": 1795885200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5804304": {
+"league": "Super League (Suíça)",
+"game": "Grasshopper x Basel",
+"ts": 1795885200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5749769": {
 "league": "Serie A (Itália)",
 "game": "Venezia x Bologna",
 "ts": 1795808700,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 142,
+"best": [
+"Mais de 2,5 gols",
+1.96,
+0.5629,
+0.1033
+],
+"matched": [
+"oddspapi: Venezia FC x Bologna FC"
+]
+},
+"5749763": {
+"league": "Serie A (Itália)",
+"game": "Frosinone x Parma",
+"ts": 1795874400,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5749767": {
+"league": "Serie A (Itália)",
+"game": "Torino x Lazio",
+"ts": 1795885200,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -55,6 +325,33 @@
 "best": null,
 "matched": []
 },
+"5887682": {
+"league": "Liga Portugal",
+"game": "Arouca x Rio Ave",
+"ts": 1795879800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5887686": {
+"league": "Liga Portugal",
+"game": "Moreirense x Santa Clara",
+"ts": 1795879800,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 136,
+"best": [
+"Vitória Santa Clara",
+2.3,
+0.5044,
+0.1601
+],
+"matched": [
+"oddspapi: Moreirense FC x Santa Clara Azores"
+]
+},
 "6580842": {
 "league": "MLS (EUA)",
 "game": "Columbus x Inter Miami CF",
@@ -68,10 +365,19 @@
 "league": "MLS (EUA)",
 "game": "Salt Lake x Vancouver",
 "ts": 1795834800,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 151,
+"best": [
+"Vancouver menos de 5,5 escanteios",
+1.8,
+0.5473,
+-0.0149
+],
+"matched": [
+"oddspapi: Real Salt Lake x Vancouver Whitecaps FC"
+]
 },
 "1000022851": {
 "league": "Liga MX (México)",
@@ -84,8 +390,8 @@
 "best": [
 "Vitória Chivas",
 2.5,
-0.405,
-0.0126
+0.4038,
+0.0096
 ],
 "matched": [
 "football-data: Pachuca x Guadalajara Chivas"
@@ -102,8 +408,8 @@
 "best": [
 "Vitória Cruz Azul",
 2.15,
-0.4934,
-0.0609
+0.4883,
+0.0498
 ],
 "matched": [
 "football-data: Club Leon x Cruz Azul"
@@ -140,10 +446,100 @@
 "best": null,
 "matched": []
 },
+"5803000": {
+"league": "Ligue 1",
+"game": "Angers x Lens",
+"ts": 1795882500,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 142,
+"best": [
+"Angers menos de 3,5 escanteios",
+2.2,
+0.4465,
+-0.0177
+],
+"matched": [
+"oddspapi: Angers SCO x Racing Club De Lens"
+]
+},
 "5881241": {
 "league": "Bundesliga",
 "game": "Werder Bremen x M'gladbach",
 "ts": 1795807800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5881234": {
+"league": "Bundesliga",
+"game": "Köln x Elversberg",
+"ts": 1795876200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5881236": {
+"league": "Bundesliga",
+"game": "Hamburger SV x Bayern München",
+"ts": 1795876200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5881238": {
+"league": "Bundesliga",
+"game": "Mainz x Union Berlin",
+"ts": 1795876200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5881239": {
+"league": "Bundesliga",
+"game": "Paderborn x Schalke 04",
+"ts": 1795876200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5793982": {
+"league": "Premiership (Escócia)",
+"game": "Aberdeen x Dundee FC",
+"ts": 1795878000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5793983": {
+"league": "Premiership (Escócia)",
+"game": "Dundee United x St. Johnstone",
+"ts": 1795878000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5793986": {
+"league": "Premiership (Escócia)",
+"game": "Rangers x Falkirk",
+"ts": 1795878000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5793987": {
+"league": "Premiership (Escócia)",
+"game": "St. Mirren x Kilmarnock",
+"ts": 1795878000,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -158,10 +554,37 @@
 "best": null,
 "matched": []
 },
+"5781816": {
+"league": "Eredivisie",
+"game": "Excelsior x Telstar",
+"ts": 1795879800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5811821": {
 "league": "Pro League (Bélgica)",
 "game": "OH Leuven x Kortrijk",
 "ts": 1795808700,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5811826": {
+"league": "Pro League (Bélgica)",
+"game": "Westerlo x RAAL La Louvière",
+"ts": 1795878000,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5811819": {
+"league": "Pro League (Bélgica)",
+"game": "Cercle Brugge x KV Mechelen",
+"ts": 1795886100,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -189,10 +612,19 @@
 "league": "2. Bundesliga",
 "game": "Bochum x Darmstadt",
 "ts": 1795800600,
-"sources": [],
-"markets_with_odds": 0,
-"best": null,
-"matched": []
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 142,
+"best": [
+"1º tempo menos de 4,5 escanteios",
+2.1,
+0.4731,
+-0.0065
+],
+"matched": [
+"oddspapi: VfL Bochum x SV Darmstadt 98"
+]
 },
 "5881738": {
 "league": "2. Bundesliga",
@@ -203,10 +635,55 @@
 "best": null,
 "matched": []
 },
+"5881742": {
+"league": "2. Bundesliga",
+"game": "Dynamo Dresden x St. Pauli",
+"ts": 1795867200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5881739": {
+"league": "2. Bundesliga",
+"game": "Hertha BSC x Karlsruher SC",
+"ts": 1795867200,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 148,
+"best": [
+"Hertha BSC menos de 5,5 escanteios",
+2.2,
+0.4797,
+0.0553
+],
+"matched": [
+"oddspapi: Hertha BSC x Karlsruher SC"
+]
+},
+"5881740": {
+"league": "2. Bundesliga",
+"game": "Holstein Kiel x Kaiserslautern",
+"ts": 1795867200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
 "5846031": {
 "league": "Bundesliga (Áustria)",
 "game": "Grazer AK x Altach",
 "ts": 1795804200,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5846030": {
+"league": "Bundesliga (Áustria)",
+"game": "Austria Wien x Wolfsberger AC",
+"ts": 1795881600,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -225,6 +702,42 @@
 "league": "Süper Lig (Turquia)",
 "game": "Rizespor x Kasımpaşa",
 "ts": 1795798800,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 143,
+"best": [
+"Menos de 2,5 gols",
+2.2,
+0.4726,
+0.0397
+],
+"matched": [
+"oddspapi: Caykur Rizespor x Kasimpasa Istanbul"
+]
+},
+"5904820": {
+"league": "Süper Lig (Turquia)",
+"game": "Samsunspor x Gençlerbirliği",
+"ts": 1795870800,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 141,
+"best": [
+"Gençlerbirliği menos de 3,5 escanteios",
+2.3,
+0.4752,
+0.093
+],
+"matched": [
+"oddspapi: Samsunspor x Genclerbirligi SK"
+]
+},
+"5904812": {
+"league": "Süper Lig (Turquia)",
+"game": "Gaziantep FK x Amed Sportif",
+"ts": 1795881600,
 "sources": [],
 "markets_with_odds": 0,
 "best": null,
@@ -238,6 +751,33 @@
 "markets_with_odds": 0,
 "best": null,
 "matched": []
+},
+"5868141": {
+"league": "La Liga",
+"game": "Real Betis x Rayo Vallecano",
+"ts": 1795870800,
+"sources": [],
+"markets_with_odds": 0,
+"best": null,
+"matched": []
+},
+"5868147": {
+"league": "La Liga",
+"game": "Málaga x Athletic Club",
+"ts": 1795878900,
+"sources": [
+"oddspapi"
+],
+"markets_with_odds": 35,
+"best": [
+"Vitória Athletic Club",
+1.69,
+0.614,
+0.0377
+],
+"matched": [
+"oddspapi: Malaga CF x Athletic Bilbao"
+]
 }
 }
 }
